@@ -27,3 +27,4 @@ data/processed/rainfall/chirps_v3_seasonal_district_*.csv
 data/processed/vegetation/mod13q1_v061_district_*.csv
 data/processed/vegetation/mod13q1_v061_district/
 data/metadata/mod13q1_historical_sources.json
+data/Earthdata-Download-x64.exe
