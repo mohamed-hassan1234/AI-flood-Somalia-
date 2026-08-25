@@ -1,0 +1,92 @@
+district_id,district_name,region_id,region_name,district_reference_latitude,district_reference_longitude,power_grid_id,power_grid_latitude,power_grid_longitude,mapping_method
+SO1102,Baki,SO11,Awdal,10.19423239,43.52042795,latp10.000_lonp043.750,10.0,43.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1101,Borama,SO11,Awdal,10.09640503,43.18074793,latp10.000_lonp043.125,10.0,43.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1103,Lughaye,SO11,Awdal,10.65553331,43.57543663,latp10.500_lonp043.750,10.5,43.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1104,Zeylac,SO11,Awdal,10.90276527,43.26187596,latp11.000_lonp043.125,11.0,43.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2502,Ceel Barde,SO25,Bakool,4.69021601,43.92904626,latp04.500_lonp043.750,4.5,43.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2505,Rab Dhuure,SO25,Bakool,4.22350194,43.21217369,latp04.000_lonp043.125,4.0,43.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2503,Tayeeglow,SO25,Bakool,3.81189881,44.54136677,latp04.000_lonp044.375,4.0,44.375,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2504,Waajid,SO25,Bakool,3.804685,43.43071401,latp04.000_lonp043.125,4.0,43.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2501,Xudur,SO25,Bakool,4.0366221,43.96843838,latp04.000_lonp043.750,4.0,43.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2201,Bondhere,SO22,Banadir,2.045235,45.34052929,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2202,Cabdulasis,SO22,Banadir,2.03955,45.35749592,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2203,Daynile,SO22,Banadir,2.07344249,45.2784482,latp02.000_lonp045.000,2.0,45.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2204,Dharkenley,SO22,Banadir,2.00327062,45.2462726,latp02.000_lonp045.000,2.0,45.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2205,Hamar Jabjab,SO22,Banadir,2.02926633,45.33019551,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2206,Hamar Weyne,SO22,Banadir,2.03388362,45.33880845,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2207,Hawl Wadaag,SO22,Banadir,2.04832338,45.3193717,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2208,Heliwa,SO22,Banadir,2.07962306,45.38357004,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2209,Hodan,SO22,Banadir,2.04556953,45.29894789,latp02.000_lonp045.000,2.0,45.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2210,Kahda,SO22,Banadir,2.04710787,45.24958836,latp02.000_lonp045.000,2.0,45.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2211,Karaan,SO22,Banadir,2.06708727,45.39958623,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2212,Shangaani,SO22,Banadir,2.03744,45.34728668,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2213,Shibis,SO22,Banadir,2.04697608,45.35337195,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+Unspecified,Unspecified,SO22,Banadir,2.12719727,45.44227136,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2214,Waaberi,SO22,Banadir,2.01881545,45.3129911,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2215,Wadajir (Medina),SO22,Banadir,2.01532,45.28572268,latp02.000_lonp045.000,2.0,45.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2216,Wardhigley,SO22,Banadir,2.05319494,45.33162016,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2217,Yaaqshid,SO22,Banadir,2.06896444,45.34626698,latp02.000_lonp045.625,2.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1602,Bandarbeyla,SO16,Bari,9.1271081,50.28856949,latp09.000_lonp050.000,9.0,50.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1601,Bossaso,SO16,Bari,10.96716698,49.42761938,latp11.000_lonp049.375,11.0,49.375,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1603,Caluula,SO16,Bari,11.69170141,50.85502539,latp11.500_lonp050.625,11.5,50.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1604,Iskushuban,SO16,Bari,10.65594407,50.7896225,latp10.500_lonp050.625,10.5,50.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1605,Qandala,SO16,Bari,11.08708111,50.09138682,latp11.000_lonp050.000,11.0,50.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1606,Qardho,SO16,Bari,9.41529953,49.56791222,latp09.500_lonp049.375,9.5,49.375,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2401,Baydhaba,SO24,Bay,3.21673307,43.61984982,latp03.000_lonp043.750,3.0,43.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2402,Buur Hakaba,SO24,Bay,2.50165391,44.02556238,latp02.500_lonp043.750,2.5,43.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2403,Diinsoor,SO24,Bay,2.03464817,42.80906404,latp02.000_lonp042.500,2.0,42.5,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2404,Qansax Dheere,SO24,Bay,2.81169213,42.83731407,latp03.000_lonp043.125,3.0,43.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1902,Cabudwaaq,SO19,Galgaduud,5.84708358,46.14369133,latp06.000_lonp046.250,6.0,46.25,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1903,Cadaado,SO19,Galgaduud,6.15692726,47.0756365,latp06.000_lonp046.875,6.0,46.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1904,Ceel Buur,SO19,Galgaduud,4.68205844,46.82490038,latp04.500_lonp046.875,4.5,46.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1905,Ceel Dheer,SO19,Galgaduud,3.98375809,46.9596925,latp04.000_lonp046.875,4.0,46.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1901,Dhuusamarreeb,SO19,Galgaduud,5.49551781,46.7687496,latp05.500_lonp046.875,5.5,46.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2602,Baardheere,SO26,Gedo,2.15175241,41.71573756,latp02.000_lonp041.875,2.0,41.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2603,Belet Xaawo,SO26,Gedo,3.40276694,41.7089009,latp03.500_lonp041.875,3.5,41.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2604,Ceel Waaq,SO26,Gedo,2.75904929,41.45616451,latp03.000_lonp041.250,3.0,41.25,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2605,Doolow,SO26,Gedo,3.9931821,42.11791997,latp04.000_lonp041.875,4.0,41.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2601,Garbahaarey,SO26,Gedo,3.17131679,42.45171926,latp03.000_lonp042.500,3.0,42.5,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2606,Luuq,SO26,Gedo,3.78529535,42.61117757,latp04.000_lonp042.500,4.0,42.5,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2001,Belet Weyne,SO20,Hiraan,4.82990908,45.38260684,latp05.000_lonp045.625,5.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2002,Bulo Burto,SO20,Hiraan,3.81713237,45.52533991,latp04.000_lonp045.625,4.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2003,Jalalaqsi,SO20,Hiraan,3.38720703,45.61100554,latp03.500_lonp045.625,3.5,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2802,Afmadow,SO28,Lower Juba,0.5467818,41.83477493,latp00.500_lonp041.875,0.5,41.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2803,Badhaadhe,SO28,Lower Juba,-0.88988267,41.46470793,latm01.000_lonp041.250,-1.0,41.25,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2804,Jamaame,SO28,Lower Juba,0.05088829,42.73860446,latp00.000_lonp042.500,0.0,42.5,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2801,Kismaayo,SO28,Lower Juba,-0.51418511,41.98644967,latm00.500_lonp041.875,-0.5,41.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2302,Afgooye,SO23,Lower Shabelle,2.31167603,45.069732,latp02.500_lonp045.000,2.5,45.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2303,Baraawe,SO23,Lower Shabelle,1.09829712,43.81408974,latp01.000_lonp043.750,1.0,43.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2304,Kurtunwaarey,SO23,Lower Shabelle,1.65169869,44.13640331,latp01.500_lonp044.375,1.5,44.375,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2301,Marka,SO23,Lower Shabelle,1.71160889,44.66436438,latp01.500_lonp044.375,1.5,44.375,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2305,Qoryooley,SO23,Lower Shabelle,1.95761532,44.43791949,latp02.000_lonp044.375,2.0,44.375,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2306,Sablaale,SO23,Lower Shabelle,1.33837081,43.52441251,latp01.500_lonp043.750,1.5,43.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2307,Wanla Weyn,SO23,Lower Shabelle,2.76123524,44.98574277,latp03.000_lonp045.000,3.0,45.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2701,Bu'aale,SO27,Middle Juba,1.11705931,42.85628265,latp01.000_lonp043.125,1.0,43.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2702,Jilib,SO27,Middle Juba,0.69708152,43.07144586,latp00.500_lonp043.125,0.5,43.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2703,Saakow,SO27,Middle Juba,1.60655924,42.17191131,latp01.500_lonp041.875,1.5,41.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2102,Adan Yabaal,SO21,Middle Shabelle,3.5120513,46.54593142,latp03.500_lonp046.250,3.5,46.25,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2103,Balcad,SO21,Middle Shabelle,2.45581055,45.68534047,latp02.500_lonp045.625,2.5,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2104,Cadale,SO21,Middle Shabelle,3.0679233,46.30984373,latp03.000_lonp046.250,3.0,46.25,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO2101,Jowhar,SO21,Middle Shabelle,2.98592068,45.555283,latp03.000_lonp045.625,3.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1801,Gaalkacyo,SO18,Mudug,6.92890205,47.89672675,latp07.000_lonp048.125,7.0,48.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1802,Galdogob,SO18,Mudug,7.04503089,47.22355376,latp07.000_lonp047.500,7.0,47.5,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1803,Hobyo,SO18,Mudug,5.90892148,48.16568856,latp06.000_lonp048.125,6.0,48.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1804,Jariiban,SO18,Mudug,7.13902681,48.98835974,latp07.000_lonp048.750,7.0,48.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1805,Xarardheere,SO18,Mudug,4.78595256,47.84846961,latp05.000_lonp048.125,5.0,48.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1702,Burtinle,SO17,Nugaal,7.86968691,48.49116333,latp08.000_lonp048.750,8.0,48.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1703,Eyl,SO17,Nugaal,8.03914543,49.56220097,latp08.000_lonp049.375,8.0,49.375,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1701,Garoowe,SO17,Nugaal,8.59332767,48.82211464,latp08.500_lonp048.750,8.5,48.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1502,Ceel Afweyn,SO15,Sanaag,10.13970386,46.69572893,latp10.000_lonp046.875,10.0,46.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1501,Ceerigaabo,SO15,Sanaag,10.33854421,47.91359232,latp10.500_lonp048.125,10.5,48.125,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1503,Laasqoray,SO15,Sanaag,10.46154385,48.82380357,latp10.500_lonp048.750,10.5,48.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1402,Caynabo,SO14,Sool,9.38430748,46.53587295,latp09.500_lonp046.250,9.5,46.25,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1401,Laas Caanood,SO14,Sool,8.43456583,47.65733026,latp08.500_lonp047.500,8.5,47.5,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1403,Taleex,SO14,Sool,9.16944907,48.57076799,latp09.000_lonp048.750,9.0,48.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1404,Xudun,SO14,Sool,9.03929728,47.48609329,latp09.000_lonp047.500,9.0,47.5,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1301,Burco,SO13,Togdheer,9.19395477,45.73698304,latp09.000_lonp045.625,9.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1302,Buuhoodle,SO13,Togdheer,8.33615001,46.6542156,latp08.500_lonp046.875,8.5,46.875,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1303,Owdweyne,SO13,Togdheer,9.25862042,44.98696769,latp09.500_lonp045.000,9.5,45.0,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1304,Sheikh,SO13,Togdheer,9.98644012,45.37836002,latp10.000_lonp045.625,10.0,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1202,Berbera,SO12,Woqooyi Galbeed,10.40333605,45.34389878,latp10.500_lonp045.625,10.5,45.625,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1203,Gebiley,SO12,Woqooyi Galbeed,9.82498164,43.64725633,latp10.000_lonp043.750,10.0,43.75,nearest_MERRA2_cell_to_authoritative_boundary_reference_point
+SO1201,Hargeysa,SO12,Woqooyi Galbeed,9.54619998,44.22031006,latp09.500_lonp044.375,9.5,44.375,nearest_MERRA2_cell_to_authoritative_boundary_reference_point

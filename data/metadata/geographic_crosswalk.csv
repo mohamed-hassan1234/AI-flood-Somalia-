@@ -1,0 +1,219 @@
+source_dataset,geography_level,source_name,canonical_name,canonical_id,match_method,confidence,review_required
+fao_swalim_snrfa,district,Belet Weyne,Belet Weyne,SO2001,exact_normalized,1.0,False
+fao_swalim_snrfa,district,Bulo Burti,Bulo Burto,SO2002,documented_alias,0.95,False
+fao_swalim_snrfa,district,Dollow,Doolow,SO2605,documented_alias,0.95,False
+fao_swalim_snrfa,district,Jowhar,Jowhar,SO2101,exact_normalized,1.0,False
+fao_swalim_snrfa,district,Luuq,Luuq,SO2606,exact_normalized,1.0,False
+fao_swalim_snrfa,region,Gedo,Gedo,SO26,exact_normalized,1.0,False
+fao_swalim_snrfa,region,Hiraan,Hiraan,SO20,exact_normalized,1.0,False
+fao_swalim_snrfa,region,Middle Shabelle,Middle Shabelle,SO21,exact_normalized,1.0,False
+ipc_hdx,region,Awdal,Awdal,SO11,exact_normalized,1.0,False
+ipc_hdx,region,Bakool,Bakool,SO25,exact_normalized,1.0,False
+ipc_hdx,region,Banadir,Banadir,SO22,exact_normalized,1.0,False
+ipc_hdx,region,Bari,Bari,SO16,exact_normalized,1.0,False
+ipc_hdx,region,Bay,Bay,SO24,exact_normalized,1.0,False
+ipc_hdx,region,Galgaduud,Galgaduud,SO19,exact_normalized,1.0,False
+ipc_hdx,region,Gedo,Gedo,SO26,exact_normalized,1.0,False
+ipc_hdx,region,Hiraan,Hiraan,SO20,exact_normalized,1.0,False
+ipc_hdx,region,Juba Dhexe,Middle Juba,SO27,documented_alias,0.95,False
+ipc_hdx,region,Juba Hoose,Lower Juba,SO28,documented_alias,0.95,False
+ipc_hdx,region,Juba dhexe,Middle Juba,SO27,documented_alias,0.95,False
+ipc_hdx,region,Juba hoose,Lower Juba,SO28,documented_alias,0.95,False
+ipc_hdx,region,Lower Juba,Lower Juba,SO28,exact_normalized,1.0,False
+ipc_hdx,region,Lower Shabelle,Lower Shabelle,SO23,exact_normalized,1.0,False
+ipc_hdx,region,Middle Juba,Middle Juba,SO27,exact_normalized,1.0,False
+ipc_hdx,region,Middle Shabelle,Middle Shabelle,SO21,exact_normalized,1.0,False
+ipc_hdx,region,Mudug,Mudug,SO18,exact_normalized,1.0,False
+ipc_hdx,region,Nugaal,Nugaal,SO17,exact_normalized,1.0,False
+ipc_hdx,region,Sanaag,Sanaag,SO15,exact_normalized,1.0,False
+ipc_hdx,region,Shabelle Dhexe,Middle Shabelle,SO21,documented_alias,0.95,False
+ipc_hdx,region,Shabelle Hoose,Lower Shabelle,SO23,documented_alias,0.95,False
+ipc_hdx,region,Shabelle dhexe,Middle Shabelle,SO21,documented_alias,0.95,False
+ipc_hdx,region,Shabelle hoose,Lower Shabelle,SO23,documented_alias,0.95,False
+ipc_hdx,region,Sool,Sool,SO14,exact_normalized,1.0,False
+ipc_hdx,region,Togdheer,Togdheer,SO13,exact_normalized,1.0,False
+ipc_hdx,region,Woqooyi Galbeed,Woqooyi Galbeed,SO12,exact_normalized,1.0,False
+ipc_hdx,region,Woqooyi Galbeed ,Woqooyi Galbeed,SO12,exact_normalized,1.0,False
+ipc_hdx,region,Woqooyi galbeed,Woqooyi Galbeed,SO12,exact_normalized,1.0,False
+project_boundaries,district,Adan Yabaal,Adan Yabaal,SO2102,source_code,1.0,False
+project_boundaries,district,Afgooye,Afgooye,SO2302,source_code,1.0,False
+project_boundaries,district,Afmadow,Afmadow,SO2802,source_code,1.0,False
+project_boundaries,district,Baardheere,Baardheere,SO2602,source_code,1.0,False
+project_boundaries,district,Badhaadhe,Badhaadhe,SO2803,source_code,1.0,False
+project_boundaries,district,Baki,Baki,SO1102,source_code,1.0,False
+project_boundaries,district,Balcad,Balcad,SO2103,source_code,1.0,False
+project_boundaries,district,Bandarbeyla,Bandarbeyla,SO1602,source_code,1.0,False
+project_boundaries,district,Baraawe,Baraawe,SO2303,source_code,1.0,False
+project_boundaries,district,Baydhaba,Baydhaba,SO2401,source_code,1.0,False
+project_boundaries,district,Belet Weyne,Belet Weyne,SO2001,source_code,1.0,False
+project_boundaries,district,Belet Xaawo,Belet Xaawo,SO2603,source_code,1.0,False
+project_boundaries,district,Berbera,Berbera,SO1202,source_code,1.0,False
+project_boundaries,district,Bondhere,Bondhere,SO2201,source_code,1.0,False
+project_boundaries,district,Borama,Borama,SO1101,source_code,1.0,False
+project_boundaries,district,Bossaso,Bossaso,SO1601,source_code,1.0,False
+project_boundaries,district,Bu'aale,Bu'aale,SO2701,source_code,1.0,False
+project_boundaries,district,Bulo Burto,Bulo Burto,SO2002,source_code,1.0,False
+project_boundaries,district,Burco,Burco,SO1301,source_code,1.0,False
+project_boundaries,district,Burtinle,Burtinle,SO1702,source_code,1.0,False
+project_boundaries,district,Buuhoodle,Buuhoodle,SO1302,source_code,1.0,False
+project_boundaries,district,Buur Hakaba,Buur Hakaba,SO2402,source_code,1.0,False
+project_boundaries,district,Cabdulasis,Cabdulasis,SO2202,source_code,1.0,False
+project_boundaries,district,Cabudwaaq,Cabudwaaq,SO1902,source_code,1.0,False
+project_boundaries,district,Cadaado,Cadaado,SO1903,source_code,1.0,False
+project_boundaries,district,Cadale,Cadale,SO2104,source_code,1.0,False
+project_boundaries,district,Caluula,Caluula,SO1603,source_code,1.0,False
+project_boundaries,district,Caynabo,Caynabo,SO1402,source_code,1.0,False
+project_boundaries,district,Ceel Afweyn,Ceel Afweyn,SO1502,source_code,1.0,False
+project_boundaries,district,Ceel Barde,Ceel Barde,SO2502,source_code,1.0,False
+project_boundaries,district,Ceel Buur,Ceel Buur,SO1904,source_code,1.0,False
+project_boundaries,district,Ceel Dheer,Ceel Dheer,SO1905,source_code,1.0,False
+project_boundaries,district,Ceel Waaq,Ceel Waaq,SO2604,source_code,1.0,False
+project_boundaries,district,Ceerigaabo,Ceerigaabo,SO1501,source_code,1.0,False
+project_boundaries,district,Daynile,Daynile,SO2203,source_code,1.0,False
+project_boundaries,district,Dharkenley,Dharkenley,SO2204,source_code,1.0,False
+project_boundaries,district,Dhuusamarreeb,Dhuusamarreeb,SO1901,source_code,1.0,False
+project_boundaries,district,Diinsoor,Diinsoor,SO2403,source_code,1.0,False
+project_boundaries,district,Doolow,Doolow,SO2605,source_code,1.0,False
+project_boundaries,district,Eyl,Eyl,SO1703,source_code,1.0,False
+project_boundaries,district,Gaalkacyo,Gaalkacyo,SO1801,source_code,1.0,False
+project_boundaries,district,Galdogob,Galdogob,SO1802,source_code,1.0,False
+project_boundaries,district,Garbahaarey,Garbahaarey,SO2601,source_code,1.0,False
+project_boundaries,district,Garoowe,Garoowe,SO1701,source_code,1.0,False
+project_boundaries,district,Gebiley,Gebiley,SO1203,source_code,1.0,False
+project_boundaries,district,Hamar Jabjab,Hamar Jabjab,SO2205,source_code,1.0,False
+project_boundaries,district,Hamar Weyne,Hamar Weyne,SO2206,source_code,1.0,False
+project_boundaries,district,Hargeysa,Hargeysa,SO1201,source_code,1.0,False
+project_boundaries,district,Hawl Wadaag,Hawl Wadaag,SO2207,source_code,1.0,False
+project_boundaries,district,Heliwa,Heliwa,SO2208,source_code,1.0,False
+project_boundaries,district,Hobyo,Hobyo,SO1803,source_code,1.0,False
+project_boundaries,district,Hodan,Hodan,SO2209,source_code,1.0,False
+project_boundaries,district,Iskushuban,Iskushuban,SO1604,source_code,1.0,False
+project_boundaries,district,Jalalaqsi,Jalalaqsi,SO2003,source_code,1.0,False
+project_boundaries,district,Jamaame,Jamaame,SO2804,source_code,1.0,False
+project_boundaries,district,Jariiban,Jariiban,SO1804,source_code,1.0,False
+project_boundaries,district,Jilib,Jilib,SO2702,source_code,1.0,False
+project_boundaries,district,Jowhar,Jowhar,SO2101,source_code,1.0,False
+project_boundaries,district,Kahda,Kahda,SO2210,source_code,1.0,False
+project_boundaries,district,Karaan,Karaan,SO2211,source_code,1.0,False
+project_boundaries,district,Kismaayo,Kismaayo,SO2801,source_code,1.0,False
+project_boundaries,district,Kurtunwaarey,Kurtunwaarey,SO2304,source_code,1.0,False
+project_boundaries,district,Laas Caanood,Laas Caanood,SO1401,source_code,1.0,False
+project_boundaries,district,Laasqoray,Laasqoray,SO1503,source_code,1.0,False
+project_boundaries,district,Lughaye,Lughaye,SO1103,source_code,1.0,False
+project_boundaries,district,Luuq,Luuq,SO2606,source_code,1.0,False
+project_boundaries,district,Marka,Marka,SO2301,source_code,1.0,False
+project_boundaries,district,Owdweyne,Owdweyne,SO1303,source_code,1.0,False
+project_boundaries,district,Qandala,Qandala,SO1605,source_code,1.0,False
+project_boundaries,district,Qansax Dheere,Qansax Dheere,SO2404,source_code,1.0,False
+project_boundaries,district,Qardho,Qardho,SO1606,source_code,1.0,False
+project_boundaries,district,Qoryooley,Qoryooley,SO2305,source_code,1.0,False
+project_boundaries,district,Rab Dhuure,Rab Dhuure,SO2505,source_code,1.0,False
+project_boundaries,district,Saakow,Saakow,SO2703,source_code,1.0,False
+project_boundaries,district,Sablaale,Sablaale,SO2306,source_code,1.0,False
+project_boundaries,district,Shangaani,Shangaani,SO2212,source_code,1.0,False
+project_boundaries,district,Sheikh,Sheikh,SO1304,source_code,1.0,False
+project_boundaries,district,Shibis,Shibis,SO2213,source_code,1.0,False
+project_boundaries,district,Taleex,Taleex,SO1403,source_code,1.0,False
+project_boundaries,district,Tayeeglow,Tayeeglow,SO2503,source_code,1.0,False
+project_boundaries,district,Unspecified,Unspecified,Unspecified,source_code,1.0,False
+project_boundaries,district,Waaberi,Waaberi,SO2214,source_code,1.0,False
+project_boundaries,district,Waajid,Waajid,SO2504,source_code,1.0,False
+project_boundaries,district,Wadajir (Medina),Wadajir (Medina),SO2215,source_code,1.0,False
+project_boundaries,district,Wanla Weyn,Wanla Weyn,SO2307,source_code,1.0,False
+project_boundaries,district,Wardhigley,Wardhigley,SO2216,source_code,1.0,False
+project_boundaries,district,Xarardheere,Xarardheere,SO1805,source_code,1.0,False
+project_boundaries,district,Xudun,Xudun,SO1404,source_code,1.0,False
+project_boundaries,district,Xudur,Xudur,SO2501,source_code,1.0,False
+project_boundaries,district,Yaaqshid,Yaaqshid,SO2217,source_code,1.0,False
+project_boundaries,district,Zeylac,Zeylac,SO1104,source_code,1.0,False
+project_boundaries,region,Awdal,Awdal,SO11,source_code,1.0,False
+project_boundaries,region,Bakool,Bakool,SO25,source_code,1.0,False
+project_boundaries,region,Banadir,Banadir,SO22,source_code,1.0,False
+project_boundaries,region,Bari,Bari,SO16,source_code,1.0,False
+project_boundaries,region,Bay,Bay,SO24,source_code,1.0,False
+project_boundaries,region,Galgaduud,Galgaduud,SO19,source_code,1.0,False
+project_boundaries,region,Gedo,Gedo,SO26,source_code,1.0,False
+project_boundaries,region,Hiraan,Hiraan,SO20,source_code,1.0,False
+project_boundaries,region,Lower Juba,Lower Juba,SO28,source_code,1.0,False
+project_boundaries,region,Lower Shabelle,Lower Shabelle,SO23,source_code,1.0,False
+project_boundaries,region,Middle Juba,Middle Juba,SO27,source_code,1.0,False
+project_boundaries,region,Middle Shabelle,Middle Shabelle,SO21,source_code,1.0,False
+project_boundaries,region,Mudug,Mudug,SO18,source_code,1.0,False
+project_boundaries,region,Nugaal,Nugaal,SO17,source_code,1.0,False
+project_boundaries,region,Sanaag,Sanaag,SO15,source_code,1.0,False
+project_boundaries,region,Sool,Sool,SO14,source_code,1.0,False
+project_boundaries,region,Togdheer,Togdheer,SO13,source_code,1.0,False
+project_boundaries,region,Woqooyi Galbeed,Woqooyi Galbeed,SO12,source_code,1.0,False
+wfp_market_prices,district,Afgooye,Afgooye,SO2302,exact_normalized,1.0,False
+wfp_market_prices,district,Afmadow,Afmadow,SO2802,exact_normalized,1.0,False
+wfp_market_prices,district,Balcad,Balcad,SO2103,exact_normalized,1.0,False
+wfp_market_prices,district,Banadir,,,quarantined_provider_admin2_not_canonical_district,0.0,True
+wfp_market_prices,district,Baydhaba,Baydhaba,SO2401,exact_normalized,1.0,False
+wfp_market_prices,district,Belet Weyne,Belet Weyne,SO2001,exact_normalized,1.0,False
+wfp_market_prices,district,Belet Xaawo,Belet Xaawo,SO2603,exact_normalized,1.0,False
+wfp_market_prices,district,Berbera,Berbera,SO1202,exact_normalized,1.0,False
+wfp_market_prices,district,Borama,Borama,SO1101,exact_normalized,1.0,False
+wfp_market_prices,district,Bossaso,Bossaso,SO1601,exact_normalized,1.0,False
+wfp_market_prices,district,Bu'aale,Bu'aale,SO2701,exact_normalized,1.0,False
+wfp_market_prices,district,Bulo Burto,Bulo Burto,SO2002,exact_normalized,1.0,False
+wfp_market_prices,district,Burco,Burco,SO1301,exact_normalized,1.0,False
+wfp_market_prices,district,Burtinle,Burtinle,SO1702,exact_normalized,1.0,False
+wfp_market_prices,district,Buur Hakaba,Buur Hakaba,SO2402,exact_normalized,1.0,False
+wfp_market_prices,district,Cabudwaaq,Cabudwaaq,SO1902,exact_normalized,1.0,False
+wfp_market_prices,district,Cadaado,Cadaado,SO1903,exact_normalized,1.0,False
+wfp_market_prices,district,Cadale,Cadale,SO2104,exact_normalized,1.0,False
+wfp_market_prices,district,Ceel Barde,Ceel Barde,SO2502,exact_normalized,1.0,False
+wfp_market_prices,district,Ceel Waaq,Ceel Waaq,SO2604,exact_normalized,1.0,False
+wfp_market_prices,district,Ceerigaabo,Ceerigaabo,SO1501,exact_normalized,1.0,False
+wfp_market_prices,district,Dhuusamarreeb,Dhuusamarreeb,SO1901,exact_normalized,1.0,False
+wfp_market_prices,district,Diinsoor,Diinsoor,SO2403,exact_normalized,1.0,False
+wfp_market_prices,district,Doolow,Doolow,SO2605,exact_normalized,1.0,False
+wfp_market_prices,district,Eyl,Eyl,SO1703,exact_normalized,1.0,False
+wfp_market_prices,district,Gaalkacyo,Gaalkacyo,SO1801,exact_normalized,1.0,False
+wfp_market_prices,district,Garoowe,Garoowe,SO1701,exact_normalized,1.0,False
+wfp_market_prices,district,Hargeysa,Hargeysa,SO1201,exact_normalized,1.0,False
+wfp_market_prices,district,Hobyo,Hobyo,SO1803,exact_normalized,1.0,False
+wfp_market_prices,district,Jalalaqsi,Jalalaqsi,SO2003,exact_normalized,1.0,False
+wfp_market_prices,district,Jariiban,Jariiban,SO1804,exact_normalized,1.0,False
+wfp_market_prices,district,Jowhar,Jowhar,SO2101,exact_normalized,1.0,False
+wfp_market_prices,district,Kismaayo,Kismaayo,SO2801,exact_normalized,1.0,False
+wfp_market_prices,district,Laas Caanood,Laas Caanood,SO1401,exact_normalized,1.0,False
+wfp_market_prices,district,Luuq,Luuq,SO2606,exact_normalized,1.0,False
+wfp_market_prices,district,Marka,Marka,SO2301,exact_normalized,1.0,False
+wfp_market_prices,district,Owdweyne,Owdweyne,SO1303,exact_normalized,1.0,False
+wfp_market_prices,district,Qansax Dheere,Qansax Dheere,SO2404,exact_normalized,1.0,False
+wfp_market_prices,district,Qardho,Qardho,SO1606,exact_normalized,1.0,False
+wfp_market_prices,district,Qoryooley,Qoryooley,SO2305,exact_normalized,1.0,False
+wfp_market_prices,district,Rab Dhuure,Rab Dhuure,SO2505,exact_normalized,1.0,False
+wfp_market_prices,district,Taleex,Taleex,SO1403,exact_normalized,1.0,False
+wfp_market_prices,district,Waajid,Waajid,SO2504,exact_normalized,1.0,False
+wfp_market_prices,district,Xudun,Xudun,SO1404,exact_normalized,1.0,False
+wfp_market_prices,district,Xudur,Xudur,SO2501,exact_normalized,1.0,False
+wfp_market_prices,market_point_to_district,Bakaara (market_id=6634),Hawl Wadaag,SO2207,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,market_point_to_district,Boondheere (market_id=6630),Bondhere,SO2201,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,market_point_to_district,Cabdulcasiis (market_id=6631),Cabdulasis,SO2202,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,market_point_to_district,Karaan (market_id=2104),Heliwa,SO2208,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,market_point_to_district,Shangaani (market_id=6637),Shangaani,SO2212,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,market_point_to_district,Suuq Bacaad (market_id=6641),Yaaqshid,SO2217,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,market_point_to_district,Suuqa Liberia/Suuqa Beerta (market_id=6638),Waaberi,SO2214,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,market_point_to_district,Suuqa Xoolaha (market_id=6635),Heliwa,SO2208,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,market_point_to_district,Xamar Jajab (market_id=6639),Hamar Jabjab,SO2205,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,market_point_to_district,Xamar Weyne (market_id=6640),Hamar Weyne,SO2206,market_coordinate_point_in_polygon,1.0,False
+wfp_market_prices,region,Awdal,Awdal,SO11,exact_normalized,1.0,False
+wfp_market_prices,region,Bakool,Bakool,SO25,exact_normalized,1.0,False
+wfp_market_prices,region,Banadir,Banadir,SO22,exact_normalized,1.0,False
+wfp_market_prices,region,Bari,Bari,SO16,exact_normalized,1.0,False
+wfp_market_prices,region,Bay,Bay,SO24,exact_normalized,1.0,False
+wfp_market_prices,region,Galgaduud,Galgaduud,SO19,exact_normalized,1.0,False
+wfp_market_prices,region,Gedo,Gedo,SO26,exact_normalized,1.0,False
+wfp_market_prices,region,Hiraan,Hiraan,SO20,exact_normalized,1.0,False
+wfp_market_prices,region,Juba Dhexe,Middle Juba,SO27,documented_alias,0.95,False
+wfp_market_prices,region,Juba Hoose,Lower Juba,SO28,documented_alias,0.95,False
+wfp_market_prices,region,Mudug,Mudug,SO18,exact_normalized,1.0,False
+wfp_market_prices,region,Nugaal,Nugaal,SO17,exact_normalized,1.0,False
+wfp_market_prices,region,Sanaag,Sanaag,SO15,exact_normalized,1.0,False
+wfp_market_prices,region,Shabelle Dhexe,Middle Shabelle,SO21,documented_alias,0.95,False
+wfp_market_prices,region,Shabelle Hoose,Lower Shabelle,SO23,documented_alias,0.95,False
+wfp_market_prices,region,Sool,Sool,SO14,exact_normalized,1.0,False
+wfp_market_prices,region,Togdheer,Togdheer,SO13,exact_normalized,1.0,False
+wfp_market_prices,region,Woqooyi Galbeed,Woqooyi Galbeed,SO12,exact_normalized,1.0,False

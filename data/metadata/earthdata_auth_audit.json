@@ -1,0 +1,42 @@
+{
+  "audited_at": "2026-08-25T12:43:06.606500+00:00",
+  "credential_files": [
+    {
+      "name": ".netrc",
+      "exists": false
+    },
+    {
+      "name": "_netrc",
+      "exists": false
+    },
+    {
+      "name": ".urs_cookies",
+      "exists": false
+    },
+    {
+      "name": ".earthaccess",
+      "exists": false
+    },
+    {
+      "name": ".cdsapirc",
+      "exists": false
+    }
+  ],
+  "matching_environment_variable_names": [],
+  "python_modules": {
+    "earthaccess": false,
+    "cdsapi": false,
+    "h5py": true,
+    "rasterio": true,
+    "xarray": false
+  },
+  "legacy_earthdata_download_script": {
+    "exists": true,
+    "interactive_password_prompt": true,
+    "embedded_username_field": true,
+    "embedded_password_assignment": false
+  },
+  "earthdata_unattended_auth_available": false,
+  "smap_historical_automation_status": "BLOCKED_NO_NONINTERACTIVE_CREDENTIALS",
+  "security_note": "No credential, token, password, cookie, or environment-variable value was recorded."
+}

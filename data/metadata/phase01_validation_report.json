@@ -1,0 +1,2421 @@
+{
+  "generated_at": "2026-08-25T13:10:48.474080+00:00",
+  "boundaries": {
+    "admin1_feature_count": 18,
+    "admin2_feature_count": 91,
+    "admin1_invalid_geometry_count": 0,
+    "admin2_invalid_geometry_count": 0,
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+      }
+    },
+    "source_files_in_archive": 17,
+    "status": "PASS"
+  },
+  "rainfall": {
+    "file_count": 39,
+    "daily_file_count": 38,
+    "daily_date_count": 38,
+    "daily_temporal_start": "2026-06-24",
+    "daily_temporal_end": "2026-07-31",
+    "historical_dekad_file_count": 1,
+    "historical_dekad_period": "1981-01 dekad 1",
+    "temporal_start": "1981-01 dekad 1",
+    "temporal_end": "2026-07-31",
+    "duplicate_dates": [],
+    "unreadable": [],
+    "rasters": [
+      {
+        "file": "chirps-v3.0.1981.01.1.tif",
+        "crs": "EPSG:4326",
+        "width": 1500,
+        "height": 1600,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -20.0,
+          -40.000001192092896,
+          55.00000111758709,
+          40.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 345.799560546875
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.06.24.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 96.0531997680664
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.06.25.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 77.50534057617188
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.06.26.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 123.19941711425781
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.06.27.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 120.7785873413086
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.06.28.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 149.62342834472656
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.06.29.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 117.50593566894531
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.06.30.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 78.23812866210938
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.01.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 93.8193359375
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.02.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 102.544189453125
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.03.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 185.48329162597656
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.04.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 111.24366760253906
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.05.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 149.71170043945312
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.06.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 197.42628479003906
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.07.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 182.94610595703125
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.08.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 181.7243194580078
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.09.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 131.99200439453125
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.10.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 116.34579467773438
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.11.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 131.37159729003906
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.12.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 134.35255432128906
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.13.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 65.94951629638672
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.14.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 113.02983093261719
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.15.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 77.37325286865234
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.16.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 92.65055084228516
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.17.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 118.07935333251953
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.18.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 163.32237243652344
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.19.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 151.67572021484375
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.20.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 128.59132385253906
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.21.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 109.62952423095703
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.22.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 191.2887420654297
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.23.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 150.6296844482422
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.24.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 213.75978088378906
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.25.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 99.28487396240234
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.26.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 102.0438232421875
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.27.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 128.65872192382812
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.28.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 183.7503662109375
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.29.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 168.29173278808594
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.30.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 116.77421569824219
+      },
+      {
+        "file": "CHIRPS_Rainfall\\chirps-v3.0.rnl.2026.07.31.tif",
+        "crs": "EPSG:4326",
+        "width": 7200,
+        "height": 2400,
+        "resolution": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "bounds": [
+          -180.0,
+          -60.00000178813934,
+          180.00000536441803,
+          60.0
+        ],
+        "nodata": null,
+        "sample_min": -9999.0,
+        "sample_max": 196.62806701660156
+      }
+    ],
+    "historical_archive": {
+      "dataset": "CHIRPS v3 daily final rnl p25 district time-series",
+      "start": "2014-01-09",
+      "end": "2014-01-10",
+      "expected_days": 2,
+      "actual_days": 2,
+      "districts": 91,
+      "daily_rows": 182,
+      "dekad_rows": 91,
+      "missing_dates": [],
+      "minimum_valid_pixel_fraction": 0.5,
+      "missing_district_day_rows": 0,
+      "negative_rainfall_rows": 0,
+      "crs": "EPSG:4326",
+      "source_resolution": "0.25 degree",
+      "source_url_template": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/p25/{YYYY}/chirps-v3.0.rnl.{YYYY.MM.DD}.tif",
+      "daily_sha256": "8b46988b42a3f97fdd47ee0f5d9545c5844b98fe2f09964c5227a0699f9c77bc",
+      "dekad_sha256": "aaedde4f39984e1587d2efe796fe819bdf5b890ad93e9eae8bfc0da4f08a8c5a",
+      "status": "COMPLETE"
+    },
+    "status": "PARTIAL",
+    "limitation": "The production 2000-2025 district history has not yet passed continuity and completeness checks."
+  },
+  "soil_moisture": {
+    "file_count": 38,
+    "date_count": 31,
+    "temporal_start": "2026-07-01",
+    "temporal_end": "2026-07-31",
+    "multiple_granule_dates": {
+      "2026-07-02": 2,
+      "2026-07-04": 2,
+      "2026-07-05": 2,
+      "2026-07-08": 2,
+      "2026-07-09": 2,
+      "2026-07-23": 2,
+      "2026-07-24": 2
+    },
+    "entries": [
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260701_R19240_001_subsetted.nc4",
+        "date": "2026-07-01",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 6896,
+        "missing_count": 15106,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          49.901451110839844
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260702_R19240_001_subsetted.nc4",
+        "date": "2026-07-02",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "longitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260702_R19240_002_subsetted.nc4",
+        "date": "2026-07-02",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "longitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260703_R19240_001_subsetted.nc4",
+        "date": "2026-07-03",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 4455,
+        "missing_count": 17547,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260704_R19240_001_subsetted.nc4",
+        "date": "2026-07-04",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 3535,
+        "missing_count": 18467,
+        "min": 0.019999999552965164,
+        "max": 0.45877498388290405,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          46.82053756713867
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260704_R19240_002_subsetted.nc4",
+        "date": "2026-07-04",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 3535,
+        "missing_count": 18467,
+        "min": 0.019999999552965164,
+        "max": 0.45877498388290405,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          46.82053756713867
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260705_R19240_001_subsetted.nc4",
+        "date": "2026-07-05",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          5.693285942077637
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260705_R19240_002_subsetted.nc4",
+        "date": "2026-07-05",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          5.693285942077637
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260706_R19240_001_subsetted.nc4",
+        "date": "2026-07-06",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 7488,
+        "missing_count": 14514,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260707_R19240_001_subsetted.nc4",
+        "date": "2026-07-07",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 455,
+        "missing_count": 21547,
+        "min": 0.043531328439712524,
+        "max": 0.4635792374610901,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          43.55290603637695
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260708_R19240_001_subsetted.nc4",
+        "date": "2026-07-08",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 1083,
+        "missing_count": 20919,
+        "min": 0.019999999552965164,
+        "max": 0.45662957429885864,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260708_R19240_002_subsetted.nc4",
+        "date": "2026-07-08",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 1083,
+        "missing_count": 20919,
+        "min": 0.019999999552965164,
+        "max": 0.45662957429885864,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260709_R19240_001_subsetted.nc4",
+        "date": "2026-07-09",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 6967,
+        "missing_count": 15035,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          49.901451110839844
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260709_R19240_002_subsetted.nc4",
+        "date": "2026-07-09",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 6967,
+        "missing_count": 15035,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          49.901451110839844
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260710_R19240_001_subsetted.nc4",
+        "date": "2026-07-10",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "longitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260711_R19240_001_subsetted.nc4",
+        "date": "2026-07-11",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 4399,
+        "missing_count": 17603,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260712_R19240_001_subsetted.nc4",
+        "date": "2026-07-12",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 3563,
+        "missing_count": 18439,
+        "min": 0.019999999552965164,
+        "max": 0.4635792374610901,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          46.82053756713867
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260713_R19240_001_subsetted.nc4",
+        "date": "2026-07-13",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          5.551400184631348
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260714_R19240_001_subsetted.nc4",
+        "date": "2026-07-14",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 7428,
+        "missing_count": 14574,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260715_R19240_001_subsetted.nc4",
+        "date": "2026-07-15",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 485,
+        "missing_count": 21517,
+        "min": 0.05064430832862854,
+        "max": 0.4635792374610901,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          43.64626693725586
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260716_R19240_001_subsetted.nc4",
+        "date": "2026-07-16",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 1050,
+        "missing_count": 20952,
+        "min": 0.019999999552965164,
+        "max": 0.45662957429885864,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260717_R19240_001_subsetted.nc4",
+        "date": "2026-07-17",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 6882,
+        "missing_count": 15120,
+        "min": 0.019999999552965164,
+        "max": 0.48439860343933105,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          49.99481201171875
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260718_R19240_001_subsetted.nc4",
+        "date": "2026-07-18",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "longitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260719_R19240_001_subsetted.nc4",
+        "date": "2026-07-19",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 4324,
+        "missing_count": 17678,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260720_R19240_001_subsetted.nc4",
+        "date": "2026-07-20",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 3584,
+        "missing_count": 18418,
+        "min": 0.019999999552965164,
+        "max": 0.4635792374610901,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          46.913902282714844
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260721_R19240_001_subsetted.nc4",
+        "date": "2026-07-21",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          5.338633060455322
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260722_R19240_001_subsetted.nc4",
+        "date": "2026-07-22",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 7381,
+        "missing_count": 14621,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260723_R19240_001_subsetted.nc4",
+        "date": "2026-07-23",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 527,
+        "missing_count": 21475,
+        "min": 0.047548845410346985,
+        "max": 0.4635792374610901,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          43.64626693725586
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260723_R19240_002_subsetted.nc4",
+        "date": "2026-07-23",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 527,
+        "missing_count": 21475,
+        "min": 0.047548845410346985,
+        "max": 0.4635792374610901,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          43.64626693725586
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260724_R19240_001_subsetted.nc4",
+        "date": "2026-07-24",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 1011,
+        "missing_count": 20991,
+        "min": 0.019999999552965164,
+        "max": 0.4592238664627075,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260724_R19240_004_subsetted.nc4",
+        "date": "2026-07-24",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 1011,
+        "missing_count": 20991,
+        "min": 0.019999999552965164,
+        "max": 0.4592238664627075,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260725_R19240_001_subsetted.nc4",
+        "date": "2026-07-25",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 6978,
+        "missing_count": 15024,
+        "min": 0.019999999552965164,
+        "max": 0.48439860343933105,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          49.99481201171875
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260726_R19240_001_subsetted.nc4",
+        "date": "2026-07-26",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "longitude_range": [
+          -9999.0,
+          -9999.0
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260727_R19240_001_subsetted.nc4",
+        "date": "2026-07-27",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 4290,
+        "missing_count": 17712,
+        "min": 0.019999999552965164,
+        "max": 0.4833717942237854,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260728_R19240_001_subsetted.nc4",
+        "date": "2026-07-28",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 3724,
+        "missing_count": 18278,
+        "min": 0.019999999552965164,
+        "max": 0.26016342639923096,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          46.913902282714844
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260729_R19240_001_subsetted.nc4",
+        "date": "2026-07-29",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 0,
+        "missing_count": 22002,
+        "min": null,
+        "max": null,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          5.055054664611816
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260730_R19240_001_subsetted.nc4",
+        "date": "2026-07-30",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 7514,
+        "missing_count": 14488,
+        "min": 0.019999999552965164,
+        "max": 0.4869649410247803,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          51.488590240478516
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          13,
+          15,
+          65534
+        ]
+      },
+      {
+        "file": "SPL3SMP_E_006-20260825_092003\\SMAP_L3_SM_P_E_20260731_R19240_001_subsetted.nc4",
+        "date": "2026-07-31",
+        "shape": [
+          193,
+          114
+        ],
+        "valid_count": 574,
+        "missing_count": 21428,
+        "min": 0.039660774171352386,
+        "max": 0.23736000061035156,
+        "units": "cm**3/cm**3",
+        "fill_value": -9999.0,
+        "latitude_range": [
+          -9999.0,
+          11.982797622680664
+        ],
+        "longitude_range": [
+          -9999.0,
+          43.83298873901367
+        ],
+        "quality_flag_present": true,
+        "quality_values": [
+          7,
+          8,
+          9,
+          15,
+          65534
+        ]
+      }
+    ],
+    "errors": [],
+    "status": "PARTIAL",
+    "limitation": "Local coverage is July 2026 only; this validates V006 structure and QA but not the 2015-present archive."
+  },
+  "river_levels": {
+    "station_count": 5,
+    "rows": 87848,
+    "stations": [
+      {
+        "station_id": "SH001",
+        "station_values_in_file": [
+          "sh001"
+        ],
+        "station_id_matches_expected": true,
+        "rows": 23167,
+        "date_min": "1963-01-01",
+        "date_max": "2026-08-25",
+        "invalid_dates": 0,
+        "missing_level": 5250,
+        "negative_level_count": 0,
+        "duplicate_rows_by_date_station_level": 0,
+        "maximum_gap_days": 16,
+        "gaps_over_7_days": 1,
+        "level_min_m": 0.75,
+        "level_max_m": 9.0
+      },
+      {
+        "station_id": "SH002",
+        "station_values_in_file": [
+          "sh002"
+        ],
+        "station_id_matches_expected": true,
+        "rows": 23213,
+        "date_min": "1963-01-01",
+        "date_max": "2026-08-25",
+        "invalid_dates": 0,
+        "missing_level": 8310,
+        "negative_level_count": 0,
+        "duplicate_rows_by_date_station_level": 0,
+        "maximum_gap_days": 16,
+        "gaps_over_7_days": 1,
+        "level_min_m": 0.295,
+        "level_max_m": 9.148
+      },
+      {
+        "station_id": "SH004",
+        "station_values_in_file": [
+          "sh004"
+        ],
+        "station_id_matches_expected": true,
+        "rows": 10023,
+        "date_min": "1999-01-01",
+        "date_max": "2026-08-25",
+        "invalid_dates": 0,
+        "missing_level": 339,
+        "negative_level_count": 0,
+        "duplicate_rows_by_date_station_level": 0,
+        "maximum_gap_days": 16,
+        "gaps_over_7_days": 1,
+        "level_min_m": 0.4,
+        "level_max_m": 5.55
+      },
+      {
+        "station_id": "JB001",
+        "station_values_in_file": [
+          "jb001"
+        ],
+        "station_id_matches_expected": true,
+        "rows": 27508,
+        "date_min": "1951-01-01",
+        "date_max": "2026-08-25",
+        "invalid_dates": 0,
+        "missing_level": 8015,
+        "negative_level_count": 0,
+        "duplicate_rows_by_date_station_level": 2,
+        "maximum_gap_days": 36,
+        "gaps_over_7_days": 2,
+        "level_min_m": 0.0,
+        "level_max_m": 7.0
+      },
+      {
+        "station_id": "JB009",
+        "station_values_in_file": [
+          "jb009"
+        ],
+        "station_id_matches_expected": true,
+        "rows": 3937,
+        "date_min": "2015-01-01",
+        "date_max": "2026-08-25",
+        "invalid_dates": 0,
+        "missing_level": 190,
+        "negative_level_count": 0,
+        "duplicate_rows_by_date_station_level": 0,
+        "maximum_gap_days": 243,
+        "gaps_over_7_days": 2,
+        "level_min_m": 1.0,
+        "level_max_m": 6.0
+      }
+    ],
+    "station_metadata": {
+      "path": "data/processed/river_station_metadata.csv",
+      "exists": true,
+      "station_count": 5,
+      "station_codes": [
+        "JB001",
+        "JB009",
+        "SH001",
+        "SH002",
+        "SH004"
+      ],
+      "all_observation_codes_have_metadata": true,
+      "coordinates_complete": true,
+      "current_thresholds_complete": true,
+      "threshold_effective_dates_available": false,
+      "spatial_exception_count": 1,
+      "spatial_checks": [
+        {
+          "station_code": "SH001",
+          "canonical_district_id": "SO2001",
+          "point_intersects_canonical_district": true
+        },
+        {
+          "station_code": "SH002",
+          "canonical_district_id": "SO2002",
+          "point_intersects_canonical_district": true
+        },
+        {
+          "station_code": "SH004",
+          "canonical_district_id": "SO2101",
+          "point_intersects_canonical_district": true
+        },
+        {
+          "station_code": "JB001",
+          "canonical_district_id": "SO2606",
+          "point_intersects_canonical_district": true
+        },
+        {
+          "station_code": "JB009",
+          "canonical_district_id": "SO2605",
+          "point_intersects_canonical_district": false
+        }
+      ],
+      "notes": "Current FAO SWALIM thresholds are complete. Effective-from dates are not published. Authoritative JB009 is retained outside the project Doolow polygon."
+    },
+    "status": "PASS"
+  },
+  "market_prices": {
+    "rows": 42231,
+    "columns": [
+      "date",
+      "admin1",
+      "admin2",
+      "market",
+      "market_id",
+      "latitude",
+      "longitude",
+      "category",
+      "commodity",
+      "commodity_id",
+      "unit",
+      "priceflag",
+      "pricetype",
+      "currency",
+      "price",
+      "usdprice",
+      "canonical_region_id",
+      "canonical_district_id",
+      "source_dataset"
+    ],
+    "temporal_start": "1995-01-15",
+    "temporal_end": "2026-06-15",
+    "invalid_dates": 0,
+    "missing_price": 0,
+    "nonpositive_price": 0,
+    "duplicate_business_key_rows": 0,
+    "markets": 47,
+    "commodities": 22,
+    "currencies": [
+      "SLS",
+      "SOS"
+    ],
+    "units": [
+      "Head",
+      "KG",
+      "L",
+      "USD/LCU",
+      "Unit"
+    ],
+    "unresolved_region_names": 0,
+    "unresolved_district_names": 1,
+    "status": "REVIEW"
+  },
+  "food_security": {
+    "files": {
+      "ipc_som_national_long.csv": {
+        "rows": 378,
+        "date_min": "2017-01-01",
+        "date_max": "2026-06-30",
+        "invalid_from_dates": 0,
+        "invalid_to_dates": 0,
+        "period_types": [
+          "current",
+          "first projection",
+          "second projection"
+        ],
+        "phases": [
+          "1",
+          "2",
+          "3",
+          "3+",
+          "4",
+          "5",
+          "all"
+        ],
+        "duplicate_rows": 3
+      },
+      "ipc_som_level1_long.csv": {
+        "rows": 6300,
+        "date_min": "2017-01-01",
+        "date_max": "2026-06-30",
+        "invalid_from_dates": 0,
+        "invalid_to_dates": 0,
+        "period_types": [
+          "current",
+          "first projection",
+          "second projection"
+        ],
+        "phases": [
+          "1",
+          "2",
+          "3",
+          "3+",
+          "4",
+          "5",
+          "all"
+        ],
+        "duplicate_rows": 0
+      },
+      "ipc_som_area_long.csv": {
+        "rows": 69399,
+        "date_min": "2017-01-01",
+        "date_max": "2026-06-30",
+        "invalid_from_dates": 0,
+        "invalid_to_dates": 0,
+        "period_types": [
+          "current",
+          "first projection",
+          "second projection"
+        ],
+        "phases": [
+          "1",
+          "2",
+          "3",
+          "3+",
+          "4",
+          "5",
+          "all"
+        ],
+        "duplicate_rows": 0
+      }
+    },
+    "rows": 76077,
+    "temporal_start": "2017-01-01",
+    "temporal_end": "2026-06-30",
+    "period_types": [
+      "current",
+      "first projection",
+      "second projection"
+    ],
+    "current_projection_distinguished": true,
+    "status": "REVIEW",
+    "limitation": "Area rows remain native IPC analysis/livelihood areas. Use the versioned polygon-overlap mapping for the represented snapshot; urban/IDP reference points are not district labels, and historical geometry stability is not assumed.",
+    "geographic_mapping_status": "PASS_WITH_DOCUMENTED_AMBIGUITY",
+    "geographic_mapping_path": "data/processed/food_security/ipc_geographic_mapping.csv"
+  },
+  "population": {
+    "width": 12509,
+    "height": 16381,
+    "bands": 1,
+    "dtype": "float32",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.00083333333,
+      0.00083333333
+    ],
+    "bounds": [
+      40.99083244937,
+      -1.662499657350013,
+      51.414999074339995,
+      11.988333621379986
+    ],
+    "nodata": -99999.0,
+    "units": "persons per pixel",
+    "district_count": 91,
+    "region_count": 18,
+    "districts_without_pixels": 0,
+    "zonal_population_sum": 19139579.797,
+    "status": "PASS",
+    "limitation": "WorldPop R2025A v1 is an alpha modeled estimate, not a census; boundary-version mismatch can affect border cells."
+  },
+  "vegetation": {
+    "science_band_count": 2,
+    "qa_files": 2,
+    "pixel_reliability_values": [
+      0,
+      1,
+      3
+    ],
+    "historical_archive": {
+      "dataset": "MOD13Q1 V061 Terra district time-series",
+      "start": "2015-01-17",
+      "end": "2015-01-17",
+      "periods": 1,
+      "items": 7,
+      "districts": 91,
+      "rows": 91,
+      "missing_district_period_rows": 7,
+      "minimum_valid_pixel_fraction": 0.0,
+      "source_resolution": "250m",
+      "derived_sampling_resolution": "approximately 1km via aligned nearest-neighbour COG overview",
+      "temporal_resolution": "16-day composite",
+      "scale": 0.0001,
+      "qa_rule": "pixel_reliability=0 AND MODLAND_QA(bits0-1)=0 AND VI range -2000..10000",
+      "sha256": "7609255d4d28bd99db3466042a6864823b1a39f38c0d5dd189184b3093340c8e",
+      "status": "PARTIAL"
+    },
+    "status": "PARTIAL",
+    "limitation": "The production 2015-2025 QA-masked district history has not yet passed completeness checks."
+  },
+  "temperature": {
+    "science_band_count": 2,
+    "qa_files": 2,
+    "qc_mandatory_bit_values": {
+      "MOD11A1.A2020183.h21v07.061.2021012102445__QC_Day.tif": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "MOD11A1.A2020183.h21v07.061.2021012102445__QC_Night.tif": [
+        1,
+        2,
+        3
+      ]
+    },
+    "scale_formula": "degrees_celsius = encoded_value * 0.02 - 273.15; encoded fill/values below 7500 excluded",
+    "status": "PARTIAL",
+    "limitation": "One daily Terra tile (2020-07-01) validates MOD11A1 V061 decoding; the full daily historical tile set is not local."
+  },
+  "nasa_power": {
+    "file_count": 12,
+    "ignored_connector_trial_files": [
+      "raw\\temperature\\nasa_power\\nasa_power_daily_t2m_20250101_20251231_somalia_tile01.csv"
+    ],
+    "rows": 591300,
+    "parameters": [
+      "T2M",
+      "T2M_MAX",
+      "T2M_MIN"
+    ],
+    "temporal_start": "2025-01-01",
+    "temporal_end": "2025-12-31",
+    "unique_grid_points": 540,
+    "missing_or_fill_values": 0,
+    "units": "degrees Celsius",
+    "status": "PASS",
+    "role": "Legacy 2025 regional API validation archive; superseded for production by the 2000-2025 deduplicated district-cell history."
+  },
+  "nasa_power_history": {
+    "status": "PASS",
+    "source": "NASA POWER Release 10; MERRA-2/GEOS",
+    "raw_file_count": 72,
+    "parameters": [
+      "GWETROOT",
+      "GWETTOP",
+      "T2M",
+      "T2M_MAX",
+      "T2M_MIN"
+    ],
+    "provider_api_versions": [
+      "v2.9.7"
+    ],
+    "provider_source_tags": [
+      "MERRA2",
+      "POWER"
+    ],
+    "provider_reported_units": {
+      "T2M": "C",
+      "T2M_MAX": "C",
+      "T2M_MIN": "C",
+      "GWETTOP": "1",
+      "GWETROOT": "1"
+    },
+    "temporal_start": "2000-01-01",
+    "temporal_end": "2025-12-31",
+    "expected_days_per_source_cell": 9497,
+    "districts": 91,
+    "unique_source_grid_cells": 72,
+    "missing_values_by_source_cell": {
+      "T2M_MIN": 0,
+      "GWETTOP": 0,
+      "T2M_MAX": 0,
+      "T2M": 0,
+      "GWETROOT": 0
+    },
+    "invalid_files": [],
+    "daily_rows": 864227,
+    "dekadal_rows": 85176,
+    "temperature_role": "Primary production historical 2 m air-temperature source.",
+    "wetness_role": "Primary historical antecedent-wetness substitute; relative modeled wetness, not SMAP volumetric soil moisture."
+  },
+  "ipc_geographic_mapping": {
+    "status": "PASS_WITH_DOCUMENTED_AMBIGUITY",
+    "ipc_features": 107,
+    "mapping_rows": 362,
+    "geometry_counts": {
+      "MultiPolygon": 18,
+      "Point": 63,
+      "Polygon": 26
+    },
+    "mapping_type_counts": {
+      "boundary_sliver_preserved": 86,
+      "polygon_overlap_multi_district": 213,
+      "reference_point_within_district_not_area_mapping": 63
+    },
+    "polygon_multi_district": 44,
+    "polygon_ambiguous": 44,
+    "polygon_coverage_pct": {
+      "minimum": 91.88174746618381,
+      "maximum": 100.00000000000014,
+      "mean": 99.58964485885116
+    },
+    "point_container_match_counts": {
+      "1": 63
+    },
+    "best_supported_snapshot_period": {
+      "date_of_analysis": "Apr 2026",
+      "validity_period": "current",
+      "from": "2026-04-01",
+      "to": "2026-06-30",
+      "title_match_count": 107,
+      "population_match_count": 107,
+      "phase_value_match_count": 472,
+      "phase_value_comparison_count": 535,
+      "geojson_feature_count": 107
+    },
+    "validation_checks": {
+      "every_source_feature_has_mapping_record": true,
+      "point_rows_have_blank_area_metrics": true,
+      "polygon_ipc_overlap_percentages_in_range": true,
+      "polygon_district_overlap_percentages_in_range": true,
+      "all_polygon_features_intersect_at_least_one_district": true,
+      "all_point_features_have_exactly_one_container": true
+    },
+    "wfp_banadir": {
+      "provider_admin2_value": "Banadir",
+      "price_rows": 1944,
+      "price_market_ids": [
+        "2104",
+        "6634"
+      ],
+      "registry_markets": 10,
+      "point_resolved_markets": 10,
+      "quarantined_markets": 0,
+      "conclusion": "HDX/WFP encodes Banadir as #adm2+name, but it duplicates admin1 and does not name a canonical district. Preserve and quarantine that source label; use market coordinates for a separate point-to-district relationship without overwriting admin2."
+    },
+    "outputs": [
+      "C:\\Users\\hp\\Desktop\\Somalia Ai\\data\\processed\\food_security\\ipc_geographic_mapping.csv",
+      "C:\\Users\\hp\\Desktop\\Somalia Ai\\data\\processed\\food_security\\ipc_geographic_mapping.json",
+      "C:\\Users\\hp\\Desktop\\Somalia Ai\\data\\processed\\market_prices\\wfp_banadir_geographic_resolution.csv",
+      "C:\\Users\\hp\\Desktop\\Somalia Ai\\docs\\ipc-mapping-methodology.md"
+    ]
+  },
+  "geography": {
+    "crosswalk_rows": 218,
+    "unresolved_rows": 1,
+    "crosswalk_path": "data/metadata/geographic_crosswalk.csv"
+  }
+}

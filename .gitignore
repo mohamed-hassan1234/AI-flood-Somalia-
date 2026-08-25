@@ -1,0 +1,29 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.py[cod]
+node_modules/
+dist/
+playwright-report/
+test-results/
+.coverage
+*.log
+*.db
+*.egg-info/
+*.tsbuildinfo
+
+# Reproducible Phase 01 historical climate payloads and generated tables.
+# Keep manifests, scripts, validation reports, and documentation in version control.
+data/raw/climate/nasa_power_merra2/*.json
+data/processed/climate/*.csv.gz
+data/processed/rainfall/chirps_v3_daily_district/*.csv
+data/processed/rainfall/chirps_v3_daily_district_*.csv
+data/processed/rainfall/chirps_v3_dekad_district_*.csv
+data/processed/rainfall/chirps_v3_monthly_district_*.csv
+data/processed/rainfall/chirps_v3_seasonal_district_*.csv
+data/processed/vegetation/mod13q1_v061_district_*.csv
+data/processed/vegetation/mod13q1_v061_district/
+data/metadata/mod13q1_historical_sources.json

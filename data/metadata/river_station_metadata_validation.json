@@ -1,0 +1,84 @@
+{
+  "validated_at": "2026-08-25T13:32:14.444619+00:00",
+  "station_csv_count": 5,
+  "station_json_count": 5,
+  "expected_station_codes": [
+    "JB001",
+    "JB009",
+    "SH001",
+    "SH002",
+    "SH004"
+  ],
+  "metadata_station_codes": [
+    "JB001",
+    "JB009",
+    "SH001",
+    "SH002",
+    "SH004"
+  ],
+  "observation_station_codes": [
+    "JB001",
+    "JB009",
+    "SH001",
+    "SH002",
+    "SH004"
+  ],
+  "observation_rows": 87848,
+  "all_expected_metadata_codes_present": true,
+  "all_observation_codes_have_metadata": true,
+  "csv_json_station_codes_match": true,
+  "spatial_exception_count": 1,
+  "station_checks": [
+    {
+      "station_code": "SH001",
+      "coordinate_range_valid": true,
+      "point_intersects_canonical_district": true,
+      "nearest_project_district_id": "SO2001",
+      "nearest_project_district_name": "Belet Weyne",
+      "distance_to_nearest_project_district_m": 0.0,
+      "threshold_order_valid": true,
+      "official_source_hosts_valid": true
+    },
+    {
+      "station_code": "SH002",
+      "coordinate_range_valid": true,
+      "point_intersects_canonical_district": true,
+      "nearest_project_district_id": "SO2002",
+      "nearest_project_district_name": "Bulo Burto",
+      "distance_to_nearest_project_district_m": 0.0,
+      "threshold_order_valid": true,
+      "official_source_hosts_valid": true
+    },
+    {
+      "station_code": "SH004",
+      "coordinate_range_valid": true,
+      "point_intersects_canonical_district": true,
+      "nearest_project_district_id": "SO2101",
+      "nearest_project_district_name": "Jowhar",
+      "distance_to_nearest_project_district_m": 0.0,
+      "threshold_order_valid": true,
+      "official_source_hosts_valid": true
+    },
+    {
+      "station_code": "JB001",
+      "coordinate_range_valid": true,
+      "point_intersects_canonical_district": true,
+      "nearest_project_district_id": "SO2606",
+      "nearest_project_district_name": "Luuq",
+      "distance_to_nearest_project_district_m": 0.0,
+      "threshold_order_valid": true,
+      "official_source_hosts_valid": true
+    },
+    {
+      "station_code": "JB009",
+      "coordinate_range_valid": true,
+      "point_intersects_canonical_district": false,
+      "nearest_project_district_id": "SO2605",
+      "nearest_project_district_name": "Doolow",
+      "distance_to_nearest_project_district_m": 1252.181,
+      "threshold_order_valid": true,
+      "official_source_hosts_valid": true
+    }
+  ],
+  "passed": true
+}

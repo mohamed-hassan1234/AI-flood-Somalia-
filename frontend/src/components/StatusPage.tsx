@@ -1,0 +1,1 @@
+export function StatusPage({eyebrow,title,description}:{eyebrow:string;title:string;description:string}){return <main><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><p className="lead">{description}</p><div className="empty"><b>No approved records available</b><p>Connect an authorized source or complete the governed workflow to populate this view.</p></div></main>}

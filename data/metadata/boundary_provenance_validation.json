@@ -1,0 +1,63 @@
+{
+  "validated_at": "2026-08-25T13:32:15.716336+00:00",
+  "archive": "data/som_admin_boundaries.geojson.zip",
+  "levels": {
+    "ADM0": {
+      "member": "som_admin0.geojson",
+      "feature_count": 1,
+      "versions": [
+        "v03"
+      ],
+      "valid_on": [
+        "2025-01-08"
+      ],
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+      }
+    },
+    "ADM1": {
+      "member": "som_admin1.geojson",
+      "feature_count": 18,
+      "versions": [
+        "v03"
+      ],
+      "valid_on": [
+        "2025-01-08"
+      ],
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+      }
+    },
+    "ADM2": {
+      "member": "som_admin2.geojson",
+      "feature_count": 91,
+      "versions": [
+        "v03"
+      ],
+      "valid_on": [
+        "2025-01-08"
+      ],
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+      }
+    }
+  },
+  "checks": {
+    "feature_counts_match": true,
+    "embedded_version_match": true,
+    "embedded_valid_on_match": true,
+    "official_source_is_hdx": true,
+    "local_files_not_replaced": true,
+    "unknown_download_date_preserved": true
+  },
+  "passed": true
+}

@@ -1,0 +1,18 @@
+{
+  "dataset": "MOD13Q1 V061 Terra district time-series",
+  "start": "2015-01-17",
+  "end": "2015-01-17",
+  "periods": 1,
+  "items": 7,
+  "districts": 91,
+  "rows": 91,
+  "missing_district_period_rows": 7,
+  "minimum_valid_pixel_fraction": 0.0,
+  "source_resolution": "250m",
+  "derived_sampling_resolution": "approximately 1km via aligned nearest-neighbour COG overview",
+  "temporal_resolution": "16-day composite",
+  "scale": 0.0001,
+  "qa_rule": "pixel_reliability=0 AND MODLAND_QA(bits0-1)=0 AND VI range -2000..10000",
+  "sha256": "7609255d4d28bd99db3466042a6864823b1a39f38c0d5dd189184b3093340c8e",
+  "status": "PARTIAL"
+}

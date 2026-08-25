@@ -1,0 +1,32 @@
+{
+  "local_files": [
+    "data/som_admin_boundaries.geojson.zip",
+    "data/som_admin_boundaries.xlsx"
+  ],
+  "dataset_title": "Somalia - Subnational Administrative Boundaries (COD-AB)",
+  "publisher": "OCHA Somalia",
+  "distributor": "Humanitarian Data Exchange (HDX)",
+  "official_dataset_url": "https://data.humdata.org/dataset/cod-ab-som",
+  "authoritative_mirror_metadata_url": "https://sodma-dev.okfn.org/dataset/cod-ab-som",
+  "embedded_version": "v03",
+  "embedded_valid_on": "2025-01-08",
+  "provider_review_date": "2024-12",
+  "provider_data_last_updated": "2025-01-15",
+  "license": "CC BY IGO",
+  "crs": "OGC CRS84 / WGS 84 longitude-latitude (EPSG:4326 semantics)",
+  "admin_levels": [
+    "ADM0 country",
+    "ADM1 region",
+    "ADM2 district"
+  ],
+  "feature_counts": {
+    "ADM0": 1,
+    "ADM1": 18,
+    "ADM2": 91
+  },
+  "download_date": null,
+  "local_file_modified_at": "2026-08-25",
+  "match_method": "Authoritative metadata match using dataset title, 18 ADM1 and 91 ADM2 feature counts, PCodes, operational-zone layers, embedded valid_on=2025-01-08, and embedded version=v03.",
+  "match_limitation": "The local GeoJSON archive was renamed and its original download record is absent. It was not asserted as byte-identical to a current HDX distribution; the download date is therefore unknown. Local filesystem modification time is recorded separately and is not represented as the download date.",
+  "replacement_performed": false
+}

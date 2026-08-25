@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "downloads": {
+    "raw/market_prices/wfp_food_prices_som.csv": {
+      "source_url": "https://data.humdata.org/dataset/26727d1b-af49-4323-9215-c2ac479abb87/resource/39614bfb-0f9c-4800-8997-e68e41a38ced/download/wfp_food_prices_som.csv",
+      "size_bytes": 5199326,
+      "sha256": "817e20e14b557a8fd525fbd009a25a187a1031498e47e14d8bd8caa482ff977e",
+      "recorded_at": "2026-08-25T12:00:29.012772+00:00",
+      "disposition": "existing"
+    },
+    "raw/market_prices/wfp_markets_som.csv": {
+      "source_url": "https://data.humdata.org/dataset/26727d1b-af49-4323-9215-c2ac479abb87/resource/bf3725e2-cbb5-4dc2-8d6a-2f2f1c6ef855/download/wfp_markets_som.csv",
+      "size_bytes": 6880,
+      "sha256": "011189e09e7d07402a831520f1e82a4ed0eb6fc1188f5f2ac0633f116e8755b8",
+      "recorded_at": "2026-08-25T12:00:29.059686+00:00",
+      "disposition": "existing"
+    },
+    "raw/food_security/ipc_som.geojson": {
+      "source_url": "https://data.humdata.org/dataset/26cac16a-98cd-4c4e-9353-40bd423302c0/resource/1c8d0767-78cb-422f-96ee-fe3aa7299e1e/download/ipc_som.geojson",
+      "size_bytes": 299942,
+      "sha256": "e519c5c85aa31632ee58d330136979566e4b06ed40be41dbac6a2586ac3cf588",
+      "recorded_at": "2026-08-25T12:00:32.258235+00:00",
+      "disposition": "existing"
+    },
+    "raw/food_security/ipc_som_national_long.csv": {
+      "source_url": "https://data.humdata.org/dataset/26cac16a-98cd-4c4e-9353-40bd423302c0/resource/0205b347-e64b-4987-bd70-38f8edff452b/download/ipc_som_national_long.csv",
+      "size_bytes": 27423,
+      "sha256": "cc313750f82b812f0db0064b82a4185df49cdfef26e333b3edd6aa53059a78f6",
+      "recorded_at": "2026-08-25T12:00:32.306438+00:00",
+      "disposition": "existing"
+    },
+    "raw/food_security/ipc_som_level1_long.csv": {
+      "source_url": "https://data.humdata.org/dataset/26cac16a-98cd-4c4e-9353-40bd423302c0/resource/fa87ad6b-d8f8-41d7-9f86-f6b46a434fdf/download/ipc_som_level1_long.csv",
+      "size_bytes": 501416,
+      "sha256": "d50c07c17cbf007b95de97206efe397beaabe64917e812187fdfc7ffa9e1f95c",
+      "recorded_at": "2026-08-25T12:00:32.352883+00:00",
+      "disposition": "existing"
+    },
+    "raw/food_security/ipc_som_area_long.csv": {
+      "source_url": "https://data.humdata.org/dataset/26cac16a-98cd-4c4e-9353-40bd423302c0/resource/80be59cd-6d1d-423f-9114-e2fb507fd257/download/ipc_som_area_long.csv",
+      "size_bytes": 6342750,
+      "sha256": "0866cb7ddc005ffe8ff7727b5606b45556065d224ff058737b73f2b8c0d0233f",
+      "recorded_at": "2026-08-25T12:00:32.411014+00:00",
+      "disposition": "existing"
+    },
+    "raw/population/som_pop_2025_CN_100m_R2025A_v1.tif": {
+      "source_url": "https://data.worldpop.org/GIS/Population/Global_2015_2030/R2025A/2025/SOM/v1/100m/constrained/som_pop_2025_CN_100m_R2025A_v1.tif",
+      "size_bytes": 16149837,
+      "sha256": "24dae459da35936556678d1e992b3846af70902489f07e7a38f3bbb601676dd0",
+      "recorded_at": "2026-08-25T12:00:36.159023+00:00",
+      "disposition": "existing"
+    },
+    "raw/vegetation/modis_v061_sample/MOD13Q1.A2026193.h22v07.061.2026210035938__250m_16_days_NDVI.tif": {
+      "source_url": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/07/2026193/MOD13Q1.A2026193.h22v07.061.2026210035938_250m_16_days_NDVI.tif",
+      "size_bytes": 31592670,
+      "sha256": "f9973952739fcfed7f6f2a175032aab0372584e0f1528a0fddf9308c954c6aa7",
+      "recorded_at": "2026-08-25T12:17:03.602492+00:00",
+      "disposition": "existing"
+    },
+    "raw/vegetation/modis_v061_sample/MOD13Q1.A2026193.h22v07.061.2026210035938__250m_16_days_EVI.tif": {
+      "source_url": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/07/2026193/MOD13Q1.A2026193.h22v07.061.2026210035938_250m_16_days_EVI.tif",
+      "size_bytes": 30673022,
+      "sha256": "36bc95bd5d28ea0041698367d23670d3e6cc09fbfa1c3cfce19f03c2416bd813",
+      "recorded_at": "2026-08-25T12:17:05.659680+00:00",
+      "disposition": "existing"
+    },
+    "raw/vegetation/modis_v061_sample/MOD13Q1.A2026193.h22v07.061.2026210035938__250m_16_days_VI_Quality.tif": {
+      "source_url": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/07/2026193/MOD13Q1.A2026193.h22v07.061.2026210035938_250m_16_days_VI_Quality.tif",
+      "size_bytes": 1708087,
+      "sha256": "baca0b19825e80b8813a12705dbfa4774c42749a15d9ce83deed666b86c37185",
+      "recorded_at": "2026-08-25T12:17:07.553214+00:00",
+      "disposition": "existing"
+    },
+    "raw/vegetation/modis_v061_sample/MOD13Q1.A2026193.h22v07.061.2026210035938__250m_16_days_pixel_reliability.tif": {
+      "source_url": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/07/2026193/MOD13Q1.A2026193.h22v07.061.2026210035938_250m_16_days_pixel_reliability.tif",
+      "size_bytes": 430787,
+      "sha256": "b1f8a9d9e38fb7f5a669330d05b3eafce9ebf2ee6b515eb61605b050f05aeb94",
+      "recorded_at": "2026-08-25T12:17:09.795946+00:00",
+      "disposition": "existing"
+    },
+    "raw/temperature/modis_v061_sample/MOD11A1.A2020183.h21v07.061.2021012102445__LST_Day_1km.tif": {
+      "source_url": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD11A1/21/07/2020183/MOD11A1.A2020183.h21v07.061.2021012102445_LST_Day_1km.tif",
+      "size_bytes": 2089138,
+      "sha256": "f6ad818a5dbafe2f849e8abeaf9529f0b77a9711ae01e12e7336f2de5d70e8f8",
+      "recorded_at": "2026-08-25T12:17:21.579399+00:00",
+      "disposition": "existing"
+    },
+    "raw/temperature/modis_v061_sample/MOD11A1.A2020183.h21v07.061.2021012102445__QC_Day.tif": {
+      "source_url": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD11A1/21/07/2020183/MOD11A1.A2020183.h21v07.061.2021012102445_QC_Day.tif",
+      "size_bytes": 194172,
+      "sha256": "02f0e0266ac4f4cad17244d60951ed318d02d32ef37bb55a01d3fad3d01d9edb",
+      "recorded_at": "2026-08-25T12:17:22.596524+00:00",
+      "disposition": "existing"
+    },
+    "raw/temperature/modis_v061_sample/MOD11A1.A2020183.h21v07.061.2021012102445__LST_Night_1km.tif": {
+      "source_url": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD11A1/21/07/2020183/MOD11A1.A2020183.h21v07.061.2021012102445_LST_Night_1km.tif",
+      "size_bytes": 423300,
+      "sha256": "a92a49b995f175e8de66342506250b617f78a802b4e3d367a721734168f9fbdb",
+      "recorded_at": "2026-08-25T12:17:23.623684+00:00",
+      "disposition": "existing"
+    },
+    "raw/temperature/modis_v061_sample/MOD11A1.A2020183.h21v07.061.2021012102445__QC_Night.tif": {
+      "source_url": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD11A1/21/07/2020183/MOD11A1.A2020183.h21v07.061.2021012102445_QC_Night.tif",
+      "size_bytes": 79342,
+      "sha256": "15f3fab38c6597058da20bdb16f001c61841e729df10a6a82d15c374b1f30df0",
+      "recorded_at": "2026-08-25T12:17:24.649285+00:00",
+      "disposition": "existing"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_20250101_20251231_somalia_tile01.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=-2.0&latitude-max=8.0&longitude-min=41.0&longitude-max=51.0&parameters=T2M&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 3188615,
+      "sha256": "e049d90fbb1bf8549292a7e6b9611efaeffba9007cdfc038c8a420aa4d6f946b",
+      "recorded_at": "2026-08-25T12:06:00.451565+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_20250101_20251231_somalia_tile01_m2p000_41p000_5p250_46p500.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=-2.0&latitude-max=5.25&longitude-min=41.0&longitude-max=46.5&parameters=T2M&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1302543,
+      "sha256": "fc0ef208e5dc114eef7cd96f16a3d24edbc9439bc77b7e803e5666a363f43026",
+      "recorded_at": "2026-08-25T12:07:25.057946+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_20250101_20251231_somalia_tile02_m2p000_46p500_5p250_52p000.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=-2.0&latitude-max=5.25&longitude-min=46.5&longitude-max=52.0&parameters=T2M&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1308098,
+      "sha256": "504bf68afee6e658faf5a22db2f7304e18cd68ce11810ea7ca22b94806a37463",
+      "recorded_at": "2026-08-25T12:07:28.883923+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_20250101_20251231_somalia_tile03_5p250_41p000_12p500_46p500.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=5.25&latitude-max=12.5&longitude-min=41.0&longitude-max=46.5&parameters=T2M&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1243409,
+      "sha256": "fb6547ba34549c32cc61988d5b7e28392ba9bbc6edd771414bbdb8bba1f0ef1c",
+      "recorded_at": "2026-08-25T12:07:33.149862+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_20250101_20251231_somalia_tile04_5p250_46p500_12p500_52p000.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=5.25&latitude-max=12.5&longitude-min=46.5&longitude-max=52.0&parameters=T2M&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1248904,
+      "sha256": "b72939841518283fa532d8b13378fd0de5415c0dc63a85ff55c8e3377fe4f01a",
+      "recorded_at": "2026-08-25T12:07:37.460926+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_max_20250101_20251231_somalia_tile01_m2p000_41p000_5p250_46p500.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=-2.0&latitude-max=5.25&longitude-min=41.0&longitude-max=46.5&parameters=T2M_MAX&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1302652,
+      "sha256": "d60a3be5693b1cc20f289ca1a43de0a0767f773402f8272fb8bf3653ac1245ce",
+      "recorded_at": "2026-08-25T12:07:41.976673+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_max_20250101_20251231_somalia_tile02_m2p000_46p500_5p250_52p000.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=-2.0&latitude-max=5.25&longitude-min=46.5&longitude-max=52.0&parameters=T2M_MAX&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1308167,
+      "sha256": "b03167de168107776d9852d44ac1dc00b95f7083de856ce514acac6931905202",
+      "recorded_at": "2026-08-25T12:07:46.259374+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_max_20250101_20251231_somalia_tile03_5p250_41p000_12p500_46p500.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=5.25&latitude-max=12.5&longitude-min=41.0&longitude-max=46.5&parameters=T2M_MAX&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1243455,
+      "sha256": "f44ccbb594a8a9f573a90907e7a90932d24b5dcbbf5f644ea5e361c3e4052ce8",
+      "recorded_at": "2026-08-25T12:07:50.548540+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_max_20250101_20251231_somalia_tile04_5p250_46p500_12p500_52p000.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=5.25&latitude-max=12.5&longitude-min=46.5&longitude-max=52.0&parameters=T2M_MAX&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1248904,
+      "sha256": "b096a226d34e8d095bfa15aff083c3c42382a1e2550987a7fc508219898c6a86",
+      "recorded_at": "2026-08-25T12:07:53.885129+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_min_20250101_20251231_somalia_tile01_m2p000_41p000_5p250_46p500.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=-2.0&latitude-max=5.25&longitude-min=41.0&longitude-max=46.5&parameters=T2M_MIN&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1302682,
+      "sha256": "4ba48a8f2953ab765522c5c7e4666f0f6f796dda84aa6b0f9ab8363c031cf427",
+      "recorded_at": "2026-08-25T12:07:57.733793+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_min_20250101_20251231_somalia_tile02_m2p000_46p500_5p250_52p000.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=-2.0&latitude-max=5.25&longitude-min=46.5&longitude-max=52.0&parameters=T2M_MIN&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1308151,
+      "sha256": "631006df351d757d626f3896155931634ed69f4e8f5e656cf6199655fdd5a9ee",
+      "recorded_at": "2026-08-25T12:08:02.103700+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_min_20250101_20251231_somalia_tile03_5p250_41p000_12p500_46p500.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=5.25&latitude-max=12.5&longitude-min=41.0&longitude-max=46.5&parameters=T2M_MIN&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1243335,
+      "sha256": "58167f2fffbc54745e43efee2f1a930eb28c65542571235a96d6ce9db5132c71",
+      "recorded_at": "2026-08-25T12:08:07.384087+00:00",
+      "disposition": "downloaded"
+    },
+    "raw/temperature/nasa_power/nasa_power_daily_t2m_min_20250101_20251231_somalia_tile04_5p250_46p500_12p500_52p000.csv": {
+      "source_url": "https://power.larc.nasa.gov/api/temporal/daily/regional?latitude-min=5.25&latitude-max=12.5&longitude-min=46.5&longitude-max=52.0&parameters=T2M_MIN&community=AG&start=20250101&end=20251231&format=CSV&time-standard=UTC",
+      "size_bytes": 1248915,
+      "sha256": "e13fdc18bb201e46645f6fd83be3493d4a05d15b5bd430f0f4d513111091d787",
+      "recorded_at": "2026-08-25T12:08:12.915042+00:00",
+      "disposition": "downloaded"
+    }
+  }
+}

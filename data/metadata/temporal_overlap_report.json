@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-08-25T13:10:48.474080+00:00",
+  "principle": "Windows below use actual local data, not provider-advertised archive coverage.",
+  "drought_model": {
+    "status": "BLOCKED",
+    "candidate_window": {
+      "start": "2015-01-01",
+      "end": "2025-12-31",
+      "dekads": 396
+    },
+    "datasets": [
+      "CHIRPS v3 rnl p25",
+      "MOD13Q1 V061",
+      "NASA POWER GWETTOP/GWETROOT",
+      "NASA POWER temperature"
+    ]
+  },
+  "flood_model": {
+    "status": "BLOCKED",
+    "candidate_window": {
+      "start": "2015-01-01",
+      "end": "2025-12-31",
+      "days": 4018,
+      "dekads": 396
+    },
+    "datasets": [
+      "CHIRPS v3 rnl p25",
+      "five FAO SWALIM gauges",
+      "NASA POWER antecedent wetness",
+      "NASA POWER temperature"
+    ]
+  },
+  "food_security_model": {
+    "status": "BLOCKED",
+    "candidate_window": {
+      "start": "2017-01-01",
+      "end": "2025-12-31",
+      "dekads": 324
+    },
+    "datasets": [
+      "CHIRPS v3 rnl p25",
+      "MOD13Q1 V061",
+      "NASA POWER temperature",
+      "WFP markets",
+      "IPC native analysis areas"
+    ]
+  },
+  "alignment_strategy": "docs/temporal-alignment-strategy.md"
+}

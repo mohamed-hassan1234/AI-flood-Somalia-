@@ -1,0 +1,144 @@
+market_id,market,countryiso3,admin1,admin2,latitude,longitude
+1412,Berbera,SOM,Woqooyi Galbeed,Berbera,10.44,45.01
+1413,Borama,SOM,Awdal,Borama,9.94,43.18
+1414,Bossaso,SOM,Bari,Bossaso,11.26,49.18
+1415,Burco,SOM,Togdheer,Burco,9.53,45.54
+1416,Ceerigaabo,SOM,Sanaag,Ceerigaabo,10.62,47.37
+1417,Gaalkacyo,SOM,Mudug,Gaalkacyo,6.77,47.42
+1418,Garowe,SOM,Nugaal,Garoowe,8.4,48.48
+1419,Hargeysa,SOM,Woqooyi Galbeed,Hargeysa,9.56,44.07
+1420,Qardho,SOM,Bari,Qardho,9.5,49.09
+1894,Beletweyne,SOM,Hiraan,Belet Weyne,4.74,45.2
+2096,Owdweyne,SOM,Togdheer,Owdweyne,9.41,45.06
+2097,Jariiban,SOM,Mudug,Jariiban,7.21,48.85
+2098,Eyl,SOM,Nugaal,Eyl,7.98,49.82
+2099,Buloburto,SOM,Hiraan,Bulo Burto,3.85,45.57
+2100,Dhuusamarreeb,SOM,Galgaduud,Dhuusamarreeb,5.54,46.39
+2101,Wadajir,SOM,,,,
+2102,Doolow,SOM,Gedo,Doolow,4.16,42.08
+2103,Xudur,SOM,Bakool,Xudur,4.12,43.89
+2104,Karaan,SOM,Banadir,Banadir,2.07,45.39
+2105,Kismayo,SOM,Juba Hoose,Kismaayo,-0.36,42.55
+2106,Afmadow,SOM,Juba Hoose,Afmadow,0.51,42.07
+2107,Afgooye,SOM,Shabelle Hoose,Afgooye,2.14,45.12
+2108,Jowhar,SOM,Shabelle Dhexe,Jowhar,2.78,45.5
+2109,Balcad,SOM,Shabelle Dhexe,Balcad,2.36,45.39
+2110,Baidoa,SOM,Bay,Baydhaba,3.12,43.65
+2570,Buale,SOM,Juba Dhexe,Bu'aale,1.08,42.58
+2575,Dinsoor,SOM,Bay,Diinsoor,2.41,42.98
+2590,Laas Caanood,SOM,Sool,Laas Caanood,8.48,47.36
+2597,Qorioley,SOM,Shabelle Hoose,Qoryooley,1.78,44.53
+3081,Waajid,SOM,Bakool,Waajid,3.81,43.25
+3082,Caluula,SOM,Bari,Caluula,11.96,50.76
+4631,Marka (Shabelle Hoose),SOM,Shabelle Hoose,Marka,1.71,44.76
+6584,Baki,SOM,Awdal,Baki,10.27,43.48
+6585,Lughaye,SOM,Awdal,Lughaye,10.68,43.94
+6586,Zeylac,SOM,Awdal,Zeylac,11.35,43.47
+6588,Gebiley,SOM,Woqooyi Galbeed,Gebiley,9.71,43.62
+6589,Sheikh,SOM,Togdheer,Sheikh,9.93,45.19
+6591,Caynabo,SOM,Sool,Caynabo,8.95,46.41
+6592,Taleex,SOM,Sool,Taleex,9.15,48.42
+6593,Xudun,SOM,Sool,Xudun,9.15,47.48
+6594,Ceel Afweyn,SOM,Sanaag,Ceel Afweyn,9.93,47.22
+6595,Laasqoray,SOM,Sanaag,Laasqoray,11.16,48.19
+6596,Bandarbayla,SOM,Bari,Bandarbeyla,9.5,50.81
+6597,Iskushuban,SOM,Bari,Iskushuban,10.28,50.23
+6598,Qandala,SOM,Bari,Qandala,11.47,49.87
+6599,Burtinle,SOM,Nugaal,Burtinle,7.64,47.83
+6600,Galdogob,SOM,Mudug,Galdogob,7.06,47.13
+6601,Buuhoodle,SOM,Togdheer,Buuhoodle,8.25,46.32
+6602,Hobyo,SOM,Mudug,Hobyo,5.35,48.53
+6603,Harardheere,SOM,Mudug,Xarardheere,4.65,47.86
+6604,Cabudwaaq,SOM,Galgaduud,Cabudwaaq,6.24,46.31
+6605,Cadaado,SOM,Galgaduud,Cadaado,6.15,46.63
+6606,Ceel Buur,SOM,Galgaduud,Ceel Buur,4.68,46.62
+6607,Ceel Dheer,SOM,Galgaduud,Ceel Dheer,3.85,47.18
+6608,Jalalaqsi,SOM,Hiraan,Jalalaqsi,3.38,45.6
+6609,Adan Jabaal,SOM,Shabelle Dhexe,Adan Yabaal,3.78,46.25
+6610,Baardheere,SOM,Gedo,Baardheere,2.34,42.29
+6611,Cadale,SOM,Shabelle Dhexe,Cadale,2.76,46.32
+6612,Baraawe,SOM,Shabelle Hoose,Baraawe,1.11,44.03
+6613,Kurtunwaarey,SOM,Shabelle Hoose,Kurtunwaarey,1.61,44.33
+6614,Belet Xaawo,SOM,Gedo,Belet Xaawo,3.78,41.89
+6615,Sablaale,SOM,Shabelle Hoose,Sablaale,1.25,43.8
+6616,Ceel Waaq,SOM,Gedo,Ceel Waaq,2.79,41
+6617,Wanla Weyn,SOM,Shabelle Hoose,Wanla Weyn,2.62,44.89
+6618,Luuq,SOM,Gedo,Luuq,3.8,42.54
+6619,Buur Hakaba,SOM,Bay,Buur Hakaba,2.8,44.08
+6620,Bu'aale,SOM,Juba Dhexe,Bu'aale,1.24,42.57
+6621,Qansax Dheere,SOM,Bay,Qansax Dheere,2.87,43
+6622,Ceel Barde,SOM,Bakool,Ceel Barde,4.83,43.66
+6623,Jilib,SOM,Juba Dhexe,Jilib,0.49,42.77
+6624,Tayeeglow,SOM,Bakool,Tayeeglow,4.02,44.51
+6625,Rab Dhuure,SOM,Bakool,Rab Dhuure,4.35,43.16
+6626,Saakow,SOM,Juba Dhexe,Saakow,1.64,42.45
+6627,Garbahaarey,SOM,Gedo,Garbahaarey,3.33,42.22
+6628,Badhaadhe,SOM,Juba Hoose,Badhaadhe,-1.04,41.5
+6629,Jamaame,SOM,Juba Hoose,Jamaame,0.07,42.74
+6630,Boondheere,SOM,Banadir,Banadir,2.05,45.34
+6631,Cabdulcasiis,SOM,Banadir,Banadir,2.04,45.36
+6632,Daynile,SOM,Shabelle Hoose,Afgooye,2.07,45.28
+6633,Suuq Bocle,SOM,Shabelle Hoose,Afgooye,2.01,45.25
+6634,Bakaara,SOM,Banadir,Banadir,2.05,45.32
+6635,Suuqa Xoolaha,SOM,Banadir,Banadir,2.08,45.39
+6636,Seybiano,SOM,Shabelle Hoose,Afgooye,2.04,45.3
+6637,Shangaani,SOM,Banadir,Banadir,2.04,45.35
+6638,Suuqa Liberia/Suuqa Beerta,SOM,Banadir,Banadir,2.02,45.31
+6639,Xamar Jajab,SOM,Banadir,Banadir,2.03,45.33
+6640,Xamar Weyne,SOM,Banadir,Banadir,2.03,45.34
+6641,Suuq Bacaad,SOM,Banadir,Banadir,2.07,45.35
+6642,Kahda,SOM,Shabelle Hoose,Afgooye,2.05,45.24
+6643,Madina (Shabelle Hoose - Afgooye),SOM,Shabelle Hoose,Afgooye,2.02,45.28
+9807,Dhobley,SOM,Juba Hoose,Afmadow,0.41,41.01
+9808,Armo,SOM,Bari,Bossaso,10.58,49.06
+9809,Raskambooni,SOM,Juba Hoose,Badhaadhe,-1.64,41.59
+9810,Burgabo,SOM,Juba Hoose,Badhaadhe,-1.22,41.84
+9811,Baligubadle,SOM,Woqooyi Galbeed,Hargeysa,9.01,44
+9812,Abud Wak,SOM,Galgaduud,Cabudwaaq,6.15,46.4
+9813,Balanbale,SOM,Galgaduud,Cabudwaaq,6.2,46.55
+9814,Huurshe,SOM,Galgaduud,Cabudwaaq,6.19,46.46
+9815,Xerale,SOM,Galgaduud,Cabudwaaq,6.26,46.56
+9816,Baxdo,SOM,Galgaduud,Cadaado,5.79,47.23
+9817,Dhahar,SOM,Sanaag,Laasqoray,9.75,48.82
+9818,Guri-Ceel,SOM,Galgaduud,Dhuusamarreeb,5.3,45.88
+9819,Bacadwayne,SOM,Mudug,Hobyo,5.32,47.91
+9820,Saaxo,SOM,Mudug,Gaalkacyo,6.74,46.81
+9821,Hafun,SOM,Bari,Iskushuban,10.42,51.26
+9822,El Dibir,SOM,Mudug,Hobyo,5.89,48.35
+9823,Gawan,SOM,Mudug,Hobyo,5.31,48.3
+9824,Xin Barwaqo,SOM,Mudug,Hobyo,5.11,48.35
+9825,Yontoy,SOM,Juba Hoose,Kismaayo,-0.12,42.56
+9826,Buula Gaduud,SOM,Juba Hoose,Kismaayo,-0.08,42.57
+9827,Mahas,SOM,Hiraan,Bulo Burto,4.39,46.09
+9828,Mahaday,SOM,Shabelle Dhexe,Jowhar,2.97,45.53
+9829,Matabaan,SOM,Hiraan,Belet Weyne,5.2,45.53
+9830,Salaxleey,SOM,Woqooyi Galbeed,Hargeysa,9.03,44.21
+9831,Ufeyn,SOM,Bari,Bossaso,10.65,49.75
+10084,War-sheikh,SOM,Shabelle Dhexe,Balcad,2.3,45.8
+10102,Dangoroyo,SOM,Bari,Qardho,8.73,49.34
+10103,Badhan,SOM,Sanaag,Ceerigaabo,10.79,48.21
+10104,Afbarwaaqo,SOM,Mudug,Hobyo,6.5,48.78
+10105,Wisil,SOM,Mudug,Hobyo,5.43,48.12
+10106,Xerodhagaxley,SOM,Mudug,Hobyo,5.58,48.23
+10107,Laas Bur,SOM,Galgaduud,Cadaado,6.21,47.01
+10108,Berdale,SOM,Bay,Buur Hakaba,2.98,44.28
+10690,Rage Elle,SOM,Shabelle Dhexe,Balcad,2.57,45.75
+10691,Ceeldahir,SOM,Bari,Bossaso,10.63,49.06
+10692,Kalabayr,SOM,Bari,Bossaso,10.83,49.25
+10693,Cuun,SOM,Nugaal,Garoowe,8.83,48.89
+10694,Sunjiif,SOM,Nugaal,Garoowe,8.53,48.99
+10695,Kalabeyr,SOM,Nugaal,Burtinle,7.99,48.1
+10696,Yoombays,SOM,Nugaal,Garoowe,8.41,48.48
+10697,Bursalah,SOM,Mudug,Galdogob,7.17,47.24
+10698,Darusalam,SOM,Mudug,Galdogob,7.2,47.21
+10699,Beyra,SOM,Mudug,Gaalkacyo,6.95,47.32
+10700,Gacanafale,SOM,Mudug,Gaalkacyo,7.04,47.78
+10701,Bacaadweyn,SOM,Mudug,Galdogob,7.19,47.53
+10702,Agaaran,SOM,Mudug,Gaalkacyo,7.06,47.49
+10703,Harfo,SOM,Mudug,Gaalkacyo,7.35,47.62
+10704,Bandiradley,SOM,Mudug,Gaalkacyo,6.48,46.95
+10705,Bandarqaali,SOM,Mudug,Hobyo,6.7,47.83
+10706,Galinsoor,SOM,Galgaduud,Cadaado,6.43,46.71
+10707,Jilable,SOM,Mudug,Hobyo,6.42,47.84
+10708,Docol,SOM,Mudug,Gaalkacyo,6.43,47.49
+10709,Wargalo,SOM,Galgaduud,Cadaado,6.26,47.52

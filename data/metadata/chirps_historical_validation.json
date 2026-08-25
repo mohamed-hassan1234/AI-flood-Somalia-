@@ -1,0 +1,33 @@
+{
+  "dataset": "CHIRPS v3 daily final rnl p25 district time-series",
+  "start": "2015-01-01",
+  "end": "2025-12-31",
+  "expected_days": 4018,
+  "actual_days": 4018,
+  "districts": 91,
+  "daily_rows": 365638,
+  "dekad_rows": 36036,
+  "monthly_rows": 12012,
+  "seasonal_rows": 4004,
+  "missing_dates": [],
+  "missing_date_percentage": 0.0,
+  "minimum_valid_pixel_fraction": 0.5,
+  "missing_district_day_rows": 0,
+  "negative_rainfall_rows": 0,
+  "crs": "EPSG:4326",
+  "source_resolution": "0.25 degree",
+  "source_nodata": null,
+  "invalid_value_rule": "exclude non-finite and negative source values",
+  "source_url_template": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/p25/{YYYY}/chirps-v3.0.rnl.{YYYY.MM.DD}.tif",
+  "daily_sha256": "0da39c01b6cff4f965235cdae2f1270c3aaf096af46c962020505a4fde222bf9",
+  "dekad_sha256": "6eb12d83c0a110e29a159c3fe31304bdd03d0f6891e6e8746e7a4230dbb069ab",
+  "monthly_sha256": "a72bb6dc858215b8a49b6afe80c91dd324df0841988194aa26ac186e8377043a",
+  "seasonal_sha256": "8f3b802fc7a803d907e38ae13e6a44804681b9711963fcf0d2aacd9cd3db93b9",
+  "output_size_bytes": {
+    "daily": 101650755,
+    "dekad": 10479722,
+    "monthly": 3351375,
+    "seasonal": 952023
+  },
+  "status": "COMPLETE"
+}

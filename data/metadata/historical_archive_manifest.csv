@@ -1,0 +1,2 @@
+provider,dataset,version,source_url,local_path,reference_date,downloaded_at,size_bytes,checksum_sha256,status
+UCSB Climate Hazards Center,CHIRPS v3 daily final rnl p25 district archive,3.0,https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/p25/{YYYY}/chirps-v3.0.rnl.{YYYY.MM.DD}.tif,processed/rainfall/chirps_v3_dekad_district_2015-01-01_2025-12-31.csv,2015-01-01/2025-12-31,2026-08-25T13:59:20.318463+00:00,10479722,6eb12d83c0a110e29a159c3fe31304bdd03d0f6891e6e8746e7a4230dbb069ab,COMPLETE

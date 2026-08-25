@@ -1,0 +1,1026 @@
+{
+  "generated_at": "2026-08-25T13:06:15.258735+00:00",
+  "phase01_status": "PARTIAL",
+  "final_decision": "PHASE 01 NOT COMPLETE",
+  "models": {
+    "DROUGHT": {
+      "status": "BLOCKED",
+      "window": {
+        "start": "2015-01-01",
+        "end": "2025-12-31",
+        "calendar": "dekad"
+      },
+      "requirements": {
+        "boundaries": true,
+        "rainfall": false,
+        "temperature_and_antecedent_wetness": true,
+        "vegetation": false
+      }
+    },
+    "FLOOD": {
+      "status": "BLOCKED",
+      "window": {
+        "start": "2015-01-01",
+        "end": "2025-12-31",
+        "calendar": "daily plus dekad"
+      },
+      "requirements": {
+        "boundaries": true,
+        "rainfall": false,
+        "temperature_and_antecedent_wetness": true,
+        "river_observations_and_metadata": true
+      }
+    },
+    "FOOD_SECURITY": {
+      "status": "BLOCKED",
+      "window": {
+        "start": "2017-01-01",
+        "end": "2025-12-31",
+        "calendar": "dekad predictors; IPC assessment target"
+      },
+      "requirements": {
+        "boundaries": true,
+        "rainfall": false,
+        "temperature_and_antecedent_wetness": true,
+        "vegetation": false,
+        "ipc_geographic_interpretation": true,
+        "market_prices": true,
+        "banadir_quarantine_and_point_mapping": true
+      }
+    }
+  },
+  "acceptance_gate": [
+    {
+      "name": "boundaries_structural_and_metadata",
+      "passed": true,
+      "evidence": {
+        "validated_at": "2026-08-25T12:50:45.843536+00:00",
+        "archive": "data/som_admin_boundaries.geojson.zip",
+        "levels": {
+          "ADM0": {
+            "member": "som_admin0.geojson",
+            "feature_count": 1,
+            "versions": [
+              "v03"
+            ],
+            "valid_on": [
+              "2025-01-08"
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+              }
+            }
+          },
+          "ADM1": {
+            "member": "som_admin1.geojson",
+            "feature_count": 18,
+            "versions": [
+              "v03"
+            ],
+            "valid_on": [
+              "2025-01-08"
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+              }
+            }
+          },
+          "ADM2": {
+            "member": "som_admin2.geojson",
+            "feature_count": 91,
+            "versions": [
+              "v03"
+            ],
+            "valid_on": [
+              "2025-01-08"
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+              }
+            }
+          }
+        },
+        "checks": {
+          "feature_counts_match": true,
+          "embedded_version_match": true,
+          "embedded_valid_on_match": true,
+          "official_source_is_hdx": true,
+          "local_files_not_replaced": true,
+          "unknown_download_date_preserved": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "name": "historical_chirps",
+      "passed": false,
+      "evidence": {
+        "dataset": "CHIRPS v3 daily final rnl p25 district time-series",
+        "start": "2014-01-09",
+        "end": "2014-01-10",
+        "expected_days": 2,
+        "actual_days": 2,
+        "districts": 91,
+        "daily_rows": 182,
+        "dekad_rows": 91,
+        "missing_dates": [],
+        "minimum_valid_pixel_fraction": 0.5,
+        "missing_district_day_rows": 0,
+        "negative_rainfall_rows": 0,
+        "crs": "EPSG:4326",
+        "source_resolution": "0.25 degree",
+        "source_url_template": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/p25/{YYYY}/chirps-v3.0.rnl.{YYYY.MM.DD}.tif",
+        "daily_sha256": "8b46988b42a3f97fdd47ee0f5d9545c5844b98fe2f09964c5227a0699f9c77bc",
+        "dekad_sha256": "aaedde4f39984e1587d2efe796fe819bdf5b890ad93e9eae8bfc0da4f08a8c5a",
+        "status": "COMPLETE"
+      }
+    },
+    {
+      "name": "historical_mod13q1",
+      "passed": false,
+      "evidence": {
+        "dataset": "MOD13Q1 V061 Terra district time-series",
+        "start": "2015-01-17",
+        "end": "2015-01-17",
+        "periods": 1,
+        "items": 7,
+        "districts": 91,
+        "rows": 91,
+        "missing_district_period_rows": 7,
+        "minimum_valid_pixel_fraction": 0.0,
+        "source_resolution": "250m",
+        "derived_sampling_resolution": "approximately 1km via aligned nearest-neighbour COG overview",
+        "temporal_resolution": "16-day composite",
+        "scale": 0.0001,
+        "qa_rule": "pixel_reliability=0 AND MODLAND_QA(bits0-1)=0 AND VI range -2000..10000",
+        "sha256": "7609255d4d28bd99db3466042a6864823b1a39f38c0d5dd189184b3093340c8e",
+        "status": "PARTIAL"
+      }
+    },
+    {
+      "name": "historical_wetness_equivalent",
+      "passed": true,
+      "evidence": {
+        "validated_at": "2026-08-25T12:53:48.526368+00:00",
+        "status": "COMPLETE",
+        "source": "NASA POWER Release 10, MERRA-2/GEOS meteorology",
+        "period": {
+          "start": "20000101",
+          "end": "20251231",
+          "expected_days": 9497
+        },
+        "parameters": [
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN",
+          "GWETTOP",
+          "GWETROOT"
+        ],
+        "provider_reported_units": {
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C",
+          "GWETTOP": "1",
+          "GWETROOT": "1"
+        },
+        "geography": {
+          "district_count": 91,
+          "unique_source_grid_cells": 72,
+          "sampling": "nearest native source grid cell to each boundary reference point",
+          "source_grid_degrees": {
+            "latitude": 0.5,
+            "longitude": 0.625
+          }
+        },
+        "daily_rows": 864227,
+        "dekadal_rows": 85176,
+        "missing_values": {
+          "T2M": 0,
+          "T2M_MAX": 0,
+          "T2M_MIN": 0,
+          "GWETTOP": 0,
+          "GWETROOT": 0
+        },
+        "value_ranges": {
+          "T2M": {
+            "minimum": 12.0,
+            "maximum": 37.76
+          },
+          "T2M_MAX": {
+            "minimum": 19.39,
+            "maximum": 45.15
+          },
+          "T2M_MIN": {
+            "minimum": 4.86,
+            "maximum": 32.26
+          },
+          "GWETTOP": {
+            "minimum": 0.07,
+            "maximum": 1.0
+          },
+          "GWETROOT": {
+            "minimum": 0.2,
+            "maximum": 1.0
+          }
+        },
+        "outputs": {
+          "daily": "data/processed/climate/nasa_power_district_daily_20000101_20251231.csv.gz",
+          "dekadal": "data/processed/climate/nasa_power_district_dekadal_20000101_20251231.csv.gz",
+          "district_grid_mapping": "data/metadata/nasa_power_district_grid_mapping.csv"
+        },
+        "output_integrity": {
+          "daily": {
+            "size_bytes": 9926086,
+            "checksum_sha256": "f6c8890b7c484522d29873f0b8f0b4f4caa961176dbad3728e1b65cbe46e6f2b"
+          },
+          "dekadal": {
+            "size_bytes": 2478527,
+            "checksum_sha256": "bf3b67aa3556928876d5f604c8a36561b92144c6352c701cf5808507226bbe3b"
+          },
+          "district_grid_mapping": {
+            "size_bytes": 13745,
+            "checksum_sha256": "886a950db929e7337561697b695e62eea684da47b20efdbefe797a7aae72434b"
+          }
+        },
+        "scientific_limits": [
+          "GWETTOP and GWETROOT are modeled relative wetness indices, not SMAP volumetric soil moisture.",
+          "District values sample the nearest coarse source grid cell and are not polygon-area averages.",
+          "Near-real-time GEOS values can later be replaced by improved climate-quality MERRA-2 values."
+        ]
+      }
+    },
+    {
+      "name": "historical_temperature",
+      "passed": true,
+      "evidence": {
+        "validated_at": "2026-08-25T12:53:48.526368+00:00",
+        "status": "COMPLETE",
+        "source": "NASA POWER Release 10, MERRA-2/GEOS meteorology",
+        "period": {
+          "start": "20000101",
+          "end": "20251231",
+          "expected_days": 9497
+        },
+        "parameters": [
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN",
+          "GWETTOP",
+          "GWETROOT"
+        ],
+        "provider_reported_units": {
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C",
+          "GWETTOP": "1",
+          "GWETROOT": "1"
+        },
+        "geography": {
+          "district_count": 91,
+          "unique_source_grid_cells": 72,
+          "sampling": "nearest native source grid cell to each boundary reference point",
+          "source_grid_degrees": {
+            "latitude": 0.5,
+            "longitude": 0.625
+          }
+        },
+        "daily_rows": 864227,
+        "dekadal_rows": 85176,
+        "missing_values": {
+          "T2M": 0,
+          "T2M_MAX": 0,
+          "T2M_MIN": 0,
+          "GWETTOP": 0,
+          "GWETROOT": 0
+        },
+        "value_ranges": {
+          "T2M": {
+            "minimum": 12.0,
+            "maximum": 37.76
+          },
+          "T2M_MAX": {
+            "minimum": 19.39,
+            "maximum": 45.15
+          },
+          "T2M_MIN": {
+            "minimum": 4.86,
+            "maximum": 32.26
+          },
+          "GWETTOP": {
+            "minimum": 0.07,
+            "maximum": 1.0
+          },
+          "GWETROOT": {
+            "minimum": 0.2,
+            "maximum": 1.0
+          }
+        },
+        "outputs": {
+          "daily": "data/processed/climate/nasa_power_district_daily_20000101_20251231.csv.gz",
+          "dekadal": "data/processed/climate/nasa_power_district_dekadal_20000101_20251231.csv.gz",
+          "district_grid_mapping": "data/metadata/nasa_power_district_grid_mapping.csv"
+        },
+        "output_integrity": {
+          "daily": {
+            "size_bytes": 9926086,
+            "checksum_sha256": "f6c8890b7c484522d29873f0b8f0b4f4caa961176dbad3728e1b65cbe46e6f2b"
+          },
+          "dekadal": {
+            "size_bytes": 2478527,
+            "checksum_sha256": "bf3b67aa3556928876d5f604c8a36561b92144c6352c701cf5808507226bbe3b"
+          },
+          "district_grid_mapping": {
+            "size_bytes": 13745,
+            "checksum_sha256": "886a950db929e7337561697b695e62eea684da47b20efdbefe797a7aae72434b"
+          }
+        },
+        "scientific_limits": [
+          "GWETTOP and GWETROOT are modeled relative wetness indices, not SMAP volumetric soil moisture.",
+          "District values sample the nearest coarse source grid cell and are not polygon-area averages.",
+          "Near-real-time GEOS values can later be replaced by improved climate-quality MERRA-2 values."
+        ]
+      }
+    },
+    {
+      "name": "river_coordinates_thresholds_observations",
+      "passed": true,
+      "evidence": {
+        "validated_at": "2026-08-25T12:50:15.419141+00:00",
+        "station_csv_count": 5,
+        "station_json_count": 5,
+        "expected_station_codes": [
+          "JB001",
+          "JB009",
+          "SH001",
+          "SH002",
+          "SH004"
+        ],
+        "metadata_station_codes": [
+          "JB001",
+          "JB009",
+          "SH001",
+          "SH002",
+          "SH004"
+        ],
+        "observation_station_codes": [
+          "JB001",
+          "JB009",
+          "SH001",
+          "SH002",
+          "SH004"
+        ],
+        "observation_rows": 87848,
+        "all_expected_metadata_codes_present": true,
+        "all_observation_codes_have_metadata": true,
+        "csv_json_station_codes_match": true,
+        "spatial_exception_count": 1,
+        "station_checks": [
+          {
+            "station_code": "SH001",
+            "coordinate_range_valid": true,
+            "point_intersects_canonical_district": true,
+            "nearest_project_district_id": "SO2001",
+            "nearest_project_district_name": "Belet Weyne",
+            "distance_to_nearest_project_district_m": 0.0,
+            "threshold_order_valid": true,
+            "official_source_hosts_valid": true
+          },
+          {
+            "station_code": "SH002",
+            "coordinate_range_valid": true,
+            "point_intersects_canonical_district": true,
+            "nearest_project_district_id": "SO2002",
+            "nearest_project_district_name": "Bulo Burto",
+            "distance_to_nearest_project_district_m": 0.0,
+            "threshold_order_valid": true,
+            "official_source_hosts_valid": true
+          },
+          {
+            "station_code": "SH004",
+            "coordinate_range_valid": true,
+            "point_intersects_canonical_district": true,
+            "nearest_project_district_id": "SO2101",
+            "nearest_project_district_name": "Jowhar",
+            "distance_to_nearest_project_district_m": 0.0,
+            "threshold_order_valid": true,
+            "official_source_hosts_valid": true
+          },
+          {
+            "station_code": "JB001",
+            "coordinate_range_valid": true,
+            "point_intersects_canonical_district": true,
+            "nearest_project_district_id": "SO2606",
+            "nearest_project_district_name": "Luuq",
+            "distance_to_nearest_project_district_m": 0.0,
+            "threshold_order_valid": true,
+            "official_source_hosts_valid": true
+          },
+          {
+            "station_code": "JB009",
+            "coordinate_range_valid": true,
+            "point_intersects_canonical_district": false,
+            "nearest_project_district_id": "SO2605",
+            "nearest_project_district_name": "Doolow",
+            "distance_to_nearest_project_district_m": 1252.181,
+            "threshold_order_valid": true,
+            "official_source_hosts_valid": true
+          }
+        ],
+        "passed": true
+      }
+    },
+    {
+      "name": "ipc_geographic_interpretation",
+      "passed": true,
+      "evidence": {
+        "generated_at": "2026-08-25T12:52:46.913280+00:00",
+        "method_version": "1.0",
+        "source_crs": "EPSG:4326",
+        "area_calculation_crs": "EPSG:6933",
+        "minimum_substantive_ipc_overlap_pct": 0.01,
+        "inputs": {
+          "data/raw/food_security/ipc_som.geojson": "e519c5c85aa31632ee58d330136979566e4b06ed40be41dbac6a2586ac3cf588",
+          "data/raw/food_security/ipc_som_area_long.csv": "0866cb7ddc005ffe8ff7727b5606b45556065d224ff058737b73f2b8c0d0233f",
+          "data/processed/boundaries/som_admin2_canonical.geojson": "b891765b0e83c6d4cde32fb8ca221d7b1c2a4a0172ac7b00003c7a3354758746"
+        },
+        "ipc_feature_count": 107,
+        "mapping_row_count": 362,
+        "geometry_counts": {
+          "MultiPolygon": 18,
+          "Point": 63,
+          "Polygon": 26
+        },
+        "admin_type_counts": {
+          "idp": 31,
+          "polygon": 45,
+          "urb": 31
+        },
+        "analysis_ids": [
+          "87143416"
+        ],
+        "ipc_period_codes": [
+          "C"
+        ],
+        "snapshot_period_candidates_from_exact_title_and_population_matches": [
+          {
+            "date_of_analysis": "Apr 2026",
+            "validity_period": "current",
+            "from": "2026-04-01",
+            "to": "2026-06-30",
+            "title_match_count": 107,
+            "population_match_count": 107,
+            "phase_value_match_count": 472,
+            "phase_value_comparison_count": 535,
+            "geojson_feature_count": 107
+          },
+          {
+            "date_of_analysis": "Jan 2026",
+            "validity_period": "current",
+            "from": "2026-01-01",
+            "to": "2026-01-31",
+            "title_match_count": 107,
+            "population_match_count": 107,
+            "phase_value_match_count": 236,
+            "phase_value_comparison_count": 535,
+            "geojson_feature_count": 107
+          }
+        ],
+        "best_supported_snapshot_period": {
+          "date_of_analysis": "Apr 2026",
+          "validity_period": "current",
+          "from": "2026-04-01",
+          "to": "2026-06-30",
+          "title_match_count": 107,
+          "population_match_count": 107,
+          "phase_value_match_count": 472,
+          "phase_value_comparison_count": 535,
+          "geojson_feature_count": 107
+        },
+        "snapshot_period_inference_status": "BEST_SIGNATURE_MATCH_NOT_EXPLICIT_ANALYSIS_ID_JOIN",
+        "repaired_for_overlay_only": {
+          "ipc_features": 0,
+          "district_features": 0
+        },
+        "polygon_area_count": 44,
+        "polygon_single_substantive_district_count": 0,
+        "polygon_multi_substantive_district_count": 44,
+        "polygon_no_substantive_district_count": 0,
+        "polygon_ambiguous_count": 44,
+        "polygon_canonical_coverage_pct": {
+          "minimum": 91.8817474661838,
+          "maximum": 100.00000000000016,
+          "mean": 99.58964485885113
+        },
+        "point_container_match_counts": {
+          "1": 63
+        },
+        "mapping_type_counts": {
+          "boundary_sliver_preserved": 86,
+          "polygon_overlap_multi_district": 213,
+          "reference_point_within_district_not_area_mapping": 63
+        },
+        "unique_ambiguous_ipc_area_count": 107,
+        "eligible_polygon_overlap_row_count": 213,
+        "validation_checks": {
+          "every_source_feature_has_mapping_record": true,
+          "point_rows_have_blank_area_metrics": true,
+          "polygon_ipc_overlap_percentages_in_range": true,
+          "polygon_district_overlap_percentages_in_range": true,
+          "all_polygon_features_intersect_at_least_one_district": true,
+          "all_point_features_have_exactly_one_container": true
+        },
+        "polygon_summaries": [
+          {
+            "ipc_area_id": "1455",
+            "title": "Bakool Southern Agro-Pastoral",
+            "ipc_area_km2": 11629.264993711146,
+            "district_intersections": 5,
+            "substantive_district_intersections": 5,
+            "canonical_district_coverage_pct": 100.00000000000001,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1456",
+            "title": "Bakool Southern Inland Pastoral",
+            "ipc_area_km2": 8583.559320066855,
+            "district_intersections": 7,
+            "substantive_district_intersections": 5,
+            "canonical_district_coverage_pct": 99.9933797766297,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1469",
+            "title": "Bay Southern Inland Pastoral",
+            "ipc_area_km2": 2077.811982201278,
+            "district_intersections": 6,
+            "substantive_district_intersections": 2,
+            "canonical_district_coverage_pct": 99.99999999999977,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1467",
+            "title": "Bay-Bakool Agro-pastoral Low Potential (Bay and Bakool)",
+            "ipc_area_km2": 26411.014677559982,
+            "district_intersections": 11,
+            "substantive_district_intersections": 7,
+            "canonical_district_coverage_pct": 99.99999999999996,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1468",
+            "title": "Bay-Gedo Sorghum High Potential Agropastoral (Bay and Gedo)",
+            "ipc_area_km2": 22311.02554006965,
+            "district_intersections": 12,
+            "substantive_district_intersections": 8,
+            "canonical_district_coverage_pct": 99.99999999999993,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1474",
+            "title": "Central Addun pastoral (Mudug and Galgaduud)",
+            "ipc_area_km2": 41314.94712957957,
+            "district_intersections": 7,
+            "substantive_district_intersections": 5,
+            "canonical_district_coverage_pct": 99.99999999999999,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1475",
+            "title": "Central Coastal Deeh Pastoral (Mudug and Galgadud)",
+            "ipc_area_km2": 10445.59577961981,
+            "district_intersections": 5,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 99.8548372457107,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1476",
+            "title": "Central Cowpea Belt  (Mudug and Galgadud)",
+            "ipc_area_km2": 13166.442604864187,
+            "district_intersections": 7,
+            "substantive_district_intersections": 4,
+            "canonical_district_coverage_pct": 99.99999999999991,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1477",
+            "title": "Central Hawd Pastoral (South Mudug, Galgadud)",
+            "ipc_area_km2": 21594.920083089793,
+            "district_intersections": 7,
+            "substantive_district_intersections": 5,
+            "canonical_district_coverage_pct": 91.8817474661838,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1478",
+            "title": "Central Southern Inland Pastoral (Galgadud)",
+            "ipc_area_km2": 1539.4855956999602,
+            "district_intersections": 2,
+            "substantive_district_intersections": 2,
+            "canonical_district_coverage_pct": 99.99999999999999,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1483",
+            "title": "Gedo Riverine Pump Irrigation",
+            "ipc_area_km2": 4234.740474722757,
+            "district_intersections": 6,
+            "substantive_district_intersections": 4,
+            "canonical_district_coverage_pct": 99.9982687270569,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1484",
+            "title": "Gedo Southern Agro-Pastoral",
+            "ipc_area_km2": 10423.292716604557,
+            "district_intersections": 10,
+            "substantive_district_intersections": 6,
+            "canonical_district_coverage_pct": 99.99945146351715,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1485",
+            "title": "Gedo Southern Inland Pastoral",
+            "ipc_area_km2": 29093.43494425383,
+            "district_intersections": 8,
+            "substantive_district_intersections": 6,
+            "canonical_district_coverage_pct": 99.98683000240182,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1490",
+            "title": "Hiraan Cowpea Belt (Bulo Burto)",
+            "ipc_area_km2": 439.9585429008329,
+            "district_intersections": 6,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 99.99999999999844,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1491",
+            "title": "Hiraan Hawd Pastoral",
+            "ipc_area_km2": 6721.053230932375,
+            "district_intersections": 5,
+            "substantive_district_intersections": 4,
+            "canonical_district_coverage_pct": 93.85463802582895,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1492",
+            "title": "Hiraan Riverine Pump and Gravity Irrigation",
+            "ipc_area_km2": 2309.767787629977,
+            "district_intersections": 4,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 99.20563455038248,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1493",
+            "title": "Hiraan Southern Agro-Pastoral",
+            "ipc_area_km2": 5378.471023237618,
+            "district_intersections": 4,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 99.52359052017924,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1494",
+            "title": "Hiraan Southern Inland Pastoral",
+            "ipc_area_km2": 19564.647530385882,
+            "district_intersections": 10,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 99.50158419903643,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1499",
+            "title": "Juba Pastoral (M Juba and L Juba)",
+            "ipc_area_km2": 26672.011202252186,
+            "district_intersections": 7,
+            "substantive_district_intersections": 5,
+            "canonical_district_coverage_pct": 99.9999999999999,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1500",
+            "title": "Juba Riverine Gravity Irrigation (L Juba & M Juba)",
+            "ipc_area_km2": 4914.1647922520315,
+            "district_intersections": 6,
+            "substantive_district_intersections": 5,
+            "canonical_district_coverage_pct": 99.99989613345204,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1501",
+            "title": "Juba Riverine Pump and Gravity Irrigation (M Juba)",
+            "ipc_area_km2": 1390.5823709434114,
+            "district_intersections": 4,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 99.99999999999996,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1502",
+            "title": "Juba Sorghum High Potential Agropastoral (M Juba)",
+            "ipc_area_km2": 2513.5946241915867,
+            "district_intersections": 5,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 99.99999999999989,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1503",
+            "title": "Juba Southern Agro-Pastoral (M Juba and L Juba)",
+            "ipc_area_km2": 4313.6428736843945,
+            "district_intersections": 4,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 100.00000000000001,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1504",
+            "title": "Juba Southern Inland Pastoral (M Juba and L Juba)",
+            "ipc_area_km2": 19658.13604437691,
+            "district_intersections": 8,
+            "substantive_district_intersections": 6,
+            "canonical_district_coverage_pct": 99.99102461417242,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1505",
+            "title": "Juba Southern Rainfed (M Juba and L Juba)",
+            "ipc_area_km2": 7090.4407314392665,
+            "district_intersections": 5,
+            "substantive_district_intersections": 4,
+            "canonical_district_coverage_pct": 99.91025348999496,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1519",
+            "title": "NE Addun pastoral (Mudug, Nugaal)",
+            "ipc_area_km2": 13182.913326138665,
+            "district_intersections": 4,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 99.99999999999997,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1520",
+            "title": "NE Coastal Deeh Pastoral (Bari, Mudug and Nugal)",
+            "ipc_area_km2": 7603.475930183187,
+            "district_intersections": 6,
+            "substantive_district_intersections": 5,
+            "canonical_district_coverage_pct": 99.98164456294707,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1521",
+            "title": "NE East Golis Pastoral (Bari)",
+            "ipc_area_km2": 24596.057605406517,
+            "district_intersections": 5,
+            "substantive_district_intersections": 4,
+            "canonical_district_coverage_pct": 99.99366186320435,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1522",
+            "title": "NE Hawd Pastoral (North Mudug and Nugaal)",
+            "ipc_area_km2": 21441.428972382582,
+            "district_intersections": 6,
+            "substantive_district_intersections": 6,
+            "canonical_district_coverage_pct": 98.61017646707086,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1523",
+            "title": "NE Northern Inland Pastoral (Bari and Nugaal)",
+            "ipc_area_km2": 50808.706664405305,
+            "district_intersections": 10,
+            "substantive_district_intersections": 7,
+            "canonical_district_coverage_pct": 99.99999999999996,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1528",
+            "title": "NW East Golis Pastoral (Sanaag)",
+            "ipc_area_km2": 20188.182927951657,
+            "district_intersections": 4,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 99.99830730100288,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1529",
+            "title": "NW Guban Pastoral (Awdal, Sanaag and W. Galbeed)",
+            "ipc_area_km2": 13880.465154059784,
+            "district_intersections": 6,
+            "substantive_district_intersections": 6,
+            "canonical_district_coverage_pct": 99.99497004021347,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1530",
+            "title": "NW Hawd Pastoral of NW (W. Galbeed, Toghdeer and Sool)",
+            "ipc_area_km2": 30850.562934675163,
+            "district_intersections": 8,
+            "substantive_district_intersections": 6,
+            "canonical_district_coverage_pct": 99.94007887559135,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1531",
+            "title": "NW Northern Inland Pastoral (Sanaag and Sool)",
+            "ipc_area_km2": 62787.61823962921,
+            "district_intersections": 11,
+            "substantive_district_intersections": 7,
+            "canonical_district_coverage_pct": 100.00000000000003,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1532",
+            "title": "NW Northwest Agro-pastoral (Awdal, W. Galbeed & Togdheer)",
+            "ipc_area_km2": 9005.370534952464,
+            "district_intersections": 5,
+            "substantive_district_intersections": 5,
+            "canonical_district_coverage_pct": 99.99306734204343,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1533",
+            "title": "NW Toghdeer Agro-pastoral (Toghdeer)",
+            "ipc_area_km2": 4038.149958473196,
+            "district_intersections": 3,
+            "substantive_district_intersections": 3,
+            "canonical_district_coverage_pct": 100.0,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1534",
+            "title": "NW West Golis Pastoral (Awdal, W. Galbeed, Toghdeer, Sool and Sanaag)",
+            "ipc_area_km2": 28651.668898845037,
+            "district_intersections": 12,
+            "substantive_district_intersections": 12,
+            "canonical_district_coverage_pct": 99.99687755245202,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1539",
+            "title": "Shabelle Coastal Deeh Pastoral and Fishing (L. Shabelle & M. Shabelle)",
+            "ipc_area_km2": 3132.5878411356166,
+            "district_intersections": 8,
+            "substantive_district_intersections": 5,
+            "canonical_district_coverage_pct": 99.7480590093611,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1540",
+            "title": "Shabelle Cowpea Belt (M Shabelle)",
+            "ipc_area_km2": 9173.96665182539,
+            "district_intersections": 7,
+            "substantive_district_intersections": 4,
+            "canonical_district_coverage_pct": 100.00000000000016,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1541",
+            "title": "Shabelle Peri-urban Agropastoral (Banadir)",
+            "ipc_area_km2": 25.469018848723472,
+            "district_intersections": 5,
+            "substantive_district_intersections": 4,
+            "canonical_district_coverage_pct": 99.99245441505852,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1542",
+            "title": "Shabelle Riverine Gravity Irrigation (L Shabelle & M Shabelle)",
+            "ipc_area_km2": 5164.890676683734,
+            "district_intersections": 9,
+            "substantive_district_intersections": 8,
+            "canonical_district_coverage_pct": 99.99999999999994,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1543",
+            "title": "Shabelle Sorghum High Potential Agropastoral (M Shabelle and L Shabelle)",
+            "ipc_area_km2": 10225.38400576648,
+            "district_intersections": 12,
+            "substantive_district_intersections": 7,
+            "canonical_district_coverage_pct": 100.0,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1544",
+            "title": "Shabelle Southern Inland Pastoral (M Shabelle and L Shabelle)",
+            "ipc_area_km2": 12249.00910252564,
+            "district_intersections": 12,
+            "substantive_district_intersections": 7,
+            "canonical_district_coverage_pct": 100.00000000000001,
+            "ambiguous": true
+          },
+          {
+            "ipc_area_id": "1545",
+            "title": "Shabelle Southern Rainfed (L Shabelle)",
+            "ipc_area_km2": 3946.768740462241,
+            "district_intersections": 5,
+            "substantive_district_intersections": 4,
+            "canonical_district_coverage_pct": 99.99394014596092,
+            "ambiguous": true
+          }
+        ],
+        "scientific_interpretation": {
+          "polygon_features": "Use overlap weights; do not collapse multi-district IPC analysis areas to one district.",
+          "point_features": "Urban/IDP points are reference/display locations, not footprint geometry; areal weights are undefined.",
+          "temporal_scope": "The GeoJSON is a snapshot. Exact title matching identifies candidate assessment periods but does not prove historical boundary stability."
+        },
+        "wfp_banadir": {
+          "provider_admin2_value": "Banadir",
+          "price_rows": 1944,
+          "price_market_ids": [
+            "2104",
+            "6634"
+          ],
+          "registry_markets": 10,
+          "point_resolved_markets": 10,
+          "quarantined_markets": 0,
+          "conclusion": "HDX/WFP encodes Banadir as #adm2+name, but it duplicates admin1 and does not name a canonical district. Preserve and quarantine that source label; use market coordinates for a separate point-to-district relationship without overwriting admin2."
+        }
+      }
+    },
+    {
+      "name": "market_banadir_safely_isolated",
+      "passed": true,
+      "evidence": {
+        "rows": 10
+      }
+    },
+    {
+      "name": "population_documented",
+      "passed": true,
+      "evidence": {
+        "width": 12509,
+        "height": 16381,
+        "bands": 1,
+        "dtype": "float32",
+        "crs": "EPSG:4326",
+        "resolution": [
+          0.00083333333,
+          0.00083333333
+        ],
+        "bounds": [
+          40.99083244937,
+          -1.662499657350013,
+          51.414999074339995,
+          11.988333621379986
+        ],
+        "nodata": -99999.0,
+        "units": "persons per pixel",
+        "district_count": 91,
+        "region_count": 18,
+        "districts_without_pixels": 0,
+        "zonal_population_sum": 19139579.592,
+        "status": "PASS",
+        "limitation": "WorldPop R2025A v1 is an alpha modeled estimate, not a census; boundary-version mismatch can affect border cells."
+      }
+    },
+    {
+      "name": "registries",
+      "passed": true,
+      "evidence": "data/metadata/source_registry.csv|json"
+    },
+    {
+      "name": "matrices",
+      "passed": true,
+      "evidence": "availability, temporal coverage, geographic crosswalk"
+    },
+    {
+      "name": "historical_manifests",
+      "passed": false,
+      "evidence": {
+        "rows": 6
+      }
+    },
+    {
+      "name": "crosswalk",
+      "passed": true,
+      "evidence": {
+        "rows": 218
+      }
+    },
+    {
+      "name": "temporal_alignment_strategy",
+      "passed": true,
+      "evidence": "docs/temporal-alignment-strategy.md"
+    }
+  ],
+  "genuine_blockers": [
+    "historical_chirps",
+    "historical_mod13q1",
+    "historical_manifests"
+  ]
+}

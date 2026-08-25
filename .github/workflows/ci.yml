@@ -1,0 +1,65 @@
+name: CI
+on: [push,pull_request]
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install 'pip>=26.2.1'
+      - run: pip install -e './backend[test]'
+      - run: cd backend && ruff check . && mypy app && pytest
+      - run: cd backend && python -m scripts.benchmark_http --requests 90 --concurrency 6 --max-p95-ms 2000 --max-operation-ms 5000 --max-error-rate 0
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - run: cd frontend && npm install
+      - run: cd frontend && npx playwright install --with-deps chromium
+      - run: cd frontend && npm run check && npm test -- --run && npm run build
+      - run: cd frontend && npm run test:e2e
+      - run: cd frontend && npm audit --audit-level=high
+  dependency-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install 'pip>=26.2.1'
+      - run: pip install pip-audit './backend[test]'
+      - run: pip-audit
+  synthetic-restore:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: synthetic-ci-root-password
+          MYSQL_DATABASE: somalia_ai
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -psynthetic-ci-root-password"
+          --health-interval=5s --health-timeout=5s --health-retries=20
+    env:
+      ENVIRONMENT: development
+      DATABASE_URL: mysql+pymysql://root:synthetic-ci-root-password@127.0.0.1:3306/somalia_ai
+      SECRET_KEY: synthetic-ci-secret-key-that-is-longer-than-thirty-two-characters
+      SEED_PASSWORD: synthetic-development-password
+      MYSQL_PWD: synthetic-ci-root-password
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: sudo apt-get update && sudo apt-get install -y default-mysql-client
+      - run: pip install -e './backend[test]'
+      - run: cd backend && alembic upgrade head && python -m scripts.seed_development
+      - run: mysqldump -h 127.0.0.1 -u root --single-transaction somalia_ai > "$RUNNER_TEMP/somalia-ai.sql"
+      - run: mysql -h 127.0.0.1 -u root -e 'CREATE DATABASE somalia_ai_restore'
+      - run: mysql -h 127.0.0.1 -u root somalia_ai_restore < "$RUNNER_TEMP/somalia-ai.sql"
+      - run: >-
+          cd backend && python -m scripts.verify_restore
+          --source-url mysql+pymysql://root:synthetic-ci-root-password@127.0.0.1:3306/somalia_ai
+          --restored-url mysql+pymysql://root:synthetic-ci-root-password@127.0.0.1:3306/somalia_ai_restore

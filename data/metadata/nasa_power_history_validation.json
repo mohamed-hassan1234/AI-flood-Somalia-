@@ -1,0 +1,88 @@
+{
+  "validated_at": "2026-08-25T12:53:48.526368+00:00",
+  "status": "COMPLETE",
+  "source": "NASA POWER Release 10, MERRA-2/GEOS meteorology",
+  "period": {
+    "start": "20000101",
+    "end": "20251231",
+    "expected_days": 9497
+  },
+  "parameters": [
+    "T2M",
+    "T2M_MAX",
+    "T2M_MIN",
+    "GWETTOP",
+    "GWETROOT"
+  ],
+  "provider_reported_units": {
+    "T2M": "C",
+    "T2M_MAX": "C",
+    "T2M_MIN": "C",
+    "GWETTOP": "1",
+    "GWETROOT": "1"
+  },
+  "geography": {
+    "district_count": 91,
+    "unique_source_grid_cells": 72,
+    "sampling": "nearest native source grid cell to each boundary reference point",
+    "source_grid_degrees": {
+      "latitude": 0.5,
+      "longitude": 0.625
+    }
+  },
+  "daily_rows": 864227,
+  "dekadal_rows": 85176,
+  "missing_values": {
+    "T2M": 0,
+    "T2M_MAX": 0,
+    "T2M_MIN": 0,
+    "GWETTOP": 0,
+    "GWETROOT": 0
+  },
+  "value_ranges": {
+    "T2M": {
+      "minimum": 12.0,
+      "maximum": 37.76
+    },
+    "T2M_MAX": {
+      "minimum": 19.39,
+      "maximum": 45.15
+    },
+    "T2M_MIN": {
+      "minimum": 4.86,
+      "maximum": 32.26
+    },
+    "GWETTOP": {
+      "minimum": 0.07,
+      "maximum": 1.0
+    },
+    "GWETROOT": {
+      "minimum": 0.2,
+      "maximum": 1.0
+    }
+  },
+  "outputs": {
+    "daily": "data/processed/climate/nasa_power_district_daily_20000101_20251231.csv.gz",
+    "dekadal": "data/processed/climate/nasa_power_district_dekadal_20000101_20251231.csv.gz",
+    "district_grid_mapping": "data/metadata/nasa_power_district_grid_mapping.csv"
+  },
+  "output_integrity": {
+    "daily": {
+      "size_bytes": 9926086,
+      "checksum_sha256": "f6c8890b7c484522d29873f0b8f0b4f4caa961176dbad3728e1b65cbe46e6f2b"
+    },
+    "dekadal": {
+      "size_bytes": 2478527,
+      "checksum_sha256": "bf3b67aa3556928876d5f604c8a36561b92144c6352c701cf5808507226bbe3b"
+    },
+    "district_grid_mapping": {
+      "size_bytes": 13745,
+      "checksum_sha256": "886a950db929e7337561697b695e62eea684da47b20efdbefe797a7aae72434b"
+    }
+  },
+  "scientific_limits": [
+    "GWETTOP and GWETROOT are modeled relative wetness indices, not SMAP volumetric soil moisture.",
+    "District values sample the nearest coarse source grid cell and are not polygon-area averages.",
+    "Near-real-time GEOS values can later be replaced by improved climate-quality MERRA-2 values."
+  ]
+}

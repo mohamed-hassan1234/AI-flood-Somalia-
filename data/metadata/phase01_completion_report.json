@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-08-25T13:10:48.474080+00:00",
+  "phase": "PHASE 01 - REAL DATA FOUNDATION",
+  "status": "PARTIAL",
+  "final_decision": "PHASE 01 NOT COMPLETE",
+  "datasets": {
+    "01_boundaries": "PASS",
+    "02_rainfall": "PARTIAL",
+    "03_vegetation": "PARTIAL",
+    "04_soil_moisture_or_equivalent": "PASS",
+    "05_river_levels": "PASS",
+    "06_temperature": "PASS",
+    "07_food_security": "REVIEW",
+    "08_market_prices": "REVIEW",
+    "09_population": "PASS"
+  },
+  "acceptance_gate": {
+    "boundaries_validated": true,
+    "chirps_validated_but_historical_archive_complete": false,
+    "modis_ndvi_evi_validated_but_historical_archive_complete": false,
+    "smap_validated_but_historical_archive_complete": false,
+    "historical_antecedent_wetness_equivalent_complete": true,
+    "river_level_files_validated": true,
+    "river_station_coordinates_and_current_thresholds_validated": true,
+    "temperature_primary_history_complete": true,
+    "ipc_historical_outcomes_acquired_and_validated": true,
+    "market_history_acquired_and_validated": true,
+    "population_acquired_and_validated": true,
+    "source_registry_complete": true,
+    "availability_matrix_complete": true,
+    "temporal_matrix_complete": true,
+    "geographic_mapping_documented": true,
+    "raw_preserved": true,
+    "phase2_model_training_ready": false
+  },
+  "phase2_readiness": {
+    "drought_model": "BLOCKED",
+    "flood_model": "BLOCKED",
+    "food_security_model": "BLOCKED"
+  },
+  "genuine_blockers": [
+    "Historical CHIRPS archive has not passed the 2000-2025 continuity gate.",
+    "Historical MOD13Q1 archive has not passed the 2015-2025 QA/coverage gate."
+  ]
+}

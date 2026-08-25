@@ -1,0 +1,10 @@
+dataset,actual_start,actual_end,continuity
+rainfall_primary_local,2014-01-09,2014-01-10,daily complete; 2 days; 91 district summaries
+vegetation_primary_local,2015-01-17,2015-01-17,1 16-day composites; QA-masked; missing district-period fraction=None
+soil_moisture_local,2026-07-01,2026-07-31,daily July 2026; multiple granules on some dates
+antecedent_wetness_primary_local,2000-01-01,2025-12-31,daily complete GWETTOP/GWETROOT; 9497 days; 91 districts from 72 unique source cells
+lst_local,2020-07-01,2020-07-01,one daily tile/sample
+air_temperature_primary_local,2000-01-01,2025-12-31,daily complete T2M/T2M_MAX/T2M_MIN; 9497 days; 91 districts from 72 unique source cells
+river_levels_local,1951-01-01,2026-08-25,station-dependent gaps
+market_prices_local,1995-01-15,2026-06-15,market/commodity-dependent
+ipc_outcomes_local,2017-01-01,2026-06-30,"assessment windows, not continuous daily labels"
