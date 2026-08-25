@@ -1,0 +1,72 @@
+[
+  {
+    "item_id": "MOD13Q1.A2018033.h23v09.061.2021317103359",
+    "date": "2018-02-02",
+    "assets": {
+      "ndvi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/09/2018033/MOD13Q1.A2018033.h23v09.061.2021317103359_250m_16_days_NDVI.tif",
+      "evi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/09/2018033/MOD13Q1.A2018033.h23v09.061.2021317103359_250m_16_days_EVI.tif",
+      "quality": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/09/2018033/MOD13Q1.A2018033.h23v09.061.2021317103359_250m_16_days_VI_Quality.tif",
+      "reliability": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/09/2018033/MOD13Q1.A2018033.h23v09.061.2021317103359_250m_16_days_pixel_reliability.tif"
+    }
+  },
+  {
+    "item_id": "MOD13Q1.A2018033.h22v09.061.2021317103208",
+    "date": "2018-02-02",
+    "assets": {
+      "ndvi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/09/2018033/MOD13Q1.A2018033.h22v09.061.2021317103208_250m_16_days_NDVI.tif",
+      "evi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/09/2018033/MOD13Q1.A2018033.h22v09.061.2021317103208_250m_16_days_EVI.tif",
+      "quality": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/09/2018033/MOD13Q1.A2018033.h22v09.061.2021317103208_250m_16_days_VI_Quality.tif",
+      "reliability": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/09/2018033/MOD13Q1.A2018033.h22v09.061.2021317103208_250m_16_days_pixel_reliability.tif"
+    }
+  },
+  {
+    "item_id": "MOD13Q1.A2018033.h23v07.061.2021317103415",
+    "date": "2018-02-02",
+    "assets": {
+      "ndvi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/07/2018033/MOD13Q1.A2018033.h23v07.061.2021317103415_250m_16_days_NDVI.tif",
+      "evi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/07/2018033/MOD13Q1.A2018033.h23v07.061.2021317103415_250m_16_days_EVI.tif",
+      "quality": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/07/2018033/MOD13Q1.A2018033.h23v07.061.2021317103415_250m_16_days_VI_Quality.tif",
+      "reliability": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/07/2018033/MOD13Q1.A2018033.h23v07.061.2021317103415_250m_16_days_pixel_reliability.tif"
+    }
+  },
+  {
+    "item_id": "MOD13Q1.A2018033.h23v08.061.2021317104009",
+    "date": "2018-02-02",
+    "assets": {
+      "ndvi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/08/2018033/MOD13Q1.A2018033.h23v08.061.2021317104009_250m_16_days_NDVI.tif",
+      "evi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/08/2018033/MOD13Q1.A2018033.h23v08.061.2021317104009_250m_16_days_EVI.tif",
+      "quality": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/08/2018033/MOD13Q1.A2018033.h23v08.061.2021317104009_250m_16_days_VI_Quality.tif",
+      "reliability": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/23/08/2018033/MOD13Q1.A2018033.h23v08.061.2021317104009_250m_16_days_pixel_reliability.tif"
+    }
+  },
+  {
+    "item_id": "MOD13Q1.A2018033.h22v07.061.2021317103622",
+    "date": "2018-02-02",
+    "assets": {
+      "ndvi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/07/2018033/MOD13Q1.A2018033.h22v07.061.2021317103622_250m_16_days_NDVI.tif",
+      "evi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/07/2018033/MOD13Q1.A2018033.h22v07.061.2021317103622_250m_16_days_EVI.tif",
+      "quality": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/07/2018033/MOD13Q1.A2018033.h22v07.061.2021317103622_250m_16_days_VI_Quality.tif",
+      "reliability": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/07/2018033/MOD13Q1.A2018033.h22v07.061.2021317103622_250m_16_days_pixel_reliability.tif"
+    }
+  },
+  {
+    "item_id": "MOD13Q1.A2018033.h21v07.061.2021317102527",
+    "date": "2018-02-02",
+    "assets": {
+      "ndvi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/21/07/2018033/MOD13Q1.A2018033.h21v07.061.2021317102527_250m_16_days_NDVI.tif",
+      "evi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/21/07/2018033/MOD13Q1.A2018033.h21v07.061.2021317102527_250m_16_days_EVI.tif",
+      "quality": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/21/07/2018033/MOD13Q1.A2018033.h21v07.061.2021317102527_250m_16_days_VI_Quality.tif",
+      "reliability": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/21/07/2018033/MOD13Q1.A2018033.h21v07.061.2021317102527_250m_16_days_pixel_reliability.tif"
+    }
+  },
+  {
+    "item_id": "MOD13Q1.A2018033.h22v08.061.2021317103227",
+    "date": "2018-02-02",
+    "assets": {
+      "ndvi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/08/2018033/MOD13Q1.A2018033.h22v08.061.2021317103227_250m_16_days_NDVI.tif",
+      "evi": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/08/2018033/MOD13Q1.A2018033.h22v08.061.2021317103227_250m_16_days_EVI.tif",
+      "quality": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/08/2018033/MOD13Q1.A2018033.h22v08.061.2021317103227_250m_16_days_VI_Quality.tif",
+      "reliability": "https://modiseuwest.blob.core.windows.net/modis-061-cogs/MOD13Q1/22/08/2018033/MOD13Q1.A2018033.h22v08.061.2021317103227_250m_16_days_pixel_reliability.tif"
+    }
+  }
+]
