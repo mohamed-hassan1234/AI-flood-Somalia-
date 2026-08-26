@@ -1,0 +1,393 @@
+[
+  {
+    "intelligence_id": "d093d2be249c696206b4f86e",
+    "risk_type": "FLOOD",
+    "as_of_date": "2024-05-01",
+    "valid_from": "2024-05-02",
+    "valid_until": "2024-05-04",
+    "prediction_horizon": "1-3 days",
+    "geography": {
+      "type": "STATION",
+      "id": "SH001",
+      "name": "SH001 (Belet Weyne)",
+      "parent_region_id": "SO20"
+    },
+    "station_code": "SH001",
+    "river_name": "Shabelle",
+    "prediction": {
+      "probability": 1.0,
+      "risk_level": "SEVERE",
+      "threshold_version": "flood-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.11499999999999999,
+        "warning": 0.22999999999999998,
+        "severe": 0.615
+      }
+    },
+    "exposure": {
+      "scope_type": "STATION",
+      "population_context": 348532.312,
+      "population_potentially_exposed": null,
+      "exposure_method": "station_operational_context_only_no_validated_inundation_geometry",
+      "exposure_uncertainty": "No floodplain, river-corridor, or historical inundation footprint exists in the Phase 01 data foundation. population_context is the population of the district nearest the gauge (SO2001 \u2014 Belet Weyne), reported for operational orientation only. It must never be read as an exposed-population or affected-population estimate; the true flood-exposed population is unknown without validated inundation geometry.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "linked_district_id": "SO2001",
+      "linked_district_name": "Belet Weyne",
+      "risk_level": "SEVERE"
+    },
+    "impact_summary": {
+      "signal": "RIVERINE_THRESHOLD_EXCEEDANCE",
+      "station": "SH001",
+      "river": "Shabelle",
+      "level_condition": "above normal",
+      "rate_of_rise_3d": "below normal",
+      "antecedent_rainfall_7d": "above normal",
+      "antecedent_soil_wetness": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "distance_to_moderate_m",
+        "observed_value": 0.0,
+        "training_median": 2.6799999999999997,
+        "probability_change_if_replaced_by_training_median": 1.0,
+        "reason_code": "RIVER_LEVEL_NEAR_THRESHOLD"
+      },
+      {
+        "feature": "level_ratio_moderate",
+        "observed_value": 1.0,
+        "training_median": 0.5076923076923077,
+        "probability_change_if_replaced_by_training_median": 0.7727272727272727,
+        "reason_code": "RIVER_LEVEL_NEAR_THRESHOLD"
+      },
+      {
+        "feature": "distance_to_high_m",
+        "observed_value": 0.7999999999999998,
+        "training_median": 3.22,
+        "probability_change_if_replaced_by_training_median": 0.7727272727272727,
+        "reason_code": null
+      },
+      {
+        "feature": "gwet_top_7d",
+        "observed_value": 0.4942857142857143,
+        "training_median": 0.28,
+        "probability_change_if_replaced_by_training_median": 0.7727272727272727,
+        "reason_code": "SATURATED_ANTECEDENT_SOIL"
+      },
+      {
+        "feature": "rain_7d_mm",
+        "observed_value": 59.33249602134051,
+        "training_median": 1.161568505211038,
+        "probability_change_if_replaced_by_training_median": 0.25,
+        "reason_code": "HEAVY_ANTECEDENT_RAINFALL"
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "RIVER_LEVEL_NEAR_THRESHOLD",
+        "SATURATED_ANTECEDENT_SOIL",
+        "HEAVY_ANTECEDENT_RAINFALL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FLOOD-SEVERE-01",
+        "risk_type": "flood",
+        "risk_level": "SEVERE",
+        "action_category": "preparedness",
+        "action_text": "Prepare local communication materials and stand up heightened gauge monitoring.",
+        "intended_actor": "DRM/communication focal point",
+        "time_horizon": "immediate",
+        "prerequisites": [],
+        "source_reference": "OCHA/DRM preparedness planning practice",
+        "priority": "high",
+        "scope_notes": "preparation only; publication remains a human decision",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "flood",
+          "risk_level": "SEVERE",
+          "reason_codes": [
+            "RIVER_LEVEL_NEAR_THRESHOLD",
+            "SATURATED_ANTECEDENT_SOIL",
+            "HEAVY_ANTECEDENT_RAINFALL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FLOOD-SEVERE-02",
+        "risk_type": "flood",
+        "risk_level": "SEVERE",
+        "action_category": "coordination",
+        "action_text": "Escalate to authorized flood-response coordination bodies for human review before any public action.",
+        "intended_actor": "coordination lead",
+        "time_horizon": "immediate",
+        "prerequisites": [],
+        "source_reference": "SWALIM/OCHA escalation practice",
+        "priority": "high",
+        "scope_notes": "this platform is decision support, not an evacuation authority",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "flood",
+          "risk_level": "SEVERE",
+          "reason_codes": [
+            "RIVER_LEVEL_NEAR_THRESHOLD",
+            "SATURATED_ANTECEDENT_SOIL",
+            "HEAVY_ANTECEDENT_RAINFALL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "rain_1d_mm"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "river_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 2
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "flood-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-05-01"
+    },
+    "limitations": [
+      "Riverine early warning for five supported Jubba/Shabelle gauges only; not Somalia-wide, not flash/surface flood.",
+      "No validated inundation geometry exists; population_context is district orientation only, not exposed population."
+    ],
+    "generated_at": "2026-08-26T11:59:25.090202+00:00"
+  },
+  {
+    "intelligence_id": "060f5d8956302516866227f6",
+    "risk_type": "FLOOD",
+    "as_of_date": "2024-05-01",
+    "valid_from": "2024-05-02",
+    "valid_until": "2024-05-04",
+    "prediction_horizon": "1-3 days",
+    "geography": {
+      "type": "STATION",
+      "id": "SH004",
+      "name": "SH004 (Jowhar)",
+      "parent_region_id": "SO21"
+    },
+    "station_code": "SH004",
+    "river_name": "Shabelle",
+    "prediction": {
+      "probability": 0.75,
+      "risk_level": "SEVERE",
+      "threshold_version": "flood-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.11499999999999999,
+        "warning": 0.22999999999999998,
+        "severe": 0.615
+      }
+    },
+    "exposure": {
+      "scope_type": "STATION",
+      "population_context": 449436.0,
+      "population_potentially_exposed": null,
+      "exposure_method": "station_operational_context_only_no_validated_inundation_geometry",
+      "exposure_uncertainty": "No floodplain, river-corridor, or historical inundation footprint exists in the Phase 01 data foundation. population_context is the population of the district nearest the gauge (SO2101 \u2014 Jowhar), reported for operational orientation only. It must never be read as an exposed-population or affected-population estimate; the true flood-exposed population is unknown without validated inundation geometry.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "linked_district_id": "SO2101",
+      "linked_district_name": "Jowhar",
+      "risk_level": "SEVERE"
+    },
+    "impact_summary": {
+      "signal": "RIVERINE_THRESHOLD_EXCEEDANCE",
+      "station": "SH004",
+      "river": "Shabelle",
+      "level_condition": "above normal",
+      "rate_of_rise_3d": "below normal",
+      "antecedent_rainfall_7d": "above normal",
+      "antecedent_soil_wetness": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "distance_to_moderate_m",
+        "observed_value": 0.4000000000000003,
+        "training_median": 2.6799999999999997,
+        "probability_change_if_replaced_by_training_median": 0.75,
+        "reason_code": "RIVER_LEVEL_NEAR_THRESHOLD"
+      },
+      {
+        "feature": "gwet_top_7d",
+        "observed_value": 0.5442857142857143,
+        "training_median": 0.28,
+        "probability_change_if_replaced_by_training_median": 0.7338709677419355,
+        "reason_code": "SATURATED_ANTECEDENT_SOIL"
+      },
+      {
+        "feature": "level_ratio_moderate",
+        "observed_value": 0.92,
+        "training_median": 0.5076923076923077,
+        "probability_change_if_replaced_by_training_median": 0.7243589743589743,
+        "reason_code": "RIVER_LEVEL_NEAR_THRESHOLD"
+      },
+      {
+        "feature": "distance_to_high_m",
+        "observed_value": 0.6500000000000004,
+        "training_median": 3.22,
+        "probability_change_if_replaced_by_training_median": 0.7243589743589743,
+        "reason_code": null
+      },
+      {
+        "feature": "current_level_m",
+        "observed_value": 4.6,
+        "training_median": 2.8,
+        "probability_change_if_replaced_by_training_median": 0.5227272727272727,
+        "reason_code": "RIVER_LEVEL_NEAR_THRESHOLD"
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "RIVER_LEVEL_NEAR_THRESHOLD",
+        "SATURATED_ANTECEDENT_SOIL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FLOOD-SEVERE-01",
+        "risk_type": "flood",
+        "risk_level": "SEVERE",
+        "action_category": "preparedness",
+        "action_text": "Prepare local communication materials and stand up heightened gauge monitoring.",
+        "intended_actor": "DRM/communication focal point",
+        "time_horizon": "immediate",
+        "prerequisites": [],
+        "source_reference": "OCHA/DRM preparedness planning practice",
+        "priority": "high",
+        "scope_notes": "preparation only; publication remains a human decision",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "flood",
+          "risk_level": "SEVERE",
+          "reason_codes": [
+            "RIVER_LEVEL_NEAR_THRESHOLD",
+            "SATURATED_ANTECEDENT_SOIL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FLOOD-SEVERE-02",
+        "risk_type": "flood",
+        "risk_level": "SEVERE",
+        "action_category": "coordination",
+        "action_text": "Escalate to authorized flood-response coordination bodies for human review before any public action.",
+        "intended_actor": "coordination lead",
+        "time_horizon": "immediate",
+        "prerequisites": [],
+        "source_reference": "SWALIM/OCHA escalation practice",
+        "priority": "high",
+        "scope_notes": "this platform is decision support, not an evacuation authority",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "flood",
+          "risk_level": "SEVERE",
+          "reason_codes": [
+            "RIVER_LEVEL_NEAR_THRESHOLD",
+            "SATURATED_ANTECEDENT_SOIL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "river_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 2
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "flood-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-05-01"
+    },
+    "limitations": [
+      "Riverine early warning for five supported Jubba/Shabelle gauges only; not Somalia-wide, not flash/surface flood.",
+      "No validated inundation geometry exists; population_context is district orientation only, not exposed population."
+    ],
+    "generated_at": "2026-08-26T11:59:25.628827+00:00"
+  }
+]

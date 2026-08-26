@@ -1,0 +1,6 @@
+risk_type,geography_type,geography_id,as_of_date,risk_probability,risk_level,population_context,population_potentially_exposed,exposure_method,source_version,model_version,quality_status
+FLOOD,STATION,JB001,2024-05-01,0.0,NORMAL,146401.578,,station_operational_context_only_no_validated_inundation_geometry,1.1.0,1.1.0,GOOD
+FLOOD,STATION,SH001,2024-05-01,1.0,SEVERE,348532.312,,station_operational_context_only_no_validated_inundation_geometry,1.1.0,1.1.0,DEGRADED
+FLOOD,STATION,SH002,2024-05-01,0.0,NORMAL,104658.766,,station_operational_context_only_no_validated_inundation_geometry,1.1.0,1.1.0,GOOD
+FLOOD,STATION,SH004,2024-05-01,0.75,SEVERE,449436.0,,station_operational_context_only_no_validated_inundation_geometry,1.1.0,1.1.0,GOOD
+FLOOD,STATION,JB009,2024-05-01,0.0,NORMAL,94299.75,,station_operational_context_only_no_validated_inundation_geometry,1.1.0,1.1.0,GOOD

@@ -1,0 +1,150 @@
+{
+  "phase": "03",
+  "generated_at": "2026-08-26T12:01:48.792917+00:00",
+  "git_commit": "452d3a26508dab80b45ceb7552d983ff6f78a306",
+  "status": "COMPLETE",
+  "exposure": {
+    "flood_exposed_population_always_null": true,
+    "food_security_exposed_population_always_null": true
+  },
+  "geographic_impact": {
+    "canonical_geography_valid": true,
+    "drought_district_scope_valid": true,
+    "flood_station_scope_valid": true,
+    "food_security_region_scope_valid": true
+  },
+  "warning_logic": {
+    "thresholds_match_frozen_phase02": true,
+    "quality_gating_works": true,
+    "freshness_policy_works": true,
+    "reason_codes_valid": true,
+    "risk_thresholds_by_track": {
+      "drought": true,
+      "flood": true,
+      "food_security": true
+    }
+  },
+  "recommended_actions": {
+    "every_track_severity_has_action": true,
+    "coverage": {
+      "drought-WATCH": true,
+      "drought-WARNING": true,
+      "drought-SEVERE": true,
+      "flood-WATCH": true,
+      "flood-WARNING": true,
+      "flood-SEVERE": true,
+      "food_security-WATCH": true,
+      "food_security-WARNING": true,
+      "food_security-SEVERE": true
+    },
+    "no_action_marked_approved": true
+  },
+  "historical_replay": {
+    "drought": {
+      "rows_replayed": 3875,
+      "outcome_counts": {
+        "TRUE_NEGATIVE": 3212,
+        "FALSE_POSITIVE": 344,
+        "TRUE_POSITIVE": 196,
+        "FALSE_NEGATIVE": 123
+      },
+      "successes_represented": true,
+      "failures_represented": true,
+      "complete": true
+    },
+    "flood": {
+      "rows_replayed": 4035,
+      "outcome_counts": {
+        "TRUE_NEGATIVE": 3413,
+        "TRUE_POSITIVE": 452,
+        "FALSE_NEGATIVE": 121,
+        "FALSE_POSITIVE": 49
+      },
+      "successes_represented": true,
+      "failures_represented": true,
+      "complete": true
+    },
+    "food_security": {
+      "rows_replayed": 72,
+      "outcome_counts": {
+        "TRUE_NEGATIVE": 40,
+        "TRUE_POSITIVE": 14,
+        "FALSE_NEGATIVE": 12,
+        "FALSE_POSITIVE": 6
+      },
+      "successes_represented": true,
+      "failures_represented": true,
+      "complete": true
+    }
+  },
+  "pipeline": {
+    "end_to_end_pipeline_runs": true,
+    "as_of_date_supported": true,
+    "lineage_preserved": true,
+    "frozen_models_verified": true,
+    "idempotency_passes": true,
+    "idempotency_detail": {
+      "as_of_date": "2024-05-01",
+      "identical_after_stripping_generated_at": {
+        "drought": true,
+        "flood": true,
+        "food_security": true
+      },
+      "all_identical": true,
+      "checksum_run1": {
+        "drought": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+        "flood": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+        "food_security": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904"
+      },
+      "checksum_run2": {
+        "drought": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+        "flood": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+        "food_security": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904"
+      }
+    }
+  },
+  "tests": {
+    "generated_at": "2026-08-26T11:58:52.789386+00:00",
+    "phase03_version": "1.0.0",
+    "status": "PASS",
+    "tests_run": 33,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 8.93030110001564
+  },
+  "reproducibility": {
+    "as_of_date": "2024-05-01",
+    "identical_after_stripping_generated_at": {
+      "drought": true,
+      "flood": true,
+      "food_security": true
+    },
+    "all_identical": true,
+    "checksum_run1": {
+      "drought": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "flood": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "food_security": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904"
+    },
+    "checksum_run2": {
+      "drought": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "flood": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "food_security": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904"
+    }
+  },
+  "phase04_readiness": {
+    "integration_contract_complete": true,
+    "json_serialization_valid": true,
+    "frontend_fields_documented": true,
+    "audit_metadata_available": true,
+    "api_integration_requirements_documented": true
+  },
+  "limitations": [
+    "Flood exposure is district orientation context only; no validated inundation geometry exists, so population_potentially_exposed is always null for flood.",
+    "Food-security exposure reports regional population context only; the model predicts a binary burden-threshold crossing, not an exact affected-population count.",
+    "Drought exposure reports the full district population as potentially exposed at WATCH+ (no sub-district/cropland mask available); this is a whole-district approximation, not confirmed impact.",
+    "The 'Unspecified' district bucket (a Phase 01 unresolved-observation artifact in Banadir) is explicitly excluded from all operational geography output.",
+    "The operational pipeline runs against the frozen Phase 01/02 historical feature archive; live/streaming feature ingestion is out of scope for Phase 03."
+  ],
+  "blockers": []
+}

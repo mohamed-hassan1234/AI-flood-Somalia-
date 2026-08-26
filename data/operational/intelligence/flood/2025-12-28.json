@@ -1,0 +1,709 @@
+[
+  {
+    "intelligence_id": "812e4e98400c2baf6aaa8ce2",
+    "risk_type": "FLOOD",
+    "as_of_date": "2025-12-01",
+    "valid_from": "2025-12-02",
+    "valid_until": "2025-12-04",
+    "prediction_horizon": "1-3 days",
+    "geography": {
+      "type": "STATION",
+      "id": "JB001",
+      "name": "JB001 (Luuq)",
+      "parent_region_id": "SO26"
+    },
+    "station_code": "JB001",
+    "river_name": "Juba",
+    "prediction": {
+      "probability": 0.0,
+      "risk_level": "NORMAL",
+      "threshold_version": "flood-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.11499999999999999,
+        "warning": 0.22999999999999998,
+        "severe": 0.615
+      }
+    },
+    "exposure": {
+      "scope_type": "STATION",
+      "population_context": 146401.578,
+      "population_potentially_exposed": null,
+      "exposure_method": "station_operational_context_only_no_validated_inundation_geometry",
+      "exposure_uncertainty": "No floodplain, river-corridor, or historical inundation footprint exists in the Phase 01 data foundation. population_context is the population of the district nearest the gauge (SO2606 \u2014 Luuq), reported for operational orientation only. It must never be read as an exposed-population or affected-population estimate; the true flood-exposed population is unknown without validated inundation geometry.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "linked_district_id": "SO2606",
+      "linked_district_name": "Luuq",
+      "risk_level": "NORMAL"
+    },
+    "impact_summary": {
+      "signal": "RIVERINE_THRESHOLD_EXCEEDANCE",
+      "station": "JB001",
+      "river": "Juba",
+      "level_condition": "below normal",
+      "rate_of_rise_3d": "above normal",
+      "antecedent_rainfall_7d": "below normal",
+      "antecedent_soil_wetness": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "current_level_m",
+        "observed_value": 2.48,
+        "training_median": 2.8,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_1d",
+        "observed_value": 0.0,
+        "training_median": 0.0,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_3d",
+        "observed_value": -0.02,
+        "training_median": -0.020000000000000018,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_7d",
+        "observed_value": -0.1200000000000001,
+        "training_median": -0.04999999999999982,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_mean_7d",
+        "observed_value": 2.5142857142857147,
+        "training_median": 2.805714285714285,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": false,
+      "status": "NO_WARNING_RISK_NORMAL",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "river_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 2
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "flood-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-12-01"
+    },
+    "limitations": [
+      "Riverine early warning for five supported Jubba/Shabelle gauges only; not Somalia-wide, not flash/surface flood.",
+      "No validated inundation geometry exists; population_context is district orientation only, not exposed population."
+    ],
+    "generated_at": "2026-08-26T11:37:24.563537+00:00"
+  },
+  {
+    "intelligence_id": "dd9001c008bd043a4b3e28bd",
+    "risk_type": "FLOOD",
+    "as_of_date": "2025-12-28",
+    "valid_from": "2025-12-29",
+    "valid_until": "2025-12-31",
+    "prediction_horizon": "1-3 days",
+    "geography": {
+      "type": "STATION",
+      "id": "SH001",
+      "name": "SH001 (Belet Weyne)",
+      "parent_region_id": "SO20"
+    },
+    "station_code": "SH001",
+    "river_name": "Shabelle",
+    "prediction": {
+      "probability": 0.0,
+      "risk_level": "NORMAL",
+      "threshold_version": "flood-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.11499999999999999,
+        "warning": 0.22999999999999998,
+        "severe": 0.615
+      }
+    },
+    "exposure": {
+      "scope_type": "STATION",
+      "population_context": 348532.312,
+      "population_potentially_exposed": null,
+      "exposure_method": "station_operational_context_only_no_validated_inundation_geometry",
+      "exposure_uncertainty": "No floodplain, river-corridor, or historical inundation footprint exists in the Phase 01 data foundation. population_context is the population of the district nearest the gauge (SO2001 \u2014 Belet Weyne), reported for operational orientation only. It must never be read as an exposed-population or affected-population estimate; the true flood-exposed population is unknown without validated inundation geometry.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "linked_district_id": "SO2001",
+      "linked_district_name": "Belet Weyne",
+      "risk_level": "NORMAL"
+    },
+    "impact_summary": {
+      "signal": "RIVERINE_THRESHOLD_EXCEEDANCE",
+      "station": "SH001",
+      "river": "Shabelle",
+      "level_condition": "below normal",
+      "rate_of_rise_3d": "above normal",
+      "antecedent_rainfall_7d": "below normal",
+      "antecedent_soil_wetness": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "current_level_m",
+        "observed_value": 1.18,
+        "training_median": 2.8,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_1d",
+        "observed_value": 0.0,
+        "training_median": 0.0,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_3d",
+        "observed_value": 0.0,
+        "training_median": -0.020000000000000018,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_7d",
+        "observed_value": -0.02,
+        "training_median": -0.04999999999999982,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_mean_7d",
+        "observed_value": 1.18,
+        "training_median": 2.805714285714285,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": false,
+      "status": "NO_WARNING_RISK_NORMAL",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "distance_to_bankfull_m"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "river_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 2
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "flood-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-12-28"
+    },
+    "limitations": [
+      "Riverine early warning for five supported Jubba/Shabelle gauges only; not Somalia-wide, not flash/surface flood.",
+      "No validated inundation geometry exists; population_context is district orientation only, not exposed population."
+    ],
+    "generated_at": "2026-08-26T11:37:24.760415+00:00"
+  },
+  {
+    "intelligence_id": "0cd344cdc383c686eecb96c2",
+    "risk_type": "FLOOD",
+    "as_of_date": "2025-12-28",
+    "valid_from": "2025-12-29",
+    "valid_until": "2025-12-31",
+    "prediction_horizon": "1-3 days",
+    "geography": {
+      "type": "STATION",
+      "id": "SH002",
+      "name": "SH002 (Bulo Burto)",
+      "parent_region_id": "SO20"
+    },
+    "station_code": "SH002",
+    "river_name": "Shabelle",
+    "prediction": {
+      "probability": 0.0,
+      "risk_level": "NORMAL",
+      "threshold_version": "flood-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.11499999999999999,
+        "warning": 0.22999999999999998,
+        "severe": 0.615
+      }
+    },
+    "exposure": {
+      "scope_type": "STATION",
+      "population_context": 104658.766,
+      "population_potentially_exposed": null,
+      "exposure_method": "station_operational_context_only_no_validated_inundation_geometry",
+      "exposure_uncertainty": "No floodplain, river-corridor, or historical inundation footprint exists in the Phase 01 data foundation. population_context is the population of the district nearest the gauge (SO2002 \u2014 Bulo Burto), reported for operational orientation only. It must never be read as an exposed-population or affected-population estimate; the true flood-exposed population is unknown without validated inundation geometry.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "linked_district_id": "SO2002",
+      "linked_district_name": "Bulo Burto",
+      "risk_level": "NORMAL"
+    },
+    "impact_summary": {
+      "signal": "RIVERINE_THRESHOLD_EXCEEDANCE",
+      "station": "SH002",
+      "river": "Shabelle",
+      "level_condition": "below normal",
+      "rate_of_rise_3d": "above normal",
+      "antecedent_rainfall_7d": "below normal",
+      "antecedent_soil_wetness": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "current_level_m",
+        "observed_value": 1.44,
+        "training_median": 2.8,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_1d",
+        "observed_value": -0.02,
+        "training_median": 0.0,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_3d",
+        "observed_value": -0.02,
+        "training_median": -0.020000000000000018,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_7d",
+        "observed_value": -0.04,
+        "training_median": -0.04999999999999982,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_mean_7d",
+        "observed_value": 1.457142857142857,
+        "training_median": 2.805714285714285,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": false,
+      "status": "NO_WARNING_RISK_NORMAL",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "river_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 2
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "flood-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-12-28"
+    },
+    "limitations": [
+      "Riverine early warning for five supported Jubba/Shabelle gauges only; not Somalia-wide, not flash/surface flood.",
+      "No validated inundation geometry exists; population_context is district orientation only, not exposed population."
+    ],
+    "generated_at": "2026-08-26T11:37:25.052180+00:00"
+  },
+  {
+    "intelligence_id": "630f5633d6550e1a1af533ce",
+    "risk_type": "FLOOD",
+    "as_of_date": "2025-12-28",
+    "valid_from": "2025-12-29",
+    "valid_until": "2025-12-31",
+    "prediction_horizon": "1-3 days",
+    "geography": {
+      "type": "STATION",
+      "id": "SH004",
+      "name": "SH004 (Jowhar)",
+      "parent_region_id": "SO21"
+    },
+    "station_code": "SH004",
+    "river_name": "Shabelle",
+    "prediction": {
+      "probability": 0.0,
+      "risk_level": "NORMAL",
+      "threshold_version": "flood-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.11499999999999999,
+        "warning": 0.22999999999999998,
+        "severe": 0.615
+      }
+    },
+    "exposure": {
+      "scope_type": "STATION",
+      "population_context": 449436.0,
+      "population_potentially_exposed": null,
+      "exposure_method": "station_operational_context_only_no_validated_inundation_geometry",
+      "exposure_uncertainty": "No floodplain, river-corridor, or historical inundation footprint exists in the Phase 01 data foundation. population_context is the population of the district nearest the gauge (SO2101 \u2014 Jowhar), reported for operational orientation only. It must never be read as an exposed-population or affected-population estimate; the true flood-exposed population is unknown without validated inundation geometry.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "linked_district_id": "SO2101",
+      "linked_district_name": "Jowhar",
+      "risk_level": "NORMAL"
+    },
+    "impact_summary": {
+      "signal": "RIVERINE_THRESHOLD_EXCEEDANCE",
+      "station": "SH004",
+      "river": "Shabelle",
+      "level_condition": "below normal",
+      "rate_of_rise_3d": "above normal",
+      "antecedent_rainfall_7d": "below normal",
+      "antecedent_soil_wetness": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "current_level_m",
+        "observed_value": 1.0,
+        "training_median": 2.8,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_1d",
+        "observed_value": 0.0,
+        "training_median": 0.0,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_3d",
+        "observed_value": 0.0,
+        "training_median": -0.020000000000000018,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_7d",
+        "observed_value": 0.0,
+        "training_median": -0.04999999999999982,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_mean_7d",
+        "observed_value": 1.0,
+        "training_median": 2.805714285714285,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": false,
+      "status": "NO_WARNING_RISK_NORMAL",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "river_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 2
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "flood-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-12-28"
+    },
+    "limitations": [
+      "Riverine early warning for five supported Jubba/Shabelle gauges only; not Somalia-wide, not flash/surface flood.",
+      "No validated inundation geometry exists; population_context is district orientation only, not exposed population."
+    ],
+    "generated_at": "2026-08-26T11:37:25.299771+00:00"
+  },
+  {
+    "intelligence_id": "85a3dea45972e673aad29aff",
+    "risk_type": "FLOOD",
+    "as_of_date": "2025-12-27",
+    "valid_from": "2025-12-28",
+    "valid_until": "2025-12-30",
+    "prediction_horizon": "1-3 days",
+    "geography": {
+      "type": "STATION",
+      "id": "JB009",
+      "name": "JB009 (Doolow)",
+      "parent_region_id": "SO26"
+    },
+    "station_code": "JB009",
+    "river_name": "Juba",
+    "prediction": {
+      "probability": 0.0,
+      "risk_level": "NORMAL",
+      "threshold_version": "flood-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.11499999999999999,
+        "warning": 0.22999999999999998,
+        "severe": 0.615
+      }
+    },
+    "exposure": {
+      "scope_type": "STATION",
+      "population_context": 94299.75,
+      "population_potentially_exposed": null,
+      "exposure_method": "station_operational_context_only_no_validated_inundation_geometry",
+      "exposure_uncertainty": "No floodplain, river-corridor, or historical inundation footprint exists in the Phase 01 data foundation. population_context is the population of the district nearest the gauge (SO2605 \u2014 Doolow), reported for operational orientation only. It must never be read as an exposed-population or affected-population estimate; the true flood-exposed population is unknown without validated inundation geometry.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "linked_district_id": "SO2605",
+      "linked_district_name": "Doolow",
+      "risk_level": "NORMAL"
+    },
+    "impact_summary": {
+      "signal": "RIVERINE_THRESHOLD_EXCEEDANCE",
+      "station": "JB009",
+      "river": "Juba",
+      "level_condition": "below normal",
+      "rate_of_rise_3d": "below normal",
+      "antecedent_rainfall_7d": "below normal",
+      "antecedent_soil_wetness": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "current_level_m",
+        "observed_value": 2.28,
+        "training_median": 2.8,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_1d",
+        "observed_value": -0.02,
+        "training_median": 0.0,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_3d",
+        "observed_value": -0.04,
+        "training_median": -0.020000000000000018,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_change_7d",
+        "observed_value": 0.02,
+        "training_median": -0.04999999999999982,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "level_mean_7d",
+        "observed_value": 2.294285714285714,
+        "training_median": 2.805714285714285,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": false,
+      "status": "NO_WARNING_RISK_NORMAL",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "river_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 2
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "flood-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-12-27"
+    },
+    "limitations": [
+      "Riverine early warning for five supported Jubba/Shabelle gauges only; not Somalia-wide, not flash/surface flood.",
+      "No validated inundation geometry exists; population_context is district orientation only, not exposed population."
+    ],
+    "generated_at": "2026-08-26T11:37:25.514466+00:00"
+  }
+]

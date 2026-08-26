@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "principle": "Freshness limits are set from each source's own observation cadence, not one invented global threshold.",
+  "drought": {
+    "vegetation_feature_timestamp": {"max_gap_days": 32, "cadence": "MOD13Q1 16-day composite", "critical": true, "rationale": "flag when more than two composites have been missed"},
+    "rainfall_feature_timestamp": {"max_gap_days": 3, "cadence": "CHIRPS daily", "critical": true},
+    "power_feature_timestamp": {"max_gap_days": 3, "cadence": "NASA POWER daily", "critical": true}
+  },
+  "flood": {
+    "river_feature_timestamp": {"max_gap_days": 2, "cadence": "FAO SWALIM/SNRFA daily gauge reading", "critical": true, "rationale": "flood is a fast-moving hazard; even a 2-day gauge gap is operationally significant"},
+    "rainfall_feature_timestamp": {"max_gap_days": 3, "cadence": "CHIRPS daily", "critical": true},
+    "power_feature_timestamp": {"max_gap_days": 3, "cadence": "NASA POWER daily", "critical": true}
+  },
+  "food_security": {
+    "market_feature_timestamp": {"max_gap_days": 120, "cadence": "WFP market bulletin, roughly monthly with coverage gaps", "critical": false, "rationale": "market coverage is already ~31% missing at the source; treated as non-critical (DEGRADED, not INSUFFICIENT)"},
+    "previous_ipc_feature_timestamp": {"max_gap_days": 220, "cadence": "IPC assessment round, roughly semi-annual", "critical": false},
+    "vegetation_feature_timestamp": {"max_gap_days": 32, "cadence": "MOD13Q1 16-day composite", "critical": true},
+    "rainfall_feature_timestamp": {"max_gap_days": 3, "cadence": "CHIRPS daily", "critical": true},
+    "power_feature_timestamp": {"max_gap_days": 3, "cadence": "NASA POWER daily", "critical": true}
+  }
+}

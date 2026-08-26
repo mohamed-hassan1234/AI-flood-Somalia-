@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-08-26T11:59:27.968861+00:00",
+  "pipeline_version": "1.0.0",
+  "git_commit": "452d3a26508dab80b45ceb7552d983ff6f78a306",
+  "as_of_date_requested": "2024-05-01",
+  "as_of_date_resolved": {
+    "drought": "2024-05-01",
+    "flood": "2024-05-01",
+    "food_security": "2024-05-01"
+  },
+  "tracks": {
+    "drought": {
+      "track": "drought",
+      "as_of_date": "2024-05-01",
+      "rows_evaluated": 87,
+      "skipped_unsupported_geography": 1,
+      "risk_level_counts": {
+        "NORMAL": 76,
+        "WATCH": 6,
+        "WARNING": 5,
+        "SEVERE": 0,
+        "UNKNOWN": 0
+      },
+      "warning_eligible_count": 11,
+      "population_context_total": 18754534.995999996,
+      "population_potentially_exposed_total": 2045223.3900000001,
+      "intelligence_path": "data/operational/intelligence/drought/2024-05-01.json",
+      "warnings_path": "data/operational/warnings/drought/2024-05-01.json",
+      "exposure_path": "data/operational/exposure/drought/2024-05-01.csv",
+      "model_id": "drought-early-warning",
+      "model_version": "1.1.0",
+      "dataset_checksum": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42"
+    },
+    "flood": {
+      "track": "flood",
+      "as_of_date": "2024-05-01",
+      "rows_evaluated": 5,
+      "skipped_unsupported_geography": 0,
+      "risk_level_counts": {
+        "NORMAL": 3,
+        "WATCH": 0,
+        "WARNING": 0,
+        "SEVERE": 2,
+        "UNKNOWN": 0
+      },
+      "warning_eligible_count": 2,
+      "population_context_total": 1143328.406,
+      "population_potentially_exposed_total": null,
+      "intelligence_path": "data/operational/intelligence/flood/2024-05-01.json",
+      "warnings_path": "data/operational/warnings/flood/2024-05-01.json",
+      "exposure_path": "data/operational/exposure/flood/2024-05-01.csv",
+      "model_id": "flood-early-warning",
+      "model_version": "1.1.0",
+      "dataset_checksum": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9"
+    },
+    "food_security": {
+      "track": "food_security",
+      "as_of_date": "2024-05-01",
+      "rows_evaluated": 18,
+      "skipped_unsupported_geography": 0,
+      "risk_level_counts": {
+        "NORMAL": 0,
+        "WATCH": 13,
+        "WARNING": 2,
+        "SEVERE": 3,
+        "UNKNOWN": 0
+      },
+      "warning_eligible_count": 18,
+      "population_context_total": 19139579.797,
+      "population_potentially_exposed_total": null,
+      "intelligence_path": "data/operational/intelligence/food_security/2024-05-01.json",
+      "warnings_path": "data/operational/warnings/food_security/2024-05-01.json",
+      "exposure_path": "data/operational/exposure/food_security/2024-05-01.csv",
+      "model_id": "food_security-early-warning",
+      "model_version": "1.1.0",
+      "dataset_checksum": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904"
+    }
+  },
+  "stages_completed": [
+    "ACTIONS_ATTACHED",
+    "EXPOSURE_COMPLETE",
+    "FEATURES_READY",
+    "INFERENCE_COMPLETE",
+    "MODEL_LOADED",
+    "OUTPUT_VALIDATED",
+    "WARNING_EVALUATED"
+  ],
+  "run_seconds": 17.838575700006913
+}

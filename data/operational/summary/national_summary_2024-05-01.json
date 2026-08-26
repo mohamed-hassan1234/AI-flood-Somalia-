@@ -1,0 +1,46 @@
+{
+  "as_of_date": {
+    "drought": "2024-05-01",
+    "flood": "2024-05-01",
+    "food_security": "2024-05-01"
+  },
+  "pipeline_version": "1.0.0",
+  "generated_at": "2026-08-26T11:59:27.968861+00:00",
+  "note": "Unit counts only. No national probability is produced by averaging heterogeneous per-unit model outputs.",
+  "drought": {
+    "risk_level_counts": {
+      "NORMAL": 76,
+      "WATCH": 6,
+      "WARNING": 5,
+      "SEVERE": 0,
+      "UNKNOWN": 0
+    },
+    "warning_eligible_units": 11,
+    "units_evaluated": 87,
+    "population_context_total": 18754534.995999996
+  },
+  "flood": {
+    "risk_level_counts": {
+      "NORMAL": 3,
+      "WATCH": 0,
+      "WARNING": 0,
+      "SEVERE": 2,
+      "UNKNOWN": 0
+    },
+    "warning_eligible_units": 2,
+    "units_evaluated": 5,
+    "population_context_total": 1143328.406
+  },
+  "food_security": {
+    "risk_level_counts": {
+      "NORMAL": 0,
+      "WATCH": 13,
+      "WARNING": 2,
+      "SEVERE": 3,
+      "UNKNOWN": 0
+    },
+    "warning_eligible_units": 18,
+    "units_evaluated": 18,
+    "population_context_total": 19139579.797
+  }
+}

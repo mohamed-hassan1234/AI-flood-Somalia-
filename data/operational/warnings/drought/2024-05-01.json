@@ -1,0 +1,2195 @@
+[
+  {
+    "intelligence_id": "5f1041049a15bd754d78c6ff",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2024-03-20",
+    "valid_from": "2024-03-21",
+    "valid_until": "2024-04-05",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2203",
+      "name": "Daynile",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.22641509433962265,
+      "risk_level": "WATCH",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 505210.188,
+      "population_potentially_exposed": 505210.188,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "below normal",
+      "vegetation_trend": "below normal",
+      "rainfall_condition_30d": "below normal",
+      "soil_wetness_condition": "below normal",
+      "temperature_condition_30d": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "t2m_7d_c",
+        "observed_value": 30.07,
+        "training_median": 27.58642857142857,
+        "probability_change_if_replaced_by_training_median": -0.16134000770119367,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 29.77133333333333,
+        "training_median": 27.5795,
+        "probability_change_if_replaced_by_training_median": 0.11176541281096022,
+        "reason_code": "ELEVATED_TEMPERATURE_STRESS"
+      },
+      {
+        "feature": "vegetation_valid_pixel_fraction",
+        "observed_value": 0.3333333333333333,
+        "training_median": 0.7145454099515902,
+        "probability_change_if_replaced_by_training_median": 0.06295355587808418,
+        "reason_code": "LOW_VEGETATION_DATA_COVERAGE"
+      },
+      {
+        "feature": "ndvi_last_anomaly_z_reference",
+        "observed_value": -0.3059157170182838,
+        "training_median": -0.18039730137375712,
+        "probability_change_if_replaced_by_training_median": 0.06295355587808418,
+        "reason_code": "LOW_NDVI_ANOMALY"
+      },
+      {
+        "feature": "dry_spell_days",
+        "observed_value": 83.0,
+        "training_median": 11.0,
+        "probability_change_if_replaced_by_training_median": -0.04281567489114657,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "ELEVATED_TEMPERATURE_STRESS",
+        "LOW_VEGETATION_DATA_COVERAGE",
+        "LOW_NDVI_ANOMALY"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WATCH-01",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Intensify vegetation and rainfall monitoring for the district over the coming composite period.",
+        "intended_actor": "monitoring/early-warning analyst",
+        "time_horizon": "next 16-day composite",
+        "prerequisites": [],
+        "source_reference": "WMO/FEWS NET monitoring cadence",
+        "priority": "routine",
+        "scope_notes": "district-level environmental signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "ELEVATED_TEMPERATURE_STRESS",
+            "LOW_VEGETATION_DATA_COVERAGE",
+            "LOW_NDVI_ANOMALY"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WATCH-02",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Prepare a targeted field-verification checklist for the district in case conditions persist.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "routine",
+        "scope_notes": "preparation only, not a dispatch order",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "ELEVATED_TEMPERATURE_STRESS",
+            "LOW_VEGETATION_DATA_COVERAGE",
+            "LOW_NDVI_ANOMALY"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-03-20"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:17.055736+00:00"
+  },
+  {
+    "intelligence_id": "b1746d15efcb4f1173a1ac9d",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2024-03-20",
+    "valid_from": "2024-03-21",
+    "valid_until": "2024-04-05",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2207",
+      "name": "Hawl Wadaag",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.3877551020408163,
+      "risk_level": "WARNING",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 134763.609,
+      "population_potentially_exposed": 134763.609,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "unknown",
+      "vegetation_trend": "unknown",
+      "rainfall_condition_30d": "below normal",
+      "soil_wetness_condition": "above normal",
+      "temperature_condition_30d": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "ndvi_last_anomaly_z_reference",
+        "observed_value": null,
+        "training_median": -0.18039730137375712,
+        "probability_change_if_replaced_by_training_median": -0.339517625231911,
+        "reason_code": null
+      },
+      {
+        "feature": "ndvi_last",
+        "observed_value": null,
+        "training_median": 0.21241884833620475,
+        "probability_change_if_replaced_by_training_median": 0.3093237294917967,
+        "reason_code": null
+      },
+      {
+        "feature": "evi_last",
+        "observed_value": null,
+        "training_median": 0.1379864933462589,
+        "probability_change_if_replaced_by_training_median": 0.3093237294917967,
+        "reason_code": null
+      },
+      {
+        "feature": "vegetation_valid_pixel_fraction",
+        "observed_value": 0.0,
+        "training_median": 0.7145454099515902,
+        "probability_change_if_replaced_by_training_median": 0.16134000770119367,
+        "reason_code": "LOW_VEGETATION_DATA_COVERAGE"
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 28.49233333333333,
+        "training_median": 27.5795,
+        "probability_change_if_replaced_by_training_median": 0.1185243328100471,
+        "reason_code": "ELEVATED_TEMPERATURE_STRESS"
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "LOW_VEGETATION_DATA_COVERAGE",
+        "ELEVATED_TEMPERATURE_STRESS"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WARNING-01",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "assessment",
+        "action_text": "Prioritize field verification of vegetation and livelihood conditions in the district.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [
+          "DROUGHT-WATCH-02 checklist prepared where available"
+        ],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "elevated",
+        "scope_notes": "environmental signal; not a hunger determination",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE",
+            "ELEVATED_TEMPERATURE_STRESS"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-02",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "coordination",
+        "action_text": "Coordinate with agriculture and water-resource monitoring counterparts to cross-check the signal.",
+        "intended_actor": "coordination focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FAO/SWALIM coordination practice",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE",
+            "ELEVATED_TEMPERATURE_STRESS"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-03",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "water",
+        "action_text": "Review local water-availability indicators for the district and neighboring water-stressed areas.",
+        "intended_actor": "WASH/water-resources focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "WMO drought monitoring guidance",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE",
+            "ELEVATED_TEMPERATURE_STRESS"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-03-20"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:17.261835+00:00"
+  },
+  {
+    "intelligence_id": "f156f1b6a090cc0e7a46d760",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2024-04-05",
+    "valid_from": "2024-04-06",
+    "valid_until": "2024-04-21",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2208",
+      "name": "Heliwa",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.22641509433962265,
+      "risk_level": "WATCH",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 350552.625,
+      "population_potentially_exposed": 350552.625,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "above normal",
+      "vegetation_trend": "above normal",
+      "rainfall_condition_30d": "below normal",
+      "soil_wetness_condition": "above normal",
+      "temperature_condition_30d": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "vegetation_valid_pixel_fraction",
+        "observed_value": 0.0909090909090909,
+        "training_median": 0.7145454099515902,
+        "probability_change_if_replaced_by_training_median": 0.11176541281096022,
+        "reason_code": "LOW_VEGETATION_DATA_COVERAGE"
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 28.87633333333333,
+        "training_median": 27.5795,
+        "probability_change_if_replaced_by_training_median": 0.0835579514824798,
+        "reason_code": "ELEVATED_TEMPERATURE_STRESS"
+      },
+      {
+        "feature": "t2m_max_30d_c",
+        "observed_value": 31.08,
+        "training_median": 36.15,
+        "probability_change_if_replaced_by_training_median": 0.0809605488850772,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 8.624204363913462,
+        "training_median": 67.05405115143218,
+        "probability_change_if_replaced_by_training_median": 0.06295355587808418,
+        "reason_code": "PERSISTENT_RAINFALL_DEFICIT"
+      },
+      {
+        "feature": "gwet_root_30d",
+        "observed_value": 0.2523333333333333,
+        "training_median": 0.43799999999999994,
+        "probability_change_if_replaced_by_training_median": 0.06295355587808418,
+        "reason_code": "SOIL_MOISTURE_DEFICIT"
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "LOW_VEGETATION_DATA_COVERAGE",
+        "ELEVATED_TEMPERATURE_STRESS",
+        "PERSISTENT_RAINFALL_DEFICIT",
+        "SOIL_MOISTURE_DEFICIT"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WATCH-01",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Intensify vegetation and rainfall monitoring for the district over the coming composite period.",
+        "intended_actor": "monitoring/early-warning analyst",
+        "time_horizon": "next 16-day composite",
+        "prerequisites": [],
+        "source_reference": "WMO/FEWS NET monitoring cadence",
+        "priority": "routine",
+        "scope_notes": "district-level environmental signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE",
+            "ELEVATED_TEMPERATURE_STRESS",
+            "PERSISTENT_RAINFALL_DEFICIT",
+            "SOIL_MOISTURE_DEFICIT"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WATCH-02",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Prepare a targeted field-verification checklist for the district in case conditions persist.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "routine",
+        "scope_notes": "preparation only, not a dispatch order",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE",
+            "ELEVATED_TEMPERATURE_STRESS",
+            "PERSISTENT_RAINFALL_DEFICIT",
+            "SOIL_MOISTURE_DEFICIT"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-04-05"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:17.360347+00:00"
+  },
+  {
+    "intelligence_id": "7b89005c1bd17bcb0479be8b",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2024-02-17",
+    "valid_from": "2024-02-18",
+    "valid_until": "2024-03-04",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2216",
+      "name": "Wardhigley",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.3877551020408163,
+      "risk_level": "WARNING",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 175108.75,
+      "population_potentially_exposed": 175108.75,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "unknown",
+      "vegetation_trend": "unknown",
+      "rainfall_condition_30d": "much below normal",
+      "soil_wetness_condition": "above normal",
+      "temperature_condition_30d": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "ndvi_last_anomaly_z_reference",
+        "observed_value": null,
+        "training_median": -0.18039730137375712,
+        "probability_change_if_replaced_by_training_median": -0.339517625231911,
+        "reason_code": null
+      },
+      {
+        "feature": "ndvi_last",
+        "observed_value": null,
+        "training_median": 0.21241884833620475,
+        "probability_change_if_replaced_by_training_median": 0.32108843537414966,
+        "reason_code": null
+      },
+      {
+        "feature": "evi_last",
+        "observed_value": null,
+        "training_median": 0.1379864933462589,
+        "probability_change_if_replaced_by_training_median": 0.32108843537414966,
+        "reason_code": null
+      },
+      {
+        "feature": "vegetation_valid_pixel_fraction",
+        "observed_value": 0.0,
+        "training_median": 0.7145454099515902,
+        "probability_change_if_replaced_by_training_median": 0.22429356357927785,
+        "reason_code": "LOW_VEGETATION_DATA_COVERAGE"
+      },
+      {
+        "feature": "t2m_max_30d_c",
+        "observed_value": 30.15,
+        "training_median": 36.15,
+        "probability_change_if_replaced_by_training_median": 0.16134000770119367,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "LOW_VEGETATION_DATA_COVERAGE"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WARNING-01",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "assessment",
+        "action_text": "Prioritize field verification of vegetation and livelihood conditions in the district.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [
+          "DROUGHT-WATCH-02 checklist prepared where available"
+        ],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "elevated",
+        "scope_notes": "environmental signal; not a hunger determination",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-02",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "coordination",
+        "action_text": "Coordinate with agriculture and water-resource monitoring counterparts to cross-check the signal.",
+        "intended_actor": "coordination focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FAO/SWALIM coordination practice",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-03",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "water",
+        "action_text": "Review local water-availability indicators for the district and neighboring water-stressed areas.",
+        "intended_actor": "WASH/water-resources focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "WMO drought monitoring guidance",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "rain_30d_mm"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-02-17"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:17.780301+00:00"
+  },
+  {
+    "intelligence_id": "8b0dbb9c2585080c404bbdf0",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2024-02-17",
+    "valid_from": "2024-02-18",
+    "valid_until": "2024-03-04",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2217",
+      "name": "Yaaqshid",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.3877551020408163,
+      "risk_level": "WARNING",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 195648.156,
+      "population_potentially_exposed": 195648.156,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "unknown",
+      "vegetation_trend": "unknown",
+      "rainfall_condition_30d": "much below normal",
+      "soil_wetness_condition": "above normal",
+      "temperature_condition_30d": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "ndvi_last_anomaly_z_reference",
+        "observed_value": null,
+        "training_median": -0.18039730137375712,
+        "probability_change_if_replaced_by_training_median": -0.339517625231911,
+        "reason_code": null
+      },
+      {
+        "feature": "ndvi_last",
+        "observed_value": null,
+        "training_median": 0.21241884833620475,
+        "probability_change_if_replaced_by_training_median": 0.32108843537414966,
+        "reason_code": null
+      },
+      {
+        "feature": "evi_last",
+        "observed_value": null,
+        "training_median": 0.1379864933462589,
+        "probability_change_if_replaced_by_training_median": 0.32108843537414966,
+        "reason_code": null
+      },
+      {
+        "feature": "vegetation_valid_pixel_fraction",
+        "observed_value": 0.0,
+        "training_median": 0.7145454099515902,
+        "probability_change_if_replaced_by_training_median": 0.22429356357927785,
+        "reason_code": "LOW_VEGETATION_DATA_COVERAGE"
+      },
+      {
+        "feature": "t2m_max_30d_c",
+        "observed_value": 30.15,
+        "training_median": 36.15,
+        "probability_change_if_replaced_by_training_median": 0.16134000770119367,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "LOW_VEGETATION_DATA_COVERAGE"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WARNING-01",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "assessment",
+        "action_text": "Prioritize field verification of vegetation and livelihood conditions in the district.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [
+          "DROUGHT-WATCH-02 checklist prepared where available"
+        ],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "elevated",
+        "scope_notes": "environmental signal; not a hunger determination",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-02",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "coordination",
+        "action_text": "Coordinate with agriculture and water-resource monitoring counterparts to cross-check the signal.",
+        "intended_actor": "coordination focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FAO/SWALIM coordination practice",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-03",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "water",
+        "action_text": "Review local water-availability indicators for the district and neighboring water-stressed areas.",
+        "intended_actor": "WASH/water-resources focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "WMO drought monitoring guidance",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "rain_30d_mm"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-02-17"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:17.904569+00:00"
+  },
+  {
+    "intelligence_id": "63aa3e0c5cc1913f930e8cd1",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2024-04-21",
+    "valid_from": "2024-04-22",
+    "valid_until": "2024-05-07",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2306",
+      "name": "Sablaale",
+      "parent_region_id": "SO23"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.3877551020408163,
+      "risk_level": "WARNING",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 77745.422,
+      "population_potentially_exposed": 77745.422,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "above normal",
+      "vegetation_trend": "above normal",
+      "rainfall_condition_30d": "above normal",
+      "soil_wetness_condition": "above normal",
+      "temperature_condition_30d": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "ndvi_change_1",
+        "observed_value": 0.1723618800888232,
+        "training_median": -0.002384352327185646,
+        "probability_change_if_replaced_by_training_median": 0.3093237294917967,
+        "reason_code": null
+      },
+      {
+        "feature": "ndvi_last",
+        "observed_value": 0.5822,
+        "training_median": 0.21241884833620475,
+        "probability_change_if_replaced_by_training_median": 0.2731054205121539,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 30.02833333333333,
+        "training_median": 27.5795,
+        "probability_change_if_replaced_by_training_median": 0.24230055658627087,
+        "reason_code": "ELEVATED_TEMPERATURE_STRESS"
+      },
+      {
+        "feature": "vegetation_valid_pixel_fraction",
+        "observed_value": 0.0001400168020162,
+        "training_median": 0.7145454099515902,
+        "probability_change_if_replaced_by_training_median": 0.22429356357927785,
+        "reason_code": "LOW_VEGETATION_DATA_COVERAGE"
+      },
+      {
+        "feature": "gwet_top_30d",
+        "observed_value": 0.393,
+        "training_median": 0.266,
+        "probability_change_if_replaced_by_training_median": 0.1185243328100471,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "ELEVATED_TEMPERATURE_STRESS",
+        "LOW_VEGETATION_DATA_COVERAGE"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WARNING-01",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "assessment",
+        "action_text": "Prioritize field verification of vegetation and livelihood conditions in the district.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [
+          "DROUGHT-WATCH-02 checklist prepared where available"
+        ],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "elevated",
+        "scope_notes": "environmental signal; not a hunger determination",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "ELEVATED_TEMPERATURE_STRESS",
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-02",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "coordination",
+        "action_text": "Coordinate with agriculture and water-resource monitoring counterparts to cross-check the signal.",
+        "intended_actor": "coordination focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FAO/SWALIM coordination practice",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "ELEVATED_TEMPERATURE_STRESS",
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-03",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "water",
+        "action_text": "Review local water-availability indicators for the district and neighboring water-stressed areas.",
+        "intended_actor": "WASH/water-resources focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "WMO drought monitoring guidance",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "ELEVATED_TEMPERATURE_STRESS",
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "evi_last"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-04-21"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:18.993834+00:00"
+  },
+  {
+    "intelligence_id": "6a26ac8f1fd017de8b0fc407",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2024-03-20",
+    "valid_from": "2024-03-21",
+    "valid_until": "2024-04-05",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2209",
+      "name": "Hodan",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.2692307692307692,
+      "risk_level": "WATCH",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 202269.281,
+      "population_potentially_exposed": 202269.281,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "unknown",
+      "vegetation_trend": "unknown",
+      "rainfall_condition_30d": "below normal",
+      "soil_wetness_condition": "below normal",
+      "temperature_condition_30d": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "ndvi_last_anomaly_z_reference",
+        "observed_value": null,
+        "training_median": -0.18039730137375712,
+        "probability_change_if_replaced_by_training_median": -0.4580419580419581,
+        "reason_code": null
+      },
+      {
+        "feature": "ndvi_last",
+        "observed_value": null,
+        "training_median": 0.21241884833620475,
+        "probability_change_if_replaced_by_training_median": 0.2169431875314228,
+        "reason_code": null
+      },
+      {
+        "feature": "evi_last",
+        "observed_value": null,
+        "training_median": 0.1379864933462589,
+        "probability_change_if_replaced_by_training_median": 0.2169431875314228,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_7d_c",
+        "observed_value": 30.07,
+        "training_median": 27.58642857142857,
+        "probability_change_if_replaced_by_training_median": -0.1333666333666334,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 29.77133333333333,
+        "training_median": 27.5795,
+        "probability_change_if_replaced_by_training_median": 0.12217194570135745,
+        "reason_code": "ELEVATED_TEMPERATURE_STRESS"
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "ELEVATED_TEMPERATURE_STRESS"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WATCH-01",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Intensify vegetation and rainfall monitoring for the district over the coming composite period.",
+        "intended_actor": "monitoring/early-warning analyst",
+        "time_horizon": "next 16-day composite",
+        "prerequisites": [],
+        "source_reference": "WMO/FEWS NET monitoring cadence",
+        "priority": "routine",
+        "scope_notes": "district-level environmental signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "ELEVATED_TEMPERATURE_STRESS"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WATCH-02",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Prepare a targeted field-verification checklist for the district in case conditions persist.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "routine",
+        "scope_notes": "preparation only, not a dispatch order",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "ELEVATED_TEMPERATURE_STRESS"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-03-20"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:22.785324+00:00"
+  },
+  {
+    "intelligence_id": "1c55f5fd5ff20b8b3847c4d4",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2024-04-05",
+    "valid_from": "2024-04-06",
+    "valid_until": "2024-04-21",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2211",
+      "name": "Karaan",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.22641509433962265,
+      "risk_level": "WATCH",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 255619.969,
+      "population_potentially_exposed": 255619.969,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "above normal",
+      "vegetation_trend": "unknown",
+      "rainfall_condition_30d": "below normal",
+      "soil_wetness_condition": "above normal",
+      "temperature_condition_30d": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "ndvi_last_anomaly_z_reference",
+        "observed_value": -0.0182081806756047,
+        "training_median": -0.18039730137375712,
+        "probability_change_if_replaced_by_training_median": -0.16134000770119367,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 28.87633333333333,
+        "training_median": 27.5795,
+        "probability_change_if_replaced_by_training_median": 0.0809605488850772,
+        "reason_code": "ELEVATED_TEMPERATURE_STRESS"
+      },
+      {
+        "feature": "vegetation_valid_pixel_fraction",
+        "observed_value": 0.1428571428571428,
+        "training_median": 0.7145454099515902,
+        "probability_change_if_replaced_by_training_median": 0.0809605488850772,
+        "reason_code": "LOW_VEGETATION_DATA_COVERAGE"
+      },
+      {
+        "feature": "t2m_max_30d_c",
+        "observed_value": 31.08,
+        "training_median": 36.15,
+        "probability_change_if_replaced_by_training_median": 0.07935627081021088,
+        "reason_code": null
+      },
+      {
+        "feature": "ndvi_change_1",
+        "observed_value": null,
+        "training_median": -0.002384352327185646,
+        "probability_change_if_replaced_by_training_median": 0.06295355587808418,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "ELEVATED_TEMPERATURE_STRESS",
+        "LOW_VEGETATION_DATA_COVERAGE"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WATCH-01",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Intensify vegetation and rainfall monitoring for the district over the coming composite period.",
+        "intended_actor": "monitoring/early-warning analyst",
+        "time_horizon": "next 16-day composite",
+        "prerequisites": [],
+        "source_reference": "WMO/FEWS NET monitoring cadence",
+        "priority": "routine",
+        "scope_notes": "district-level environmental signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "ELEVATED_TEMPERATURE_STRESS",
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WATCH-02",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Prepare a targeted field-verification checklist for the district in case conditions persist.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "routine",
+        "scope_notes": "preparation only, not a dispatch order",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "ELEVATED_TEMPERATURE_STRESS",
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-04-05"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:22.941754+00:00"
+  },
+  {
+    "intelligence_id": "f30b7ce98c6b8fd784fe97c1",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2024-02-17",
+    "valid_from": "2024-02-18",
+    "valid_until": "2024-03-04",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2206",
+      "name": "Hamar Weyne",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.3877551020408163,
+      "risk_level": "WARNING",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 28368.617,
+      "population_potentially_exposed": 28368.617,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "unknown",
+      "vegetation_trend": "unknown",
+      "rainfall_condition_30d": "much below normal",
+      "soil_wetness_condition": "above normal",
+      "temperature_condition_30d": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "ndvi_last_anomaly_z_reference",
+        "observed_value": null,
+        "training_median": -0.18039730137375712,
+        "probability_change_if_replaced_by_training_median": -0.339517625231911,
+        "reason_code": null
+      },
+      {
+        "feature": "ndvi_last",
+        "observed_value": null,
+        "training_median": 0.21241884833620475,
+        "probability_change_if_replaced_by_training_median": 0.32108843537414966,
+        "reason_code": null
+      },
+      {
+        "feature": "evi_last",
+        "observed_value": null,
+        "training_median": 0.1379864933462589,
+        "probability_change_if_replaced_by_training_median": 0.32108843537414966,
+        "reason_code": null
+      },
+      {
+        "feature": "vegetation_valid_pixel_fraction",
+        "observed_value": 0.0,
+        "training_median": 0.7145454099515902,
+        "probability_change_if_replaced_by_training_median": 0.22429356357927785,
+        "reason_code": "LOW_VEGETATION_DATA_COVERAGE"
+      },
+      {
+        "feature": "t2m_max_30d_c",
+        "observed_value": 30.15,
+        "training_median": 36.15,
+        "probability_change_if_replaced_by_training_median": 0.16134000770119367,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "LOW_VEGETATION_DATA_COVERAGE"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WARNING-01",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "assessment",
+        "action_text": "Prioritize field verification of vegetation and livelihood conditions in the district.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [
+          "DROUGHT-WATCH-02 checklist prepared where available"
+        ],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "elevated",
+        "scope_notes": "environmental signal; not a hunger determination",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-02",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "coordination",
+        "action_text": "Coordinate with agriculture and water-resource monitoring counterparts to cross-check the signal.",
+        "intended_actor": "coordination focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FAO/SWALIM coordination practice",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WARNING-03",
+        "risk_type": "drought",
+        "risk_level": "WARNING",
+        "action_category": "water",
+        "action_text": "Review local water-availability indicators for the district and neighboring water-stressed areas.",
+        "intended_actor": "WASH/water-resources focal point",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "WMO drought monitoring guidance",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "LOW_VEGETATION_DATA_COVERAGE"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "rain_30d_mm"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2024-02-17"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:23.132544+00:00"
+  },
+  {
+    "intelligence_id": "6c4f9b6c43ba362dcc95202e",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2020-11-15",
+    "valid_from": "2020-11-16",
+    "valid_until": "2020-12-01",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2201",
+      "name": "Bondhere",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.16346153846153846,
+      "risk_level": "WATCH",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 50111.906,
+      "population_potentially_exposed": 50111.906,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "unknown",
+      "vegetation_trend": "unknown",
+      "rainfall_condition_30d": "above normal",
+      "soil_wetness_condition": "above normal",
+      "temperature_condition_30d": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "ndvi_last_anomaly_z_reference",
+        "observed_value": null,
+        "training_median": -0.18039730137375712,
+        "probability_change_if_replaced_by_training_median": -0.4957563386334336,
+        "reason_code": null
+      },
+      {
+        "feature": "ndvi_last",
+        "observed_value": null,
+        "training_median": 0.21241884833620475,
+        "probability_change_if_replaced_by_training_median": 0.13946153846153847,
+        "reason_code": null
+      },
+      {
+        "feature": "evi_last",
+        "observed_value": null,
+        "training_median": 0.1379864933462589,
+        "probability_change_if_replaced_by_training_median": 0.13946153846153847,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 52.803381819278,
+        "training_median": 11.053664703853427,
+        "probability_change_if_replaced_by_training_median": -0.06295355587808418,
+        "reason_code": null
+      },
+      {
+        "feature": "gwet_top_7d",
+        "observed_value": 0.48,
+        "training_median": 0.26285714285714284,
+        "probability_change_if_replaced_by_training_median": -0.06295355587808418,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WATCH-01",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Intensify vegetation and rainfall monitoring for the district over the coming composite period.",
+        "intended_actor": "monitoring/early-warning analyst",
+        "time_horizon": "next 16-day composite",
+        "prerequisites": [],
+        "source_reference": "WMO/FEWS NET monitoring cadence",
+        "priority": "routine",
+        "scope_notes": "district-level environmental signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": []
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WATCH-02",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Prepare a targeted field-verification checklist for the district in case conditions persist.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "routine",
+        "scope_notes": "preparation only, not a dispatch order",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": []
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2020-11-15"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:23.267013+00:00"
+  },
+  {
+    "intelligence_id": "5f23e8ec621ef0c6fd42bfb5",
+    "risk_type": "DROUGHT",
+    "as_of_date": "2020-02-17",
+    "valid_from": "2020-02-18",
+    "valid_until": "2020-03-04",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "geography": {
+      "type": "DISTRICT",
+      "id": "SO2213",
+      "name": "Shibis",
+      "parent_region_id": "SO22"
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.2692307692307692,
+      "risk_level": "WATCH",
+      "threshold_version": "drought-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      }
+    },
+    "exposure": {
+      "scope_type": "DISTRICT",
+      "population_context": 69824.867,
+      "population_potentially_exposed": 69824.867,
+      "exposure_method": "full_canonical_district_population_at_or_above_watch_threshold",
+      "exposure_uncertainty": "Whole-district approximation: the drought target is a district-level agricultural/vegetation signal, not a sub-district exposure geometry. No cropland/settlement mask was available in Phase 01, so the entire district population is reported as potentially exposed, not confirmed affected.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025
+    },
+    "impact_summary": {
+      "signal": "AGRICULTURAL_VEGETATION_STRESS",
+      "vegetation_stress": "unknown",
+      "vegetation_trend": "unknown",
+      "rainfall_condition_30d": "below normal",
+      "soil_wetness_condition": "above normal",
+      "temperature_condition_30d": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "ndvi_last_anomaly_z_reference",
+        "observed_value": null,
+        "training_median": -0.18039730137375712,
+        "probability_change_if_replaced_by_training_median": -0.4580419580419581,
+        "reason_code": null
+      },
+      {
+        "feature": "ndvi_last",
+        "observed_value": null,
+        "training_median": 0.21241884833620475,
+        "probability_change_if_replaced_by_training_median": 0.2169431875314228,
+        "reason_code": null
+      },
+      {
+        "feature": "evi_last",
+        "observed_value": null,
+        "training_median": 0.1379864933462589,
+        "probability_change_if_replaced_by_training_median": 0.2169431875314228,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_spell_days",
+        "observed_value": 50.0,
+        "training_median": 11.0,
+        "probability_change_if_replaced_by_training_median": -0.1185243328100471,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 27.35333333333333,
+        "training_median": 27.5795,
+        "probability_change_if_replaced_by_training_median": -0.1185243328100471,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [
+      {
+        "action_id": "DROUGHT-WATCH-01",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Intensify vegetation and rainfall monitoring for the district over the coming composite period.",
+        "intended_actor": "monitoring/early-warning analyst",
+        "time_horizon": "next 16-day composite",
+        "prerequisites": [],
+        "source_reference": "WMO/FEWS NET monitoring cadence",
+        "priority": "routine",
+        "scope_notes": "district-level environmental signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": []
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "DROUGHT-WATCH-02",
+        "risk_type": "drought",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Prepare a targeted field-verification checklist for the district in case conditions persist.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "1-2 weeks",
+        "prerequisites": [],
+        "source_reference": "FEWS NET early-warning-to-early-action practice",
+        "priority": "routine",
+        "scope_notes": "preparation only, not a dispatch order",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "drought",
+          "risk_level": "WATCH",
+          "reason_codes": []
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "vegetation_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "drought-early-warning",
+      "version": "1.1.0",
+      "algorithm": "logistic_regression",
+      "calibration_method": "isotonic"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2020-02-17"
+    },
+    "limitations": [
+      "Predicts environmental/agricultural vegetation stress, not humanitarian food insecurity directly.",
+      "District-level unit; no sub-district exposure geometry is available."
+    ],
+    "generated_at": "2026-08-26T11:59:23.483362+00:00"
+  }
+]

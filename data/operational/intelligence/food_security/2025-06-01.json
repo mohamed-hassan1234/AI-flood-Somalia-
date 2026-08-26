@@ -1,0 +1,3439 @@
+[
+  {
+    "intelligence_id": "3da47008fda9c027ea9b5557",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO11",
+      "name": "Awdal",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.3,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 653181.562,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "unknown",
+      "climate_context_rainfall_30d": "below normal",
+      "vegetation_context": "below normal",
+      "previous_ipc_context": "near normal"
+    },
+    "drivers": [
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 19.989988622068196,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 37.40914925163724,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 25.75,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 30.336666666666662,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_max_30d_c",
+        "observed_value": 37.83841666666667,
+        "training_median": 33.21072222222222,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": []
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": []
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "t2m_max_30d_c"
+      ],
+      "freshness": {
+        "status": "DEGRADED",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [
+          "market_feature_timestamp"
+        ],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 1904,
+            "status": "STALE",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:25.731033+00:00"
+  },
+  {
+    "intelligence_id": "4bd9c67c2a9100c5316e54cf",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO12",
+      "name": "Woqooyi Galbeed",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.22499999999999998,
+      "risk_level": "NORMAL",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 1491844.922,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "NORMAL"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "unknown",
+      "climate_context_rainfall_30d": "below normal",
+      "vegetation_context": "below normal",
+      "previous_ipc_context": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.09,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": -0.07500000000000001,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 33.39501891008848,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 59.05460586391184,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 22.666666666666664,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 29.390444444444444,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": false,
+      "status": "NO_WARNING_RISK_NORMAL",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "t2m_max_30d_c"
+      ],
+      "freshness": {
+        "status": "DEGRADED",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [
+          "market_feature_timestamp"
+        ],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 1904,
+            "status": "STALE",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:25.870591+00:00"
+  },
+  {
+    "intelligence_id": "ff8561eb507a2eb67a3d7c68",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO13",
+      "name": "Togdheer",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.25,
+      "risk_level": "NORMAL",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 888844.344,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "NORMAL"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "unknown",
+      "climate_context_rainfall_30d": "below normal",
+      "vegetation_context": "below normal",
+      "previous_ipc_context": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.1,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": -0.04999999999999999,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 39.7156144436841,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 82.76796634679043,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 19.75,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 27.765916666666666,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": false,
+      "status": "NO_WARNING_RISK_NORMAL",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "DEGRADED",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [
+          "market_feature_timestamp"
+        ],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 1904,
+            "status": "STALE",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:25.991986+00:00"
+  },
+  {
+    "intelligence_id": "fb1cff1ee283b2a7a2add92e",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO14",
+      "name": "Sool",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.37499999999999994,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 570530.664,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "below normal",
+      "climate_context_rainfall_30d": "below normal",
+      "vegetation_context": "below normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.15,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.07499999999999996,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 49.84232089311983,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 90.47724748207946,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 21.0,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 29.219916666666663,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "market_usdkg_90d_median"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:26.138436+00:00"
+  },
+  {
+    "intelligence_id": "b4f27ff385eb61d5ce1810fa",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO15",
+      "name": "Sanaag",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.39999999999999997,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 442544.062,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "unknown",
+      "climate_context_rainfall_30d": "below normal",
+      "vegetation_context": "below normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.16,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.09999999999999998,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 29.25830446749852,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 52.70909960664781,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 21.0,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 28.058222222222224,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "DEGRADED",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [
+          "market_feature_timestamp"
+        ],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 1904,
+            "status": "STALE",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:26.285121+00:00"
+  },
+  {
+    "intelligence_id": "9f6e2411356ab5cde863e5da",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO16",
+      "name": "Bari",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.475,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 1208658.941,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "below normal",
+      "climate_context_rainfall_30d": "below normal",
+      "vegetation_context": "below normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.19,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.175,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 17.781424490601513,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 32.9332122279271,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 24.833333333333336,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 31.12144444444445,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "t2m_30d_c",
+        "t2m_max_30d_c",
+        "gwet_top_30d",
+        "market_usdkg_90d_median"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:26.473581+00:00"
+  },
+  {
+    "intelligence_id": "c51305927fd70de32dd7fd95",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO17",
+      "name": "Nugaal",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.35000000000000003,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 654037.735,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "below normal",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "below normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.14,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.050000000000000044,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 73.7586228646483,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 106.30932970039328,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 21.0,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 30.38655555555556,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "market_usdkg_90d_median"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:26.649483+00:00"
+  },
+  {
+    "intelligence_id": "7acf7861ef124dea0e68789f",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO18",
+      "name": "Mudug",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.575,
+      "risk_level": "WARNING",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 1520143.844,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WARNING"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "below normal",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "below normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.23,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.27499999999999997,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 51.79105802842036,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 99.38925348156158,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 20.8,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 30.5432,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WARNING-01",
+        "risk_type": "food_security",
+        "risk_level": "WARNING",
+        "action_category": "assessment",
+        "action_text": "Prioritize IPC/food-security technical working group review for the region.",
+        "intended_actor": "food-security coordination lead",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual review process",
+        "priority": "elevated",
+        "scope_notes": "regional burden-risk signal; not a district or household determination",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WARNING-02",
+        "risk_type": "food_security",
+        "risk_level": "WARNING",
+        "action_category": "assessment",
+        "action_text": "Verify livelihood conditions with local partners operating in the region.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "FEWS NET livelihood-zone verification practice",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:26.867156+00:00"
+  },
+  {
+    "intelligence_id": "f76b7396b9604468e0d1223f",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO19",
+      "name": "Galgaduud",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.8999999999999999,
+      "risk_level": "SEVERE",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 821518.875,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "SEVERE"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "above normal",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "above normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.36,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.5999999999999999,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 57.34804784388726,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 163.38170017864908,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 19.4,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 29.03553333333333,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-SEVERE-01",
+        "risk_type": "food_security",
+        "risk_level": "SEVERE",
+        "action_category": "coordination",
+        "action_text": "Escalate to humanitarian response-preparedness coordination bodies for cross-sector review.",
+        "intended_actor": "coordination lead",
+        "time_horizon": "as soon as practicable",
+        "prerequisites": [],
+        "source_reference": "OCHA/IPC escalation practice",
+        "priority": "high",
+        "scope_notes": "preparedness review, not a distribution decision",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "SEVERE",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-SEVERE-02",
+        "risk_type": "food_security",
+        "risk_level": "SEVERE",
+        "action_category": "assessment",
+        "action_text": "Request expedited IPC field validation for the region.",
+        "intended_actor": "IPC technical working group",
+        "time_horizon": "as soon as practicable",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual escalation guidance",
+        "priority": "high",
+        "scope_notes": "",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "SEVERE",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.036113+00:00"
+  },
+  {
+    "intelligence_id": "42ebbcb96e2e3878f4a0f26a",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO20",
+      "name": "Hiraan",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.35000000000000003,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 519712.273,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "above normal",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "above normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.14,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.050000000000000044,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 68.61252403724185,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 198.20272362477556,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 19.666666666666668,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 27.454777777777775,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.157709+00:00"
+  },
+  {
+    "intelligence_id": "b5cf865e201a0d01046d87fe",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO21",
+      "name": "Middle Shabelle",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.44999999999999996,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 1053066.297,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "below normal",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "above normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.18,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.14999999999999997,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 87.38496965567751,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 220.6354802125839,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 18.5,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 27.418416666666666,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.274683+00:00"
+  },
+  {
+    "intelligence_id": "921779a9d2b36167e9a84ca1",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO22",
+      "name": "Banadir",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.475,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 3292852.184,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "above normal",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "below normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.19,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.175,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 92.53661592118442,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 194.64889133518776,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 15.944444444444445,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 27.81155555555556,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.361335+00:00"
+  },
+  {
+    "intelligence_id": "37f44effa6f144656b88c5c9",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO23",
+      "name": "Lower Shabelle",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.475,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 1655323.367,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "unknown",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "above normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.19,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.175,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 103.50698508419607,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 252.5931095078961,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 10.857142857142858,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 27.340285714285717,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "gwet_top_30d",
+        "gwet_root_30d"
+      ],
+      "freshness": {
+        "status": "DEGRADED",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [
+          "market_feature_timestamp"
+        ],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 1690,
+            "status": "STALE",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.483437+00:00"
+  },
+  {
+    "intelligence_id": "6bb4a5fda5b259b5f5bc574d",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO24",
+      "name": "Bay",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.625,
+      "risk_level": "WARNING",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 1296980.906,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WARNING"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "above normal",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "above normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.25,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.325,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 75.96436502534809,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 310.74829057820244,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 16.0,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 26.54283333333333,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WARNING-01",
+        "risk_type": "food_security",
+        "risk_level": "WARNING",
+        "action_category": "assessment",
+        "action_text": "Prioritize IPC/food-security technical working group review for the region.",
+        "intended_actor": "food-security coordination lead",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual review process",
+        "priority": "elevated",
+        "scope_notes": "regional burden-risk signal; not a district or household determination",
+        "status": "REQUIRES_REVIEW",
+        "review_required": true,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WARNING-02",
+        "risk_type": "food_security",
+        "risk_level": "WARNING",
+        "action_category": "assessment",
+        "action_text": "Verify livelihood conditions with local partners operating in the region.",
+        "intended_actor": "field assessment team",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "FEWS NET livelihood-zone verification practice",
+        "priority": "elevated",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WARNING",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "gwet_root_30d"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.644911+00:00"
+  },
+  {
+    "intelligence_id": "340f488673479daf913a7e34",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO25",
+      "name": "Bakool",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.5,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 563170.625,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "below normal",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "above normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.2,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.2,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 56.94802164509856,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 251.46948556033664,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 24.0,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 25.948866666666667,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "DEGRADED",
+      "feature_availability": 1.0,
+      "out_of_range_features": [
+        "ndvi_change"
+      ],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.738594+00:00"
+  },
+  {
+    "intelligence_id": "677d76fdb2c67f1db07e6ea3",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO26",
+      "name": "Gedo",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.3,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 883606.04,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "above normal",
+      "climate_context_rainfall_30d": "below normal",
+      "vegetation_context": "above normal",
+      "previous_ipc_context": "near normal"
+    },
+    "drivers": [
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 44.643078764385486,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 278.3668038753752,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 23.333333333333336,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 28.1825,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_max_30d_c",
+        "observed_value": 33.93566666666667,
+        "training_median": 33.21072222222222,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": []
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": []
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.822039+00:00"
+  },
+  {
+    "intelligence_id": "512266314b6f1ba13526f6e2",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO27",
+      "name": "Middle Juba",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.22499999999999998,
+      "risk_level": "NORMAL",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 447016.219,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "NORMAL"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "unknown",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "above normal",
+      "previous_ipc_context": "below normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.09,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": -0.07500000000000001,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 91.0134159068812,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 347.18508790615874,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 10.0,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 27.73933333333333,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": false,
+      "status": "NO_WARNING_RISK_NORMAL",
+      "suppression_reason": null,
+      "reason_codes": []
+    },
+    "recommended_actions": [],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "DEGRADED",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [
+          "market_feature_timestamp"
+        ],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 1690,
+            "status": "STALE",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "DEGRADED"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.906705+00:00"
+  },
+  {
+    "intelligence_id": "12cf36d978b77a64bf0ab465",
+    "risk_type": "FOOD_SECURITY",
+    "as_of_date": "2025-06-01",
+    "valid_from": "2025-06-02",
+    "valid_until": "2025-07-01",
+    "prediction_horizon": "30 days pre-assessment",
+    "geography": {
+      "type": "REGION",
+      "id": "SO28",
+      "name": "Lower Juba",
+      "parent_region_id": null
+    },
+    "station_code": null,
+    "river_name": null,
+    "prediction": {
+      "probability": 0.325,
+      "risk_level": "WATCH",
+      "threshold_version": "food_security-1.1.0",
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      }
+    },
+    "exposure": {
+      "scope_type": "REGION",
+      "population_context": 1176546.937,
+      "population_potentially_exposed": null,
+      "exposure_method": "model_predicts_binary_burden_threshold_not_a_population_fraction",
+      "exposure_uncertainty": "The food-security target predicts whether the observed regional Crisis-or-worse population share will reach 20%, not the exact share itself. Reporting a specific exposed-population number from a binary threshold prediction would fabricate precision the model does not have. population_context is the total regional population for orientation only; it is not an estimate of the number of food-insecure people.",
+      "population_source": "worldpop_derived_phase01_population_summary",
+      "population_year": 2025,
+      "risk_level": "WATCH"
+    },
+    "impact_summary": {
+      "signal": "CRISIS_OR_WORSE_BURDEN_RISK",
+      "prediction_unit": "REGION",
+      "market_stress": "below normal",
+      "climate_context_rainfall_30d": "above normal",
+      "vegetation_context": "above normal",
+      "previous_ipc_context": "above normal"
+    },
+    "drivers": [
+      {
+        "feature": "previous_ipc3plus_percentage",
+        "observed_value": 0.13,
+        "training_median": 0.12,
+        "probability_change_if_replaced_by_training_median": 0.025000000000000022,
+        "reason_code": "IPC_DETERIORATION_SIGNAL"
+      },
+      {
+        "feature": "rain_30d_mm",
+        "observed_value": 104.8798088951618,
+        "training_median": 51.582542987175785,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "rain_90d_mm",
+        "observed_value": 302.96520878850544,
+        "training_median": 130.37472979094264,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "dry_days_30d",
+        "observed_value": 8.75,
+        "training_median": 19.333333333333336,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      },
+      {
+        "feature": "t2m_30d_c",
+        "observed_value": 27.574666666666666,
+        "training_median": 27.642041666666668,
+        "probability_change_if_replaced_by_training_median": 0.0,
+        "reason_code": null
+      }
+    ],
+    "warning": {
+      "eligible": true,
+      "status": "CANDIDATE",
+      "suppression_reason": null,
+      "reason_codes": [
+        "IPC_DETERIORATION_SIGNAL"
+      ]
+    },
+    "recommended_actions": [
+      {
+        "action_id": "FOOD_SECURITY-WATCH-01",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "monitoring",
+        "action_text": "Monitor staple market-price stress in the region.",
+        "intended_actor": "market monitoring analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "WFP/FEWS NET market monitoring practice",
+        "priority": "routine",
+        "scope_notes": "regional signal only",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      },
+      {
+        "action_id": "FOOD_SECURITY-WATCH-02",
+        "risk_type": "food_security",
+        "risk_level": "WATCH",
+        "action_category": "assessment",
+        "action_text": "Identify sub-areas within the region warranting deeper field verification.",
+        "intended_actor": "food-security analyst",
+        "time_horizon": "next assessment cycle",
+        "prerequisites": [],
+        "source_reference": "IPC Technical Manual field-verification guidance",
+        "priority": "routine",
+        "scope_notes": "",
+        "status": "SUGGESTED",
+        "review_required": false,
+        "why_triggered": {
+          "risk_type": "food_security",
+          "risk_level": "WATCH",
+          "reason_codes": [
+            "IPC_DETERIORATION_SIGNAL"
+          ]
+        },
+        "catalogue_version": "1.0.0"
+      }
+    ],
+    "data_quality": {
+      "model_input_quality": "GOOD",
+      "feature_availability": 1.0,
+      "out_of_range_features": [],
+      "freshness": {
+        "status": "GOOD",
+        "policy_version": "1.0.0",
+        "stale_critical_features": [],
+        "stale_noncritical_features": [],
+        "detail": {
+          "market_feature_timestamp": {
+            "gap_days": 17,
+            "status": "CURRENT",
+            "max_gap_days": 120
+          },
+          "previous_ipc_feature_timestamp": {
+            "gap_days": 62,
+            "status": "CURRENT",
+            "max_gap_days": 220
+          },
+          "vegetation_feature_timestamp": {
+            "gap_days": 8,
+            "status": "CURRENT",
+            "max_gap_days": 32
+          },
+          "rainfall_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          },
+          "power_feature_timestamp": {
+            "gap_days": 0,
+            "status": "CURRENT",
+            "max_gap_days": 3
+          }
+        }
+      },
+      "overall_status": "GOOD"
+    },
+    "model": {
+      "id": "food_security-early-warning",
+      "version": "1.1.0",
+      "algorithm": "rule",
+      "calibration_method": "identity"
+    },
+    "lineage": {
+      "dataset_version": "1.1.0",
+      "dataset_checksum_sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "feature_version": "1.1.0",
+      "target_version": "1.1.0",
+      "threshold_version": "1.1.0",
+      "action_catalogue_version": "1.0.0",
+      "pipeline_version": "1.0.0",
+      "as_of_date": "2025-06-01"
+    },
+    "limitations": [
+      "Region-level (IPC Level 1) signal; not a district-level food-security classification.",
+      "Predicts a binary Crisis-or-worse burden threshold, not an exact affected-population count.",
+      "Small sample size; calibration intentionally left uncalibrated due to a validation prevalence shift."
+    ],
+    "generated_at": "2026-08-26T11:37:27.983660+00:00"
+  }
+]

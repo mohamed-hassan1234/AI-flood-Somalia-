@@ -1,0 +1,37 @@
+{
+  "track": "food_security",
+  "generated_at": "2026-08-26T12:01:48.746448+00:00",
+  "test_period": [
+    2024,
+    2025
+  ],
+  "rows_replayed": 72,
+  "skipped_unsupported_geography": 0,
+  "outcome_at_warning_threshold": {
+    "counts": {
+      "TRUE_NEGATIVE": 40,
+      "TRUE_POSITIVE": 14,
+      "FALSE_NEGATIVE": 12,
+      "FALSE_POSITIVE": 6
+    },
+    "recall": 0.5384615384615384,
+    "precision": 0.7,
+    "false_alarm_rate": 0.13043478260869565
+  },
+  "outcome_at_watch_threshold": {
+    "counts": {
+      "FALSE_POSITIVE": 43,
+      "TRUE_POSITIVE": 26,
+      "TRUE_NEGATIVE": 3
+    },
+    "recall": 1.0,
+    "precision": 0.37681159420289856,
+    "false_alarm_rate": 0.9347826086956522
+  },
+  "mean_detected_lead_time_days": null,
+  "station_breakdown_at_warning_threshold": null,
+  "replay_path": "data/operational/replay/food_security_operational_replay.csv.gz",
+  "replay_seconds": 1.4227141000155825,
+  "model_version": "1.1.0",
+  "selection_methodology": "every row in the frozen, untouched Phase 02 final-test partition (ml.pipeline.partition); no cherry-picking"
+}
