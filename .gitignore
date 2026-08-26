@@ -19,3 +19,10 @@ test-results/
 # Keep manifests, scripts, validation reports, and documentation in version control.
 
 data/Earthdata-Download-x64.exe
+
+# Reproducible, large Phase 01 history outputs and recovery checkpoints.
+data/processed/rainfall/chirps_v3_*_district_*.csv
+data/processed/vegetation/mod13q1_v061_district_*.csv
+data/processed/vegetation/mod13q1_v061_district/
+data/processed/climate/nasa_power_district_*.csv.gz
+data/raw/climate/nasa_power_merra2/

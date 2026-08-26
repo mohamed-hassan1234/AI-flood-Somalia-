@@ -1,0 +1,19 @@
+{
+  "method": "identity",
+  "validation_brier_before": 0.20132301587301585,
+  "validation_brier_after": 0.20132301587301585,
+  "candidate_brier": {
+    "identity": 0.20132301587301585,
+    "sigmoid": 0.16795458082560885,
+    "isotonic": 0.16071546829828404
+  },
+  "fit_data": "validation partition only",
+  "reference_prevalence": 0.18888888888888888,
+  "validation_prevalence": 0.7698412698412699,
+  "absolute_prevalence_shift": 0.580952380952381,
+  "selection_guard": "IDENTITY_PREVALENCE_SHIFT_GUARD",
+  "test_brier_before": 0.20219305555555553,
+  "test_brier_after": 0.20219305555555553,
+  "test_ece_before": 0.14958333333333332,
+  "test_ece_after": 0.14958333333333332
+}

@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-08-26T10:37:41.214297+00:00",
+  "source": "ml/artifacts/flood/rolling_backtest_predictions.csv.gz",
+  "note": "Computed from the frozen rolling backtest; no retraining performed.",
+  "stations": {
+    "SH001": {
+      "rows": 1998,
+      "positives": 448,
+      "negatives": 1550,
+      "true_negative": 1536,
+      "false_positive": 14,
+      "false_negative": 43,
+      "true_positive": 405,
+      "recall": 0.9040178571428571,
+      "precision": 0.9665871121718377,
+      "false_alarm_rate": 0.00903225806451613,
+      "miss_rate": 0.09598214285714286,
+      "mean_detected_lead_time_days": 1.0222222222222221,
+      "status": "EVALUATED"
+    },
+    "SH002": {
+      "rows": 2182,
+      "positives": 239,
+      "negatives": 1943,
+      "true_negative": 1934,
+      "false_positive": 9,
+      "false_negative": 42,
+      "true_positive": 197,
+      "recall": 0.8242677824267782,
+      "precision": 0.9563106796116505,
+      "false_alarm_rate": 0.004632012352032939,
+      "miss_rate": 0.17573221757322174,
+      "mean_detected_lead_time_days": 1.0203045685279188,
+      "status": "EVALUATED"
+    },
+    "SH004": {
+      "rows": 2019,
+      "positives": 339,
+      "negatives": 1680,
+      "true_negative": 1636,
+      "false_positive": 44,
+      "false_negative": 43,
+      "true_positive": 296,
+      "recall": 0.8731563421828908,
+      "precision": 0.8705882352941177,
+      "false_alarm_rate": 0.02619047619047619,
+      "miss_rate": 0.12684365781710916,
+      "mean_detected_lead_time_days": 1.027027027027027,
+      "status": "EVALUATED"
+    },
+    "JB001": {
+      "rows": 2003,
+      "positives": 59,
+      "negatives": 1944,
+      "true_negative": 1914,
+      "false_positive": 30,
+      "false_negative": 12,
+      "true_positive": 47,
+      "recall": 0.7966101694915254,
+      "precision": 0.6103896103896104,
+      "false_alarm_rate": 0.015432098765432098,
+      "miss_rate": 0.2033898305084746,
+      "mean_detected_lead_time_days": 1.148936170212766,
+      "status": "EVALUATED"
+    },
+    "JB009": {
+      "rows": 1793,
+      "positives": 128,
+      "negatives": 1665,
+      "true_negative": 1621,
+      "false_positive": 44,
+      "false_negative": 35,
+      "true_positive": 93,
+      "recall": 0.7265625,
+      "precision": 0.6788321167883211,
+      "false_alarm_rate": 0.026426426426426425,
+      "miss_rate": 0.2734375,
+      "mean_detected_lead_time_days": 1.1397849462365592,
+      "status": "EVALUATED"
+    }
+  }
+}

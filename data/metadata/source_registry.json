@@ -36,8 +36,8 @@
     "geographic_coverage": "91 Somalia districts",
     "spatial_resolution": "0.25 degree production p25; 0.05 degree validation samples",
     "temporal_resolution": "Daily plus derived dekad",
-    "temporal_start": "2014-01-09",
-    "temporal_end": "2014-01-10",
+    "temporal_start": "2015-01-01",
+    "temporal_end": "2025-12-31",
     "update_frequency": "Daily preliminary; periodic final",
     "format": "Source GeoTIFF; derived CSV",
     "variables": "precipitation; 7/30-day totals; dry spell; heavy rain; dekadal anomaly",
@@ -48,8 +48,8 @@
     "authentication_required": "No",
     "local_raw_path": "data/processed/rainfall/chirps_v3_*_district_*",
     "connector_status": "AUTOMATED_HISTORICAL_DISTRICT_ARCHIVE",
-    "validation_status": "PARTIAL",
-    "notes": "The production 2000-2025 district history has not yet passed continuity and completeness checks."
+    "validation_status": "PASS",
+    "notes": "Production district history is complete for the 2015-2025 common environmental window; compact p25 summaries are used and source URLs/checksums are preserved."
   },
   {
     "dataset_id": "MOD13Q1_061",
@@ -62,8 +62,8 @@
     "geographic_coverage": "91 Somalia districts; source tiles intersect Somalia",
     "spatial_resolution": "250 m source; approximately 1 km aligned overview sampling for district summaries",
     "temporal_resolution": "16 day",
-    "temporal_start": "2015-01-17",
-    "temporal_end": "2015-01-17",
+    "temporal_start": "2015-01-01",
+    "temporal_end": "2025-12-31",
     "update_frequency": "16 day",
     "format": "Cloud-optimized GeoTIFF mirror; source HDF available",
     "variables": "NDVI; EVI; VI_Quality; pixel_reliability",
@@ -74,8 +74,8 @@
     "authentication_required": "No for mirror; Earthdata login for direct LP DAAC",
     "local_raw_path": "data/processed/vegetation/mod13q1_v061_district_*",
     "connector_status": "AUTOMATED_HISTORICAL_DISTRICT_ARCHIVE",
-    "validation_status": "PARTIAL",
-    "notes": "The production 2015-2025 QA-masked district history has not yet passed completeness checks."
+    "validation_status": "PASS",
+    "notes": "Production QA-masked district history is complete for 2015-2025; source assets are native 250m and aligned COG overviews are sampled at approximately 1km."
   },
   {
     "dataset_id": "SPL3SMP_E_006",

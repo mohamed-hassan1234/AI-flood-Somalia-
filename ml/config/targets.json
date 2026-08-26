@@ -1,0 +1,58 @@
+{
+  "version": "1.1.0",
+  "frozen_before_final_test": true,
+  "drought": {
+    "target_name": "agricultural_vegetation_stress_next_composite",
+    "target_type": "binary",
+    "unit_of_prediction": "canonical district",
+    "geography": "91 OCHA COD-AB v03 district features; unknown strict-QA targets excluded",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "label_source": "MOD13Q1 V061 strict-QA NDVI standardized against the fixed 2015-2020 district/seasonal-slot reference climatology",
+    "positive_definition": "future composite reference-period NDVI anomaly z-score <= -1.0",
+    "negative_definition": "future composite reference-period NDVI anomaly z-score > -1.0",
+    "unknown_definition": "future composite absent or strict-QA NDVI is null",
+    "minimum_history": "one prior available composite and 90 days of climate history",
+    "exclusion_rules": ["unknown future target", "feature date after feature_as_of_date"],
+    "leakage_controls": [
+      "future vegetation is label only; reference climatology is fitted only from the outer training era",
+      "last vegetation feature composite must have ended on or before feature_as_of_date",
+      "all rainfall and POWER windows end on feature_as_of_date"
+    ],
+    "interpretation": "agricultural drought condition; not humanitarian impact"
+  },
+  "flood": {
+    "target_name": "riverine_moderate_threshold_exceedance_within_3_days",
+    "target_type": "binary",
+    "unit_of_prediction": "FAO SWALIM/SNRFA gauge",
+    "geography": "SH001, SH002, SH004, JB001, JB009 only",
+    "prediction_horizon": "1-3 days after feature_as_of_date",
+    "label_source": "observed future gauge level and current official moderate threshold",
+    "positive_definition": "maximum observed level on days t+1 through t+3 >= station moderate threshold",
+    "negative_definition": "all three future daily levels observed and below threshold",
+    "unknown_definition": "one or more required future days missing",
+    "minimum_history": "seven prior daily gauge observations plus 30 days of climate history",
+    "exclusion_rules": ["unknown future window", "dates outside 2015-2025 climate overlap"],
+    "leakage_controls": ["future_max_level is label metadata only", "all feature windows end at t"],
+    "interpretation": "riverine risk at five supported Jubba/Shabelle gauges; not Somalia-wide flash flood risk"
+  },
+  "food_security": {
+    "target_name": "regional_crisis_or_worse_population_burden_20pct",
+    "target_type": "binary",
+    "unit_of_prediction": "canonical OCHA region matched to IPC Level 1",
+    "geography": "18 canonical regions; historical IPC aliases resolved by the Phase 01 crosswalk",
+    "prediction_horizon": "30 days before the observed current IPC validity period starts",
+    "label_source": "IPC Level 1 current assessment Phase 3+ population percentage",
+    "positive_definition": "observed current IPC Phase 3+ percentage >= 0.20",
+    "negative_definition": "observed current IPC Phase 3+ percentage < 0.20",
+    "unknown_definition": "missing current Phase 3+ row or unresolved region",
+    "minimum_history": "90 days of environmental data before as-of date",
+    "exclusion_rules": ["IPC first/second projections", "unresolved geography", "target period after 2025-12-31"],
+    "leakage_controls": [
+      "target assessment fields are never predictors",
+      "previous IPC is allowed only when its validity end is on or before feature_as_of_date",
+      "MODIS composites must have ended before feature_as_of_date",
+      "market and climate windows end before feature_as_of_date"
+    ],
+    "interpretation": "regional high Crisis-or-Worse burden; not a district IPC classification"
+  }
+}

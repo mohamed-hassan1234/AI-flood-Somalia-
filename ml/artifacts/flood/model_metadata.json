@@ -1,0 +1,61 @@
+{
+  "model_id": "flood-early-warning",
+  "model_version": "1.1.0",
+  "target_version": "1.1.0",
+  "feature_version": "1.1.0",
+  "algorithm": "logistic_regression",
+  "features": [
+    "current_level_m",
+    "level_change_1d",
+    "level_change_3d",
+    "level_change_7d",
+    "level_mean_7d",
+    "level_max_7d",
+    "level_ratio_moderate",
+    "distance_to_moderate_m",
+    "distance_to_high_m",
+    "distance_to_bankfull_m",
+    "rain_1d_mm",
+    "rain_3d_mm",
+    "rain_7d_mm",
+    "rain_30d_mm",
+    "heavy_rain_days_7d",
+    "gwet_top_7d",
+    "gwet_top_30d",
+    "gwet_root_30d",
+    "t2m_7d_c"
+  ],
+  "training_period": [
+    2015,
+    2020
+  ],
+  "validation_period": [
+    2021,
+    2022
+  ],
+  "test_period": [
+    2023,
+    2025
+  ],
+  "calibration_method": "isotonic",
+  "operating_threshold": 0.22999999999999998,
+  "risk_thresholds": {
+    "watch": 0.11499999999999999,
+    "warning": 0.22999999999999998,
+    "severe": 0.615
+  },
+  "artifact_path": "ml/artifacts/flood/flood_model_v1.1.0.joblib",
+  "artifact_checksum_sha256": "7d5db090b3601734be8ac6625abcaffcdb340e11f4bdbb0f9a36c635541bed80",
+  "artifact_size_bytes": 5117,
+  "serialization_round_trip_passed": true,
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3",
+    "random_seed": 20260826
+  },
+  "selection_reason": "Logistic regression improved on the deterministic rule, while random forest added less than 0.02 validation utility."
+}

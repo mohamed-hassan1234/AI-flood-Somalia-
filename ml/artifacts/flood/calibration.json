@@ -1,0 +1,19 @@
+{
+  "method": "isotonic",
+  "validation_brier_before": 0.02754017202639663,
+  "validation_brier_after": 0.0032468835333664156,
+  "candidate_brier": {
+    "identity": 0.02754017202639663,
+    "sigmoid": 0.007768145766177338,
+    "isotonic": 0.0032468835333664156
+  },
+  "fit_data": "validation partition only",
+  "reference_prevalence": 0.09683995922528033,
+  "validation_prevalence": 0.01674982181040627,
+  "absolute_prevalence_shift": 0.08009013741487406,
+  "selection_guard": "CANDIDATE_SELECTED_BY_VALIDATION_BRIER",
+  "test_brier_before": 0.07708448318034838,
+  "test_brier_after": 0.03535022791086659,
+  "test_ece_before": 0.09830090655472493,
+  "test_ece_after": 0.030877896702830823
+}

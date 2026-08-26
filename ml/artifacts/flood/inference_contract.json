@@ -1,0 +1,43 @@
+{
+  "version": "1.1.0",
+  "input": {
+    "identity": "district_id, station_code, or region_id",
+    "as_of_date": "ISO-8601 date",
+    "features": [
+      "current_level_m",
+      "level_change_1d",
+      "level_change_3d",
+      "level_change_7d",
+      "level_mean_7d",
+      "level_max_7d",
+      "level_ratio_moderate",
+      "distance_to_moderate_m",
+      "distance_to_high_m",
+      "distance_to_bankfull_m",
+      "rain_1d_mm",
+      "rain_3d_mm",
+      "rain_7d_mm",
+      "rain_30d_mm",
+      "heavy_rain_days_7d",
+      "gwet_top_7d",
+      "gwet_top_30d",
+      "gwet_root_30d",
+      "t2m_7d_c"
+    ]
+  },
+  "output": [
+    "model_version",
+    "risk_type",
+    "probability",
+    "risk_level",
+    "prediction_horizon",
+    "top_drivers",
+    "data_quality",
+    "generated_at"
+  ],
+  "data_quality": {
+    "GOOD": "all critical features present and within training guardrails",
+    "DEGRADED": "some optional data absent or outside 1st-99th percentile",
+    "INSUFFICIENT": "less than half of critical features present; probability withheld"
+  }
+}

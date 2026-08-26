@@ -1,6 +1,6 @@
 dataset,actual_start,actual_end,continuity
-rainfall_primary_local,2014-01-09,2014-01-10,daily complete; 2 days; 91 district summaries
-vegetation_primary_local,2015-01-17,2015-01-17,1 16-day composites; QA-masked; missing district-period fraction=None
+rainfall_primary_local,2015-01-01,2025-12-31,daily complete; 4018 days; 91 district summaries
+vegetation_primary_local,2015-01-01,2025-12-31,242 16-day composites; QA-masked; missing district-period fraction=0.1501226046680592
 soil_moisture_local,2026-07-01,2026-07-31,daily July 2026; multiple granules on some dates
 antecedent_wetness_primary_local,2000-01-01,2025-12-31,daily complete GWETTOP/GWETROOT; 9497 days; 91 districts from 72 unique source cells
 lst_local,2020-07-01,2020-07-01,one daily tile/sample

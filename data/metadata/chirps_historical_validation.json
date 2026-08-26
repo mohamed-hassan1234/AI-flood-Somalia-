@@ -29,5 +29,27 @@
     "monthly": 3351375,
     "seasonal": 952023
   },
-  "status": "COMPLETE"
+  "status": "COMPLETE",
+  "source_raster_metadata": {
+    "driver": "GTiff",
+    "crs": "EPSG:4326",
+    "shape": [
+      480,
+      1440
+    ],
+    "resolution_degrees": [
+      0.25,
+      0.25
+    ],
+    "bounds": [
+      -180.0,
+      -60.0,
+      180.0,
+      60.0
+    ],
+    "dtype": "float32",
+    "nodata": null,
+    "compression": "LZW",
+    "inspection_source": "official first-day p25 GeoTIFF in the archive period"
+  }
 }

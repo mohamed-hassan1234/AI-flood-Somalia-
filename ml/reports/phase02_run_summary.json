@@ -1,0 +1,3877 @@
+{
+  "generated_at": "2026-08-26T10:36:59.264943+00:00",
+  "phase02_version": "1.1.0",
+  "git_commit": "ccabf5cdbcbb5017ab56794662d37cd0ee49a11e",
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3",
+    "random_seed": 20260826
+  },
+  "dataset_build": {
+    "drought": {
+      "track": "drought",
+      "dataset_version": "1.1.0",
+      "created_at": "2026-08-26T10:36:00.527348+00:00",
+      "path": "data/model_ready/drought/drought_dataset_v1.1.0.csv.gz",
+      "sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+      "size_bytes": 1922343,
+      "rows": 17433,
+      "features": [
+        "rain_7d_mm",
+        "rain_30d_mm",
+        "rain_90d_mm",
+        "heavy_rain_days_30d",
+        "dry_spell_days",
+        "t2m_7d_c",
+        "t2m_30d_c",
+        "t2m_max_30d_c",
+        "gwet_top_7d",
+        "gwet_top_30d",
+        "gwet_root_30d",
+        "ndvi_last",
+        "evi_last",
+        "ndvi_change_1",
+        "vegetation_valid_pixel_fraction",
+        "ndvi_last_anomaly_z_reference"
+      ],
+      "feature_count": 16,
+      "target_definition": {
+        "target_name": "agricultural_vegetation_stress_next_composite",
+        "target_type": "binary",
+        "unit_of_prediction": "canonical district",
+        "geography": "91 OCHA COD-AB v03 district features; unknown strict-QA targets excluded",
+        "prediction_horizon": "next MOD13Q1 16-day composite",
+        "label_source": "MOD13Q1 V061 strict-QA NDVI standardized against the fixed 2015-2020 district/seasonal-slot reference climatology",
+        "positive_definition": "future composite reference-period NDVI anomaly z-score <= -1.0",
+        "negative_definition": "future composite reference-period NDVI anomaly z-score > -1.0",
+        "unknown_definition": "future composite absent or strict-QA NDVI is null",
+        "minimum_history": "one prior available composite and 90 days of climate history",
+        "exclusion_rules": [
+          "unknown future target",
+          "feature date after feature_as_of_date"
+        ],
+        "leakage_controls": [
+          "future vegetation is label only; reference climatology is fitted only from the outer training era",
+          "last vegetation feature composite must have ended on or before feature_as_of_date",
+          "all rainfall and POWER windows end on feature_as_of_date"
+        ],
+        "interpretation": "agricultural drought condition; not humanitarian impact"
+      },
+      "temporal_coverage": {
+        "start": "2015-01-17",
+        "end": "2025-12-19"
+      },
+      "geographic_coverage": {
+        "district_id": 88,
+        "region_id": 18
+      },
+      "target_counts": {
+        "positive": 2219,
+        "negative": 15214,
+        "positive_rate": 0.1272873286296105
+      },
+      "feature_missing_fraction": {
+        "rain_7d_mm": 0.0,
+        "rain_30d_mm": 0.00476108529799805,
+        "rain_90d_mm": 0.02363333906958068,
+        "heavy_rain_days_30d": 0.00476108529799805,
+        "dry_spell_days": 0.0,
+        "t2m_7d_c": 0.0,
+        "t2m_30d_c": 0.0,
+        "t2m_max_30d_c": 0.0,
+        "gwet_top_7d": 0.0,
+        "gwet_top_30d": 0.0,
+        "gwet_root_30d": 0.0,
+        "ndvi_last": 0.022027189812424713,
+        "evi_last": 0.022027189812424713,
+        "ndvi_change_1": 0.04009636895542936,
+        "vegetation_valid_pixel_fraction": 0.0,
+        "ndvi_last_anomaly_z_reference": 0.023575976596110826
+      },
+      "maximum_feature_missing_fraction": 0.04009636895542936,
+      "source_lineage": [
+        "data/metadata/historical_archive_manifest.csv",
+        "data/metadata/nasa_power_history_manifest.json",
+        "data/metadata/source_registry.json",
+        "data/metadata/geographic_crosswalk.csv"
+      ],
+      "notes": {
+        "label_unknown_rows": 3546,
+        "excluded_non_16_day_gaps": 1043
+      }
+    },
+    "flood": {
+      "track": "flood",
+      "dataset_version": "1.1.0",
+      "created_at": "2026-08-26T10:36:03.348285+00:00",
+      "path": "data/model_ready/flood/flood_dataset_v1.1.0.csv.gz",
+      "sha256": "8a525d984276a559320c2900118546885ff3b46fe631008398ed228eee0bf2c9",
+      "size_bytes": 1477136,
+      "rows": 17632,
+      "features": [
+        "current_level_m",
+        "level_change_1d",
+        "level_change_3d",
+        "level_change_7d",
+        "level_mean_7d",
+        "level_max_7d",
+        "level_ratio_moderate",
+        "distance_to_moderate_m",
+        "distance_to_high_m",
+        "distance_to_bankfull_m",
+        "rain_1d_mm",
+        "rain_3d_mm",
+        "rain_7d_mm",
+        "rain_30d_mm",
+        "heavy_rain_days_7d",
+        "gwet_top_7d",
+        "gwet_top_30d",
+        "gwet_root_30d",
+        "t2m_7d_c"
+      ],
+      "feature_count": 19,
+      "target_definition": {
+        "target_name": "riverine_moderate_threshold_exceedance_within_3_days",
+        "target_type": "binary",
+        "unit_of_prediction": "FAO SWALIM/SNRFA gauge",
+        "geography": "SH001, SH002, SH004, JB001, JB009 only",
+        "prediction_horizon": "1-3 days after feature_as_of_date",
+        "label_source": "observed future gauge level and current official moderate threshold",
+        "positive_definition": "maximum observed level on days t+1 through t+3 >= station moderate threshold",
+        "negative_definition": "all three future daily levels observed and below threshold",
+        "unknown_definition": "one or more required future days missing",
+        "minimum_history": "seven prior daily gauge observations plus 30 days of climate history",
+        "exclusion_rules": [
+          "unknown future window",
+          "dates outside 2015-2025 climate overlap"
+        ],
+        "leakage_controls": [
+          "future_max_level is label metadata only",
+          "all feature windows end at t"
+        ],
+        "interpretation": "riverine risk at five supported Jubba/Shabelle gauges; not Somalia-wide flash flood risk"
+      },
+      "temporal_coverage": {
+        "start": "2015-01-08",
+        "end": "2025-12-29"
+      },
+      "geographic_coverage": {
+        "station_code": 5
+      },
+      "target_counts": {
+        "positive": 1665,
+        "negative": 15967,
+        "positive_rate": 0.09443058076225046
+      },
+      "feature_missing_fraction": {
+        "current_level_m": 0.0,
+        "level_change_1d": 0.0,
+        "level_change_3d": 0.0,
+        "level_change_7d": 0.0031193284936479127,
+        "level_mean_7d": 0.0,
+        "level_max_7d": 0.0,
+        "level_ratio_moderate": 0.0,
+        "distance_to_moderate_m": 0.0,
+        "distance_to_high_m": 0.0,
+        "distance_to_bankfull_m": 0.0,
+        "rain_1d_mm": 0.0,
+        "rain_3d_mm": 0.0,
+        "rain_7d_mm": 0.0,
+        "rain_30d_mm": 0.0052177858439201455,
+        "heavy_rain_days_7d": 0.0,
+        "gwet_top_7d": 0.0,
+        "gwet_top_30d": 0.0,
+        "gwet_root_30d": 0.0,
+        "t2m_7d_c": 0.0
+      },
+      "maximum_feature_missing_fraction": 0.0052177858439201455,
+      "source_lineage": [
+        "data/metadata/historical_archive_manifest.csv",
+        "data/metadata/nasa_power_history_manifest.json",
+        "data/metadata/source_registry.json",
+        "data/metadata/geographic_crosswalk.csv"
+      ],
+      "notes": {
+        "unknown_future_windows": 1749,
+        "scope": [
+          "JB001",
+          "JB009",
+          "SH001",
+          "SH002",
+          "SH004"
+        ]
+      }
+    },
+    "food_security": {
+      "track": "food_security",
+      "dataset_version": "1.1.0",
+      "created_at": "2026-08-26T10:36:15.904986+00:00",
+      "path": "data/model_ready/food_security/food_security_dataset_v1.1.0.csv.gz",
+      "sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+      "size_bytes": 38885,
+      "rows": 378,
+      "features": [
+        "rain_30d_mm",
+        "rain_90d_mm",
+        "dry_days_30d",
+        "t2m_30d_c",
+        "t2m_max_30d_c",
+        "gwet_top_30d",
+        "gwet_root_30d",
+        "ndvi_last",
+        "ndvi_change",
+        "vegetation_valid_pixel_fraction",
+        "market_usdkg_90d_median",
+        "market_price_change_previous_90d",
+        "market_price_anomaly_365d",
+        "previous_ipc3plus_percentage",
+        "log_region_population"
+      ],
+      "feature_count": 15,
+      "target_definition": {
+        "target_name": "regional_crisis_or_worse_population_burden_20pct",
+        "target_type": "binary",
+        "unit_of_prediction": "canonical OCHA region matched to IPC Level 1",
+        "geography": "18 canonical regions; historical IPC aliases resolved by the Phase 01 crosswalk",
+        "prediction_horizon": "30 days before the observed current IPC validity period starts",
+        "label_source": "IPC Level 1 current assessment Phase 3+ population percentage",
+        "positive_definition": "observed current IPC Phase 3+ percentage >= 0.20",
+        "negative_definition": "observed current IPC Phase 3+ percentage < 0.20",
+        "unknown_definition": "missing current Phase 3+ row or unresolved region",
+        "minimum_history": "90 days of environmental data before as-of date",
+        "exclusion_rules": [
+          "IPC first/second projections",
+          "unresolved geography",
+          "target period after 2025-12-31"
+        ],
+        "leakage_controls": [
+          "target assessment fields are never predictors",
+          "previous IPC is allowed only when its validity end is on or before feature_as_of_date",
+          "MODIS composites must have ended before feature_as_of_date",
+          "market and climate windows end before feature_as_of_date"
+        ],
+        "interpretation": "regional high Crisis-or-Worse burden; not a district IPC classification"
+      },
+      "temporal_coverage": {
+        "start": "2017-01-01",
+        "end": "2025-07-01"
+      },
+      "geographic_coverage": {
+        "region_id": 18
+      },
+      "target_counts": {
+        "positive": 157,
+        "negative": 221,
+        "positive_rate": 0.41534391534391535
+      },
+      "feature_missing_fraction": {
+        "rain_30d_mm": 0.0,
+        "rain_90d_mm": 0.0,
+        "dry_days_30d": 0.0,
+        "t2m_30d_c": 0.0,
+        "t2m_max_30d_c": 0.0,
+        "gwet_top_30d": 0.0,
+        "gwet_root_30d": 0.0,
+        "ndvi_last": 0.0026455026455026454,
+        "ndvi_change": 0.005291005291005291,
+        "vegetation_valid_pixel_fraction": 0.0,
+        "market_usdkg_90d_median": 0.30687830687830686,
+        "market_price_change_previous_90d": 0.3201058201058201,
+        "market_price_anomaly_365d": 0.30687830687830686,
+        "previous_ipc3plus_percentage": 0.047619047619047616,
+        "log_region_population": 0.0
+      },
+      "maximum_feature_missing_fraction": 0.3201058201058201,
+      "source_lineage": [
+        "data/metadata/historical_archive_manifest.csv",
+        "data/metadata/nasa_power_history_manifest.json",
+        "data/metadata/source_registry.json",
+        "data/metadata/geographic_crosswalk.csv"
+      ],
+      "notes": {
+        "unresolved_target_rows": 0,
+        "ipc_projection_rows_excluded": 0
+      }
+    }
+  },
+  "leakage": {
+    "generated_at": "2026-08-26T10:36:15.953251+00:00",
+    "status": "PASS",
+    "tracks": {
+      "drought": {
+        "status": "PASS",
+        "checks": {
+          "vegetation_feature_timestamp_not_future": true,
+          "rainfall_feature_timestamp_not_future": true,
+          "power_feature_timestamp_not_future": true,
+          "target_after_as_of": true,
+          "unique_observation_keys": true,
+          "no_target_columns_in_features": true,
+          "split_time_order": true
+        }
+      },
+      "flood": {
+        "status": "PASS",
+        "checks": {
+          "river_feature_timestamp_not_future": true,
+          "rainfall_feature_timestamp_not_future": true,
+          "power_feature_timestamp_not_future": true,
+          "target_after_as_of": true,
+          "unique_observation_keys": true,
+          "no_target_columns_in_features": true,
+          "split_time_order": true
+        }
+      },
+      "food_security": {
+        "status": "PASS",
+        "checks": {
+          "rainfall_feature_timestamp_not_future": true,
+          "power_feature_timestamp_not_future": true,
+          "vegetation_feature_timestamp_not_future": true,
+          "market_feature_timestamp_not_future": true,
+          "previous_ipc_feature_timestamp_not_future": true,
+          "target_after_as_of": true,
+          "unique_observation_keys": true,
+          "no_target_columns_in_features": true,
+          "split_time_order": true
+        }
+      }
+    }
+  },
+  "models": {
+    "drought": {
+      "track": "drought",
+      "selected_model": "logistic_regression",
+      "selection_reason": "Logistic regression improved on the deterministic rule, while random forest added less than 0.02 validation utility.",
+      "partitions": {
+        "train": {
+          "rows": 10164,
+          "positive": 1151,
+          "negative": 9013,
+          "start": "2015-01-17",
+          "end": "2020-12-18"
+        },
+        "validation": {
+          "rows": 3349,
+          "positive": 740,
+          "negative": 2609,
+          "start": "2021-01-17",
+          "end": "2022-12-19"
+        },
+        "test": {
+          "rows": 3920,
+          "positive": 328,
+          "negative": 3592,
+          "start": "2023-01-17",
+          "end": "2025-12-19"
+        }
+      },
+      "baseline": {
+        "rule": {
+          "validation": {
+            "rows": 3349,
+            "positives": 740,
+            "negatives": 2609,
+            "prevalence": 0.22096148103911614,
+            "accuracy": 0.27381307853090475,
+            "balanced_accuracy": 0.44921555323050144,
+            "precision": 0.20021261516654854,
+            "recall": 0.7635135135135135,
+            "f1": 0.31723750701852893,
+            "roc_auc": 0.3744105642629982,
+            "pr_auc": 0.17262298305046614,
+            "brier": 0.20902661321276655,
+            "ece_10_bin": 0.17616888508672898,
+            "false_alarm_rate": 0.8650824070525105,
+            "miss_rate": 0.23648648648648649,
+            "true_negative": 352,
+            "false_positive": 2257,
+            "false_negative": 175,
+            "true_positive": 565,
+            "operating_threshold": 0.05
+          },
+          "test": {
+            "rows": 3920,
+            "positives": 328,
+            "negatives": 3592,
+            "prevalence": 0.0836734693877551,
+            "accuracy": 0.27168367346938777,
+            "balanced_accuracy": 0.4585291161931664,
+            "precision": 0.07529411764705882,
+            "recall": 0.6829268292682927,
+            "f1": 0.13563427187405389,
+            "roc_auc": 0.4458637758704981,
+            "pr_auc": 0.07013662137033083,
+            "brier": 0.10852396582280477,
+            "ece_10_bin": 0.1292664229489064,
+            "false_alarm_rate": 0.76586859688196,
+            "miss_rate": 0.3170731707317073,
+            "true_negative": 841,
+            "false_positive": 2751,
+            "false_negative": 104,
+            "true_positive": 224,
+            "operating_threshold": 0.05
+          }
+        },
+        "logistic_regression": {
+          "validation": {
+            "rows": 3349,
+            "positives": 740,
+            "negatives": 2609,
+            "prevalence": 0.22096148103911614,
+            "accuracy": 0.8038220364287847,
+            "balanced_accuracy": 0.7889001688541741,
+            "precision": 0.539712918660287,
+            "recall": 0.7621621621621621,
+            "f1": 0.6319327731092437,
+            "roc_auc": 0.8594444386893602,
+            "pr_auc": 0.5904756126077944,
+            "brier": 0.16391296070756875,
+            "ece_10_bin": 0.17488930288690824,
+            "false_alarm_rate": 0.18436182445381372,
+            "miss_rate": 0.23783783783783785,
+            "true_negative": 2128,
+            "false_positive": 481,
+            "false_negative": 176,
+            "true_positive": 564,
+            "operating_threshold": 0.6100000000000001
+          },
+          "test": {
+            "rows": 3920,
+            "positives": 328,
+            "negatives": 3592,
+            "prevalence": 0.0836734693877551,
+            "accuracy": 0.877295918367347,
+            "balanced_accuracy": 0.7585114617849964,
+            "precision": 0.362657091561939,
+            "recall": 0.6158536585365854,
+            "f1": 0.45649717514124294,
+            "roc_auc": 0.8704039124884567,
+            "pr_auc": 0.40449823577014304,
+            "brier": 0.10746471404877059,
+            "ece_10_bin": 0.13463533653431625,
+            "false_alarm_rate": 0.09883073496659243,
+            "miss_rate": 0.38414634146341464,
+            "true_negative": 3237,
+            "false_positive": 355,
+            "false_negative": 126,
+            "true_positive": 202,
+            "operating_threshold": 0.6100000000000001
+          }
+        }
+      },
+      "candidates": {
+        "logistic_regression": {
+          "algorithm": "logistic_regression",
+          "parameters": {
+            "C": 1.0,
+            "class_weight": "balanced",
+            "dual": false,
+            "fit_intercept": true,
+            "intercept_scaling": 1,
+            "l1_ratio": 0.0,
+            "max_iter": 2000,
+            "n_jobs": null,
+            "penalty": "deprecated",
+            "random_state": 20260826,
+            "solver": "lbfgs",
+            "tol": 0.0001,
+            "verbose": 0,
+            "warm_start": false
+          },
+          "validation_metrics": {
+            "rows": 3349,
+            "positives": 740,
+            "negatives": 2609,
+            "prevalence": 0.22096148103911614,
+            "accuracy": 0.8038220364287847,
+            "balanced_accuracy": 0.7889001688541741,
+            "precision": 0.539712918660287,
+            "recall": 0.7621621621621621,
+            "f1": 0.6319327731092437,
+            "roc_auc": 0.8594444386893602,
+            "pr_auc": 0.5904756126077944,
+            "brier": 0.16391296070756875,
+            "ece_10_bin": 0.17488930288690824,
+            "false_alarm_rate": 0.18436182445381372,
+            "miss_rate": 0.23783783783783785,
+            "true_negative": 2128,
+            "false_positive": 481,
+            "false_negative": 176,
+            "true_positive": 564,
+            "operating_threshold": 0.6100000000000001
+          },
+          "validation_utility": 0.6908109674336036,
+          "training_seconds": 1.4702323999954388,
+          "threshold_before_calibration": 0.6100000000000001
+        },
+        "random_forest": {
+          "algorithm": "random_forest",
+          "parameters": {
+            "bootstrap": true,
+            "ccp_alpha": 0.0,
+            "class_weight": "balanced_subsample",
+            "criterion": "gini",
+            "max_depth": 8,
+            "max_features": "sqrt",
+            "max_leaf_nodes": null,
+            "max_samples": null,
+            "min_impurity_decrease": 0.0,
+            "min_samples_leaf": 10,
+            "min_samples_split": 2,
+            "min_weight_fraction_leaf": 0.0,
+            "monotonic_cst": null,
+            "n_estimators": 250,
+            "n_jobs": -1,
+            "oob_score": false,
+            "random_state": 20260826,
+            "verbose": 0,
+            "warm_start": false
+          },
+          "validation_metrics": {
+            "rows": 3349,
+            "positives": 740,
+            "negatives": 2609,
+            "prevalence": 0.22096148103911614,
+            "accuracy": 0.7909823828008361,
+            "balanced_accuracy": 0.7845317145432131,
+            "precision": 0.5181159420289855,
+            "recall": 0.772972972972973,
+            "f1": 0.6203904555314533,
+            "roc_auc": 0.8399366019910289,
+            "pr_auc": 0.5617061973332723,
+            "brier": 0.13844081819614087,
+            "ece_10_bin": 0.10867923721780151,
+            "false_alarm_rate": 0.20390954388654656,
+            "miss_rate": 0.22702702702702704,
+            "true_negative": 2077,
+            "false_positive": 532,
+            "false_negative": 168,
+            "true_positive": 572,
+            "operating_threshold": 0.4
+          },
+          "validation_utility": 0.686230339776951,
+          "training_seconds": 2.66352060000645,
+          "threshold_before_calibration": 0.4
+        }
+      },
+      "candidate_test_metrics": {
+        "logistic_regression": {
+          "rows": 3920,
+          "positives": 328,
+          "negatives": 3592,
+          "prevalence": 0.0836734693877551,
+          "accuracy": 0.877295918367347,
+          "balanced_accuracy": 0.7585114617849964,
+          "precision": 0.362657091561939,
+          "recall": 0.6158536585365854,
+          "f1": 0.45649717514124294,
+          "roc_auc": 0.8704039124884567,
+          "pr_auc": 0.40449823577014304,
+          "brier": 0.10746471404877059,
+          "ece_10_bin": 0.13463533653431625,
+          "false_alarm_rate": 0.09883073496659243,
+          "miss_rate": 0.38414634146341464,
+          "true_negative": 3237,
+          "false_positive": 355,
+          "false_negative": 126,
+          "true_positive": 202,
+          "operating_threshold": 0.6100000000000001
+        },
+        "random_forest": {
+          "rows": 3920,
+          "positives": 328,
+          "negatives": 3592,
+          "prevalence": 0.0836734693877551,
+          "accuracy": 0.8678571428571429,
+          "balanced_accuracy": 0.7630574718887501,
+          "precision": 0.34375,
+          "recall": 0.6371951219512195,
+          "f1": 0.4465811965811966,
+          "roc_auc": 0.8523403973599869,
+          "pr_auc": 0.39563211082478134,
+          "brier": 0.09310437945532589,
+          "ece_10_bin": 0.16114333886282886,
+          "false_alarm_rate": 0.11108017817371937,
+          "miss_rate": 0.3628048780487805,
+          "true_negative": 3193,
+          "false_positive": 399,
+          "false_negative": 119,
+          "true_positive": 209,
+          "operating_threshold": 0.4
+        }
+      },
+      "calibration": {
+        "method": "isotonic",
+        "validation_brier_before": 0.16391296070756875,
+        "validation_brier_after": 0.11737032032040581,
+        "candidate_brier": {
+          "identity": 0.16391296070756875,
+          "sigmoid": 0.11906389679415955,
+          "isotonic": 0.11737032032040581
+        },
+        "fit_data": "validation partition only",
+        "reference_prevalence": 0.11324281778827233,
+        "validation_prevalence": 0.22096148103911614,
+        "absolute_prevalence_shift": 0.10771866325084381,
+        "selection_guard": "CANDIDATE_SELECTED_BY_VALIDATION_BRIER",
+        "test_brier_before": 0.10746471404877059,
+        "test_brier_after": 0.06489080971230429,
+        "test_ece_before": 0.13463533653431625,
+        "test_ece_after": 0.03244163705877263
+      },
+      "operating_threshold": 0.27,
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      },
+      "validation_metrics_after_calibration": {
+        "rows": 3349,
+        "positives": 740,
+        "negatives": 2609,
+        "prevalence": 0.22096148103911614,
+        "accuracy": 0.8047178262167811,
+        "balanced_accuracy": 0.7889910704111547,
+        "precision": 0.5413461538461538,
+        "recall": 0.7608108108108108,
+        "f1": 0.6325842696629214,
+        "roc_auc": 0.8629706939595786,
+        "pr_auc": 0.5896525562014753,
+        "brier": 0.11737032032040581,
+        "ece_10_bin": 3.248786396335185e-18,
+        "false_alarm_rate": 0.18282866998850134,
+        "miss_rate": 0.2391891891891892,
+        "true_negative": 2132,
+        "false_positive": 477,
+        "false_negative": 177,
+        "true_positive": 563,
+        "operating_threshold": 0.27
+      },
+      "final_test_metrics": {
+        "rows": 3920,
+        "positives": 328,
+        "negatives": 3592,
+        "prevalence": 0.0836734693877551,
+        "accuracy": 0.8778061224489796,
+        "balanced_accuracy": 0.758789858221522,
+        "precision": 0.36396396396396397,
+        "recall": 0.6158536585365854,
+        "f1": 0.4575311438278596,
+        "roc_auc": 0.8692695318865773,
+        "pr_auc": 0.38578864047202055,
+        "brier": 0.06489080971230429,
+        "ece_10_bin": 0.03244163705877263,
+        "false_alarm_rate": 0.0982739420935412,
+        "miss_rate": 0.38414634146341464,
+        "true_negative": 3239,
+        "false_positive": 353,
+        "false_negative": 126,
+        "true_positive": 202,
+        "operating_threshold": 0.27
+      },
+      "artifact": {
+        "model_id": "drought-early-warning",
+        "model_version": "1.1.0",
+        "target_version": "1.1.0",
+        "feature_version": "1.1.0",
+        "algorithm": "logistic_regression",
+        "features": [
+          "rain_7d_mm",
+          "rain_30d_mm",
+          "rain_90d_mm",
+          "heavy_rain_days_30d",
+          "dry_spell_days",
+          "t2m_7d_c",
+          "t2m_30d_c",
+          "t2m_max_30d_c",
+          "gwet_top_7d",
+          "gwet_top_30d",
+          "gwet_root_30d",
+          "ndvi_last",
+          "evi_last",
+          "ndvi_change_1",
+          "vegetation_valid_pixel_fraction",
+          "ndvi_last_anomaly_z_reference"
+        ],
+        "training_period": [
+          2015,
+          2020
+        ],
+        "validation_period": [
+          2021,
+          2022
+        ],
+        "test_period": [
+          2023,
+          2025
+        ],
+        "calibration_method": "isotonic",
+        "operating_threshold": 0.27,
+        "risk_thresholds": {
+          "watch": 0.135,
+          "warning": 0.27,
+          "severe": 0.635
+        },
+        "artifact_path": "ml/artifacts/drought/drought_model_v1.1.0.joblib",
+        "artifact_checksum_sha256": "9125108a58b5370ffd5e1b30000fd75690eda0cdf38621407cff7c29f7ac64ec",
+        "artifact_size_bytes": 5610,
+        "serialization_round_trip_passed": true,
+        "environment": {
+          "python": "3.13.5",
+          "platform": "Windows-11-10.0.26200-SP0",
+          "numpy": "2.3.5",
+          "pandas": "2.3.3",
+          "scikit_learn": "1.9.0",
+          "joblib": "1.5.3",
+          "random_seed": 20260826
+        },
+        "selection_reason": "Logistic regression improved on the deterministic rule, while random forest added less than 0.02 validation utility."
+      },
+      "explainability": {
+        "available": true,
+        "method": "model-agnostic permutation importance plus median-perturbation local drivers",
+        "shap_status": "NOT_APPLICABLE",
+        "top_features": [
+          {
+            "feature": "ndvi_last_anomaly_z_reference",
+            "importance_mean": 0.28454693779493573,
+            "importance_std": 0.010380626877765947
+          },
+          {
+            "feature": "ndvi_change_1",
+            "importance_mean": 0.042290833918943026,
+            "importance_std": 0.005291967772413344
+          },
+          {
+            "feature": "t2m_30d_c",
+            "importance_mean": 0.03840638762615909,
+            "importance_std": 0.01236884935035321
+          },
+          {
+            "feature": "ndvi_last",
+            "importance_mean": 0.03834538583911242,
+            "importance_std": 0.0056937426432625594
+          },
+          {
+            "feature": "evi_last",
+            "importance_mean": 0.01886938640335743,
+            "importance_std": 0.004703407418271537
+          },
+          {
+            "feature": "rain_7d_mm",
+            "importance_mean": 0.014376438094214997,
+            "importance_std": 0.003159514257785894
+          },
+          {
+            "feature": "rain_30d_mm",
+            "importance_mean": 0.013661518908065681,
+            "importance_std": 0.004172370686862962
+          },
+          {
+            "feature": "vegetation_valid_pixel_fraction",
+            "importance_mean": 0.010845877010085528,
+            "importance_std": 0.0065944242459854705
+          },
+          {
+            "feature": "t2m_7d_c",
+            "importance_mean": 0.007902932694007048,
+            "importance_std": 0.007911650346584267
+          },
+          {
+            "feature": "t2m_max_30d_c",
+            "importance_mean": 0.006892997145157749,
+            "importance_std": 0.0023583525484180095
+          }
+        ]
+      },
+      "drift": {
+        "rain_7d_mm": {
+          "psi_train_to_validation": 0.013783964860440055,
+          "psi_train_to_test": 0.04617172701938321
+        },
+        "rain_30d_mm": {
+          "psi_train_to_validation": 0.08408306199811871,
+          "psi_train_to_test": 0.013655090352523443
+        },
+        "rain_90d_mm": {
+          "psi_train_to_validation": 0.20248205702445676,
+          "psi_train_to_test": 0.027163314349318388
+        },
+        "heavy_rain_days_30d": {
+          "psi_train_to_validation": null,
+          "psi_train_to_test": null
+        },
+        "dry_spell_days": {
+          "psi_train_to_validation": 0.03275163721547816,
+          "psi_train_to_test": 0.04382172300871501
+        },
+        "t2m_7d_c": {
+          "psi_train_to_validation": 0.08087454386409883,
+          "psi_train_to_test": 0.019243596694904403
+        },
+        "t2m_30d_c": {
+          "psi_train_to_validation": 0.07212192346187798,
+          "psi_train_to_test": 0.022673582556903
+        },
+        "t2m_max_30d_c": {
+          "psi_train_to_validation": 0.03608043326480052,
+          "psi_train_to_test": 0.012365548835514644
+        },
+        "gwet_top_7d": {
+          "psi_train_to_validation": 0.07566865773884221,
+          "psi_train_to_test": 0.09503095360238414
+        },
+        "gwet_top_30d": {
+          "psi_train_to_validation": 0.08314763832186481,
+          "psi_train_to_test": 0.08887538341996665
+        },
+        "gwet_root_30d": {
+          "psi_train_to_validation": 0.02187871944591854,
+          "psi_train_to_test": 0.05257787793743671
+        },
+        "ndvi_last": {
+          "psi_train_to_validation": 0.03834605012816124,
+          "psi_train_to_test": 0.0759794425947213
+        },
+        "evi_last": {
+          "psi_train_to_validation": 0.03472764664124285,
+          "psi_train_to_test": 0.07152211930557113
+        },
+        "ndvi_change_1": {
+          "psi_train_to_validation": 0.016658709882932096,
+          "psi_train_to_test": 0.04660110294602363
+        },
+        "vegetation_valid_pixel_fraction": {
+          "psi_train_to_validation": 0.003322552478257326,
+          "psi_train_to_test": 0.012279514315849716
+        },
+        "ndvi_last_anomaly_z_reference": {
+          "psi_train_to_validation": 0.09878265795517154,
+          "psi_train_to_test": 0.4109183633292799
+        }
+      },
+      "failure_analysis": {
+        "false_positive_count": 353,
+        "false_negative_count": 126,
+        "highest_confidence_false_positives": [
+          {
+            "district_id": "SO2306",
+            "region_id": "SO23",
+            "feature_as_of_date": "2025-05-24T00:00:00",
+            "target_period_start": "2025-05-25T00:00:00",
+            "target_period_end": "2025-06-09T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2801",
+            "region_id": "SO28",
+            "feature_as_of_date": "2023-03-21T00:00:00",
+            "target_period_start": "2023-03-22T00:00:00",
+            "target_period_end": "2023-04-06T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "Unspecified",
+            "region_id": "SO22",
+            "feature_as_of_date": "2024-11-15T00:00:00",
+            "target_period_start": "2024-11-16T00:00:00",
+            "target_period_end": "2024-12-01T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2803",
+            "region_id": "SO28",
+            "feature_as_of_date": "2023-07-11T00:00:00",
+            "target_period_start": "2023-07-12T00:00:00",
+            "target_period_end": "2023-07-27T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2306",
+            "region_id": "SO23",
+            "feature_as_of_date": "2023-05-24T00:00:00",
+            "target_period_start": "2023-05-25T00:00:00",
+            "target_period_end": "2023-06-09T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2701",
+            "region_id": "SO27",
+            "feature_as_of_date": "2023-08-12T00:00:00",
+            "target_period_start": "2023-08-13T00:00:00",
+            "target_period_end": "2023-08-28T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "Unspecified",
+            "region_id": "SO22",
+            "feature_as_of_date": "2024-07-10T00:00:00",
+            "target_period_start": "2024-07-11T00:00:00",
+            "target_period_end": "2024-07-26T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2301",
+            "region_id": "SO23",
+            "feature_as_of_date": "2023-11-16T00:00:00",
+            "target_period_start": "2023-11-17T00:00:00",
+            "target_period_end": "2023-12-02T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2301",
+            "region_id": "SO23",
+            "feature_as_of_date": "2023-09-29T00:00:00",
+            "target_period_start": "2023-09-30T00:00:00",
+            "target_period_end": "2023-10-15T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2802",
+            "region_id": "SO28",
+            "feature_as_of_date": "2025-12-02T00:00:00",
+            "target_period_start": "2025-12-03T00:00:00",
+            "target_period_end": "2025-12-18T00:00:00",
+            "target": 0,
+            "probability": 0.7857142857142857,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO1904",
+            "region_id": "SO19",
+            "feature_as_of_date": "2023-09-29T00:00:00",
+            "target_period_start": "2023-09-30T00:00:00",
+            "target_period_end": "2023-10-15T00:00:00",
+            "target": 0,
+            "probability": 0.76,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2702",
+            "region_id": "SO27",
+            "feature_as_of_date": "2024-06-24T00:00:00",
+            "target_period_start": "2024-06-25T00:00:00",
+            "target_period_end": "2024-07-10T00:00:00",
+            "target": 0,
+            "probability": 0.76,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "Unspecified",
+            "region_id": "SO22",
+            "feature_as_of_date": "2025-03-21T00:00:00",
+            "target_period_start": "2025-03-22T00:00:00",
+            "target_period_end": "2025-04-06T00:00:00",
+            "target": 0,
+            "probability": 0.76,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2804",
+            "region_id": "SO28",
+            "feature_as_of_date": "2025-04-06T00:00:00",
+            "target_period_start": "2025-04-07T00:00:00",
+            "target_period_end": "2025-04-22T00:00:00",
+            "target": 0,
+            "probability": 0.76,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2804",
+            "region_id": "SO28",
+            "feature_as_of_date": "2023-03-21T00:00:00",
+            "target_period_start": "2023-03-22T00:00:00",
+            "target_period_end": "2023-04-06T00:00:00",
+            "target": 0,
+            "probability": 0.76,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO1905",
+            "region_id": "SO19",
+            "feature_as_of_date": "2025-05-24T00:00:00",
+            "target_period_start": "2025-05-25T00:00:00",
+            "target_period_end": "2025-06-09T00:00:00",
+            "target": 0,
+            "probability": 0.76,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2801",
+            "region_id": "SO28",
+            "feature_as_of_date": "2023-06-25T00:00:00",
+            "target_period_start": "2023-06-26T00:00:00",
+            "target_period_end": "2023-07-11T00:00:00",
+            "target": 0,
+            "probability": 0.76,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2404",
+            "region_id": "SO24",
+            "feature_as_of_date": "2023-08-12T00:00:00",
+            "target_period_start": "2023-08-13T00:00:00",
+            "target_period_end": "2023-08-28T00:00:00",
+            "target": 0,
+            "probability": 0.7467617020115062,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2302",
+            "region_id": "SO23",
+            "feature_as_of_date": "2023-10-15T00:00:00",
+            "target_period_start": "2023-10-16T00:00:00",
+            "target_period_end": "2023-10-31T00:00:00",
+            "target": 0,
+            "probability": 0.7272727272727273,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2703",
+            "region_id": "SO27",
+            "feature_as_of_date": "2023-08-12T00:00:00",
+            "target_period_start": "2023-08-13T00:00:00",
+            "target_period_end": "2023-08-28T00:00:00",
+            "target": 0,
+            "probability": 0.7272727272727273,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2002",
+            "region_id": "SO20",
+            "feature_as_of_date": "2023-08-28T00:00:00",
+            "target_period_start": "2023-08-29T00:00:00",
+            "target_period_end": "2023-09-13T00:00:00",
+            "target": 0,
+            "probability": 0.659217877094972,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2802",
+            "region_id": "SO28",
+            "feature_as_of_date": "2023-03-21T00:00:00",
+            "target_period_start": "2023-03-22T00:00:00",
+            "target_period_end": "2023-04-06T00:00:00",
+            "target": 0,
+            "probability": 0.659217877094972,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2605",
+            "region_id": "SO26",
+            "feature_as_of_date": "2023-03-21T00:00:00",
+            "target_period_start": "2023-03-22T00:00:00",
+            "target_period_end": "2023-04-06T00:00:00",
+            "target": 0,
+            "probability": 0.659217877094972,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2208",
+            "region_id": "SO22",
+            "feature_as_of_date": "2025-04-22T00:00:00",
+            "target_period_start": "2025-04-23T00:00:00",
+            "target_period_end": "2025-05-08T00:00:00",
+            "target": 0,
+            "probability": 0.659217877094972,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "district_id": "SO2701",
+            "region_id": "SO27",
+            "feature_as_of_date": "2025-05-24T00:00:00",
+            "target_period_start": "2025-05-25T00:00:00",
+            "target_period_end": "2025-06-09T00:00:00",
+            "target": 0,
+            "probability": 0.659217877094972,
+            "prediction": 1,
+            "correct": false
+          }
+        ],
+        "highest_confidence_false_negatives": [
+          {
+            "district_id": "SO2303",
+            "region_id": "SO23",
+            "feature_as_of_date": "2024-05-23T00:00:00",
+            "target_period_start": "2024-05-24T00:00:00",
+            "target_period_end": "2024-06-08T00:00:00",
+            "target": 1,
+            "probability": 0.010452961672473868,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2203",
+            "region_id": "SO22",
+            "feature_as_of_date": "2024-12-01T00:00:00",
+            "target_period_start": "2024-12-02T00:00:00",
+            "target_period_end": "2024-12-17T00:00:00",
+            "target": 1,
+            "probability": 0.010452961672473868,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2804",
+            "region_id": "SO28",
+            "feature_as_of_date": "2025-03-05T00:00:00",
+            "target_period_start": "2025-03-06T00:00:00",
+            "target_period_end": "2025-03-21T00:00:00",
+            "target": 1,
+            "probability": 0.010452961672473868,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2102",
+            "region_id": "SO21",
+            "feature_as_of_date": "2025-05-08T00:00:00",
+            "target_period_start": "2025-05-09T00:00:00",
+            "target_period_end": "2025-05-24T00:00:00",
+            "target": 1,
+            "probability": 0.010452961672473868,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2304",
+            "region_id": "SO23",
+            "feature_as_of_date": "2025-05-08T00:00:00",
+            "target_period_start": "2025-05-09T00:00:00",
+            "target_period_end": "2025-05-24T00:00:00",
+            "target": 1,
+            "probability": 0.010452961672473868,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2703",
+            "region_id": "SO27",
+            "feature_as_of_date": "2024-05-23T00:00:00",
+            "target_period_start": "2024-05-24T00:00:00",
+            "target_period_end": "2024-06-08T00:00:00",
+            "target": 1,
+            "probability": 0.010452961672473868,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2304",
+            "region_id": "SO23",
+            "feature_as_of_date": "2023-06-25T00:00:00",
+            "target_period_start": "2023-06-26T00:00:00",
+            "target_period_end": "2023-07-11T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO1905",
+            "region_id": "SO19",
+            "feature_as_of_date": "2023-05-08T00:00:00",
+            "target_period_start": "2023-05-09T00:00:00",
+            "target_period_end": "2023-05-24T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2215",
+            "region_id": "SO22",
+            "feature_as_of_date": "2024-06-08T00:00:00",
+            "target_period_start": "2024-06-09T00:00:00",
+            "target_period_end": "2024-06-24T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO1301",
+            "region_id": "SO13",
+            "feature_as_of_date": "2024-07-10T00:00:00",
+            "target_period_start": "2024-07-11T00:00:00",
+            "target_period_end": "2024-07-26T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO1905",
+            "region_id": "SO19",
+            "feature_as_of_date": "2025-05-08T00:00:00",
+            "target_period_start": "2025-05-09T00:00:00",
+            "target_period_end": "2025-05-24T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2208",
+            "region_id": "SO22",
+            "feature_as_of_date": "2023-06-09T00:00:00",
+            "target_period_start": "2023-06-10T00:00:00",
+            "target_period_end": "2023-06-25T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2804",
+            "region_id": "SO28",
+            "feature_as_of_date": "2023-12-18T00:00:00",
+            "target_period_start": "2023-12-19T00:00:00",
+            "target_period_end": "2024-01-03T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2403",
+            "region_id": "SO24",
+            "feature_as_of_date": "2024-05-23T00:00:00",
+            "target_period_start": "2024-05-24T00:00:00",
+            "target_period_end": "2024-06-08T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2104",
+            "region_id": "SO21",
+            "feature_as_of_date": "2023-07-11T00:00:00",
+            "target_period_start": "2023-07-12T00:00:00",
+            "target_period_end": "2023-07-27T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2402",
+            "region_id": "SO24",
+            "feature_as_of_date": "2024-05-23T00:00:00",
+            "target_period_start": "2024-05-24T00:00:00",
+            "target_period_end": "2024-06-08T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2606",
+            "region_id": "SO26",
+            "feature_as_of_date": "2025-05-08T00:00:00",
+            "target_period_start": "2025-05-09T00:00:00",
+            "target_period_end": "2025-05-24T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2402",
+            "region_id": "SO24",
+            "feature_as_of_date": "2025-05-08T00:00:00",
+            "target_period_start": "2025-05-09T00:00:00",
+            "target_period_end": "2025-05-24T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2701",
+            "region_id": "SO27",
+            "feature_as_of_date": "2025-06-25T00:00:00",
+            "target_period_start": "2025-06-26T00:00:00",
+            "target_period_end": "2025-07-11T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2305",
+            "region_id": "SO23",
+            "feature_as_of_date": "2025-05-08T00:00:00",
+            "target_period_start": "2025-05-09T00:00:00",
+            "target_period_end": "2025-05-24T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2001",
+            "region_id": "SO20",
+            "feature_as_of_date": "2025-06-25T00:00:00",
+            "target_period_start": "2025-06-26T00:00:00",
+            "target_period_end": "2025-07-11T00:00:00",
+            "target": 1,
+            "probability": 0.016835016835016835,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2802",
+            "region_id": "SO28",
+            "feature_as_of_date": "2025-05-24T00:00:00",
+            "target_period_start": "2025-05-25T00:00:00",
+            "target_period_end": "2025-06-09T00:00:00",
+            "target": 1,
+            "probability": 0.024,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "Unspecified",
+            "region_id": "SO22",
+            "feature_as_of_date": "2024-10-30T00:00:00",
+            "target_period_start": "2024-10-31T00:00:00",
+            "target_period_end": "2024-11-15T00:00:00",
+            "target": 1,
+            "probability": 0.024,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2804",
+            "region_id": "SO28",
+            "feature_as_of_date": "2024-05-23T00:00:00",
+            "target_period_start": "2024-05-24T00:00:00",
+            "target_period_end": "2024-06-08T00:00:00",
+            "target": 1,
+            "probability": 0.024,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "district_id": "SO2401",
+            "region_id": "SO24",
+            "feature_as_of_date": "2023-05-24T00:00:00",
+            "target_period_start": "2023-05-25T00:00:00",
+            "target_period_end": "2023-06-09T00:00:00",
+            "target": 1,
+            "probability": 0.024,
+            "prediction": 0,
+            "correct": false
+          }
+        ],
+        "errors_by_region": {
+          "SO11": 4,
+          "SO12": 2,
+          "SO13": 9,
+          "SO14": 5,
+          "SO15": 4,
+          "SO16": 3,
+          "SO17": 2,
+          "SO18": 21,
+          "SO19": 38,
+          "SO20": 21,
+          "SO21": 53,
+          "SO22": 55,
+          "SO23": 84,
+          "SO24": 30,
+          "SO25": 30,
+          "SO26": 39,
+          "SO27": 40,
+          "SO28": 39
+        }
+      },
+      "training_and_evaluation_seconds": 8.431203499989351
+    },
+    "flood": {
+      "track": "flood",
+      "selected_model": "logistic_regression",
+      "selection_reason": "Logistic regression improved on the deterministic rule, while random forest added less than 0.02 validation utility.",
+      "partitions": {
+        "train": {
+          "rows": 10791,
+          "positive": 1045,
+          "negative": 9746,
+          "start": "2015-01-08",
+          "end": "2020-12-31"
+        },
+        "validation": {
+          "rows": 2806,
+          "positive": 47,
+          "negative": 2759,
+          "start": "2021-01-01",
+          "end": "2022-12-31"
+        },
+        "test": {
+          "rows": 4035,
+          "positive": 573,
+          "negative": 3462,
+          "start": "2023-01-01",
+          "end": "2025-12-29"
+        }
+      },
+      "baseline": {
+        "rule": {
+          "validation": {
+            "rows": 2806,
+            "positives": 47,
+            "negatives": 2759,
+            "prevalence": 0.01674982181040627,
+            "accuracy": 0.9896650035637918,
+            "balanced_accuracy": 0.9529161814718561,
+            "precision": 0.6323529411764706,
+            "recall": 0.9148936170212766,
+            "f1": 0.7478260869565218,
+            "roc_auc": 0.993013194728278,
+            "pr_auc": 0.5619582720778051,
+            "brier": 0.11707425511511176,
+            "ece_10_bin": 0.2575785832298799,
+            "false_alarm_rate": 0.009061254077564335,
+            "miss_rate": 0.0851063829787234,
+            "true_negative": 2734,
+            "false_positive": 25,
+            "false_negative": 4,
+            "true_positive": 43,
+            "operating_threshold": 0.8600000000000001
+          },
+          "test": {
+            "rows": 4035,
+            "positives": 573,
+            "negatives": 3462,
+            "prevalence": 0.14200743494423793,
+            "accuracy": 0.950185873605948,
+            "balanced_accuracy": 0.9025220721006832,
+            "precision": 0.8174061433447098,
+            "recall": 0.8359511343804538,
+            "f1": 0.8265746333045729,
+            "roc_auc": 0.9707998987763431,
+            "pr_auc": 0.8437791042571606,
+            "brier": 0.18468434979137827,
+            "ece_10_bin": 0.31952971580566747,
+            "false_alarm_rate": 0.030906990179087233,
+            "miss_rate": 0.16404886561954624,
+            "true_negative": 3355,
+            "false_positive": 107,
+            "false_negative": 94,
+            "true_positive": 479,
+            "operating_threshold": 0.8600000000000001
+          }
+        },
+        "logistic_regression": {
+          "validation": {
+            "rows": 2806,
+            "positives": 47,
+            "negatives": 2759,
+            "prevalence": 0.01674982181040627,
+            "accuracy": 0.9925160370634355,
+            "balanced_accuracy": 0.9543659821242665,
+            "precision": 0.7166666666666667,
+            "recall": 0.9148936170212766,
+            "f1": 0.8037383177570093,
+            "roc_auc": 0.997563101031055,
+            "pr_auc": 0.9228602585360031,
+            "brier": 0.02754017202639663,
+            "ece_10_bin": 0.04301278667507884,
+            "false_alarm_rate": 0.0061616527727437476,
+            "miss_rate": 0.0851063829787234,
+            "true_negative": 2742,
+            "false_positive": 17,
+            "false_negative": 4,
+            "true_positive": 43,
+            "operating_threshold": 0.9
+          },
+          "test": {
+            "rows": 4035,
+            "positives": 573,
+            "negatives": 3462,
+            "prevalence": 0.14200743494423793,
+            "accuracy": 0.9600991325898389,
+            "balanced_accuracy": 0.9206780573526787,
+            "precision": 0.8551724137931035,
+            "recall": 0.8656195462478184,
+            "f1": 0.8603642671292281,
+            "roc_auc": 0.9813028613830741,
+            "pr_auc": 0.9304519805145659,
+            "brier": 0.07708448318034838,
+            "ece_10_bin": 0.09830090655472493,
+            "false_alarm_rate": 0.024263431542461005,
+            "miss_rate": 0.1343804537521815,
+            "true_negative": 3378,
+            "false_positive": 84,
+            "false_negative": 77,
+            "true_positive": 496,
+            "operating_threshold": 0.9
+          }
+        }
+      },
+      "candidates": {
+        "logistic_regression": {
+          "algorithm": "logistic_regression",
+          "parameters": {
+            "C": 1.0,
+            "class_weight": "balanced",
+            "dual": false,
+            "fit_intercept": true,
+            "intercept_scaling": 1,
+            "l1_ratio": 0.0,
+            "max_iter": 2000,
+            "n_jobs": null,
+            "penalty": "deprecated",
+            "random_state": 20260826,
+            "solver": "lbfgs",
+            "tol": 0.0001,
+            "verbose": 0,
+            "warm_start": false
+          },
+          "validation_metrics": {
+            "rows": 2806,
+            "positives": 47,
+            "negatives": 2759,
+            "prevalence": 0.01674982181040627,
+            "accuracy": 0.9925160370634355,
+            "balanced_accuracy": 0.9543659821242665,
+            "precision": 0.7166666666666667,
+            "recall": 0.9148936170212766,
+            "f1": 0.8037383177570093,
+            "roc_auc": 0.997563101031055,
+            "pr_auc": 0.9228602585360031,
+            "brier": 0.02754017202639663,
+            "ece_10_bin": 0.04301278667507884,
+            "false_alarm_rate": 0.0061616527727437476,
+            "miss_rate": 0.0851063829787234,
+            "true_negative": 2742,
+            "false_positive": 17,
+            "false_negative": 4,
+            "true_positive": 43,
+            "operating_threshold": 0.9
+          },
+          "validation_utility": 0.9069641238890428,
+          "training_seconds": 1.9700355000095442,
+          "threshold_before_calibration": 0.9
+        },
+        "random_forest": {
+          "algorithm": "random_forest",
+          "parameters": {
+            "bootstrap": true,
+            "ccp_alpha": 0.0,
+            "class_weight": "balanced_subsample",
+            "criterion": "gini",
+            "max_depth": 8,
+            "max_features": "sqrt",
+            "max_leaf_nodes": null,
+            "max_samples": null,
+            "min_impurity_decrease": 0.0,
+            "min_samples_leaf": 10,
+            "min_samples_split": 2,
+            "min_weight_fraction_leaf": 0.0,
+            "monotonic_cst": null,
+            "n_estimators": 250,
+            "n_jobs": -1,
+            "oob_score": false,
+            "random_state": 20260826,
+            "verbose": 0,
+            "warm_start": false
+          },
+          "validation_metrics": {
+            "rows": 2806,
+            "positives": 47,
+            "negatives": 2759,
+            "prevalence": 0.01674982181040627,
+            "accuracy": 0.9964362081254454,
+            "balanced_accuracy": 0.9145311668581739,
+            "precision": 0.9512195121951219,
+            "recall": 0.8297872340425532,
+            "f1": 0.8863636363636364,
+            "roc_auc": 0.9981569023620954,
+            "pr_auc": 0.9396959038608251,
+            "brier": 0.009175667211308232,
+            "ece_10_bin": 0.02210818009873397,
+            "false_alarm_rate": 0.0007249003262051468,
+            "miss_rate": 0.1702127659574468,
+            "true_negative": 2757,
+            "false_positive": 2,
+            "false_negative": 8,
+            "true_positive": 39,
+            "operating_threshold": 0.8600000000000001
+          },
+          "validation_utility": 0.9117779686923927,
+          "training_seconds": 2.5932976999902166,
+          "threshold_before_calibration": 0.8600000000000001
+        }
+      },
+      "candidate_test_metrics": {
+        "logistic_regression": {
+          "rows": 4035,
+          "positives": 573,
+          "negatives": 3462,
+          "prevalence": 0.14200743494423793,
+          "accuracy": 0.9600991325898389,
+          "balanced_accuracy": 0.9206780573526787,
+          "precision": 0.8551724137931035,
+          "recall": 0.8656195462478184,
+          "f1": 0.8603642671292281,
+          "roc_auc": 0.9813028613830741,
+          "pr_auc": 0.9304519805145659,
+          "brier": 0.07708448318034838,
+          "ece_10_bin": 0.09830090655472493,
+          "false_alarm_rate": 0.024263431542461005,
+          "miss_rate": 0.1343804537521815,
+          "true_negative": 3378,
+          "false_positive": 84,
+          "false_negative": 77,
+          "true_positive": 496,
+          "operating_threshold": 0.9
+        },
+        "random_forest": {
+          "rows": 4035,
+          "positives": 573,
+          "negatives": 3462,
+          "prevalence": 0.14200743494423793,
+          "accuracy": 0.9732342007434944,
+          "balanced_accuracy": 0.9203226655294128,
+          "precision": 0.9603960396039604,
+          "recall": 0.8464223385689355,
+          "f1": 0.8998144712430427,
+          "roc_auc": 0.9871937959173798,
+          "pr_auc": 0.9576665523896729,
+          "brier": 0.0305083378943219,
+          "ece_10_bin": 0.038520329307218215,
+          "false_alarm_rate": 0.005777007510109763,
+          "miss_rate": 0.15357766143106458,
+          "true_negative": 3442,
+          "false_positive": 20,
+          "false_negative": 88,
+          "true_positive": 485,
+          "operating_threshold": 0.8600000000000001
+        }
+      },
+      "calibration": {
+        "method": "isotonic",
+        "validation_brier_before": 0.02754017202639663,
+        "validation_brier_after": 0.0032468835333664156,
+        "candidate_brier": {
+          "identity": 0.02754017202639663,
+          "sigmoid": 0.007768145766177338,
+          "isotonic": 0.0032468835333664156
+        },
+        "fit_data": "validation partition only",
+        "reference_prevalence": 0.09683995922528033,
+        "validation_prevalence": 0.01674982181040627,
+        "absolute_prevalence_shift": 0.08009013741487406,
+        "selection_guard": "CANDIDATE_SELECTED_BY_VALIDATION_BRIER",
+        "test_brier_before": 0.07708448318034838,
+        "test_brier_after": 0.03535022791086659,
+        "test_ece_before": 0.09830090655472493,
+        "test_ece_after": 0.030877896702830823
+      },
+      "operating_threshold": 0.22999999999999998,
+      "risk_thresholds": {
+        "watch": 0.11499999999999999,
+        "warning": 0.22999999999999998,
+        "severe": 0.615
+      },
+      "validation_metrics_after_calibration": {
+        "rows": 2806,
+        "positives": 47,
+        "negatives": 2759,
+        "prevalence": 0.01674982181040627,
+        "accuracy": 0.9960798289379901,
+        "balanced_accuracy": 0.9143499417766228,
+        "precision": 0.9285714285714286,
+        "recall": 0.8297872340425532,
+        "f1": 0.8764044943820225,
+        "roc_auc": 0.9981376230981005,
+        "pr_auc": 0.9157763887975114,
+        "brier": 0.0032468835333664156,
+        "ece_10_bin": 4.352264173512731e-19,
+        "false_alarm_rate": 0.0010873504893077202,
+        "miss_rate": 0.1702127659574468,
+        "true_negative": 2756,
+        "false_positive": 3,
+        "false_negative": 8,
+        "true_positive": 39,
+        "operating_threshold": 0.22999999999999998
+      },
+      "final_test_metrics": {
+        "rows": 4035,
+        "positives": 573,
+        "negatives": 3462,
+        "prevalence": 0.14200743494423793,
+        "accuracy": 0.9578686493184635,
+        "balanced_accuracy": 0.8873385235662586,
+        "precision": 0.9021956087824351,
+        "recall": 0.7888307155322862,
+        "f1": 0.8417132216014898,
+        "roc_auc": 0.9707845236690954,
+        "pr_auc": 0.8800261117925614,
+        "brier": 0.03535022791086659,
+        "ece_10_bin": 0.030877896702830823,
+        "false_alarm_rate": 0.01415366839976892,
+        "miss_rate": 0.2111692844677138,
+        "true_negative": 3413,
+        "false_positive": 49,
+        "false_negative": 121,
+        "true_positive": 452,
+        "operating_threshold": 0.22999999999999998
+      },
+      "artifact": {
+        "model_id": "flood-early-warning",
+        "model_version": "1.1.0",
+        "target_version": "1.1.0",
+        "feature_version": "1.1.0",
+        "algorithm": "logistic_regression",
+        "features": [
+          "current_level_m",
+          "level_change_1d",
+          "level_change_3d",
+          "level_change_7d",
+          "level_mean_7d",
+          "level_max_7d",
+          "level_ratio_moderate",
+          "distance_to_moderate_m",
+          "distance_to_high_m",
+          "distance_to_bankfull_m",
+          "rain_1d_mm",
+          "rain_3d_mm",
+          "rain_7d_mm",
+          "rain_30d_mm",
+          "heavy_rain_days_7d",
+          "gwet_top_7d",
+          "gwet_top_30d",
+          "gwet_root_30d",
+          "t2m_7d_c"
+        ],
+        "training_period": [
+          2015,
+          2020
+        ],
+        "validation_period": [
+          2021,
+          2022
+        ],
+        "test_period": [
+          2023,
+          2025
+        ],
+        "calibration_method": "isotonic",
+        "operating_threshold": 0.22999999999999998,
+        "risk_thresholds": {
+          "watch": 0.11499999999999999,
+          "warning": 0.22999999999999998,
+          "severe": 0.615
+        },
+        "artifact_path": "ml/artifacts/flood/flood_model_v1.1.0.joblib",
+        "artifact_checksum_sha256": "7d5db090b3601734be8ac6625abcaffcdb340e11f4bdbb0f9a36c635541bed80",
+        "artifact_size_bytes": 5117,
+        "serialization_round_trip_passed": true,
+        "environment": {
+          "python": "3.13.5",
+          "platform": "Windows-11-10.0.26200-SP0",
+          "numpy": "2.3.5",
+          "pandas": "2.3.3",
+          "scikit_learn": "1.9.0",
+          "joblib": "1.5.3",
+          "random_seed": 20260826
+        },
+        "selection_reason": "Logistic regression improved on the deterministic rule, while random forest added less than 0.02 validation utility."
+      },
+      "explainability": {
+        "available": true,
+        "method": "model-agnostic permutation importance plus median-perturbation local drivers",
+        "shap_status": "NOT_APPLICABLE",
+        "top_features": [
+          {
+            "feature": "distance_to_moderate_m",
+            "importance_mean": 0.4079889951608729,
+            "importance_std": 0.006168274913053638
+          },
+          {
+            "feature": "gwet_top_7d",
+            "importance_mean": 0.0824577855205298,
+            "importance_std": 0.00891345333036313
+          },
+          {
+            "feature": "distance_to_high_m",
+            "importance_mean": 0.0578488785116521,
+            "importance_std": 0.0025609202313438485
+          },
+          {
+            "feature": "level_ratio_moderate",
+            "importance_mean": 0.05618816773407672,
+            "importance_std": 0.004455527542152584
+          },
+          {
+            "feature": "gwet_top_30d",
+            "importance_mean": 0.039719659230586145,
+            "importance_std": 0.00513654489442887
+          },
+          {
+            "feature": "level_mean_7d",
+            "importance_mean": 0.019852801862387248,
+            "importance_std": 0.0022278505730517965
+          },
+          {
+            "feature": "current_level_m",
+            "importance_mean": 0.01830541555570823,
+            "importance_std": 0.0021068349303100444
+          },
+          {
+            "feature": "gwet_root_30d",
+            "importance_mean": 0.006027894271570096,
+            "importance_std": 0.0008987962781362099
+          },
+          {
+            "feature": "heavy_rain_days_7d",
+            "importance_mean": 0.005108433679757367,
+            "importance_std": 0.0007176169013901749
+          },
+          {
+            "feature": "rain_3d_mm",
+            "importance_mean": 0.0038432813300386024,
+            "importance_std": 9.990184103760725e-05
+          }
+        ]
+      },
+      "drift": {
+        "current_level_m": {
+          "psi_train_to_validation": 0.29739994809520476,
+          "psi_train_to_test": 0.1979123065086003
+        },
+        "level_change_1d": {
+          "psi_train_to_validation": 0.08580544227929116,
+          "psi_train_to_test": 0.022179529209475676
+        },
+        "level_change_3d": {
+          "psi_train_to_validation": 0.0894349104215198,
+          "psi_train_to_test": 0.019445744306597172
+        },
+        "level_change_7d": {
+          "psi_train_to_validation": 0.07322537490265853,
+          "psi_train_to_test": 0.01867653735707209
+        },
+        "level_mean_7d": {
+          "psi_train_to_validation": 0.2764410489562458,
+          "psi_train_to_test": 0.19989667902948222
+        },
+        "level_max_7d": {
+          "psi_train_to_validation": 0.27455973906366443,
+          "psi_train_to_test": 0.22983279124916023
+        },
+        "level_ratio_moderate": {
+          "psi_train_to_validation": 0.26061359935602024,
+          "psi_train_to_test": 0.15358581726804132
+        },
+        "distance_to_moderate_m": {
+          "psi_train_to_validation": 0.2813030887892545,
+          "psi_train_to_test": 0.16271308891175812
+        },
+        "distance_to_high_m": {
+          "psi_train_to_validation": 0.24436891227409185,
+          "psi_train_to_test": 0.1775062881359852
+        },
+        "distance_to_bankfull_m": {
+          "psi_train_to_validation": 0.2220573188700237,
+          "psi_train_to_test": 0.17099249484694515
+        },
+        "rain_1d_mm": {
+          "psi_train_to_validation": 0.05883661451810933,
+          "psi_train_to_test": 0.0052705395883807975
+        },
+        "rain_3d_mm": {
+          "psi_train_to_validation": 0.06722614971838307,
+          "psi_train_to_test": 0.008361497089019418
+        },
+        "rain_7d_mm": {
+          "psi_train_to_validation": 0.08468517586240512,
+          "psi_train_to_test": 0.01541640110678005
+        },
+        "rain_30d_mm": {
+          "psi_train_to_validation": 0.23847313883260493,
+          "psi_train_to_test": 0.03687478900854951
+        },
+        "heavy_rain_days_7d": {
+          "psi_train_to_validation": null,
+          "psi_train_to_test": null
+        },
+        "gwet_top_7d": {
+          "psi_train_to_validation": 0.16141944757456755,
+          "psi_train_to_test": 0.1707084004812317
+        },
+        "gwet_top_30d": {
+          "psi_train_to_validation": 0.2173320975417676,
+          "psi_train_to_test": 0.20703141925647423
+        },
+        "gwet_root_30d": {
+          "psi_train_to_validation": 0.17238834681843074,
+          "psi_train_to_test": 0.29113070846224676
+        },
+        "t2m_7d_c": {
+          "psi_train_to_validation": 0.140818498891826,
+          "psi_train_to_test": 0.09600443934819414
+        }
+      },
+      "failure_analysis": {
+        "false_positive_count": 49,
+        "false_negative_count": 121,
+        "highest_confidence_false_positives": [
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-03-25T00:00:00",
+            "target_period_start": "2023-03-26T00:00:00",
+            "target_period_end": "2023-03-28T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-10-22T00:00:00",
+            "target_period_start": "2023-10-23T00:00:00",
+            "target_period_end": "2023-10-25T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-03-26T00:00:00",
+            "target_period_start": "2023-03-27T00:00:00",
+            "target_period_end": "2023-03-29T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-03-27T00:00:00",
+            "target_period_start": "2023-03-28T00:00:00",
+            "target_period_end": "2023-03-30T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-04-25T00:00:00",
+            "target_period_start": "2023-04-26T00:00:00",
+            "target_period_end": "2023-04-28T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-10-05T00:00:00",
+            "target_period_start": "2023-10-06T00:00:00",
+            "target_period_end": "2023-10-08T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-05-07T00:00:00",
+            "target_period_start": "2023-05-08T00:00:00",
+            "target_period_end": "2023-05-10T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-10-22T00:00:00",
+            "target_period_start": "2023-10-23T00:00:00",
+            "target_period_end": "2023-10-25T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH001",
+            "feature_as_of_date": "2023-10-21T00:00:00",
+            "target_period_start": "2023-10-22T00:00:00",
+            "target_period_end": "2023-10-24T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2023-10-29T00:00:00",
+            "target_period_start": "2023-10-30T00:00:00",
+            "target_period_end": "2023-11-01T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH001",
+            "feature_as_of_date": "2023-12-12T00:00:00",
+            "target_period_start": "2023-12-13T00:00:00",
+            "target_period_end": "2023-12-15T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2024-04-24T00:00:00",
+            "target_period_start": "2024-04-25T00:00:00",
+            "target_period_end": "2024-04-27T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2024-04-25T00:00:00",
+            "target_period_start": "2024-04-26T00:00:00",
+            "target_period_end": "2024-04-28T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2023-11-02T00:00:00",
+            "target_period_start": "2023-11-03T00:00:00",
+            "target_period_end": "2023-11-05T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2023-11-03T00:00:00",
+            "target_period_start": "2023-11-04T00:00:00",
+            "target_period_end": "2023-11-06T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2023-11-01T00:00:00",
+            "target_period_start": "2023-11-02T00:00:00",
+            "target_period_end": "2023-11-04T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2023-10-31T00:00:00",
+            "target_period_start": "2023-11-01T00:00:00",
+            "target_period_end": "2023-11-03T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2024-05-08T00:00:00",
+            "target_period_start": "2024-05-09T00:00:00",
+            "target_period_end": "2024-05-11T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2024-11-05T00:00:00",
+            "target_period_start": "2024-11-06T00:00:00",
+            "target_period_end": "2024-11-08T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2024-11-12T00:00:00",
+            "target_period_start": "2024-11-13T00:00:00",
+            "target_period_end": "2024-11-15T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2024-11-10T00:00:00",
+            "target_period_start": "2024-11-11T00:00:00",
+            "target_period_end": "2024-11-13T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2024-04-27T00:00:00",
+            "target_period_start": "2024-04-28T00:00:00",
+            "target_period_end": "2024-04-30T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH001",
+            "feature_as_of_date": "2024-05-25T00:00:00",
+            "target_period_start": "2024-05-26T00:00:00",
+            "target_period_end": "2024-05-28T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2024-04-26T00:00:00",
+            "target_period_start": "2024-04-27T00:00:00",
+            "target_period_end": "2024-04-29T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2024-04-21T00:00:00",
+            "target_period_start": "2024-04-22T00:00:00",
+            "target_period_end": "2024-04-24T00:00:00",
+            "target": 0,
+            "target_first_crossing_lead_days": null,
+            "probability": 1.0,
+            "prediction": 1,
+            "correct": false
+          }
+        ],
+        "highest_confidence_false_negatives": [
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-03-16T00:00:00",
+            "target_period_start": "2023-03-17T00:00:00",
+            "target_period_end": "2023-03-19T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 3.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-03-17T00:00:00",
+            "target_period_start": "2023-03-18T00:00:00",
+            "target_period_end": "2023-03-20T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-03-18T00:00:00",
+            "target_period_start": "2023-03-19T00:00:00",
+            "target_period_end": "2023-03-21T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 1.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-05-29T00:00:00",
+            "target_period_start": "2023-05-30T00:00:00",
+            "target_period_end": "2023-06-01T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-05-28T00:00:00",
+            "target_period_start": "2023-05-29T00:00:00",
+            "target_period_end": "2023-05-31T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 3.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-10-17T00:00:00",
+            "target_period_start": "2023-10-18T00:00:00",
+            "target_period_end": "2023-10-20T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 3.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-10-03T00:00:00",
+            "target_period_start": "2023-10-04T00:00:00",
+            "target_period_end": "2023-10-06T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-10-02T00:00:00",
+            "target_period_start": "2023-10-03T00:00:00",
+            "target_period_end": "2023-10-05T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 3.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-10-26T00:00:00",
+            "target_period_start": "2023-10-27T00:00:00",
+            "target_period_end": "2023-10-29T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2024-04-14T00:00:00",
+            "target_period_start": "2024-04-15T00:00:00",
+            "target_period_end": "2024-04-17T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 3.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-10-18T00:00:00",
+            "target_period_start": "2023-10-19T00:00:00",
+            "target_period_end": "2023-10-21T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-10-19T00:00:00",
+            "target_period_start": "2023-10-20T00:00:00",
+            "target_period_end": "2023-10-22T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 1.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2023-10-04T00:00:00",
+            "target_period_start": "2023-10-05T00:00:00",
+            "target_period_end": "2023-10-07T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 1.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2024-05-06T00:00:00",
+            "target_period_start": "2024-05-07T00:00:00",
+            "target_period_end": "2024-05-09T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB001",
+            "feature_as_of_date": "2024-05-05T00:00:00",
+            "target_period_start": "2024-05-06T00:00:00",
+            "target_period_end": "2024-05-08T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 3.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "SH001",
+            "feature_as_of_date": "2024-04-23T00:00:00",
+            "target_period_start": "2024-04-24T00:00:00",
+            "target_period_end": "2024-04-26T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 3.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2024-05-05T00:00:00",
+            "target_period_start": "2024-05-06T00:00:00",
+            "target_period_end": "2024-05-08T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2024-05-14T00:00:00",
+            "target_period_start": "2024-05-15T00:00:00",
+            "target_period_end": "2024-05-17T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 1.0,
+            "probability": 0.0,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "SH001",
+            "feature_as_of_date": "2023-04-01T00:00:00",
+            "target_period_start": "2023-04-02T00:00:00",
+            "target_period_end": "2023-04-04T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 3.0,
+            "probability": 0.008478910779537248,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "SH004",
+            "feature_as_of_date": "2024-04-15T00:00:00",
+            "target_period_start": "2024-04-16T00:00:00",
+            "target_period_end": "2024-04-18T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.016129032258064516,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-05-30T00:00:00",
+            "target_period_start": "2023-05-31T00:00:00",
+            "target_period_end": "2023-06-02T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 1.0,
+            "probability": 0.016129032258064516,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2023-10-25T00:00:00",
+            "target_period_start": "2023-10-26T00:00:00",
+            "target_period_end": "2023-10-28T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.016129032258064516,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2024-11-02T00:00:00",
+            "target_period_start": "2024-11-03T00:00:00",
+            "target_period_end": "2024-11-05T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 3.0,
+            "probability": 0.016129032258064516,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "JB009",
+            "feature_as_of_date": "2024-11-03T00:00:00",
+            "target_period_start": "2024-11-04T00:00:00",
+            "target_period_end": "2024-11-06T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.016129032258064516,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "station_code": "SH001",
+            "feature_as_of_date": "2024-08-06T00:00:00",
+            "target_period_start": "2024-08-07T00:00:00",
+            "target_period_end": "2024-08-09T00:00:00",
+            "target": 1,
+            "target_first_crossing_lead_days": 2.0,
+            "probability": 0.016129032258064516,
+            "prediction": 0,
+            "correct": false
+          }
+        ],
+        "errors_by_station": {
+          "JB001": 26,
+          "JB009": 28,
+          "SH001": 39,
+          "SH002": 45,
+          "SH004": 32
+        }
+      },
+      "training_and_evaluation_seconds": 8.484859399992274,
+      "station_test_metrics": {
+        "JB001": {
+          "rows": 769,
+          "positives": 53,
+          "negatives": 716,
+          "prevalence": 0.06892067620286085,
+          "accuracy": 0.9661898569570871,
+          "balanced_accuracy": 0.8420733635501212,
+          "precision": 0.7872340425531915,
+          "recall": 0.6981132075471698,
+          "f1": 0.74,
+          "roc_auc": 0.904026562664699,
+          "pr_auc": 0.6698700964364837,
+          "brier": 0.03107459354537174,
+          "ece_10_bin": 0.02899343161259424,
+          "false_alarm_rate": 0.013966480446927373,
+          "miss_rate": 0.3018867924528302,
+          "true_negative": 706,
+          "false_positive": 10,
+          "false_negative": 16,
+          "true_positive": 37,
+          "operating_threshold": 0.22999999999999998
+        },
+        "JB009": {
+          "rows": 824,
+          "positives": 87,
+          "negatives": 737,
+          "prevalence": 0.10558252427184465,
+          "accuracy": 0.9660194174757282,
+          "balanced_accuracy": 0.884698763237106,
+          "precision": 0.8831168831168831,
+          "recall": 0.7816091954022989,
+          "f1": 0.8292682926829268,
+          "roc_auc": 0.9463263619208034,
+          "pr_auc": 0.8249938086570924,
+          "brier": 0.03230731473666207,
+          "ece_10_bin": 0.03177174981383377,
+          "false_alarm_rate": 0.012211668928086838,
+          "miss_rate": 0.21839080459770116,
+          "true_negative": 728,
+          "false_positive": 9,
+          "false_negative": 19,
+          "true_positive": 68,
+          "operating_threshold": 0.22999999999999998
+        },
+        "SH001": {
+          "rows": 805,
+          "positives": 255,
+          "negatives": 550,
+          "prevalence": 0.3167701863354037,
+          "accuracy": 0.9515527950310559,
+          "balanced_accuracy": 0.9287878787878788,
+          "precision": 0.9778761061946902,
+          "recall": 0.8666666666666667,
+          "f1": 0.918918918918919,
+          "roc_auc": 0.9920641711229946,
+          "pr_auc": 0.9765277638056555,
+          "brier": 0.0392296862122034,
+          "ece_10_bin": 0.04038858060181602,
+          "false_alarm_rate": 0.00909090909090909,
+          "miss_rate": 0.13333333333333333,
+          "true_negative": 545,
+          "false_positive": 5,
+          "false_negative": 34,
+          "true_positive": 221,
+          "operating_threshold": 0.22999999999999998
+        },
+        "SH002": {
+          "rows": 826,
+          "positives": 156,
+          "negatives": 670,
+          "prevalence": 0.18886198547215496,
+          "accuracy": 0.9455205811138014,
+          "balanced_accuracy": 0.8680635285112897,
+          "precision": 0.9586776859504132,
+          "recall": 0.7435897435897436,
+          "f1": 0.8375451263537906,
+          "roc_auc": 0.994101607347876,
+          "pr_auc": 0.969459105492208,
+          "brier": 0.04060460727799789,
+          "ece_10_bin": 0.04014821716593826,
+          "false_alarm_rate": 0.007462686567164179,
+          "miss_rate": 0.2564102564102564,
+          "true_negative": 665,
+          "false_positive": 5,
+          "false_negative": 40,
+          "true_positive": 116,
+          "operating_threshold": 0.22999999999999998
+        },
+        "SH004": {
+          "rows": 811,
+          "positives": 22,
+          "negatives": 789,
+          "prevalence": 0.027127003699136867,
+          "accuracy": 0.9605425400739828,
+          "balanced_accuracy": 0.714598456043323,
+          "precision": 0.3333333333333333,
+          "recall": 0.45454545454545453,
+          "f1": 0.38461538461538464,
+          "roc_auc": 0.9318181818181819,
+          "pr_auc": 0.2909505727839933,
+          "brier": 0.03329380620036531,
+          "ece_10_bin": 0.031106011293642384,
+          "false_alarm_rate": 0.025348542458808618,
+          "miss_rate": 0.5454545454545454,
+          "true_negative": 769,
+          "false_positive": 20,
+          "false_negative": 12,
+          "true_positive": 10,
+          "operating_threshold": 0.22999999999999998
+        }
+      }
+    },
+    "food_security": {
+      "track": "food_security",
+      "selected_model": "rule",
+      "selection_reason": "Neither statistical nor advanced ML improved validation utility by 0.02; the deterministic operational baseline was retained.",
+      "partitions": {
+        "train": {
+          "rows": 180,
+          "positive": 34,
+          "negative": 146,
+          "start": "2017-01-01",
+          "end": "2021-07-01"
+        },
+        "validation": {
+          "rows": 126,
+          "positive": 97,
+          "negative": 29,
+          "start": "2022-01-01",
+          "end": "2023-08-01"
+        },
+        "test": {
+          "rows": 72,
+          "positive": 26,
+          "negative": 46,
+          "start": "2024-01-01",
+          "end": "2025-07-01"
+        }
+      },
+      "baseline": {
+        "rule": {
+          "validation": {
+            "rows": 126,
+            "positives": 97,
+            "negatives": 29,
+            "prevalence": 0.7698412698412699,
+            "accuracy": 0.6904761904761905,
+            "balanced_accuracy": 0.6660149306789904,
+            "precision": 0.8625,
+            "recall": 0.711340206185567,
+            "f1": 0.7796610169491526,
+            "roc_auc": 0.6749022396018486,
+            "pr_auc": 0.8615123147520831,
+            "brier": 0.20132301587301585,
+            "ece_10_bin": 0.1788888888888888,
+            "false_alarm_rate": 0.3793103448275862,
+            "miss_rate": 0.28865979381443296,
+            "true_negative": 18,
+            "false_positive": 11,
+            "false_negative": 28,
+            "true_positive": 69,
+            "operating_threshold": 0.53
+          },
+          "test": {
+            "rows": 72,
+            "positives": 26,
+            "negatives": 46,
+            "prevalence": 0.3611111111111111,
+            "accuracy": 0.75,
+            "balanced_accuracy": 0.7040133779264214,
+            "precision": 0.7,
+            "recall": 0.5384615384615384,
+            "f1": 0.6086956521739131,
+            "roc_auc": 0.7408026755852843,
+            "pr_auc": 0.6805322962016612,
+            "brier": 0.20219305555555553,
+            "ece_10_bin": 0.14958333333333332,
+            "false_alarm_rate": 0.13043478260869565,
+            "miss_rate": 0.46153846153846156,
+            "true_negative": 40,
+            "false_positive": 6,
+            "false_negative": 12,
+            "true_positive": 14,
+            "operating_threshold": 0.53
+          }
+        },
+        "logistic_regression": {
+          "validation": {
+            "rows": 126,
+            "positives": 97,
+            "negatives": 29,
+            "prevalence": 0.7698412698412699,
+            "accuracy": 0.6031746031746031,
+            "balanced_accuracy": 0.6093138997511554,
+            "precision": 0.8405797101449275,
+            "recall": 0.5979381443298969,
+            "f1": 0.6987951807228916,
+            "roc_auc": 0.6846782794169926,
+            "pr_auc": 0.8696226034722786,
+            "brier": 0.17139828222160555,
+            "ece_10_bin": 0.12778652833794624,
+            "false_alarm_rate": 0.3793103448275862,
+            "miss_rate": 0.4020618556701031,
+            "true_negative": 18,
+            "false_positive": 11,
+            "false_negative": 39,
+            "true_positive": 58,
+            "operating_threshold": 0.7400000000000001
+          },
+          "test": {
+            "rows": 72,
+            "positives": 26,
+            "negatives": 46,
+            "prevalence": 0.3611111111111111,
+            "accuracy": 0.6388888888888888,
+            "balanced_accuracy": 0.5501672240802675,
+            "precision": 0.5,
+            "recall": 0.23076923076923078,
+            "f1": 0.3157894736842105,
+            "roc_auc": 0.5326086956521738,
+            "pr_auc": 0.47207873510083653,
+            "brier": 0.28846589143461565,
+            "ece_10_bin": 0.27749992058915,
+            "false_alarm_rate": 0.13043478260869565,
+            "miss_rate": 0.7692307692307693,
+            "true_negative": 40,
+            "false_positive": 6,
+            "false_negative": 20,
+            "true_positive": 6,
+            "operating_threshold": 0.7400000000000001
+          }
+        }
+      },
+      "candidates": {
+        "logistic_regression": {
+          "algorithm": "logistic_regression",
+          "parameters": {
+            "C": 1.0,
+            "class_weight": "balanced",
+            "dual": false,
+            "fit_intercept": true,
+            "intercept_scaling": 1,
+            "l1_ratio": 0.0,
+            "max_iter": 2000,
+            "n_jobs": null,
+            "penalty": "deprecated",
+            "random_state": 20260826,
+            "solver": "lbfgs",
+            "tol": 0.0001,
+            "verbose": 0,
+            "warm_start": false
+          },
+          "validation_metrics": {
+            "rows": 126,
+            "positives": 97,
+            "negatives": 29,
+            "prevalence": 0.7698412698412699,
+            "accuracy": 0.6031746031746031,
+            "balanced_accuracy": 0.6093138997511554,
+            "precision": 0.8405797101449275,
+            "recall": 0.5979381443298969,
+            "f1": 0.6987951807228916,
+            "roc_auc": 0.6846782794169926,
+            "pr_auc": 0.8696226034722786,
+            "brier": 0.17139828222160555,
+            "ece_10_bin": 0.12778652833794624,
+            "false_alarm_rate": 0.3793103448275862,
+            "miss_rate": 0.4020618556701031,
+            "true_negative": 18,
+            "false_positive": 11,
+            "false_negative": 39,
+            "true_positive": 58,
+            "operating_threshold": 0.7400000000000001
+          },
+          "validation_utility": 0.7593318269980289,
+          "training_seconds": 1.0349484999896958,
+          "threshold_before_calibration": 0.7400000000000001
+        },
+        "random_forest": {
+          "algorithm": "random_forest",
+          "parameters": {
+            "bootstrap": true,
+            "ccp_alpha": 0.0,
+            "class_weight": "balanced_subsample",
+            "criterion": "gini",
+            "max_depth": 8,
+            "max_features": "sqrt",
+            "max_leaf_nodes": null,
+            "max_samples": null,
+            "min_impurity_decrease": 0.0,
+            "min_samples_leaf": 5,
+            "min_samples_split": 2,
+            "min_weight_fraction_leaf": 0.0,
+            "monotonic_cst": null,
+            "n_estimators": 250,
+            "n_jobs": -1,
+            "oob_score": false,
+            "random_state": 20260826,
+            "verbose": 0,
+            "warm_start": false
+          },
+          "validation_metrics": {
+            "rows": 126,
+            "positives": 97,
+            "negatives": 29,
+            "prevalence": 0.7698412698412699,
+            "accuracy": 0.6428571428571429,
+            "balanced_accuracy": 0.6471738357625311,
+            "precision": 0.8611111111111112,
+            "recall": 0.6391752577319587,
+            "f1": 0.7337278106508875,
+            "roc_auc": 0.7045858514041949,
+            "pr_auc": 0.8795769312794977,
+            "brier": 0.2534643091857421,
+            "ece_10_bin": 0.30634990574813875,
+            "false_alarm_rate": 0.3448275862068966,
+            "miss_rate": 0.36082474226804123,
+            "true_negative": 19,
+            "false_positive": 10,
+            "false_negative": 35,
+            "true_positive": 62,
+            "operating_threshold": 0.44
+          },
+          "validation_utility": 0.763698440673843,
+          "training_seconds": 1.7839212999970187,
+          "threshold_before_calibration": 0.44
+        }
+      },
+      "candidate_test_metrics": {
+        "logistic_regression": {
+          "rows": 72,
+          "positives": 26,
+          "negatives": 46,
+          "prevalence": 0.3611111111111111,
+          "accuracy": 0.6388888888888888,
+          "balanced_accuracy": 0.5501672240802675,
+          "precision": 0.5,
+          "recall": 0.23076923076923078,
+          "f1": 0.3157894736842105,
+          "roc_auc": 0.5326086956521738,
+          "pr_auc": 0.47207873510083653,
+          "brier": 0.28846589143461565,
+          "ece_10_bin": 0.27749992058915,
+          "false_alarm_rate": 0.13043478260869565,
+          "miss_rate": 0.7692307692307693,
+          "true_negative": 40,
+          "false_positive": 6,
+          "false_negative": 20,
+          "true_positive": 6,
+          "operating_threshold": 0.7400000000000001
+        },
+        "random_forest": {
+          "rows": 72,
+          "positives": 26,
+          "negatives": 46,
+          "prevalence": 0.3611111111111111,
+          "accuracy": 0.5555555555555556,
+          "balanced_accuracy": 0.459866220735786,
+          "precision": 0.25,
+          "recall": 0.11538461538461539,
+          "f1": 0.15789473684210525,
+          "roc_auc": 0.5384615384615384,
+          "pr_auc": 0.3772486592564286,
+          "brier": 0.240501969794784,
+          "ece_10_bin": 0.1442045086112149,
+          "false_alarm_rate": 0.1956521739130435,
+          "miss_rate": 0.8846153846153846,
+          "true_negative": 37,
+          "false_positive": 9,
+          "false_negative": 23,
+          "true_positive": 3,
+          "operating_threshold": 0.44
+        }
+      },
+      "calibration": {
+        "method": "identity",
+        "validation_brier_before": 0.20132301587301585,
+        "validation_brier_after": 0.20132301587301585,
+        "candidate_brier": {
+          "identity": 0.20132301587301585,
+          "sigmoid": 0.16795458082560885,
+          "isotonic": 0.16071546829828404
+        },
+        "fit_data": "validation partition only",
+        "reference_prevalence": 0.18888888888888888,
+        "validation_prevalence": 0.7698412698412699,
+        "absolute_prevalence_shift": 0.580952380952381,
+        "selection_guard": "IDENTITY_PREVALENCE_SHIFT_GUARD",
+        "test_brier_before": 0.20219305555555553,
+        "test_brier_after": 0.20219305555555553,
+        "test_ece_before": 0.14958333333333332,
+        "test_ece_after": 0.14958333333333332
+      },
+      "operating_threshold": 0.53,
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      },
+      "validation_metrics_after_calibration": {
+        "rows": 126,
+        "positives": 97,
+        "negatives": 29,
+        "prevalence": 0.7698412698412699,
+        "accuracy": 0.6904761904761905,
+        "balanced_accuracy": 0.6660149306789904,
+        "precision": 0.8625,
+        "recall": 0.711340206185567,
+        "f1": 0.7796610169491526,
+        "roc_auc": 0.6749022396018486,
+        "pr_auc": 0.8615123147520831,
+        "brier": 0.20132301587301585,
+        "ece_10_bin": 0.1788888888888888,
+        "false_alarm_rate": 0.3793103448275862,
+        "miss_rate": 0.28865979381443296,
+        "true_negative": 18,
+        "false_positive": 11,
+        "false_negative": 28,
+        "true_positive": 69,
+        "operating_threshold": 0.53
+      },
+      "final_test_metrics": {
+        "rows": 72,
+        "positives": 26,
+        "negatives": 46,
+        "prevalence": 0.3611111111111111,
+        "accuracy": 0.75,
+        "balanced_accuracy": 0.7040133779264214,
+        "precision": 0.7,
+        "recall": 0.5384615384615384,
+        "f1": 0.6086956521739131,
+        "roc_auc": 0.7408026755852843,
+        "pr_auc": 0.6805322962016612,
+        "brier": 0.20219305555555553,
+        "ece_10_bin": 0.14958333333333332,
+        "false_alarm_rate": 0.13043478260869565,
+        "miss_rate": 0.46153846153846156,
+        "true_negative": 40,
+        "false_positive": 6,
+        "false_negative": 12,
+        "true_positive": 14,
+        "operating_threshold": 0.53
+      },
+      "artifact": {
+        "model_id": "food_security-early-warning",
+        "model_version": "1.1.0",
+        "target_version": "1.1.0",
+        "feature_version": "1.1.0",
+        "algorithm": "rule",
+        "features": [
+          "rain_30d_mm",
+          "rain_90d_mm",
+          "dry_days_30d",
+          "t2m_30d_c",
+          "t2m_max_30d_c",
+          "gwet_top_30d",
+          "gwet_root_30d",
+          "ndvi_last",
+          "ndvi_change",
+          "vegetation_valid_pixel_fraction",
+          "market_usdkg_90d_median",
+          "market_price_change_previous_90d",
+          "market_price_anomaly_365d",
+          "previous_ipc3plus_percentage",
+          "log_region_population"
+        ],
+        "training_period": [
+          2017,
+          2021
+        ],
+        "validation_period": [
+          2022,
+          2023
+        ],
+        "test_period": [
+          2024,
+          2025
+        ],
+        "calibration_method": "identity",
+        "operating_threshold": 0.53,
+        "risk_thresholds": {
+          "watch": 0.265,
+          "warning": 0.53,
+          "severe": 0.765
+        },
+        "artifact_path": "ml/artifacts/food_security/food_security_model_v1.1.0.joblib",
+        "artifact_checksum_sha256": "754a7f00d72f182fa1cf5c3f2b3829c6ca4f487e2a1b632acb4d7d10a5b2c2e0",
+        "artifact_size_bytes": 1521,
+        "serialization_round_trip_passed": true,
+        "environment": {
+          "python": "3.13.5",
+          "platform": "Windows-11-10.0.26200-SP0",
+          "numpy": "2.3.5",
+          "pandas": "2.3.3",
+          "scikit_learn": "1.9.0",
+          "joblib": "1.5.3",
+          "random_seed": 20260826
+        },
+        "selection_reason": "Neither statistical nor advanced ML improved validation utility by 0.02; the deterministic operational baseline was retained."
+      },
+      "explainability": {
+        "available": true,
+        "method": "model-agnostic permutation importance plus median-perturbation local drivers",
+        "shap_status": "NOT_APPLICABLE",
+        "top_features": [
+          {
+            "feature": "previous_ipc3plus_percentage",
+            "importance_mean": 0.29595078684308584,
+            "importance_std": 0.05706922232974569
+          },
+          {
+            "feature": "rain_30d_mm",
+            "importance_mean": 0.0,
+            "importance_std": 0.0
+          },
+          {
+            "feature": "rain_90d_mm",
+            "importance_mean": 0.0,
+            "importance_std": 0.0
+          },
+          {
+            "feature": "dry_days_30d",
+            "importance_mean": 0.0,
+            "importance_std": 0.0
+          },
+          {
+            "feature": "t2m_30d_c",
+            "importance_mean": 0.0,
+            "importance_std": 0.0
+          },
+          {
+            "feature": "t2m_max_30d_c",
+            "importance_mean": 0.0,
+            "importance_std": 0.0
+          },
+          {
+            "feature": "gwet_top_30d",
+            "importance_mean": 0.0,
+            "importance_std": 0.0
+          },
+          {
+            "feature": "gwet_root_30d",
+            "importance_mean": 0.0,
+            "importance_std": 0.0
+          },
+          {
+            "feature": "ndvi_last",
+            "importance_mean": 0.0,
+            "importance_std": 0.0
+          },
+          {
+            "feature": "ndvi_change",
+            "importance_mean": 0.0,
+            "importance_std": 0.0
+          }
+        ]
+      },
+      "drift": {
+        "rain_30d_mm": {
+          "psi_train_to_validation": 5.434683582448523,
+          "psi_train_to_test": 0.22210008409225676
+        },
+        "rain_90d_mm": {
+          "psi_train_to_validation": 2.1312606027507797,
+          "psi_train_to_test": 0.2533646981199023
+        },
+        "dry_days_30d": {
+          "psi_train_to_validation": 2.4994388946551775,
+          "psi_train_to_test": 0.29980652694695875
+        },
+        "t2m_30d_c": {
+          "psi_train_to_validation": 0.23528536653401838,
+          "psi_train_to_test": 0.23589084286048342
+        },
+        "t2m_max_30d_c": {
+          "psi_train_to_validation": 0.27665523521522756,
+          "psi_train_to_test": 0.34884500166499294
+        },
+        "gwet_top_30d": {
+          "psi_train_to_validation": 0.5439710933632608,
+          "psi_train_to_test": 0.5315009219824662
+        },
+        "gwet_root_30d": {
+          "psi_train_to_validation": 0.185637235989475,
+          "psi_train_to_test": 1.4031278367506987
+        },
+        "ndvi_last": {
+          "psi_train_to_validation": 1.4332049486163396,
+          "psi_train_to_test": 0.40635208212566853
+        },
+        "ndvi_change": {
+          "psi_train_to_validation": 0.9234393591098664,
+          "psi_train_to_test": 0.14150963093524008
+        },
+        "vegetation_valid_pixel_fraction": {
+          "psi_train_to_validation": 0.15360424465264652,
+          "psi_train_to_test": 0.15609875621222052
+        },
+        "market_usdkg_90d_median": {
+          "psi_train_to_validation": 7.966905086086917,
+          "psi_train_to_test": 7.270439112923482
+        },
+        "market_price_change_previous_90d": {
+          "psi_train_to_validation": 1.5036048340075239,
+          "psi_train_to_test": 1.0554279099739703
+        },
+        "market_price_anomaly_365d": {
+          "psi_train_to_validation": 0.7477531996507797,
+          "psi_train_to_test": 1.5761442972670638
+        },
+        "previous_ipc3plus_percentage": {
+          "psi_train_to_validation": 3.83471089991159,
+          "psi_train_to_test": 4.263246636216032
+        },
+        "log_region_population": {
+          "psi_train_to_validation": 0.0,
+          "psi_train_to_test": 0.0
+        }
+      },
+      "failure_analysis": {
+        "false_positive_count": 6,
+        "false_negative_count": 12,
+        "highest_confidence_false_positives": [
+          {
+            "region_id": "SO14",
+            "feature_as_of_date": "2023-12-02T00:00:00",
+            "target_period_start": "2024-01-01T00:00:00",
+            "target_period_end": "2024-03-31T00:00:00",
+            "target": 0,
+            "probability": 0.675,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "region_id": "SO17",
+            "feature_as_of_date": "2023-12-02T00:00:00",
+            "target_period_start": "2024-01-01T00:00:00",
+            "target_period_end": "2024-03-31T00:00:00",
+            "target": 0,
+            "probability": 0.675,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "region_id": "SO23",
+            "feature_as_of_date": "2024-06-01T00:00:00",
+            "target_period_start": "2024-07-01T00:00:00",
+            "target_period_end": "2024-09-30T00:00:00",
+            "target": 0,
+            "probability": 0.625,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "region_id": "SO22",
+            "feature_as_of_date": "2024-06-01T00:00:00",
+            "target_period_start": "2024-07-01T00:00:00",
+            "target_period_end": "2024-09-30T00:00:00",
+            "target": 0,
+            "probability": 0.5499999999999999,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "region_id": "SO14",
+            "feature_as_of_date": "2024-12-02T00:00:00",
+            "target_period_start": "2025-01-01T00:00:00",
+            "target_period_end": "2025-03-31T00:00:00",
+            "target": 0,
+            "probability": 0.5499999999999999,
+            "prediction": 1,
+            "correct": false
+          },
+          {
+            "region_id": "SO21",
+            "feature_as_of_date": "2024-12-02T00:00:00",
+            "target_period_start": "2025-01-01T00:00:00",
+            "target_period_end": "2025-03-31T00:00:00",
+            "target": 0,
+            "probability": 0.5499999999999999,
+            "prediction": 1,
+            "correct": false
+          }
+        ],
+        "highest_confidence_false_negatives": [
+          {
+            "region_id": "SO22",
+            "feature_as_of_date": "2023-12-02T00:00:00",
+            "target_period_start": "2024-01-01T00:00:00",
+            "target_period_end": "2024-03-31T00:00:00",
+            "target": 1,
+            "probability": 0.35000000000000003,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO17",
+            "feature_as_of_date": "2025-06-01T00:00:00",
+            "target_period_start": "2025-07-01T00:00:00",
+            "target_period_end": "2025-09-30T00:00:00",
+            "target": 1,
+            "probability": 0.35000000000000003,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO14",
+            "feature_as_of_date": "2025-06-01T00:00:00",
+            "target_period_start": "2025-07-01T00:00:00",
+            "target_period_end": "2025-09-30T00:00:00",
+            "target": 1,
+            "probability": 0.37499999999999994,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO27",
+            "feature_as_of_date": "2024-06-01T00:00:00",
+            "target_period_start": "2024-07-01T00:00:00",
+            "target_period_end": "2024-09-30T00:00:00",
+            "target": 1,
+            "probability": 0.37499999999999994,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO23",
+            "feature_as_of_date": "2023-12-02T00:00:00",
+            "target_period_start": "2024-01-01T00:00:00",
+            "target_period_end": "2024-03-31T00:00:00",
+            "target": 1,
+            "probability": 0.39999999999999997,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO15",
+            "feature_as_of_date": "2025-06-01T00:00:00",
+            "target_period_start": "2025-07-01T00:00:00",
+            "target_period_end": "2025-09-30T00:00:00",
+            "target": 1,
+            "probability": 0.39999999999999997,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO25",
+            "feature_as_of_date": "2024-12-02T00:00:00",
+            "target_period_start": "2025-01-01T00:00:00",
+            "target_period_end": "2025-03-31T00:00:00",
+            "target": 1,
+            "probability": 0.475,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO14",
+            "feature_as_of_date": "2024-06-01T00:00:00",
+            "target_period_start": "2024-07-01T00:00:00",
+            "target_period_end": "2024-09-30T00:00:00",
+            "target": 1,
+            "probability": 0.475,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO16",
+            "feature_as_of_date": "2025-06-01T00:00:00",
+            "target_period_start": "2025-07-01T00:00:00",
+            "target_period_end": "2025-09-30T00:00:00",
+            "target": 1,
+            "probability": 0.475,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO20",
+            "feature_as_of_date": "2023-12-02T00:00:00",
+            "target_period_start": "2024-01-01T00:00:00",
+            "target_period_end": "2024-03-31T00:00:00",
+            "target": 1,
+            "probability": 0.5,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO26",
+            "feature_as_of_date": "2023-12-02T00:00:00",
+            "target_period_start": "2024-01-01T00:00:00",
+            "target_period_end": "2024-03-31T00:00:00",
+            "target": 1,
+            "probability": 0.5249999999999999,
+            "prediction": 0,
+            "correct": false
+          },
+          {
+            "region_id": "SO21",
+            "feature_as_of_date": "2023-12-02T00:00:00",
+            "target_period_start": "2024-01-01T00:00:00",
+            "target_period_end": "2024-03-31T00:00:00",
+            "target": 1,
+            "probability": 0.5249999999999999,
+            "prediction": 0,
+            "correct": false
+          }
+        ],
+        "errors_by_region": {
+          "SO14": 4,
+          "SO15": 1,
+          "SO16": 1,
+          "SO17": 2,
+          "SO20": 1,
+          "SO21": 2,
+          "SO22": 2,
+          "SO23": 2,
+          "SO25": 1,
+          "SO26": 1,
+          "SO27": 1
+        }
+      },
+      "training_and_evaluation_seconds": 6.071013800014043
+    }
+  },
+  "backtesting": {
+    "drought": {
+      "method": "expanding window; prior year used for calibration/threshold; next year held out",
+      "fold_count": 5,
+      "folds": [
+        {
+          "train_end_year": 2019,
+          "validation_year": 2020,
+          "test_year": 2021,
+          "metrics": {
+            "rows": 1670,
+            "positives": 209,
+            "negatives": 1461,
+            "prevalence": 0.1251497005988024,
+            "accuracy": 0.8748502994011976,
+            "balanced_accuracy": 0.5,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "roc_auc": 0.9015159702504347,
+            "pr_auc": 0.564005573391214,
+            "brier": 0.11503049207685924,
+            "ece_10_bin": 0.10667969806264974,
+            "false_alarm_rate": 0.0,
+            "miss_rate": 1.0,
+            "true_negative": 1461,
+            "false_positive": 0,
+            "false_negative": 209,
+            "true_positive": 0,
+            "operating_threshold": 0.5
+          },
+          "calibration_method": "sigmoid"
+        },
+        {
+          "train_end_year": 2020,
+          "validation_year": 2021,
+          "test_year": 2022,
+          "metrics": {
+            "rows": 1679,
+            "positives": 531,
+            "negatives": 1148,
+            "prevalence": 0.3162596783799881,
+            "accuracy": 0.7325789160214413,
+            "balanced_accuracy": 0.7452312053386878,
+            "precision": 0.5549597855227882,
+            "recall": 0.7796610169491526,
+            "f1": 0.6483946750195771,
+            "roc_auc": 0.7964928771563745,
+            "pr_auc": 0.5806068978427817,
+            "brier": 0.16760587201682506,
+            "ece_10_bin": 0.058109262457082554,
+            "false_alarm_rate": 0.289198606271777,
+            "miss_rate": 0.22033898305084745,
+            "true_negative": 816,
+            "false_positive": 332,
+            "false_negative": 117,
+            "true_positive": 414,
+            "operating_threshold": 0.26
+          },
+          "calibration_method": "isotonic"
+        },
+        {
+          "train_end_year": 2021,
+          "validation_year": 2022,
+          "test_year": 2023,
+          "metrics": {
+            "rows": 1492,
+            "positives": 154,
+            "negatives": 1338,
+            "prevalence": 0.1032171581769437,
+            "accuracy": 0.8337801608579088,
+            "balanced_accuracy": 0.7665443674412284,
+            "precision": 0.34539473684210525,
+            "recall": 0.6818181818181818,
+            "f1": 0.4585152838427948,
+            "roc_auc": 0.854653194339293,
+            "pr_auc": 0.33760729581494836,
+            "brier": 0.08426523705654705,
+            "ece_10_bin": 0.054794718778285186,
+            "false_alarm_rate": 0.14872944693572496,
+            "miss_rate": 0.3181818181818182,
+            "true_negative": 1139,
+            "false_positive": 199,
+            "false_negative": 49,
+            "true_positive": 105,
+            "operating_threshold": 0.22999999999999998
+          },
+          "calibration_method": "isotonic"
+        },
+        {
+          "train_end_year": 2022,
+          "validation_year": 2023,
+          "test_year": 2024,
+          "metrics": {
+            "rows": 1443,
+            "positives": 59,
+            "negatives": 1384,
+            "prevalence": 0.040887040887040885,
+            "accuracy": 0.9313929313929314,
+            "balanced_accuracy": 0.6802684432252376,
+            "precision": 0.2727272727272727,
+            "recall": 0.4067796610169492,
+            "f1": 0.32653061224489793,
+            "roc_auc": 0.8715036249632605,
+            "pr_auc": 0.21771488637926223,
+            "brier": 0.03505597297621256,
+            "ece_10_bin": 0.015104852138127307,
+            "false_alarm_rate": 0.046242774566473986,
+            "miss_rate": 0.5932203389830508,
+            "true_negative": 1320,
+            "false_positive": 64,
+            "false_negative": 35,
+            "true_positive": 24,
+            "operating_threshold": 0.24
+          },
+          "calibration_method": "isotonic"
+        },
+        {
+          "train_end_year": 2023,
+          "validation_year": 2024,
+          "test_year": 2025,
+          "metrics": {
+            "rows": 985,
+            "positives": 115,
+            "negatives": 870,
+            "prevalence": 0.116751269035533,
+            "accuracy": 0.8883248730964467,
+            "balanced_accuracy": 0.7971764117941029,
+            "precision": 0.5165562913907285,
+            "recall": 0.6782608695652174,
+            "f1": 0.5864661654135338,
+            "roc_auc": 0.8523538230884558,
+            "pr_auc": 0.5466438524731683,
+            "brier": 0.07418361471056613,
+            "ece_10_bin": 0.03223139911422153,
+            "false_alarm_rate": 0.0839080459770115,
+            "miss_rate": 0.3217391304347826,
+            "true_negative": 797,
+            "false_positive": 73,
+            "false_negative": 37,
+            "true_positive": 78,
+            "operating_threshold": 0.16999999999999998
+          },
+          "calibration_method": "isotonic"
+        }
+      ],
+      "prediction_rows": 7269,
+      "predictions_path": "ml/artifacts/drought/rolling_backtest_predictions.csv.gz",
+      "predictions_sha256": "fd621b0989ef59ad33569bb31fcd39f361d99edaf5d03fd05f125573d862e906",
+      "overall_metrics": {
+        "rows": 7269,
+        "positives": 1068,
+        "negatives": 6201,
+        "prevalence": 0.14692529921584813,
+        "accuracy": 0.8466088870546155,
+        "balanced_accuracy": 0.7368680568012771,
+        "precision": 0.48176881303335917,
+        "recall": 0.5814606741573034,
+        "f1": 0.5269410267288926,
+        "roc_auc": 0.8354359602504611,
+        "pr_auc": 0.46373149735524377,
+        "brier": 0.09944855469356922,
+        "ece_10_bin": 0.0404978415973227,
+        "false_alarm_rate": 0.10772456055474923,
+        "miss_rate": 0.41853932584269665,
+        "true_negative": 5533,
+        "false_positive": 668,
+        "false_negative": 447,
+        "true_positive": 621,
+        "operating_threshold": 0.5,
+        "threshold": "fold_specific_validation_thresholds"
+      },
+      "mean_detected_lead_time_days": 16.0
+    },
+    "flood": {
+      "method": "expanding window; prior year used for calibration/threshold; next year held out",
+      "fold_count": 6,
+      "folds": [
+        {
+          "train_end_year": 2017,
+          "validation_year": 2018,
+          "test_year": 2019,
+          "metrics": {
+            "rows": 1822,
+            "positives": 218,
+            "negatives": 1604,
+            "prevalence": 0.11964873765093303,
+            "accuracy": 0.9676180021953897,
+            "balanced_accuracy": 0.9201709030176851,
+            "precision": 0.8697674418604651,
+            "recall": 0.8577981651376146,
+            "f1": 0.8637413394919169,
+            "roc_auc": 0.9809492896199866,
+            "pr_auc": 0.8658127562560552,
+            "brier": 0.029503373030464367,
+            "ece_10_bin": 0.02747053403048988,
+            "false_alarm_rate": 0.017456359102244388,
+            "miss_rate": 0.14220183486238533,
+            "true_negative": 1576,
+            "false_positive": 28,
+            "false_negative": 31,
+            "true_positive": 187,
+            "operating_threshold": 0.29
+          },
+          "calibration_method": "isotonic"
+        },
+        {
+          "train_end_year": 2018,
+          "validation_year": 2019,
+          "test_year": 2020,
+          "metrics": {
+            "rows": 1823,
+            "positives": 375,
+            "negatives": 1448,
+            "prevalence": 0.2057048820625343,
+            "accuracy": 0.9522764673614921,
+            "balanced_accuracy": 0.936365561694291,
+            "precision": 0.8654822335025381,
+            "recall": 0.9093333333333333,
+            "f1": 0.8868660598179454,
+            "roc_auc": 0.9820616942909761,
+            "pr_auc": 0.9044713091769129,
+            "brier": 0.03940913840455883,
+            "ece_10_bin": 0.011678905544848265,
+            "false_alarm_rate": 0.03660220994475138,
+            "miss_rate": 0.09066666666666667,
+            "true_negative": 1395,
+            "false_positive": 53,
+            "false_negative": 34,
+            "true_positive": 341,
+            "operating_threshold": 0.31
+          },
+          "calibration_method": "isotonic"
+        },
+        {
+          "train_end_year": 2019,
+          "validation_year": 2020,
+          "test_year": 2021,
+          "metrics": {
+            "rows": 1562,
+            "positives": 39,
+            "negatives": 1523,
+            "prevalence": 0.02496798975672215,
+            "accuracy": 0.9910371318822023,
+            "balanced_accuracy": 0.9454349546273382,
+            "precision": 0.7777777777777778,
+            "recall": 0.8974358974358975,
+            "f1": 0.8333333333333334,
+            "roc_auc": 0.994974493661296,
+            "pr_auc": 0.8833454191396559,
+            "brier": 0.007291294943502175,
+            "ece_10_bin": 0.009882050102182925,
+            "false_alarm_rate": 0.006565988181221274,
+            "miss_rate": 0.10256410256410256,
+            "true_negative": 1513,
+            "false_positive": 10,
+            "false_negative": 4,
+            "true_positive": 35,
+            "operating_threshold": 0.29
+          },
+          "calibration_method": "isotonic"
+        },
+        {
+          "train_end_year": 2020,
+          "validation_year": 2021,
+          "test_year": 2022,
+          "metrics": {
+            "rows": 1244,
+            "positives": 8,
+            "negatives": 1236,
+            "prevalence": 0.006430868167202572,
+            "accuracy": 0.9967845659163987,
+            "balanced_accuracy": 0.8741909385113269,
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75,
+            "roc_auc": 0.9983818770226537,
+            "pr_auc": 0.6875,
+            "brier": 0.0028814068665909873,
+            "ece_10_bin": 0.0027627749727462477,
+            "false_alarm_rate": 0.0016181229773462784,
+            "miss_rate": 0.25,
+            "true_negative": 1234,
+            "false_positive": 2,
+            "false_negative": 2,
+            "true_positive": 6,
+            "operating_threshold": 0.22000000000000003
+          },
+          "calibration_method": "isotonic"
+        },
+        {
+          "train_end_year": 2021,
+          "validation_year": 2022,
+          "test_year": 2023,
+          "metrics": {
+            "rows": 1764,
+            "positives": 334,
+            "negatives": 1430,
+            "prevalence": 0.1893424036281179,
+            "accuracy": 0.9501133786848073,
+            "balanced_accuracy": 0.8923579414597379,
+            "precision": 0.9270833333333334,
+            "recall": 0.7994011976047904,
+            "f1": 0.8585209003215434,
+            "roc_auc": 0.9781437125748503,
+            "pr_auc": 0.9448929415233935,
+            "brier": 0.1392634826166999,
+            "ece_10_bin": 0.15045861115204087,
+            "false_alarm_rate": 0.014685314685314685,
+            "miss_rate": 0.20059880239520958,
+            "true_negative": 1409,
+            "false_positive": 21,
+            "false_negative": 67,
+            "true_positive": 267,
+            "operating_threshold": 0.14
+          },
+          "calibration_method": "sigmoid"
+        },
+        {
+          "train_end_year": 2022,
+          "validation_year": 2023,
+          "test_year": 2024,
+          "metrics": {
+            "rows": 1780,
+            "positives": 239,
+            "negatives": 1541,
+            "prevalence": 0.13426966292134832,
+            "accuracy": 0.9640449438202248,
+            "balanced_accuracy": 0.9138335971588302,
+            "precision": 0.8820960698689956,
+            "recall": 0.8451882845188284,
+            "f1": 0.8632478632478633,
+            "roc_auc": 0.9815095886765915,
+            "pr_auc": 0.8996506227738612,
+            "brier": 0.030208094623254616,
+            "ece_10_bin": 0.012504451347882937,
+            "false_alarm_rate": 0.01752109020116807,
+            "miss_rate": 0.15481171548117154,
+            "true_negative": 1514,
+            "false_positive": 27,
+            "false_negative": 37,
+            "true_positive": 202,
+            "operating_threshold": 0.24
+          },
+          "calibration_method": "isotonic"
+        }
+      ],
+      "prediction_rows": 9995,
+      "predictions_path": "ml/artifacts/flood/rolling_backtest_predictions.csv.gz",
+      "predictions_sha256": "27f6a5599a46a92dee998d70b9ccb99f11b9dcbadf98571a5be0e96358668ba0",
+      "overall_metrics": {
+        "rows": 9995,
+        "positives": 1213,
+        "negatives": 8782,
+        "prevalence": 0.12136068034017009,
+        "accuracy": 0.968384192096048,
+        "balanced_accuracy": 0.9198370139175857,
+        "precision": 0.8804071246819338,
+        "recall": 0.8557295960428689,
+        "f1": 0.8678929765886289,
+        "roc_auc": 0.9795530485330951,
+        "pr_auc": 0.8538355281196154,
+        "brier": 0.04402227809725445,
+        "ece_10_bin": 0.03350143152146744,
+        "false_alarm_rate": 0.016055568207697563,
+        "miss_rate": 0.1442704039571311,
+        "true_negative": 8641,
+        "false_positive": 141,
+        "false_negative": 175,
+        "true_positive": 1038,
+        "operating_threshold": 0.5,
+        "threshold": "fold_specific_validation_thresholds"
+      },
+      "mean_detected_lead_time_days": 1.0394990366088632
+    },
+    "food_security": {
+      "method": "expanding window; prior year used for calibration/threshold; next year held out",
+      "fold_count": 4,
+      "folds": [
+        {
+          "train_end_year": 2020,
+          "validation_year": 2021,
+          "test_year": 2022,
+          "metrics": {
+            "rows": 72,
+            "positives": 55,
+            "negatives": 17,
+            "prevalence": 0.7638888888888888,
+            "accuracy": 0.7638888888888888,
+            "balanced_accuracy": 0.5,
+            "precision": 0.7638888888888888,
+            "recall": 1.0,
+            "f1": 0.8661417322834646,
+            "roc_auc": 0.5909090909090909,
+            "pr_auc": 0.8192349491919322,
+            "brier": 0.5252123125671163,
+            "ece_10_bin": 0.5880037600830186,
+            "false_alarm_rate": 1.0,
+            "miss_rate": 0.0,
+            "true_negative": 0,
+            "false_positive": 17,
+            "false_negative": 0,
+            "true_positive": 55,
+            "operating_threshold": 0.16
+          },
+          "calibration_method": "sigmoid"
+        },
+        {
+          "train_end_year": 2021,
+          "validation_year": 2022,
+          "test_year": 2023,
+          "metrics": {
+            "rows": 54,
+            "positives": 42,
+            "negatives": 12,
+            "prevalence": 0.7777777777777778,
+            "accuracy": 0.7407407407407407,
+            "balanced_accuracy": 0.7142857142857142,
+            "precision": 0.8888888888888888,
+            "recall": 0.7619047619047619,
+            "f1": 0.8205128205128205,
+            "roc_auc": 0.7817460317460317,
+            "pr_auc": 0.9184688186395085,
+            "brier": 0.14814537037037037,
+            "ece_10_bin": 0.15962962962962962,
+            "false_alarm_rate": 0.3333333333333333,
+            "miss_rate": 0.23809523809523808,
+            "true_negative": 8,
+            "false_positive": 4,
+            "false_negative": 10,
+            "true_positive": 32,
+            "operating_threshold": 0.5800000000000001
+          },
+          "calibration_method": "identity"
+        },
+        {
+          "train_end_year": 2022,
+          "validation_year": 2023,
+          "test_year": 2024,
+          "metrics": {
+            "rows": 36,
+            "positives": 15,
+            "negatives": 21,
+            "prevalence": 0.4166666666666667,
+            "accuracy": 0.6944444444444444,
+            "balanced_accuracy": 0.6714285714285715,
+            "precision": 0.6666666666666666,
+            "recall": 0.5333333333333333,
+            "f1": 0.5925925925925926,
+            "roc_auc": 0.6825396825396824,
+            "pr_auc": 0.6724101307189543,
+            "brier": 0.2242125,
+            "ece_10_bin": 0.1616666666666666,
+            "false_alarm_rate": 0.19047619047619047,
+            "miss_rate": 0.4666666666666667,
+            "true_negative": 17,
+            "false_positive": 4,
+            "false_negative": 7,
+            "true_positive": 8,
+            "operating_threshold": 0.53
+          },
+          "calibration_method": "identity"
+        },
+        {
+          "train_end_year": 2023,
+          "validation_year": 2024,
+          "test_year": 2025,
+          "metrics": {
+            "rows": 36,
+            "positives": 11,
+            "negatives": 25,
+            "prevalence": 0.3055555555555556,
+            "accuracy": 0.75,
+            "balanced_accuracy": 0.6927272727272726,
+            "precision": 0.6,
+            "recall": 0.5454545454545454,
+            "f1": 0.5714285714285714,
+            "roc_auc": 0.7909090909090909,
+            "pr_auc": 0.7446679438058749,
+            "brier": 0.18017361111111108,
+            "ece_10_bin": 0.19583333333333328,
+            "false_alarm_rate": 0.16,
+            "miss_rate": 0.45454545454545453,
+            "true_negative": 21,
+            "false_positive": 4,
+            "false_negative": 5,
+            "true_positive": 6,
+            "operating_threshold": 0.51
+          },
+          "calibration_method": "identity"
+        }
+      ],
+      "prediction_rows": 198,
+      "predictions_path": "ml/artifacts/food_security/rolling_backtest_predictions.csv.gz",
+      "predictions_sha256": "8ab473efa123b176e47772322b7854f5b2bb0cbb096e547716b0e7c61e8c3f76",
+      "overall_metrics": {
+        "rows": 198,
+        "positives": 123,
+        "negatives": 75,
+        "prevalence": 0.6212121212121212,
+        "accuracy": 0.7424242424242424,
+        "balanced_accuracy": 0.7172357723577236,
+        "precision": 0.7769230769230769,
+        "recall": 0.8211382113821138,
+        "f1": 0.7984189723320158,
+        "roc_auc": 0.5355013550135501,
+        "pr_auc": 0.7356349321244219,
+        "brier": 0.3049143257819817,
+        "ece_10_bin": 0.26558722588877437,
+        "false_alarm_rate": 0.38666666666666666,
+        "miss_rate": 0.17886178861788618,
+        "true_negative": 46,
+        "false_positive": 29,
+        "false_negative": 22,
+        "true_positive": 101,
+        "operating_threshold": 0.5,
+        "threshold": "fold_specific_validation_thresholds"
+      },
+      "mean_detected_lead_time_days": 30.0
+    }
+  },
+  "run_seconds": 64.96395699999994
+}

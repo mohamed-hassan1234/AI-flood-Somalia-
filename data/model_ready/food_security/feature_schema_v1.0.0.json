@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "track": "food_security",
+  "features": [
+    {
+      "name": "rain_30d_mm",
+      "dtype": "float64",
+      "required": true
+    },
+    {
+      "name": "rain_90d_mm",
+      "dtype": "float64",
+      "required": true
+    },
+    {
+      "name": "dry_days_30d",
+      "dtype": "float64",
+      "required": true
+    },
+    {
+      "name": "t2m_30d_c",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "t2m_max_30d_c",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "gwet_top_30d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "gwet_root_30d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "ndvi_last",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "ndvi_change",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "vegetation_valid_pixel_fraction",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "market_usdkg_90d_median",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "market_price_change_previous_90d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "market_price_anomaly_365d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "previous_ipc3plus_percentage",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "log_region_population",
+      "dtype": "float64",
+      "required": false
+    }
+  ]
+}

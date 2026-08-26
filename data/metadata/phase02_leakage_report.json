@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-08-26T10:36:15.953251+00:00",
+  "status": "PASS",
+  "tracks": {
+    "drought": {
+      "status": "PASS",
+      "checks": {
+        "vegetation_feature_timestamp_not_future": true,
+        "rainfall_feature_timestamp_not_future": true,
+        "power_feature_timestamp_not_future": true,
+        "target_after_as_of": true,
+        "unique_observation_keys": true,
+        "no_target_columns_in_features": true,
+        "split_time_order": true
+      }
+    },
+    "flood": {
+      "status": "PASS",
+      "checks": {
+        "river_feature_timestamp_not_future": true,
+        "rainfall_feature_timestamp_not_future": true,
+        "power_feature_timestamp_not_future": true,
+        "target_after_as_of": true,
+        "unique_observation_keys": true,
+        "no_target_columns_in_features": true,
+        "split_time_order": true
+      }
+    },
+    "food_security": {
+      "status": "PASS",
+      "checks": {
+        "rainfall_feature_timestamp_not_future": true,
+        "power_feature_timestamp_not_future": true,
+        "vegetation_feature_timestamp_not_future": true,
+        "market_feature_timestamp_not_future": true,
+        "previous_ipc_feature_timestamp_not_future": true,
+        "target_after_as_of": true,
+        "unique_observation_keys": true,
+        "no_target_columns_in_features": true,
+        "split_time_order": true
+      }
+    }
+  }
+}

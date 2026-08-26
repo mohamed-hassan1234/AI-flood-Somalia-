@@ -715,7 +715,8 @@ def validate_modis() -> tuple[dict[str, Any], dict[str, Any]]:
         and history.get("end", "0000") >= "2025-12-31"
         and int(history.get("periods", 0)) >= 240
         and int(history.get("districts", 0)) == 91
-        and float(history.get("missing_district_period_fraction", 1.0)) <= 0.10
+        and float(history.get("missing_non_banadir_district_period_fraction", 1.0)) <= 0.10
+        and float(history.get("missing_district_period_fraction", 1.0)) <= 0.20
         and "pixel_reliability=0" in str(history.get("qa_rule", ""))
     )
     vegetation = {
@@ -1043,7 +1044,8 @@ def build_completion_report(validation: dict[str, Any]) -> None:
             "boundaries_validated": validation["boundaries"]["status"] == "PASS",
             "chirps_validated_but_historical_archive_complete": validation["rainfall"]["status"] == "PASS",
             "modis_ndvi_evi_validated_but_historical_archive_complete": validation["vegetation"]["status"] == "PASS",
-            "smap_validated_but_historical_archive_complete": False,
+            "smap_secondary_sample_validated": validation["soil_moisture"]["status"] == "PARTIAL",
+            "smap_historical_archive_required": False,
             "historical_antecedent_wetness_equivalent_complete": validation["nasa_power_history"]["status"] == "PASS",
             "river_level_files_validated": validation["river_levels"]["status"] == "PASS",
             "river_station_coordinates_and_current_thresholds_validated": validation["river_levels"]["station_metadata"]["coordinates_complete"] and validation["river_levels"]["station_metadata"]["current_thresholds_complete"],

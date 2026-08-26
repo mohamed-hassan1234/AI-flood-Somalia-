@@ -1,0 +1,101 @@
+{
+  "version": "1.1.0",
+  "track": "flood",
+  "features": [
+    {
+      "name": "current_level_m",
+      "dtype": "float64",
+      "required": true
+    },
+    {
+      "name": "level_change_1d",
+      "dtype": "float64",
+      "required": true
+    },
+    {
+      "name": "level_change_3d",
+      "dtype": "float64",
+      "required": true
+    },
+    {
+      "name": "level_change_7d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "level_mean_7d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "level_max_7d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "level_ratio_moderate",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "distance_to_moderate_m",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "distance_to_high_m",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "distance_to_bankfull_m",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "rain_1d_mm",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "rain_3d_mm",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "rain_7d_mm",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "rain_30d_mm",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "heavy_rain_days_7d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "gwet_top_7d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "gwet_top_30d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "gwet_root_30d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "t2m_7d_c",
+      "dtype": "float64",
+      "required": false
+    }
+  ]
+}

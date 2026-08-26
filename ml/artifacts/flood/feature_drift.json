@@ -1,0 +1,78 @@
+{
+  "current_level_m": {
+    "psi_train_to_validation": 0.29739994809520476,
+    "psi_train_to_test": 0.1979123065086003
+  },
+  "level_change_1d": {
+    "psi_train_to_validation": 0.08580544227929116,
+    "psi_train_to_test": 0.022179529209475676
+  },
+  "level_change_3d": {
+    "psi_train_to_validation": 0.0894349104215198,
+    "psi_train_to_test": 0.019445744306597172
+  },
+  "level_change_7d": {
+    "psi_train_to_validation": 0.07322537490265853,
+    "psi_train_to_test": 0.01867653735707209
+  },
+  "level_mean_7d": {
+    "psi_train_to_validation": 0.2764410489562458,
+    "psi_train_to_test": 0.19989667902948222
+  },
+  "level_max_7d": {
+    "psi_train_to_validation": 0.27455973906366443,
+    "psi_train_to_test": 0.22983279124916023
+  },
+  "level_ratio_moderate": {
+    "psi_train_to_validation": 0.26061359935602024,
+    "psi_train_to_test": 0.15358581726804132
+  },
+  "distance_to_moderate_m": {
+    "psi_train_to_validation": 0.2813030887892545,
+    "psi_train_to_test": 0.16271308891175812
+  },
+  "distance_to_high_m": {
+    "psi_train_to_validation": 0.24436891227409185,
+    "psi_train_to_test": 0.1775062881359852
+  },
+  "distance_to_bankfull_m": {
+    "psi_train_to_validation": 0.2220573188700237,
+    "psi_train_to_test": 0.17099249484694515
+  },
+  "rain_1d_mm": {
+    "psi_train_to_validation": 0.05883661451810933,
+    "psi_train_to_test": 0.0052705395883807975
+  },
+  "rain_3d_mm": {
+    "psi_train_to_validation": 0.06722614971838307,
+    "psi_train_to_test": 0.008361497089019418
+  },
+  "rain_7d_mm": {
+    "psi_train_to_validation": 0.08468517586240512,
+    "psi_train_to_test": 0.01541640110678005
+  },
+  "rain_30d_mm": {
+    "psi_train_to_validation": 0.23847313883260493,
+    "psi_train_to_test": 0.03687478900854951
+  },
+  "heavy_rain_days_7d": {
+    "psi_train_to_validation": null,
+    "psi_train_to_test": null
+  },
+  "gwet_top_7d": {
+    "psi_train_to_validation": 0.16141944757456755,
+    "psi_train_to_test": 0.1707084004812317
+  },
+  "gwet_top_30d": {
+    "psi_train_to_validation": 0.2173320975417676,
+    "psi_train_to_test": 0.20703141925647423
+  },
+  "gwet_root_30d": {
+    "psi_train_to_validation": 0.17238834681843074,
+    "psi_train_to_test": 0.29113070846224676
+  },
+  "t2m_7d_c": {
+    "psi_train_to_validation": 0.140818498891826,
+    "psi_train_to_test": 0.09600443934819414
+  }
+}

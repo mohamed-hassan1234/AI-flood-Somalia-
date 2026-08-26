@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T13:10:48.474080+00:00",
+  "generated_at": "2026-08-26T08:01:21.180816+00:00",
   "boundaries": {
     "admin1_feature_count": 18,
     "admin2_feature_count": 91,
@@ -771,26 +771,61 @@
     ],
     "historical_archive": {
       "dataset": "CHIRPS v3 daily final rnl p25 district time-series",
-      "start": "2014-01-09",
-      "end": "2014-01-10",
-      "expected_days": 2,
-      "actual_days": 2,
+      "start": "2015-01-01",
+      "end": "2025-12-31",
+      "expected_days": 4018,
+      "actual_days": 4018,
       "districts": 91,
-      "daily_rows": 182,
-      "dekad_rows": 91,
+      "daily_rows": 365638,
+      "dekad_rows": 36036,
+      "monthly_rows": 12012,
+      "seasonal_rows": 4004,
       "missing_dates": [],
+      "missing_date_percentage": 0.0,
       "minimum_valid_pixel_fraction": 0.5,
       "missing_district_day_rows": 0,
       "negative_rainfall_rows": 0,
       "crs": "EPSG:4326",
       "source_resolution": "0.25 degree",
+      "source_nodata": null,
+      "invalid_value_rule": "exclude non-finite and negative source values",
       "source_url_template": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/p25/{YYYY}/chirps-v3.0.rnl.{YYYY.MM.DD}.tif",
-      "daily_sha256": "8b46988b42a3f97fdd47ee0f5d9545c5844b98fe2f09964c5227a0699f9c77bc",
-      "dekad_sha256": "aaedde4f39984e1587d2efe796fe819bdf5b890ad93e9eae8bfc0da4f08a8c5a",
-      "status": "COMPLETE"
+      "daily_sha256": "0da39c01b6cff4f965235cdae2f1270c3aaf096af46c962020505a4fde222bf9",
+      "dekad_sha256": "6eb12d83c0a110e29a159c3fe31304bdd03d0f6891e6e8746e7a4230dbb069ab",
+      "monthly_sha256": "a72bb6dc858215b8a49b6afe80c91dd324df0841988194aa26ac186e8377043a",
+      "seasonal_sha256": "8f3b802fc7a803d907e38ae13e6a44804681b9711963fcf0d2aacd9cd3db93b9",
+      "output_size_bytes": {
+        "daily": 101650755,
+        "dekad": 10479722,
+        "monthly": 3351375,
+        "seasonal": 952023
+      },
+      "status": "COMPLETE",
+      "source_raster_metadata": {
+        "driver": "GTiff",
+        "crs": "EPSG:4326",
+        "shape": [
+          480,
+          1440
+        ],
+        "resolution_degrees": [
+          0.25,
+          0.25
+        ],
+        "bounds": [
+          -180.0,
+          -60.0,
+          180.0,
+          60.0
+        ],
+        "dtype": "float32",
+        "nodata": null,
+        "compression": "LZW",
+        "inspection_source": "official first-day p25 GeoTIFF in the archive period"
+      }
     },
-    "status": "PARTIAL",
-    "limitation": "The production 2000-2025 district history has not yet passed continuity and completeness checks."
+    "status": "PASS",
+    "limitation": "Production district history is complete for the 2015-2025 common environmental window; compact p25 summaries are used and source URLs/checksums are preserved."
   },
   "soil_moisture": {
     "file_count": 38,
@@ -2250,24 +2285,100 @@
     ],
     "historical_archive": {
       "dataset": "MOD13Q1 V061 Terra district time-series",
-      "start": "2015-01-17",
-      "end": "2015-01-17",
-      "periods": 1,
-      "items": 7,
+      "start": "2015-01-01",
+      "end": "2025-12-31",
+      "periods": 242,
+      "expected_nominal_periods": 253,
+      "missing_composite_start_dates": [
+        "2023-02-18",
+        "2024-08-12",
+        "2024-12-18",
+        "2025-07-12",
+        "2025-07-28",
+        "2025-08-13",
+        "2025-08-29",
+        "2025-09-14",
+        "2025-09-30",
+        "2025-10-16",
+        "2025-11-01"
+      ],
+      "source_period_missing_fraction": 0.043478260869565216,
+      "items": 1694,
       "districts": 91,
-      "rows": 91,
-      "missing_district_period_rows": 7,
+      "rows": 22022,
+      "missing_district_period_rows": 3306,
+      "missing_district_period_fraction": 0.1501226046680592,
+      "missing_non_banadir_district_period_fraction": 0.007075738707121023,
+      "missing_banadir_district_period_fraction": 0.730257116620753,
+      "missingness_interpretation": "Strict-QA nulls are retained. The concentration in small, densely urban Banadir districts is reported separately; no temporal or spatial values are imputed.",
       "minimum_valid_pixel_fraction": 0.0,
       "source_resolution": "250m",
       "derived_sampling_resolution": "approximately 1km via aligned nearest-neighbour COG overview",
       "temporal_resolution": "16-day composite",
       "scale": 0.0001,
+      "fill_and_valid_ranges": {
+        "NDVI": {
+          "fill": -3000,
+          "valid_min": -2000,
+          "valid_max": 10000
+        },
+        "EVI": {
+          "fill": -3000,
+          "valid_min": -2000,
+          "valid_max": 10000
+        },
+        "VI_Quality": {
+          "fill": 65535,
+          "interpretation": "bit field"
+        },
+        "pixel_reliability": {
+          "fill": -1,
+          "accepted": 0
+        }
+      },
       "qa_rule": "pixel_reliability=0 AND MODLAND_QA(bits0-1)=0 AND VI range -2000..10000",
-      "sha256": "7609255d4d28bd99db3466042a6864823b1a39f38c0d5dd189184b3093340c8e",
-      "status": "PARTIAL"
+      "sha256": "ef3fa1fd4b7ac05e8f683f8b81e48627b692648c5af396b8c7c633554cb0f2a5",
+      "size_bytes": 9396702,
+      "status": "COMPLETE",
+      "native_asset_metadata": {
+        "crs": "MODIS sinusoidal sphere radius 6371007.181m",
+        "native_pixel_size_m": 231.65635826375,
+        "tile_shape": [
+          4800,
+          4800
+        ],
+        "NDVI": {
+          "dtype": "int16",
+          "nodata": -3000,
+          "scale": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ]
+        },
+        "EVI": {
+          "dtype": "int16",
+          "nodata": -3000,
+          "scale": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ]
+        },
+        "VI_Quality": {
+          "dtype": "uint16",
+          "nodata": 65535,
+          "units": "bit field"
+        },
+        "pixel_reliability": {
+          "dtype": "int8",
+          "nodata": -1,
+          "units": "rank"
+        }
+      }
     },
-    "status": "PARTIAL",
-    "limitation": "The production 2015-2025 QA-masked district history has not yet passed completeness checks."
+    "status": "PASS",
+    "limitation": "Production QA-masked district history is complete for 2015-2025; source assets are native 250m and aligned COG overviews are sampled at approximately 1km."
   },
   "temperature": {
     "science_band_count": 2,
@@ -2339,11 +2450,11 @@
     "districts": 91,
     "unique_source_grid_cells": 72,
     "missing_values_by_source_cell": {
-      "T2M_MIN": 0,
       "GWETTOP": 0,
       "T2M_MAX": 0,
+      "GWETROOT": 0,
       "T2M": 0,
-      "GWETROOT": 0
+      "T2M_MIN": 0
     },
     "invalid_files": [],
     "daily_rows": 864227,

@@ -1,0 +1,58 @@
+{
+  "model_id": "drought-early-warning",
+  "model_version": "1.1.0",
+  "target_version": "1.1.0",
+  "feature_version": "1.1.0",
+  "algorithm": "logistic_regression",
+  "features": [
+    "rain_7d_mm",
+    "rain_30d_mm",
+    "rain_90d_mm",
+    "heavy_rain_days_30d",
+    "dry_spell_days",
+    "t2m_7d_c",
+    "t2m_30d_c",
+    "t2m_max_30d_c",
+    "gwet_top_7d",
+    "gwet_top_30d",
+    "gwet_root_30d",
+    "ndvi_last",
+    "evi_last",
+    "ndvi_change_1",
+    "vegetation_valid_pixel_fraction",
+    "ndvi_last_anomaly_z_reference"
+  ],
+  "training_period": [
+    2015,
+    2020
+  ],
+  "validation_period": [
+    2021,
+    2022
+  ],
+  "test_period": [
+    2023,
+    2025
+  ],
+  "calibration_method": "isotonic",
+  "operating_threshold": 0.27,
+  "risk_thresholds": {
+    "watch": 0.135,
+    "warning": 0.27,
+    "severe": 0.635
+  },
+  "artifact_path": "ml/artifacts/drought/drought_model_v1.1.0.joblib",
+  "artifact_checksum_sha256": "9125108a58b5370ffd5e1b30000fd75690eda0cdf38621407cff7c29f7ac64ec",
+  "artifact_size_bytes": 5610,
+  "serialization_round_trip_passed": true,
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3",
+    "random_seed": 20260826
+  },
+  "selection_reason": "Logistic regression improved on the deterministic rule, while random forest added less than 0.02 validation utility."
+}

@@ -1,0 +1,62 @@
+{
+  "rain_30d_mm": {
+    "psi_train_to_validation": 5.434683582448523,
+    "psi_train_to_test": 0.22210008409225676
+  },
+  "rain_90d_mm": {
+    "psi_train_to_validation": 2.1312606027507797,
+    "psi_train_to_test": 0.2533646981199023
+  },
+  "dry_days_30d": {
+    "psi_train_to_validation": 2.4994388946551775,
+    "psi_train_to_test": 0.29980652694695875
+  },
+  "t2m_30d_c": {
+    "psi_train_to_validation": 0.23528536653401838,
+    "psi_train_to_test": 0.23589084286048342
+  },
+  "t2m_max_30d_c": {
+    "psi_train_to_validation": 0.27665523521522756,
+    "psi_train_to_test": 0.34884500166499294
+  },
+  "gwet_top_30d": {
+    "psi_train_to_validation": 0.5439710933632608,
+    "psi_train_to_test": 0.5315009219824662
+  },
+  "gwet_root_30d": {
+    "psi_train_to_validation": 0.185637235989475,
+    "psi_train_to_test": 1.4031278367506987
+  },
+  "ndvi_last": {
+    "psi_train_to_validation": 1.4332049486163396,
+    "psi_train_to_test": 0.40635208212566853
+  },
+  "ndvi_change": {
+    "psi_train_to_validation": 0.9234393591098664,
+    "psi_train_to_test": 0.14150963093524008
+  },
+  "vegetation_valid_pixel_fraction": {
+    "psi_train_to_validation": 0.15360424465264652,
+    "psi_train_to_test": 0.15609875621222052
+  },
+  "market_usdkg_90d_median": {
+    "psi_train_to_validation": 7.966905086086917,
+    "psi_train_to_test": 7.270439112923482
+  },
+  "market_price_change_previous_90d": {
+    "psi_train_to_validation": 1.5036048340075239,
+    "psi_train_to_test": 1.0554279099739703
+  },
+  "market_price_anomaly_365d": {
+    "psi_train_to_validation": 0.7477531996507797,
+    "psi_train_to_test": 1.5761442972670638
+  },
+  "previous_ipc3plus_percentage": {
+    "psi_train_to_validation": 3.83471089991159,
+    "psi_train_to_test": 4.263246636216032
+  },
+  "log_region_population": {
+    "psi_train_to_validation": 0.0,
+    "psi_train_to_test": 0.0
+  }
+}

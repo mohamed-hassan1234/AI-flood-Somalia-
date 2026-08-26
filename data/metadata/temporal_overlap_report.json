@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-25T13:10:48.474080+00:00",
+  "generated_at": "2026-08-26T08:01:21.180816+00:00",
   "principle": "Windows below use actual local data, not provider-advertised archive coverage.",
   "drought_model": {
-    "status": "BLOCKED",
+    "status": "READY",
     "candidate_window": {
       "start": "2015-01-01",
       "end": "2025-12-31",
@@ -16,7 +16,7 @@
     ]
   },
   "flood_model": {
-    "status": "BLOCKED",
+    "status": "READY",
     "candidate_window": {
       "start": "2015-01-01",
       "end": "2025-12-31",
@@ -31,7 +31,7 @@
     ]
   },
   "food_security_model": {
-    "status": "BLOCKED",
+    "status": "READY",
     "candidate_window": {
       "start": "2017-01-01",
       "end": "2025-12-31",

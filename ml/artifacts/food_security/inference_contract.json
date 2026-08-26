@@ -1,0 +1,39 @@
+{
+  "version": "1.1.0",
+  "input": {
+    "identity": "district_id, station_code, or region_id",
+    "as_of_date": "ISO-8601 date",
+    "features": [
+      "rain_30d_mm",
+      "rain_90d_mm",
+      "dry_days_30d",
+      "t2m_30d_c",
+      "t2m_max_30d_c",
+      "gwet_top_30d",
+      "gwet_root_30d",
+      "ndvi_last",
+      "ndvi_change",
+      "vegetation_valid_pixel_fraction",
+      "market_usdkg_90d_median",
+      "market_price_change_previous_90d",
+      "market_price_anomaly_365d",
+      "previous_ipc3plus_percentage",
+      "log_region_population"
+    ]
+  },
+  "output": [
+    "model_version",
+    "risk_type",
+    "probability",
+    "risk_level",
+    "prediction_horizon",
+    "top_drivers",
+    "data_quality",
+    "generated_at"
+  ],
+  "data_quality": {
+    "GOOD": "all critical features present and within training guardrails",
+    "DEGRADED": "some optional data absent or outside 1st-99th percentile",
+    "INSUFFICIENT": "less than half of critical features present; probability withheld"
+  }
+}

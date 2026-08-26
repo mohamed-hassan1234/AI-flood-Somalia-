@@ -1,0 +1,433 @@
+{
+  "method": "model-agnostic permutation importance plus median-perturbation local drivers",
+  "shap_status": "NOT_APPLICABLE",
+  "global_feature_importance": [
+    {
+      "feature": "previous_ipc3plus_percentage",
+      "importance_mean": 0.29595078684308584,
+      "importance_std": 0.05706922232974569
+    },
+    {
+      "feature": "rain_30d_mm",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "rain_90d_mm",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "dry_days_30d",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "t2m_30d_c",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "t2m_max_30d_c",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "gwet_top_30d",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "gwet_root_30d",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "ndvi_last",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "ndvi_change",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "vegetation_valid_pixel_fraction",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "market_usdkg_90d_median",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "market_price_change_previous_90d",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "market_price_anomaly_365d",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "log_region_population",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    }
+  ],
+  "local_explanations": [
+    {
+      "identifiers": {
+        "region_id": "SO19",
+        "feature_as_of_date": "2023-12-02T00:00:00",
+        "target_period_start": "2024-01-01T00:00:00"
+      },
+      "probability": 0.98,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.42,
+          "probability_change_if_replaced_by_training_median": 0.6799999999999999
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 118.72209134045227,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 277.4584060864694,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 14.000000000000004,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 25.608999999999998,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "region_id": "SO24",
+        "feature_as_of_date": "2024-06-01T00:00:00",
+        "target_period_start": "2024-07-01T00:00:00"
+      },
+      "probability": 0.9249999999999999,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.37,
+          "probability_change_if_replaced_by_training_median": 0.625
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 38.544507053251394,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 212.76750693385867,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 19.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 26.844916666666666,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "region_id": "SO24",
+        "feature_as_of_date": "2024-12-02T00:00:00",
+        "target_period_start": "2025-01-01T00:00:00"
+      },
+      "probability": 0.9249999999999999,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.37,
+          "probability_change_if_replaced_by_training_median": 0.625
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 141.95540546376725,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 175.8254045764552,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 10.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 26.975166666666667,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "region_id": "SO18",
+        "feature_as_of_date": "2023-12-02T00:00:00",
+        "target_period_start": "2024-01-01T00:00:00"
+      },
+      "probability": 0.8999999999999999,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.36,
+          "probability_change_if_replaced_by_training_median": 0.5999999999999999
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 115.17821370544647,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 268.124651854225,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 15.000000000000002,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 26.311666666666667,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "region_id": "SO19",
+        "feature_as_of_date": "2025-06-01T00:00:00",
+        "target_period_start": "2025-07-01T00:00:00"
+      },
+      "probability": 0.8999999999999999,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.36,
+          "probability_change_if_replaced_by_training_median": 0.5999999999999999
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 57.34804784388726,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 163.38170017864908,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 19.400000000000002,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 29.03553333333333,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "region_id": "SO24",
+        "feature_as_of_date": "2023-12-02T00:00:00",
+        "target_period_start": "2024-01-01T00:00:00"
+      },
+      "probability": 0.7999999999999999,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.32,
+          "probability_change_if_replaced_by_training_median": 0.49999999999999994
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 290.9689599876,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 709.3647296837968,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 10.75,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 25.364916666666666,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "region_id": "SO17",
+        "feature_as_of_date": "2023-12-02T00:00:00",
+        "target_period_start": "2024-01-01T00:00:00"
+      },
+      "probability": 0.675,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.27,
+          "probability_change_if_replaced_by_training_median": 0.37500000000000006
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 55.54371792985178,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 199.5979668124627,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 20.666666666666664,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 26.479333333333333,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "region_id": "SO14",
+        "feature_as_of_date": "2023-12-02T00:00:00",
+        "target_period_start": "2024-01-01T00:00:00"
+      },
+      "probability": 0.675,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.27,
+          "probability_change_if_replaced_by_training_median": 0.37500000000000006
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 50.185937132666346,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 164.32456415749706,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 21.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 25.541083333333333,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "region_id": "SO19",
+        "feature_as_of_date": "2024-12-02T00:00:00",
+        "target_period_start": "2025-01-01T00:00:00"
+      },
+      "probability": 0.675,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.27,
+          "probability_change_if_replaced_by_training_median": 0.37500000000000006
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 10.65801485652095,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 41.55427038989001,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 27.800000000000004,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 28.128800000000002,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "region_id": "SO19",
+        "feature_as_of_date": "2024-06-01T00:00:00",
+        "target_period_start": "2024-07-01T00:00:00"
+      },
+      "probability": 0.625,
+      "top_drivers": [
+        {
+          "feature": "previous_ipc3plus_percentage",
+          "observed_value": 0.25,
+          "probability_change_if_replaced_by_training_median": 0.325
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 85.41741836404034,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 246.44965083588974,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "dry_days_30d",
+          "observed_value": 17.000000000000004,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 28.810799999999997,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,892 @@
+{
+  "generated_at": "2026-08-26T10:35:58.766499+00:00",
+  "target_version": "1.1.0",
+  "tracks": {
+    "drought": {
+      "positive_count": 2219,
+      "negative_count": 15214,
+      "unknown_count": 3546,
+      "positive_rate": 0.1272873286296105,
+      "temporal_distribution": [
+        {
+          "year": 2015,
+          "count": 1695,
+          "sum": 94,
+          "mean": 0.05545722713864307
+        },
+        {
+          "year": 2016,
+          "count": 1701,
+          "sum": 267,
+          "mean": 0.15696649029982362
+        },
+        {
+          "year": 2017,
+          "count": 1703,
+          "sum": 447,
+          "mean": 0.26247798003523193
+        },
+        {
+          "year": 2018,
+          "count": 1693,
+          "sum": 127,
+          "mean": 0.07501476668635558
+        },
+        {
+          "year": 2019,
+          "count": 1684,
+          "sum": 197,
+          "mean": 0.1169833729216152
+        },
+        {
+          "year": 2020,
+          "count": 1688,
+          "sum": 19,
+          "mean": 0.011255924170616114
+        },
+        {
+          "year": 2021,
+          "count": 1670,
+          "sum": 209,
+          "mean": 0.1251497005988024
+        },
+        {
+          "year": 2022,
+          "count": 1679,
+          "sum": 531,
+          "mean": 0.3162596783799881
+        },
+        {
+          "year": 2023,
+          "count": 1492,
+          "sum": 154,
+          "mean": 0.1032171581769437
+        },
+        {
+          "year": 2024,
+          "count": 1443,
+          "sum": 59,
+          "mean": 0.040887040887040885
+        },
+        {
+          "year": 2025,
+          "count": 985,
+          "sum": 115,
+          "mean": 0.116751269035533
+        }
+      ],
+      "geographic_distribution": [
+        {
+          "district_id": "SO1101",
+          "count": 228,
+          "sum": 24,
+          "mean": 0.10526315789473684
+        },
+        {
+          "district_id": "SO1102",
+          "count": 228,
+          "sum": 14,
+          "mean": 0.06140350877192982
+        },
+        {
+          "district_id": "SO1103",
+          "count": 228,
+          "sum": 13,
+          "mean": 0.05701754385964912
+        },
+        {
+          "district_id": "SO1104",
+          "count": 228,
+          "sum": 9,
+          "mean": 0.039473684210526314
+        },
+        {
+          "district_id": "SO1201",
+          "count": 228,
+          "sum": 10,
+          "mean": 0.043859649122807015
+        },
+        {
+          "district_id": "SO1202",
+          "count": 228,
+          "sum": 7,
+          "mean": 0.03070175438596491
+        },
+        {
+          "district_id": "SO1203",
+          "count": 228,
+          "sum": 14,
+          "mean": 0.06140350877192982
+        },
+        {
+          "district_id": "SO1301",
+          "count": 228,
+          "sum": 14,
+          "mean": 0.06140350877192982
+        },
+        {
+          "district_id": "SO1302",
+          "count": 228,
+          "sum": 34,
+          "mean": 0.14912280701754385
+        },
+        {
+          "district_id": "SO1303",
+          "count": 228,
+          "sum": 8,
+          "mean": 0.03508771929824561
+        },
+        {
+          "district_id": "SO1304",
+          "count": 228,
+          "sum": 14,
+          "mean": 0.06140350877192982
+        },
+        {
+          "district_id": "SO1401",
+          "count": 228,
+          "sum": 32,
+          "mean": 0.14035087719298245
+        },
+        {
+          "district_id": "SO1402",
+          "count": 228,
+          "sum": 13,
+          "mean": 0.05701754385964912
+        },
+        {
+          "district_id": "SO1403",
+          "count": 228,
+          "sum": 14,
+          "mean": 0.06140350877192982
+        },
+        {
+          "district_id": "SO1404",
+          "count": 228,
+          "sum": 17,
+          "mean": 0.07456140350877193
+        },
+        {
+          "district_id": "SO1501",
+          "count": 228,
+          "sum": 11,
+          "mean": 0.04824561403508772
+        },
+        {
+          "district_id": "SO1502",
+          "count": 228,
+          "sum": 11,
+          "mean": 0.04824561403508772
+        },
+        {
+          "district_id": "SO1503",
+          "count": 228,
+          "sum": 16,
+          "mean": 0.07017543859649122
+        },
+        {
+          "district_id": "SO1601",
+          "count": 228,
+          "sum": 10,
+          "mean": 0.043859649122807015
+        },
+        {
+          "district_id": "SO1602",
+          "count": 228,
+          "sum": 15,
+          "mean": 0.06578947368421052
+        },
+        {
+          "district_id": "SO1603",
+          "count": 228,
+          "sum": 9,
+          "mean": 0.039473684210526314
+        },
+        {
+          "district_id": "SO1604",
+          "count": 228,
+          "sum": 6,
+          "mean": 0.02631578947368421
+        },
+        {
+          "district_id": "SO1605",
+          "count": 228,
+          "sum": 8,
+          "mean": 0.03508771929824561
+        },
+        {
+          "district_id": "SO1606",
+          "count": 228,
+          "sum": 13,
+          "mean": 0.05701754385964912
+        },
+        {
+          "district_id": "SO1701",
+          "count": 228,
+          "sum": 23,
+          "mean": 0.10087719298245613
+        },
+        {
+          "district_id": "SO1702",
+          "count": 228,
+          "sum": 25,
+          "mean": 0.10964912280701754
+        },
+        {
+          "district_id": "SO1703",
+          "count": 228,
+          "sum": 18,
+          "mean": 0.07894736842105263
+        },
+        {
+          "district_id": "SO1801",
+          "count": 228,
+          "sum": 22,
+          "mean": 0.09649122807017543
+        },
+        {
+          "district_id": "SO1802",
+          "count": 227,
+          "sum": 16,
+          "mean": 0.07048458149779736
+        },
+        {
+          "district_id": "SO1803",
+          "count": 228,
+          "sum": 24,
+          "mean": 0.10526315789473684
+        },
+        {
+          "district_id": "SO1804",
+          "count": 228,
+          "sum": 27,
+          "mean": 0.11842105263157894
+        },
+        {
+          "district_id": "SO1805",
+          "count": 228,
+          "sum": 55,
+          "mean": 0.2412280701754386
+        },
+        {
+          "district_id": "SO1901",
+          "count": 228,
+          "sum": 26,
+          "mean": 0.11403508771929824
+        },
+        {
+          "district_id": "SO1902",
+          "count": 228,
+          "sum": 22,
+          "mean": 0.09649122807017543
+        },
+        {
+          "district_id": "SO1903",
+          "count": 228,
+          "sum": 22,
+          "mean": 0.09649122807017543
+        },
+        {
+          "district_id": "SO1904",
+          "count": 228,
+          "sum": 43,
+          "mean": 0.18859649122807018
+        },
+        {
+          "district_id": "SO1905",
+          "count": 228,
+          "sum": 41,
+          "mean": 0.17982456140350878
+        },
+        {
+          "district_id": "SO2001",
+          "count": 228,
+          "sum": 34,
+          "mean": 0.14912280701754385
+        },
+        {
+          "district_id": "SO2002",
+          "count": 228,
+          "sum": 36,
+          "mean": 0.15789473684210525
+        },
+        {
+          "district_id": "SO2003",
+          "count": 225,
+          "sum": 32,
+          "mean": 0.14222222222222222
+        },
+        {
+          "district_id": "SO2101",
+          "count": 227,
+          "sum": 28,
+          "mean": 0.12334801762114538
+        },
+        {
+          "district_id": "SO2102",
+          "count": 228,
+          "sum": 43,
+          "mean": 0.18859649122807018
+        },
+        {
+          "district_id": "SO2103",
+          "count": 228,
+          "sum": 35,
+          "mean": 0.15350877192982457
+        },
+        {
+          "district_id": "SO2104",
+          "count": 228,
+          "sum": 35,
+          "mean": 0.15350877192982457
+        },
+        {
+          "district_id": "SO2201",
+          "count": 6,
+          "sum": 0,
+          "mean": 0.0
+        },
+        {
+          "district_id": "SO2203",
+          "count": 83,
+          "sum": 22,
+          "mean": 0.26506024096385544
+        },
+        {
+          "district_id": "SO2204",
+          "count": 87,
+          "sum": 12,
+          "mean": 0.13793103448275862
+        },
+        {
+          "district_id": "SO2206",
+          "count": 8,
+          "sum": 0,
+          "mean": 0.0
+        },
+        {
+          "district_id": "SO2207",
+          "count": 25,
+          "sum": 2,
+          "mean": 0.08
+        },
+        {
+          "district_id": "SO2208",
+          "count": 127,
+          "sum": 26,
+          "mean": 0.2047244094488189
+        },
+        {
+          "district_id": "SO2209",
+          "count": 24,
+          "sum": 1,
+          "mean": 0.041666666666666664
+        },
+        {
+          "district_id": "SO2210",
+          "count": 93,
+          "sum": 11,
+          "mean": 0.11827956989247312
+        },
+        {
+          "district_id": "SO2211",
+          "count": 90,
+          "sum": 20,
+          "mean": 0.2222222222222222
+        },
+        {
+          "district_id": "SO2213",
+          "count": 4,
+          "sum": 0,
+          "mean": 0.0
+        },
+        {
+          "district_id": "SO2214",
+          "count": 24,
+          "sum": 4,
+          "mean": 0.16666666666666666
+        },
+        {
+          "district_id": "SO2215",
+          "count": 98,
+          "sum": 15,
+          "mean": 0.15306122448979592
+        },
+        {
+          "district_id": "SO2216",
+          "count": 17,
+          "sum": 1,
+          "mean": 0.058823529411764705
+        },
+        {
+          "district_id": "SO2217",
+          "count": 27,
+          "sum": 6,
+          "mean": 0.2222222222222222
+        },
+        {
+          "district_id": "SO2301",
+          "count": 228,
+          "sum": 31,
+          "mean": 0.13596491228070176
+        },
+        {
+          "district_id": "SO2302",
+          "count": 228,
+          "sum": 38,
+          "mean": 0.16666666666666666
+        },
+        {
+          "district_id": "SO2303",
+          "count": 228,
+          "sum": 34,
+          "mean": 0.14912280701754385
+        },
+        {
+          "district_id": "SO2304",
+          "count": 209,
+          "sum": 31,
+          "mean": 0.14832535885167464
+        },
+        {
+          "district_id": "SO2305",
+          "count": 208,
+          "sum": 42,
+          "mean": 0.20192307692307693
+        },
+        {
+          "district_id": "SO2306",
+          "count": 209,
+          "sum": 35,
+          "mean": 0.1674641148325359
+        },
+        {
+          "district_id": "SO2307",
+          "count": 225,
+          "sum": 49,
+          "mean": 0.21777777777777776
+        },
+        {
+          "district_id": "SO2401",
+          "count": 227,
+          "sum": 45,
+          "mean": 0.19823788546255505
+        },
+        {
+          "district_id": "SO2402",
+          "count": 225,
+          "sum": 51,
+          "mean": 0.22666666666666666
+        },
+        {
+          "district_id": "SO2403",
+          "count": 218,
+          "sum": 49,
+          "mean": 0.22477064220183487
+        },
+        {
+          "district_id": "SO2404",
+          "count": 215,
+          "sum": 43,
+          "mean": 0.2
+        },
+        {
+          "district_id": "SO2501",
+          "count": 228,
+          "sum": 28,
+          "mean": 0.12280701754385964
+        },
+        {
+          "district_id": "SO2502",
+          "count": 228,
+          "sum": 22,
+          "mean": 0.09649122807017543
+        },
+        {
+          "district_id": "SO2503",
+          "count": 228,
+          "sum": 32,
+          "mean": 0.14035087719298245
+        },
+        {
+          "district_id": "SO2504",
+          "count": 224,
+          "sum": 29,
+          "mean": 0.12946428571428573
+        },
+        {
+          "district_id": "SO2505",
+          "count": 226,
+          "sum": 27,
+          "mean": 0.11946902654867257
+        },
+        {
+          "district_id": "SO2601",
+          "count": 228,
+          "sum": 44,
+          "mean": 0.19298245614035087
+        },
+        {
+          "district_id": "SO2602",
+          "count": 226,
+          "sum": 38,
+          "mean": 0.168141592920354
+        },
+        {
+          "district_id": "SO2603",
+          "count": 226,
+          "sum": 28,
+          "mean": 0.12389380530973451
+        },
+        {
+          "district_id": "SO2604",
+          "count": 222,
+          "sum": 35,
+          "mean": 0.15765765765765766
+        },
+        {
+          "district_id": "SO2605",
+          "count": 227,
+          "sum": 38,
+          "mean": 0.16740088105726872
+        },
+        {
+          "district_id": "SO2606",
+          "count": 228,
+          "sum": 46,
+          "mean": 0.20175438596491227
+        },
+        {
+          "district_id": "SO2701",
+          "count": 220,
+          "sum": 49,
+          "mean": 0.22272727272727272
+        },
+        {
+          "district_id": "SO2702",
+          "count": 228,
+          "sum": 46,
+          "mean": 0.20175438596491227
+        },
+        {
+          "district_id": "SO2703",
+          "count": 223,
+          "sum": 32,
+          "mean": 0.14349775784753363
+        },
+        {
+          "district_id": "SO2801",
+          "count": 228,
+          "sum": 42,
+          "mean": 0.18421052631578946
+        },
+        {
+          "district_id": "SO2802",
+          "count": 228,
+          "sum": 40,
+          "mean": 0.17543859649122806
+        },
+        {
+          "district_id": "SO2803",
+          "count": 228,
+          "sum": 47,
+          "mean": 0.20614035087719298
+        },
+        {
+          "district_id": "SO2804",
+          "count": 228,
+          "sum": 54,
+          "mean": 0.23684210526315788
+        },
+        {
+          "district_id": "Unspecified",
+          "count": 199,
+          "sum": 31,
+          "mean": 0.15577889447236182
+        }
+      ],
+      "longest_gap_days": 160
+    },
+    "flood": {
+      "positive_count": 1665,
+      "negative_count": 15967,
+      "unknown_count": 1749,
+      "positive_rate": 0.09443058076225046,
+      "temporal_distribution": [
+        {
+          "year": 2015,
+          "count": 1703,
+          "sum": 114,
+          "mean": 0.06694069289489137
+        },
+        {
+          "year": 2016,
+          "count": 1800,
+          "sum": 69,
+          "mean": 0.03833333333333333
+        },
+        {
+          "year": 2017,
+          "count": 1818,
+          "sum": 116,
+          "mean": 0.0638063806380638
+        },
+        {
+          "year": 2018,
+          "count": 1825,
+          "sum": 153,
+          "mean": 0.08383561643835616
+        },
+        {
+          "year": 2019,
+          "count": 1822,
+          "sum": 218,
+          "mean": 0.11964873765093303
+        },
+        {
+          "year": 2020,
+          "count": 1823,
+          "sum": 375,
+          "mean": 0.2057048820625343
+        },
+        {
+          "year": 2021,
+          "count": 1562,
+          "sum": 39,
+          "mean": 0.02496798975672215
+        },
+        {
+          "year": 2022,
+          "count": 1244,
+          "sum": 8,
+          "mean": 0.006430868167202572
+        },
+        {
+          "year": 2023,
+          "count": 1764,
+          "sum": 334,
+          "mean": 0.1893424036281179
+        },
+        {
+          "year": 2024,
+          "count": 1780,
+          "sum": 239,
+          "mean": 0.13426966292134832
+        },
+        {
+          "year": 2025,
+          "count": 491,
+          "sum": 0,
+          "mean": 0.0
+        }
+      ],
+      "geographic_distribution": [
+        {
+          "station_code": "JB001",
+          "count": 3521,
+          "sum": 78,
+          "mean": 0.022152797500710024
+        },
+        {
+          "station_code": "JB009",
+          "count": 3238,
+          "sum": 217,
+          "mean": 0.0670166769610871
+        },
+        {
+          "station_code": "SH001",
+          "count": 3557,
+          "sum": 530,
+          "mean": 0.1490019679505201
+        },
+        {
+          "station_code": "SH002",
+          "count": 3741,
+          "sum": 276,
+          "mean": 0.07377706495589414
+        },
+        {
+          "station_code": "SH004",
+          "count": 3575,
+          "sum": 564,
+          "mean": 0.15776223776223777
+        }
+      ],
+      "longest_gap_days": 226
+    },
+    "food_security": {
+      "positive_count": 157,
+      "negative_count": 221,
+      "unknown_count": 0,
+      "positive_rate": 0.41534391534391535,
+      "temporal_distribution": [
+        {
+          "year": 2017,
+          "count": 36,
+          "sum": 17,
+          "mean": 0.4722222222222222
+        },
+        {
+          "year": 2018,
+          "count": 36,
+          "sum": 7,
+          "mean": 0.19444444444444445
+        },
+        {
+          "year": 2019,
+          "count": 36,
+          "sum": 4,
+          "mean": 0.1111111111111111
+        },
+        {
+          "year": 2020,
+          "count": 36,
+          "sum": 0,
+          "mean": 0.0
+        },
+        {
+          "year": 2021,
+          "count": 36,
+          "sum": 6,
+          "mean": 0.16666666666666666
+        },
+        {
+          "year": 2022,
+          "count": 72,
+          "sum": 55,
+          "mean": 0.7638888888888888
+        },
+        {
+          "year": 2023,
+          "count": 54,
+          "sum": 42,
+          "mean": 0.7777777777777778
+        },
+        {
+          "year": 2024,
+          "count": 36,
+          "sum": 15,
+          "mean": 0.4166666666666667
+        },
+        {
+          "year": 2025,
+          "count": 36,
+          "sum": 11,
+          "mean": 0.3055555555555556
+        }
+      ],
+      "geographic_distribution": [
+        {
+          "region_id": "SO11",
+          "count": 21,
+          "sum": 7,
+          "mean": 0.3333333333333333
+        },
+        {
+          "region_id": "SO12",
+          "count": 21,
+          "sum": 6,
+          "mean": 0.2857142857142857
+        },
+        {
+          "region_id": "SO13",
+          "count": 21,
+          "sum": 7,
+          "mean": 0.3333333333333333
+        },
+        {
+          "region_id": "SO14",
+          "count": 21,
+          "sum": 16,
+          "mean": 0.7619047619047619
+        },
+        {
+          "region_id": "SO15",
+          "count": 21,
+          "sum": 11,
+          "mean": 0.5238095238095238
+        },
+        {
+          "region_id": "SO16",
+          "count": 21,
+          "sum": 8,
+          "mean": 0.38095238095238093
+        },
+        {
+          "region_id": "SO17",
+          "count": 21,
+          "sum": 9,
+          "mean": 0.42857142857142855
+        },
+        {
+          "region_id": "SO18",
+          "count": 21,
+          "sum": 13,
+          "mean": 0.6190476190476191
+        },
+        {
+          "region_id": "SO19",
+          "count": 21,
+          "sum": 13,
+          "mean": 0.6190476190476191
+        },
+        {
+          "region_id": "SO20",
+          "count": 21,
+          "sum": 10,
+          "mean": 0.47619047619047616
+        },
+        {
+          "region_id": "SO21",
+          "count": 21,
+          "sum": 8,
+          "mean": 0.38095238095238093
+        },
+        {
+          "region_id": "SO22",
+          "count": 21,
+          "sum": 6,
+          "mean": 0.2857142857142857
+        },
+        {
+          "region_id": "SO23",
+          "count": 21,
+          "sum": 3,
+          "mean": 0.14285714285714285
+        },
+        {
+          "region_id": "SO24",
+          "count": 21,
+          "sum": 14,
+          "mean": 0.6666666666666666
+        },
+        {
+          "region_id": "SO25",
+          "count": 21,
+          "sum": 9,
+          "mean": 0.42857142857142855
+        },
+        {
+          "region_id": "SO26",
+          "count": 21,
+          "sum": 9,
+          "mean": 0.42857142857142855
+        },
+        {
+          "region_id": "SO27",
+          "count": 21,
+          "sum": 4,
+          "mean": 0.19047619047619047
+        },
+        {
+          "region_id": "SO28",
+          "count": 21,
+          "sum": 4,
+          "mean": 0.19047619047619047
+        }
+      ],
+      "longest_gap_days": 184
+    }
+  },
+  "build_seconds": 21.471956699999282
+}

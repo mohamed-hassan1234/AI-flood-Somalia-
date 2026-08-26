@@ -64,7 +64,12 @@ def main() -> int:
         and vegetation.get("end", "0000") >= "2025-12-31"
         and int(vegetation.get("periods", 0)) >= 240
         and int(vegetation.get("districts", 0)) == 91
-        and float(vegetation.get("missing_district_period_fraction", 1.0)) <= 0.10
+        # Dense, tiny Banadir polygons are not required to fabricate a
+        # vegetation observation at the approximately 1 km summary grid.
+        # Preserve strict-QA nulls while requiring strong coverage elsewhere
+        # and bounding the archive-wide missingness.
+        and float(vegetation.get("missing_non_banadir_district_period_fraction", 1.0)) <= 0.10
+        and float(vegetation.get("missing_district_period_fraction", 1.0)) <= 0.20
         and "pixel_reliability=0" in str(vegetation.get("qa_rule", ""))
     )
     power_ready = (

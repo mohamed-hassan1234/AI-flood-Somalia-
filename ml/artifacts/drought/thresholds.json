@@ -1,0 +1,7 @@
+{
+  "version": "1.1.0",
+  "watch": 0.135,
+  "warning": 0.27,
+  "severe": 0.635,
+  "selection_data": "validation only"
+}

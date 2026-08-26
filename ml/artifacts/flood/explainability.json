@@ -1,0 +1,453 @@
+{
+  "method": "model-agnostic permutation importance plus median-perturbation local drivers",
+  "shap_status": "NOT_APPLICABLE",
+  "global_feature_importance": [
+    {
+      "feature": "distance_to_moderate_m",
+      "importance_mean": 0.4079889951608729,
+      "importance_std": 0.006168274913053638
+    },
+    {
+      "feature": "gwet_top_7d",
+      "importance_mean": 0.0824577855205298,
+      "importance_std": 0.00891345333036313
+    },
+    {
+      "feature": "distance_to_high_m",
+      "importance_mean": 0.0578488785116521,
+      "importance_std": 0.0025609202313438485
+    },
+    {
+      "feature": "level_ratio_moderate",
+      "importance_mean": 0.05618816773407672,
+      "importance_std": 0.004455527542152584
+    },
+    {
+      "feature": "gwet_top_30d",
+      "importance_mean": 0.039719659230586145,
+      "importance_std": 0.00513654489442887
+    },
+    {
+      "feature": "level_mean_7d",
+      "importance_mean": 0.019852801862387248,
+      "importance_std": 0.0022278505730517965
+    },
+    {
+      "feature": "current_level_m",
+      "importance_mean": 0.01830541555570823,
+      "importance_std": 0.0021068349303100444
+    },
+    {
+      "feature": "gwet_root_30d",
+      "importance_mean": 0.006027894271570096,
+      "importance_std": 0.0008987962781362099
+    },
+    {
+      "feature": "heavy_rain_days_7d",
+      "importance_mean": 0.005108433679757367,
+      "importance_std": 0.0007176169013901749
+    },
+    {
+      "feature": "rain_3d_mm",
+      "importance_mean": 0.0038432813300386024,
+      "importance_std": 9.990184103760725e-05
+    },
+    {
+      "feature": "rain_30d_mm",
+      "importance_mean": 0.003703721046173336,
+      "importance_std": 0.00037395342753446877
+    },
+    {
+      "feature": "distance_to_bankfull_m",
+      "importance_mean": 0.0034154619289209487,
+      "importance_std": 0.001007533450830801
+    },
+    {
+      "feature": "rain_7d_mm",
+      "importance_mean": 0.00217841731148564,
+      "importance_std": 0.0004083998367162758
+    },
+    {
+      "feature": "level_change_1d",
+      "importance_mean": 0.0012409804437095346,
+      "importance_std": 0.00023339501369821193
+    },
+    {
+      "feature": "level_change_7d",
+      "importance_mean": 0.0010498168739295766,
+      "importance_std": 0.000562728015732194
+    },
+    {
+      "feature": "t2m_7d_c",
+      "importance_mean": 0.0010220453509820853,
+      "importance_std": 0.0008488680782093339
+    },
+    {
+      "feature": "level_change_3d",
+      "importance_mean": 0.0010090493842196031,
+      "importance_std": 0.00017807695795129584
+    },
+    {
+      "feature": "rain_1d_mm",
+      "importance_mean": -0.003911952158517844,
+      "importance_std": 0.0014927489368769089
+    },
+    {
+      "feature": "level_max_7d",
+      "importance_mean": -0.005100057189600086,
+      "importance_std": 0.002634032212405209
+    }
+  ],
+  "local_explanations": [
+    {
+      "identifiers": {
+        "station_code": "JB001",
+        "feature_as_of_date": "2023-11-27T00:00:00",
+        "target_period_start": "2023-11-28T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -1.5,
+          "probability_change_if_replaced_by_training_median": 1.0
+        },
+        {
+          "feature": "gwet_top_7d",
+          "observed_value": 0.8942857142857144,
+          "probability_change_if_replaced_by_training_median": 0.8888888888888888
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 7.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_3d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "station_code": "SH002",
+        "feature_as_of_date": "2023-12-03T00:00:00",
+        "target_period_start": "2023-12-04T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -1.5,
+          "probability_change_if_replaced_by_training_median": 1.0
+        },
+        {
+          "feature": "gwet_top_7d",
+          "observed_value": 0.8214285714285714,
+          "probability_change_if_replaced_by_training_median": 0.7727272727272727
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 8.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_3d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "station_code": "JB009",
+        "feature_as_of_date": "2024-11-15T00:00:00",
+        "target_period_start": "2024-11-16T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -0.40000000000000036,
+          "probability_change_if_replaced_by_training_median": 1.0
+        },
+        {
+          "feature": "level_ratio_moderate",
+          "observed_value": 1.088888888888889,
+          "probability_change_if_replaced_by_training_median": 0.8888888888888888
+        },
+        {
+          "feature": "distance_to_high_m",
+          "observed_value": 0.09999999999999964,
+          "probability_change_if_replaced_by_training_median": 0.8888888888888888
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 4.9,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": -0.2999999999999998,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "station_code": "JB001",
+        "feature_as_of_date": "2023-10-30T00:00:00",
+        "target_period_start": "2023-10-31T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -0.8799999999999999,
+          "probability_change_if_replaced_by_training_median": 0.9743589743589743
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 6.38,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": 0.17999999999999972,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_3d",
+          "observed_value": 1.8200000000000003,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_7d",
+          "observed_value": 1.7000000000000002,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "station_code": "SH001",
+        "feature_as_of_date": "2024-05-15T00:00:00",
+        "target_period_start": "2024-05-16T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -1.12,
+          "probability_change_if_replaced_by_training_median": 1.0
+        },
+        {
+          "feature": "distance_to_high_m",
+          "observed_value": -0.3200000000000003,
+          "probability_change_if_replaced_by_training_median": 0.7727272727272727
+        },
+        {
+          "feature": "level_ratio_moderate",
+          "observed_value": 1.1723076923076923,
+          "probability_change_if_replaced_by_training_median": 0.25
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 7.62,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": 0.0600000000000005,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "station_code": "SH001",
+        "feature_as_of_date": "2023-05-07T00:00:00",
+        "target_period_start": "2023-05-08T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -1.2999999999999998,
+          "probability_change_if_replaced_by_training_median": 0.9838709677419355
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 7.8,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": 0.14999999999999947,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_3d",
+          "observed_value": 0.2999999999999998,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_7d",
+          "observed_value": 0.7999999999999998,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "station_code": "SH001",
+        "feature_as_of_date": "2023-05-08T00:00:00",
+        "target_period_start": "2023-05-09T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -1.4000000000000004,
+          "probability_change_if_replaced_by_training_median": 0.9838709677419355
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 7.9,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": 0.10000000000000053,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_3d",
+          "observed_value": 0.3000000000000007,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_7d",
+          "observed_value": 0.75,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "station_code": "SH001",
+        "feature_as_of_date": "2023-05-09T00:00:00",
+        "target_period_start": "2023-05-10T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -1.8000000000000007,
+          "probability_change_if_replaced_by_training_median": 0.9838709677419355
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 8.3,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": 0.40000000000000036,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_3d",
+          "observed_value": 0.6500000000000004,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_7d",
+          "observed_value": 0.9500000000000011,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "station_code": "SH001",
+        "feature_as_of_date": "2023-05-10T00:00:00",
+        "target_period_start": "2023-05-11T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -1.8000000000000007,
+          "probability_change_if_replaced_by_training_median": 0.9838709677419355
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 8.3,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_3d",
+          "observed_value": 0.5000000000000009,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_7d",
+          "observed_value": 0.7500000000000009,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "station_code": "SH001",
+        "feature_as_of_date": "2023-05-11T00:00:00",
+        "target_period_start": "2023-05-12T00:00:00"
+      },
+      "probability": 1.0,
+      "top_drivers": [
+        {
+          "feature": "distance_to_moderate_m",
+          "observed_value": -1.8000000000000007,
+          "probability_change_if_replaced_by_training_median": 0.9838709677419355
+        },
+        {
+          "feature": "current_level_m",
+          "observed_value": 8.3,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_1d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_3d",
+          "observed_value": 0.40000000000000036,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "level_change_7d",
+          "observed_value": 0.8000000000000007,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    }
+  ]
+}

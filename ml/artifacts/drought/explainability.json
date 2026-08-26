@@ -1,0 +1,448 @@
+{
+  "method": "model-agnostic permutation importance plus median-perturbation local drivers",
+  "shap_status": "NOT_APPLICABLE",
+  "global_feature_importance": [
+    {
+      "feature": "ndvi_last_anomaly_z_reference",
+      "importance_mean": 0.28454693779493573,
+      "importance_std": 0.010380626877765947
+    },
+    {
+      "feature": "ndvi_change_1",
+      "importance_mean": 0.042290833918943026,
+      "importance_std": 0.005291967772413344
+    },
+    {
+      "feature": "t2m_30d_c",
+      "importance_mean": 0.03840638762615909,
+      "importance_std": 0.01236884935035321
+    },
+    {
+      "feature": "ndvi_last",
+      "importance_mean": 0.03834538583911242,
+      "importance_std": 0.0056937426432625594
+    },
+    {
+      "feature": "evi_last",
+      "importance_mean": 0.01886938640335743,
+      "importance_std": 0.004703407418271537
+    },
+    {
+      "feature": "rain_7d_mm",
+      "importance_mean": 0.014376438094214997,
+      "importance_std": 0.003159514257785894
+    },
+    {
+      "feature": "rain_30d_mm",
+      "importance_mean": 0.013661518908065681,
+      "importance_std": 0.004172370686862962
+    },
+    {
+      "feature": "vegetation_valid_pixel_fraction",
+      "importance_mean": 0.010845877010085528,
+      "importance_std": 0.0065944242459854705
+    },
+    {
+      "feature": "t2m_7d_c",
+      "importance_mean": 0.007902932694007048,
+      "importance_std": 0.007911650346584267
+    },
+    {
+      "feature": "t2m_max_30d_c",
+      "importance_mean": 0.006892997145157749,
+      "importance_std": 0.0023583525484180095
+    },
+    {
+      "feature": "gwet_top_7d",
+      "importance_mean": 0.005691616517978393,
+      "importance_std": 0.007354523032002392
+    },
+    {
+      "feature": "gwet_top_30d",
+      "importance_mean": 0.0017247950851852674,
+      "importance_std": 0.001802348703456992
+    },
+    {
+      "feature": "rain_90d_mm",
+      "importance_mean": 0.0005916642207250966,
+      "importance_std": 0.0009008619076540192
+    },
+    {
+      "feature": "heavy_rain_days_30d",
+      "importance_mean": 4.988701225426088e-05,
+      "importance_std": 4.995165749308004e-05
+    },
+    {
+      "feature": "dry_spell_days",
+      "importance_mean": -7.314701507073658e-06,
+      "importance_std": 0.0011621413866011816
+    },
+    {
+      "feature": "gwet_root_30d",
+      "importance_mean": -0.0004934052612517448,
+      "importance_std": 0.00018730520383848846
+    }
+  ],
+  "local_explanations": [
+    {
+      "identifiers": {
+        "district_id": "SO2703",
+        "region_id": "SO27",
+        "feature_as_of_date": "2025-12-18T00:00:00",
+        "target_period_start": "2025-12-19T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -2.6709387756259875,
+          "probability_change_if_replaced_by_training_median": 0.5164835164835164
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 30.994666666666664,
+          "probability_change_if_replaced_by_training_median": 0.02571428571428569
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 12.57991524126053,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 19.90350620137321,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 62.005284155465674,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "district_id": "SO2702",
+        "region_id": "SO27",
+        "feature_as_of_date": "2025-12-18T00:00:00",
+        "target_period_start": "2025-12-19T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -2.316978283977949,
+          "probability_change_if_replaced_by_training_median": 0.35997171145685997
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 4.512522629369039,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 10.73941767226691,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 41.56513202567681,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "heavy_rain_days_30d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "district_id": "SO2402",
+        "region_id": "SO24",
+        "feature_as_of_date": "2025-12-18T00:00:00",
+        "target_period_start": "2025-12-19T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -2.408177427689293,
+          "probability_change_if_replaced_by_training_median": 0.5164835164835164
+        },
+        {
+          "feature": "t2m_30d_c",
+          "observed_value": 29.953,
+          "probability_change_if_replaced_by_training_median": 0.02571428571428569
+        },
+        {
+          "feature": "vegetation_valid_pixel_fraction",
+          "observed_value": 0.0529984721161191,
+          "probability_change_if_replaced_by_training_median": 0.02571428571428569
+        },
+        {
+          "feature": "ndvi_last",
+          "observed_value": 0.3324422522522523,
+          "probability_change_if_replaced_by_training_median": 0.003706836956931303
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 0.6803243921833116,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "district_id": "SO2403",
+        "region_id": "SO24",
+        "feature_as_of_date": "2025-12-18T00:00:00",
+        "target_period_start": "2025-12-19T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -2.8523850442198357,
+          "probability_change_if_replaced_by_training_median": 0.5164835164835164
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 0.9171179265171114,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 5.051375005318831,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 51.70300478630429,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "heavy_rain_days_30d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "district_id": "Unspecified",
+        "region_id": "SO22",
+        "feature_as_of_date": "2024-11-15T00:00:00",
+        "target_period_start": "2024-11-16T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -4.183882657255077,
+          "probability_change_if_replaced_by_training_median": 0.6710646041856233
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 7.800743570551276,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 39.0537554040784,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 85.15402471425477,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "heavy_rain_days_30d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "district_id": "SO2701",
+        "region_id": "SO27",
+        "feature_as_of_date": "2025-12-18T00:00:00",
+        "target_period_start": "2025-12-19T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -4.360309450790387,
+          "probability_change_if_replaced_by_training_median": 0.3831168831168831
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 3.4516476267597223,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 8.816755304369394,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 56.19826480763379,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "heavy_rain_days_30d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "district_id": "SO2306",
+        "region_id": "SO23",
+        "feature_as_of_date": "2023-05-24T00:00:00",
+        "target_period_start": "2023-05-25T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -2.8686302956407785,
+          "probability_change_if_replaced_by_training_median": 0.559299191374663
+        },
+        {
+          "feature": "ndvi_last",
+          "observed_value": 0.6508731308411214,
+          "probability_change_if_replaced_by_training_median": 0.02571428571428569
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 9.764268103767844,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 98.86169411231052,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 287.815799464652,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "district_id": "SO2701",
+        "region_id": "SO27",
+        "feature_as_of_date": "2023-08-12T00:00:00",
+        "target_period_start": "2023-08-13T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -4.045764945319258,
+          "probability_change_if_replaced_by_training_median": 0.6710646041856233
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 1.7058845830460991,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 12.53217824772264,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 67.64496429802284,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "heavy_rain_days_30d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "district_id": "SO2103",
+        "region_id": "SO21",
+        "feature_as_of_date": "2025-12-18T00:00:00",
+        "target_period_start": "2025-12-19T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -2.8675414062214117,
+          "probability_change_if_replaced_by_training_median": 0.6222527472527473
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 1.3827846527528747,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 9.461934367410867,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 50.00273535479009,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "heavy_rain_days_30d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    },
+    {
+      "identifiers": {
+        "district_id": "SO2301",
+        "region_id": "SO23",
+        "feature_as_of_date": "2023-11-16T00:00:00",
+        "target_period_start": "2023-11-17T00:00:00"
+      },
+      "probability": 0.7857142857142857,
+      "top_drivers": [
+        {
+          "feature": "ndvi_last_anomaly_z_reference",
+          "observed_value": -4.328936847931205,
+          "probability_change_if_replaced_by_training_median": 0.7688792688792688
+        },
+        {
+          "feature": "rain_7d_mm",
+          "observed_value": 42.41447427868843,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_30d_mm",
+          "observed_value": 157.68404856882992,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "rain_90d_mm",
+          "observed_value": 194.4132674850989,
+          "probability_change_if_replaced_by_training_median": 0.0
+        },
+        {
+          "feature": "heavy_rain_days_30d",
+          "observed_value": 0.0,
+          "probability_change_if_replaced_by_training_median": 0.0
+        }
+      ]
+    }
+  ]
+}

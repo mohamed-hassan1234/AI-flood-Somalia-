@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-25T13:06:15.258735+00:00",
-  "phase01_status": "PARTIAL",
-  "final_decision": "PHASE 01 NOT COMPLETE",
+  "generated_at": "2026-08-26T08:05:25.382356+00:00",
+  "phase01_status": "COMPLETE",
+  "final_decision": "READY FOR PHASE 02",
   "models": {
     "DROUGHT": {
-      "status": "BLOCKED",
+      "status": "READY",
       "window": {
         "start": "2015-01-01",
         "end": "2025-12-31",
@@ -12,13 +12,13 @@
       },
       "requirements": {
         "boundaries": true,
-        "rainfall": false,
+        "rainfall": true,
         "temperature_and_antecedent_wetness": true,
-        "vegetation": false
+        "vegetation": true
       }
     },
     "FLOOD": {
-      "status": "BLOCKED",
+      "status": "READY",
       "window": {
         "start": "2015-01-01",
         "end": "2025-12-31",
@@ -26,13 +26,13 @@
       },
       "requirements": {
         "boundaries": true,
-        "rainfall": false,
+        "rainfall": true,
         "temperature_and_antecedent_wetness": true,
         "river_observations_and_metadata": true
       }
     },
     "FOOD_SECURITY": {
-      "status": "BLOCKED",
+      "status": "READY",
       "window": {
         "start": "2017-01-01",
         "end": "2025-12-31",
@@ -40,9 +40,9 @@
       },
       "requirements": {
         "boundaries": true,
-        "rainfall": false,
+        "rainfall": true,
         "temperature_and_antecedent_wetness": true,
-        "vegetation": false,
+        "vegetation": true,
         "ipc_geographic_interpretation": true,
         "market_prices": true,
         "banadir_quarantine_and_point_mapping": true
@@ -54,7 +54,7 @@
       "name": "boundaries_structural_and_metadata",
       "passed": true,
       "evidence": {
-        "validated_at": "2026-08-25T12:50:45.843536+00:00",
+        "validated_at": "2026-08-26T07:58:15.655153+00:00",
         "archive": "data/som_admin_boundaries.geojson.zip",
         "levels": {
           "ADM0": {
@@ -119,48 +119,159 @@
     },
     {
       "name": "historical_chirps",
-      "passed": false,
+      "passed": true,
       "evidence": {
         "dataset": "CHIRPS v3 daily final rnl p25 district time-series",
-        "start": "2014-01-09",
-        "end": "2014-01-10",
-        "expected_days": 2,
-        "actual_days": 2,
+        "start": "2015-01-01",
+        "end": "2025-12-31",
+        "expected_days": 4018,
+        "actual_days": 4018,
         "districts": 91,
-        "daily_rows": 182,
-        "dekad_rows": 91,
+        "daily_rows": 365638,
+        "dekad_rows": 36036,
+        "monthly_rows": 12012,
+        "seasonal_rows": 4004,
         "missing_dates": [],
+        "missing_date_percentage": 0.0,
         "minimum_valid_pixel_fraction": 0.5,
         "missing_district_day_rows": 0,
         "negative_rainfall_rows": 0,
         "crs": "EPSG:4326",
         "source_resolution": "0.25 degree",
+        "source_nodata": null,
+        "invalid_value_rule": "exclude non-finite and negative source values",
         "source_url_template": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/p25/{YYYY}/chirps-v3.0.rnl.{YYYY.MM.DD}.tif",
-        "daily_sha256": "8b46988b42a3f97fdd47ee0f5d9545c5844b98fe2f09964c5227a0699f9c77bc",
-        "dekad_sha256": "aaedde4f39984e1587d2efe796fe819bdf5b890ad93e9eae8bfc0da4f08a8c5a",
-        "status": "COMPLETE"
+        "daily_sha256": "0da39c01b6cff4f965235cdae2f1270c3aaf096af46c962020505a4fde222bf9",
+        "dekad_sha256": "6eb12d83c0a110e29a159c3fe31304bdd03d0f6891e6e8746e7a4230dbb069ab",
+        "monthly_sha256": "a72bb6dc858215b8a49b6afe80c91dd324df0841988194aa26ac186e8377043a",
+        "seasonal_sha256": "8f3b802fc7a803d907e38ae13e6a44804681b9711963fcf0d2aacd9cd3db93b9",
+        "output_size_bytes": {
+          "daily": 101650755,
+          "dekad": 10479722,
+          "monthly": 3351375,
+          "seasonal": 952023
+        },
+        "status": "COMPLETE",
+        "source_raster_metadata": {
+          "driver": "GTiff",
+          "crs": "EPSG:4326",
+          "shape": [
+            480,
+            1440
+          ],
+          "resolution_degrees": [
+            0.25,
+            0.25
+          ],
+          "bounds": [
+            -180.0,
+            -60.0,
+            180.0,
+            60.0
+          ],
+          "dtype": "float32",
+          "nodata": null,
+          "compression": "LZW",
+          "inspection_source": "official first-day p25 GeoTIFF in the archive period"
+        }
       }
     },
     {
       "name": "historical_mod13q1",
-      "passed": false,
+      "passed": true,
       "evidence": {
         "dataset": "MOD13Q1 V061 Terra district time-series",
-        "start": "2015-01-17",
-        "end": "2015-01-17",
-        "periods": 1,
-        "items": 7,
+        "start": "2015-01-01",
+        "end": "2025-12-31",
+        "periods": 242,
+        "expected_nominal_periods": 253,
+        "missing_composite_start_dates": [
+          "2023-02-18",
+          "2024-08-12",
+          "2024-12-18",
+          "2025-07-12",
+          "2025-07-28",
+          "2025-08-13",
+          "2025-08-29",
+          "2025-09-14",
+          "2025-09-30",
+          "2025-10-16",
+          "2025-11-01"
+        ],
+        "source_period_missing_fraction": 0.043478260869565216,
+        "items": 1694,
         "districts": 91,
-        "rows": 91,
-        "missing_district_period_rows": 7,
+        "rows": 22022,
+        "missing_district_period_rows": 3306,
+        "missing_district_period_fraction": 0.1501226046680592,
+        "missing_non_banadir_district_period_fraction": 0.007075738707121023,
+        "missing_banadir_district_period_fraction": 0.730257116620753,
+        "missingness_interpretation": "Strict-QA nulls are retained. The concentration in small, densely urban Banadir districts is reported separately; no temporal or spatial values are imputed.",
         "minimum_valid_pixel_fraction": 0.0,
         "source_resolution": "250m",
         "derived_sampling_resolution": "approximately 1km via aligned nearest-neighbour COG overview",
         "temporal_resolution": "16-day composite",
         "scale": 0.0001,
+        "fill_and_valid_ranges": {
+          "NDVI": {
+            "fill": -3000,
+            "valid_min": -2000,
+            "valid_max": 10000
+          },
+          "EVI": {
+            "fill": -3000,
+            "valid_min": -2000,
+            "valid_max": 10000
+          },
+          "VI_Quality": {
+            "fill": 65535,
+            "interpretation": "bit field"
+          },
+          "pixel_reliability": {
+            "fill": -1,
+            "accepted": 0
+          }
+        },
         "qa_rule": "pixel_reliability=0 AND MODLAND_QA(bits0-1)=0 AND VI range -2000..10000",
-        "sha256": "7609255d4d28bd99db3466042a6864823b1a39f38c0d5dd189184b3093340c8e",
-        "status": "PARTIAL"
+        "sha256": "ef3fa1fd4b7ac05e8f683f8b81e48627b692648c5af396b8c7c633554cb0f2a5",
+        "size_bytes": 9396702,
+        "status": "COMPLETE",
+        "native_asset_metadata": {
+          "crs": "MODIS sinusoidal sphere radius 6371007.181m",
+          "native_pixel_size_m": 231.65635826375,
+          "tile_shape": [
+            4800,
+            4800
+          ],
+          "NDVI": {
+            "dtype": "int16",
+            "nodata": -3000,
+            "scale": 0.0001,
+            "valid_range": [
+              -2000,
+              10000
+            ]
+          },
+          "EVI": {
+            "dtype": "int16",
+            "nodata": -3000,
+            "scale": 0.0001,
+            "valid_range": [
+              -2000,
+              10000
+            ]
+          },
+          "VI_Quality": {
+            "dtype": "uint16",
+            "nodata": 65535,
+            "units": "bit field"
+          },
+          "pixel_reliability": {
+            "dtype": "int8",
+            "nodata": -1,
+            "units": "rank"
+          }
+        }
       }
     },
     {
@@ -351,7 +462,7 @@
       "name": "river_coordinates_thresholds_observations",
       "passed": true,
       "evidence": {
-        "validated_at": "2026-08-25T12:50:15.419141+00:00",
+        "validated_at": "2026-08-26T07:58:14.382659+00:00",
         "station_csv_count": 5,
         "station_json_count": 5,
         "expected_station_codes": [
@@ -439,7 +550,7 @@
       "name": "ipc_geographic_interpretation",
       "passed": true,
       "evidence": {
-        "generated_at": "2026-08-25T12:52:46.913280+00:00",
+        "generated_at": "2026-08-26T08:01:21.169865+00:00",
         "method_version": "1.0",
         "source_crs": "EPSG:4326",
         "area_calculation_crs": "EPSG:6933",
@@ -513,9 +624,9 @@
         "polygon_no_substantive_district_count": 0,
         "polygon_ambiguous_count": 44,
         "polygon_canonical_coverage_pct": {
-          "minimum": 91.8817474661838,
-          "maximum": 100.00000000000016,
-          "mean": 99.58964485885113
+          "minimum": 91.88174746618381,
+          "maximum": 100.00000000000014,
+          "mean": 99.58964485885116
         },
         "point_container_match_counts": {
           "1": 63
@@ -551,7 +662,7 @@
             "ipc_area_km2": 8583.559320066855,
             "district_intersections": 7,
             "substantive_district_intersections": 5,
-            "canonical_district_coverage_pct": 99.9933797766297,
+            "canonical_district_coverage_pct": 99.99337977662968,
             "ambiguous": true
           },
           {
@@ -587,7 +698,7 @@
             "ipc_area_km2": 41314.94712957957,
             "district_intersections": 7,
             "substantive_district_intersections": 5,
-            "canonical_district_coverage_pct": 99.99999999999999,
+            "canonical_district_coverage_pct": 100.0,
             "ambiguous": true
           },
           {
@@ -605,7 +716,7 @@
             "ipc_area_km2": 13166.442604864187,
             "district_intersections": 7,
             "substantive_district_intersections": 4,
-            "canonical_district_coverage_pct": 99.99999999999991,
+            "canonical_district_coverage_pct": 99.99999999999994,
             "ambiguous": true
           },
           {
@@ -614,7 +725,7 @@
             "ipc_area_km2": 21594.920083089793,
             "district_intersections": 7,
             "substantive_district_intersections": 5,
-            "canonical_district_coverage_pct": 91.8817474661838,
+            "canonical_district_coverage_pct": 91.88174746618381,
             "ambiguous": true
           },
           {
@@ -677,7 +788,7 @@
             "ipc_area_km2": 2309.767787629977,
             "district_intersections": 4,
             "substantive_district_intersections": 3,
-            "canonical_district_coverage_pct": 99.20563455038248,
+            "canonical_district_coverage_pct": 99.2056345503825,
             "ambiguous": true
           },
           {
@@ -695,7 +806,7 @@
             "ipc_area_km2": 19564.647530385882,
             "district_intersections": 10,
             "substantive_district_intersections": 3,
-            "canonical_district_coverage_pct": 99.50158419903643,
+            "canonical_district_coverage_pct": 99.50158419903642,
             "ambiguous": true
           },
           {
@@ -740,7 +851,7 @@
             "ipc_area_km2": 4313.6428736843945,
             "district_intersections": 4,
             "substantive_district_intersections": 3,
-            "canonical_district_coverage_pct": 100.00000000000001,
+            "canonical_district_coverage_pct": 100.0,
             "ambiguous": true
           },
           {
@@ -749,7 +860,7 @@
             "ipc_area_km2": 19658.13604437691,
             "district_intersections": 8,
             "substantive_district_intersections": 6,
-            "canonical_district_coverage_pct": 99.99102461417242,
+            "canonical_district_coverage_pct": 99.99102461417243,
             "ambiguous": true
           },
           {
@@ -785,7 +896,7 @@
             "ipc_area_km2": 24596.057605406517,
             "district_intersections": 5,
             "substantive_district_intersections": 4,
-            "canonical_district_coverage_pct": 99.99366186320435,
+            "canonical_district_coverage_pct": 99.99366186320434,
             "ambiguous": true
           },
           {
@@ -839,7 +950,7 @@
             "ipc_area_km2": 62787.61823962921,
             "district_intersections": 11,
             "substantive_district_intersections": 7,
-            "canonical_district_coverage_pct": 100.00000000000003,
+            "canonical_district_coverage_pct": 100.00000000000001,
             "ambiguous": true
           },
           {
@@ -857,7 +968,7 @@
             "ipc_area_km2": 4038.149958473196,
             "district_intersections": 3,
             "substantive_district_intersections": 3,
-            "canonical_district_coverage_pct": 100.0,
+            "canonical_district_coverage_pct": 99.99999999999999,
             "ambiguous": true
           },
           {
@@ -875,7 +986,7 @@
             "ipc_area_km2": 3132.5878411356166,
             "district_intersections": 8,
             "substantive_district_intersections": 5,
-            "canonical_district_coverage_pct": 99.7480590093611,
+            "canonical_district_coverage_pct": 99.74805900936109,
             "ambiguous": true
           },
           {
@@ -884,7 +995,7 @@
             "ipc_area_km2": 9173.96665182539,
             "district_intersections": 7,
             "substantive_district_intersections": 4,
-            "canonical_district_coverage_pct": 100.00000000000016,
+            "canonical_district_coverage_pct": 100.00000000000014,
             "ambiguous": true
           },
           {
@@ -893,7 +1004,7 @@
             "ipc_area_km2": 25.469018848723472,
             "district_intersections": 5,
             "substantive_district_intersections": 4,
-            "canonical_district_coverage_pct": 99.99245441505852,
+            "canonical_district_coverage_pct": 99.99245441505853,
             "ambiguous": true
           },
           {
@@ -902,7 +1013,7 @@
             "ipc_area_km2": 5164.890676683734,
             "district_intersections": 9,
             "substantive_district_intersections": 8,
-            "canonical_district_coverage_pct": 99.99999999999994,
+            "canonical_district_coverage_pct": 99.99999999999996,
             "ambiguous": true
           },
           {
@@ -920,7 +1031,7 @@
             "ipc_area_km2": 12249.00910252564,
             "district_intersections": 12,
             "substantive_district_intersections": 7,
-            "canonical_district_coverage_pct": 100.00000000000001,
+            "canonical_district_coverage_pct": 100.00000000000003,
             "ambiguous": true
           },
           {
@@ -929,7 +1040,7 @@
             "ipc_area_km2": 3946.768740462241,
             "district_intersections": 5,
             "substantive_district_intersections": 4,
-            "canonical_district_coverage_pct": 99.99394014596092,
+            "canonical_district_coverage_pct": 99.99394014596093,
             "ambiguous": true
           }
         ],
@@ -983,7 +1094,7 @@
         "district_count": 91,
         "region_count": 18,
         "districts_without_pixels": 0,
-        "zonal_population_sum": 19139579.592,
+        "zonal_population_sum": 19139579.797,
         "status": "PASS",
         "limitation": "WorldPop R2025A v1 is an alpha modeled estimate, not a census; boundary-version mismatch can affect border cells."
       }
@@ -1000,9 +1111,9 @@
     },
     {
       "name": "historical_manifests",
-      "passed": false,
+      "passed": true,
       "evidence": {
-        "rows": 6
+        "rows": 2
       }
     },
     {
@@ -1016,11 +1127,28 @@
       "name": "temporal_alignment_strategy",
       "passed": true,
       "evidence": "docs/temporal-alignment-strategy.md"
+    },
+    {
+      "name": "zero_corrupted_or_partial_source_files",
+      "passed": true,
+      "evidence": {
+        "zero_byte": 0,
+        "partial": 0,
+        "unreadable": 0
+      }
+    },
+    {
+      "name": "zero_unexplained_duplicate_downloads",
+      "passed": true,
+      "evidence": {
+        "exact_duplicate_groups": 0
+      }
+    },
+    {
+      "name": "model_overlap_periods",
+      "passed": true,
+      "evidence": "data/metadata/temporal_overlap_report.json"
     }
   ],
-  "genuine_blockers": [
-    "historical_chirps",
-    "historical_mod13q1",
-    "historical_manifests"
-  ]
+  "genuine_blockers": []
 }

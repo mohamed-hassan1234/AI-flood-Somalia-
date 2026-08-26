@@ -1,0 +1,86 @@
+{
+  "version": "1.1.0",
+  "track": "drought",
+  "features": [
+    {
+      "name": "rain_7d_mm",
+      "dtype": "float64",
+      "required": true
+    },
+    {
+      "name": "rain_30d_mm",
+      "dtype": "float64",
+      "required": true
+    },
+    {
+      "name": "rain_90d_mm",
+      "dtype": "float64",
+      "required": true
+    },
+    {
+      "name": "heavy_rain_days_30d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "dry_spell_days",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "t2m_7d_c",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "t2m_30d_c",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "t2m_max_30d_c",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "gwet_top_7d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "gwet_top_30d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "gwet_root_30d",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "ndvi_last",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "evi_last",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "ndvi_change_1",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "vegetation_valid_pixel_fraction",
+      "dtype": "float64",
+      "required": false
+    },
+    {
+      "name": "ndvi_last_anomaly_z_reference",
+      "dtype": "float64",
+      "required": false
+    }
+  ]
+}

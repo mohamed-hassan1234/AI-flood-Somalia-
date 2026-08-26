@@ -1,0 +1,92 @@
+{
+  "track": "drought",
+  "dataset_version": "1.1.0",
+  "created_at": "2026-08-26T10:36:00.527348+00:00",
+  "path": "data/model_ready/drought/drought_dataset_v1.1.0.csv.gz",
+  "sha256": "98e62e4a766e4d2c5b8397cda40ffb5c1fb11f82ba779503e7fac92a68226c42",
+  "size_bytes": 1922343,
+  "rows": 17433,
+  "features": [
+    "rain_7d_mm",
+    "rain_30d_mm",
+    "rain_90d_mm",
+    "heavy_rain_days_30d",
+    "dry_spell_days",
+    "t2m_7d_c",
+    "t2m_30d_c",
+    "t2m_max_30d_c",
+    "gwet_top_7d",
+    "gwet_top_30d",
+    "gwet_root_30d",
+    "ndvi_last",
+    "evi_last",
+    "ndvi_change_1",
+    "vegetation_valid_pixel_fraction",
+    "ndvi_last_anomaly_z_reference"
+  ],
+  "feature_count": 16,
+  "target_definition": {
+    "target_name": "agricultural_vegetation_stress_next_composite",
+    "target_type": "binary",
+    "unit_of_prediction": "canonical district",
+    "geography": "91 OCHA COD-AB v03 district features; unknown strict-QA targets excluded",
+    "prediction_horizon": "next MOD13Q1 16-day composite",
+    "label_source": "MOD13Q1 V061 strict-QA NDVI standardized against the fixed 2015-2020 district/seasonal-slot reference climatology",
+    "positive_definition": "future composite reference-period NDVI anomaly z-score <= -1.0",
+    "negative_definition": "future composite reference-period NDVI anomaly z-score > -1.0",
+    "unknown_definition": "future composite absent or strict-QA NDVI is null",
+    "minimum_history": "one prior available composite and 90 days of climate history",
+    "exclusion_rules": [
+      "unknown future target",
+      "feature date after feature_as_of_date"
+    ],
+    "leakage_controls": [
+      "future vegetation is label only; reference climatology is fitted only from the outer training era",
+      "last vegetation feature composite must have ended on or before feature_as_of_date",
+      "all rainfall and POWER windows end on feature_as_of_date"
+    ],
+    "interpretation": "agricultural drought condition; not humanitarian impact"
+  },
+  "temporal_coverage": {
+    "start": "2015-01-17",
+    "end": "2025-12-19"
+  },
+  "geographic_coverage": {
+    "district_id": 88,
+    "region_id": 18
+  },
+  "target_counts": {
+    "positive": 2219,
+    "negative": 15214,
+    "positive_rate": 0.1272873286296105
+  },
+  "feature_missing_fraction": {
+    "rain_7d_mm": 0.0,
+    "rain_30d_mm": 0.00476108529799805,
+    "rain_90d_mm": 0.02363333906958068,
+    "heavy_rain_days_30d": 0.00476108529799805,
+    "dry_spell_days": 0.0,
+    "t2m_7d_c": 0.0,
+    "t2m_30d_c": 0.0,
+    "t2m_max_30d_c": 0.0,
+    "gwet_top_7d": 0.0,
+    "gwet_top_30d": 0.0,
+    "gwet_root_30d": 0.0,
+    "ndvi_last": 0.022027189812424713,
+    "evi_last": 0.022027189812424713,
+    "ndvi_change_1": 0.04009636895542936,
+    "vegetation_valid_pixel_fraction": 0.0,
+    "ndvi_last_anomaly_z_reference": 0.023575976596110826
+  },
+  "maximum_feature_missing_fraction": 0.04009636895542936,
+  "source_lineage": [
+    "data/metadata/historical_archive_manifest.csv",
+    "data/metadata/nasa_power_history_manifest.json",
+    "data/metadata/source_registry.json",
+    "data/metadata/geographic_crosswalk.csv"
+  ],
+  "notes": {
+    "label_unknown_rows": 3546,
+    "excluded_non_16_day_gaps": 1043
+  }
+}

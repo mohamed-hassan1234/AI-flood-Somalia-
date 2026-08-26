@@ -1,0 +1,91 @@
+{
+  "track": "food_security",
+  "dataset_version": "1.1.0",
+  "created_at": "2026-08-26T10:36:15.904986+00:00",
+  "path": "data/model_ready/food_security/food_security_dataset_v1.1.0.csv.gz",
+  "sha256": "f7c26bf2757210b69c298c33cdff421011167e26aee2f7acdd2799c7ce323904",
+  "size_bytes": 38885,
+  "rows": 378,
+  "features": [
+    "rain_30d_mm",
+    "rain_90d_mm",
+    "dry_days_30d",
+    "t2m_30d_c",
+    "t2m_max_30d_c",
+    "gwet_top_30d",
+    "gwet_root_30d",
+    "ndvi_last",
+    "ndvi_change",
+    "vegetation_valid_pixel_fraction",
+    "market_usdkg_90d_median",
+    "market_price_change_previous_90d",
+    "market_price_anomaly_365d",
+    "previous_ipc3plus_percentage",
+    "log_region_population"
+  ],
+  "feature_count": 15,
+  "target_definition": {
+    "target_name": "regional_crisis_or_worse_population_burden_20pct",
+    "target_type": "binary",
+    "unit_of_prediction": "canonical OCHA region matched to IPC Level 1",
+    "geography": "18 canonical regions; historical IPC aliases resolved by the Phase 01 crosswalk",
+    "prediction_horizon": "30 days before the observed current IPC validity period starts",
+    "label_source": "IPC Level 1 current assessment Phase 3+ population percentage",
+    "positive_definition": "observed current IPC Phase 3+ percentage >= 0.20",
+    "negative_definition": "observed current IPC Phase 3+ percentage < 0.20",
+    "unknown_definition": "missing current Phase 3+ row or unresolved region",
+    "minimum_history": "90 days of environmental data before as-of date",
+    "exclusion_rules": [
+      "IPC first/second projections",
+      "unresolved geography",
+      "target period after 2025-12-31"
+    ],
+    "leakage_controls": [
+      "target assessment fields are never predictors",
+      "previous IPC is allowed only when its validity end is on or before feature_as_of_date",
+      "MODIS composites must have ended before feature_as_of_date",
+      "market and climate windows end before feature_as_of_date"
+    ],
+    "interpretation": "regional high Crisis-or-Worse burden; not a district IPC classification"
+  },
+  "temporal_coverage": {
+    "start": "2017-01-01",
+    "end": "2025-07-01"
+  },
+  "geographic_coverage": {
+    "region_id": 18
+  },
+  "target_counts": {
+    "positive": 157,
+    "negative": 221,
+    "positive_rate": 0.41534391534391535
+  },
+  "feature_missing_fraction": {
+    "rain_30d_mm": 0.0,
+    "rain_90d_mm": 0.0,
+    "dry_days_30d": 0.0,
+    "t2m_30d_c": 0.0,
+    "t2m_max_30d_c": 0.0,
+    "gwet_top_30d": 0.0,
+    "gwet_root_30d": 0.0,
+    "ndvi_last": 0.0026455026455026454,
+    "ndvi_change": 0.005291005291005291,
+    "vegetation_valid_pixel_fraction": 0.0,
+    "market_usdkg_90d_median": 0.30687830687830686,
+    "market_price_change_previous_90d": 0.3201058201058201,
+    "market_price_anomaly_365d": 0.30687830687830686,
+    "previous_ipc3plus_percentage": 0.047619047619047616,
+    "log_region_population": 0.0
+  },
+  "maximum_feature_missing_fraction": 0.3201058201058201,
+  "source_lineage": [
+    "data/metadata/historical_archive_manifest.csv",
+    "data/metadata/nasa_power_history_manifest.json",
+    "data/metadata/source_registry.json",
+    "data/metadata/geographic_crosswalk.csv"
+  ],
+  "notes": {
+    "unresolved_target_rows": 0,
+    "ipc_projection_rows_excluded": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "frozen_before_final_test": true,
+  "principle": "Use the simplest candidate that meets operational usefulness; advanced ML need not be selected.",
+  "common": {
+    "minimum_positive_train_validation": 30,
+    "minimum_negative_train_validation": 30,
+    "minimum_positive_test": 10,
+    "minimum_negative_test": 10,
+    "minimum_backtest_folds": 3,
+    "maximum_calibrated_brier_degradation": 0.02,
+    "require_no_leakage": true,
+    "require_serialization_round_trip": true,
+    "require_global_and_local_explanations": true
+  },
+  "drought": {
+    "minimum_rows": 1000,
+    "minimum_test_pr_auc_relative_to_prevalence": 1.0,
+    "minimum_test_recall": 0.30,
+    "maximum_false_alarm_rate": 0.35
+  },
+  "flood": {
+    "minimum_rows": 1000,
+    "minimum_test_pr_auc_relative_to_prevalence": 1.0,
+    "minimum_test_recall": 0.50,
+    "maximum_false_alarm_rate": 0.25,
+    "require_station_breakdown": true
+  },
+  "food_security": {
+    "minimum_rows": 150,
+    "minimum_test_pr_auc_relative_to_prevalence": 1.0,
+    "minimum_test_recall": 0.40,
+    "maximum_false_alarm_rate": 0.40
+  }
+}

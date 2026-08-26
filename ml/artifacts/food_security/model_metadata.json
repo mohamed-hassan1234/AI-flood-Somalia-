@@ -1,0 +1,57 @@
+{
+  "model_id": "food_security-early-warning",
+  "model_version": "1.1.0",
+  "target_version": "1.1.0",
+  "feature_version": "1.1.0",
+  "algorithm": "rule",
+  "features": [
+    "rain_30d_mm",
+    "rain_90d_mm",
+    "dry_days_30d",
+    "t2m_30d_c",
+    "t2m_max_30d_c",
+    "gwet_top_30d",
+    "gwet_root_30d",
+    "ndvi_last",
+    "ndvi_change",
+    "vegetation_valid_pixel_fraction",
+    "market_usdkg_90d_median",
+    "market_price_change_previous_90d",
+    "market_price_anomaly_365d",
+    "previous_ipc3plus_percentage",
+    "log_region_population"
+  ],
+  "training_period": [
+    2017,
+    2021
+  ],
+  "validation_period": [
+    2022,
+    2023
+  ],
+  "test_period": [
+    2024,
+    2025
+  ],
+  "calibration_method": "identity",
+  "operating_threshold": 0.53,
+  "risk_thresholds": {
+    "watch": 0.265,
+    "warning": 0.53,
+    "severe": 0.765
+  },
+  "artifact_path": "ml/artifacts/food_security/food_security_model_v1.1.0.joblib",
+  "artifact_checksum_sha256": "754a7f00d72f182fa1cf5c3f2b3829c6ca4f487e2a1b632acb4d7d10a5b2c2e0",
+  "artifact_size_bytes": 1521,
+  "serialization_round_trip_passed": true,
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3",
+    "random_seed": 20260826
+  },
+  "selection_reason": "Neither statistical nor advanced ML improved validation utility by 0.02; the deterministic operational baseline was retained."
+}

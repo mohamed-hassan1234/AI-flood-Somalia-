@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-25T12:28:19.389614+00:00",
+  "generated_at": "2026-08-26T08:05:24.401684+00:00",
   "data_root": "C:\\Users\\hp\\Desktop\\Somalia Ai\\data",
-  "source_file_count": 115,
-  "total_source_bytes": 1001843780,
+  "source_file_count": 188,
+  "total_source_bytes": 1058333819,
   "available_python_modules": {
     "h5py": true,
     "openpyxl": true,
@@ -146,7 +146,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 132.0751953125,
-        "sample_mean": -7192.7060546875,
+        "sample_mean": -7192.705078125,
         "sample_valid_fraction": 1.0
       }
     },
@@ -206,7 +206,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 98.14385986328125,
-        "sample_mean": -7192.78515625,
+        "sample_mean": -7192.78564453125,
         "sample_valid_fraction": 1.0
       }
     },
@@ -266,7 +266,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 211.4727783203125,
-        "sample_mean": -7192.6767578125,
+        "sample_mean": -7192.67724609375,
         "sample_valid_fraction": 1.0
       }
     },
@@ -326,7 +326,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 107.38404083251953,
-        "sample_mean": -7192.6728515625,
+        "sample_mean": -7192.673828125,
         "sample_valid_fraction": 1.0
       }
     },
@@ -446,7 +446,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 130.51597595214844,
-        "sample_mean": -7192.52490234375,
+        "sample_mean": -7192.525390625,
         "sample_valid_fraction": 1.0
       }
     },
@@ -566,7 +566,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 172.3089141845703,
-        "sample_mean": -7192.5166015625,
+        "sample_mean": -7192.51708984375,
         "sample_valid_fraction": 1.0
       }
     },
@@ -1166,7 +1166,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 164.03598022460938,
-        "sample_mean": -7192.52978515625,
+        "sample_mean": -7192.5302734375,
         "sample_valid_fraction": 1.0
       }
     },
@@ -1226,7 +1226,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 155.2284698486328,
-        "sample_mean": -7192.5849609375,
+        "sample_mean": -7192.58544921875,
         "sample_valid_fraction": 1.0
       }
     },
@@ -1346,7 +1346,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 124.68303680419922,
-        "sample_mean": -7192.6552734375,
+        "sample_mean": -7192.65576171875,
         "sample_valid_fraction": 1.0
       }
     },
@@ -1406,7 +1406,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 184.24046325683594,
-        "sample_mean": -7192.7001953125,
+        "sample_mean": -7192.69970703125,
         "sample_valid_fraction": 1.0
       }
     },
@@ -1466,7 +1466,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 127.20206451416016,
-        "sample_mean": -7192.6513671875,
+        "sample_mean": -7192.65234375,
         "sample_valid_fraction": 1.0
       }
     },
@@ -1586,7 +1586,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 106.843994140625,
-        "sample_mean": -7192.6669921875,
+        "sample_mean": -7192.66748046875,
         "sample_valid_fraction": 1.0
       }
     },
@@ -1826,7 +1826,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 191.2887420654297,
-        "sample_mean": -7192.5126953125,
+        "sample_mean": -7192.51318359375,
         "sample_valid_fraction": 1.0
       }
     },
@@ -1886,7 +1886,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 170.86102294921875,
-        "sample_mean": -7192.59765625,
+        "sample_mean": -7192.59716796875,
         "sample_valid_fraction": 1.0
       }
     },
@@ -2246,7 +2246,7 @@
         },
         "sample_min": -9999.0,
         "sample_max": 185.59898376464844,
-        "sample_mean": -7192.55712890625,
+        "sample_mean": -7192.5576171875,
         "sample_valid_fraction": 1.0
       }
     },
@@ -2383,6 +2383,1086 @@
       "inspection": {
         "readable": null,
         "note": "inventory and checksum only"
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latm00.500_lonp041.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784419,
+      "modified_utc": "2026-08-25T12:43:55.034538+00:00",
+      "sha256": "a1bb9658d903d71b339adf4c6c0eb0778e1243db0ee4b5e3714645ae062c3e49",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latm01.000_lonp041.250_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784602,
+      "modified_utc": "2026-08-25T12:43:55.037539+00:00",
+      "sha256": "a6fdad68eac0d8e4077e99a6582dd62ecc8612d799df2d65cbc49f09097d11bc",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp00.000_lonp042.500_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784196,
+      "modified_utc": "2026-08-25T12:43:54.863233+00:00",
+      "sha256": "675fca482a3965a9667e295a6d2f8d50910b22a1fae1035be6f5405b2dc34c59",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp00.500_lonp041.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784490,
+      "modified_utc": "2026-08-25T12:43:54.885411+00:00",
+      "sha256": "e2e88c8dfc2d9d8e99ba38a6fde3c2f534c788e664d4aa4a0f19def7b67f3de8",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp00.500_lonp043.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784367,
+      "modified_utc": "2026-08-25T12:43:57.347008+00:00",
+      "sha256": "76355f08ed0cc1f5dc1d491357875a1028a154a8f561df401e644fa93b574e35",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp01.000_lonp043.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784907,
+      "modified_utc": "2026-08-25T12:43:57.124943+00:00",
+      "sha256": "30907991dd8581c5d9f99b84ff6476ee0d59bf0c408bf40fafc9cbf63b64b481",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp01.000_lonp043.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 783765,
+      "modified_utc": "2026-08-25T12:43:57.537759+00:00",
+      "sha256": "6d6f773eeb3036e53923d6525f78bb31e24901c374da4ab3a0470bbf8f13d971",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp01.500_lonp041.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784185,
+      "modified_utc": "2026-08-25T12:43:57.918817+00:00",
+      "sha256": "45da4a68790aced56ec861c1562226b6130a3dbe9965a0be59c295fa73b71f1f",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp01.500_lonp043.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784892,
+      "modified_utc": "2026-08-25T12:43:59.354434+00:00",
+      "sha256": "7414247dc114dfbfcd67fc8a7d97c7b066feb51f53bcfff19c1ede505ce68253",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp01.500_lonp044.375_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785006,
+      "modified_utc": "2026-08-25T12:43:59.077288+00:00",
+      "sha256": "7c81a46ab238bceba871c7c0ea1adb66d8ecedd8c14d9198bf9a6cbdeb078b8f",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp02.000_lonp041.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784906,
+      "modified_utc": "2026-08-25T12:43:59.770321+00:00",
+      "sha256": "55e959ef745141f9990ff0b614fc611e8b55bca3dc78daffd24c5c9422960961",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp02.000_lonp042.500_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784731,
+      "modified_utc": "2026-08-25T12:43:59.506132+00:00",
+      "sha256": "54f0d47dcd3115db8e63f5115bcfaf26ce8dad0d3296ad147daaf60b551d1637",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp02.000_lonp044.375_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 782761,
+      "modified_utc": "2026-08-25T12:44:01.607934+00:00",
+      "sha256": "3f599070dd6d00dc39f256fc6e8e4bc31f4c186b639080da8a5f2019848ebf25",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp02.000_lonp045.000_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784542,
+      "modified_utc": "2026-08-25T12:44:01.336818+00:00",
+      "sha256": "2bfb4c68c5043a031bdb9b93265fa6806282bd817765c44ac0ce13892ad2c808",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp02.000_lonp045.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784375,
+      "modified_utc": "2026-08-25T12:44:01.816249+00:00",
+      "sha256": "47da67c0f27824fed285af5f0c5e0dc8cfb548eba0326f8e20ed91a575ca3f22",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp02.500_lonp043.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 781872,
+      "modified_utc": "2026-08-25T12:44:02.307039+00:00",
+      "sha256": "03f11d0105ef43c8f841f74985cd408597fd2968c154a043f0401dc2abaea5a3",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp02.500_lonp045.000_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 782957,
+      "modified_utc": "2026-08-25T12:44:03.123976+00:00",
+      "sha256": "4f5121dd97bb9b9964b35401e53aa2d61dd5b3d9a2de685f3b27507ee1aa1ef9",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp02.500_lonp045.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784658,
+      "modified_utc": "2026-08-25T12:44:03.367283+00:00",
+      "sha256": "71424a99897406d32ec46339fb4acc3b2a63a7ebb7d230787c2ff585e9157945",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.000_lonp041.250_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 783262,
+      "modified_utc": "2026-08-25T12:44:04.048891+00:00",
+      "sha256": "fced9a684a798d0737bd37fa9f529955e226778039749546bce973b753a3bce2",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.000_lonp042.500_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784523,
+      "modified_utc": "2026-08-25T12:44:03.858948+00:00",
+      "sha256": "2be99ba6d0015526e00cdf27ed36258ee6aebaf58b6a7f6b59beb62c77fead15",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.000_lonp043.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 783949,
+      "modified_utc": "2026-08-25T12:44:05.283367+00:00",
+      "sha256": "4da9e84080c3d1ffb6bd50ac60f2afc7b841077d163868a0b029f705e81b2e6f",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.000_lonp043.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784432,
+      "modified_utc": "2026-08-25T12:44:04.924874+00:00",
+      "sha256": "e5f2742b9f841d1a010caf0efc13813472398015c7fdfa30a86dc469e8ae1ca1",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.000_lonp045.000_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 783314,
+      "modified_utc": "2026-08-25T12:44:05.577136+00:00",
+      "sha256": "6421674046f97f2c944057c7da732c7ef52e7cfad9f9f5fd6aa1b126b0e7dbef",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.000_lonp045.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784365,
+      "modified_utc": "2026-08-25T12:44:06.668635+00:00",
+      "sha256": "0d45937d4d08321c762c218bd7c34405d39f439544b8cc73153f247da8492640",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.000_lonp046.250_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784973,
+      "modified_utc": "2026-08-25T12:44:07.145729+00:00",
+      "sha256": "05c0277a342895e28da95045ddf2a729e1ea06ad8a421c47f24911875961d1ae",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.500_lonp041.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784695,
+      "modified_utc": "2026-08-25T12:44:07.336746+00:00",
+      "sha256": "5e12a954200e2a246ab0f5cd6765b62a44b5dd1146e8fd4f85067d1f9b09e9e4",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.500_lonp045.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784914,
+      "modified_utc": "2026-08-25T12:44:07.338747+00:00",
+      "sha256": "ad914415302dee307fef23610d2ac637fae97313185ff58b6789567aa39895d5",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp03.500_lonp046.250_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784075,
+      "modified_utc": "2026-08-25T12:44:09.173325+00:00",
+      "sha256": "288174eb9dc61d2a4bc727ae78554e30dc1eea33aa27f24fc73d14e1d4750621",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp04.000_lonp041.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784324,
+      "modified_utc": "2026-08-25T12:44:09.786280+00:00",
+      "sha256": "8cad2ed6a1f551a95ca176f4a103a9769baffcd2d9997750aed907451e15018b",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp04.000_lonp042.500_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784716,
+      "modified_utc": "2026-08-25T12:44:09.749638+00:00",
+      "sha256": "54b76f15dbf5fb2a822d6d17fb17d7832963aff9b58b59fcc8697e69823a0d36",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp04.000_lonp043.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784139,
+      "modified_utc": "2026-08-25T12:44:09.862609+00:00",
+      "sha256": "e113a83bbdb7d3f08905cb3c700a08da37448ff5766b2056918d4d4358d761a0",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp04.000_lonp043.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784729,
+      "modified_utc": "2026-08-25T12:44:11.585739+00:00",
+      "sha256": "9f749344cd7b952286de7283821dab8eb3d2d0321b623c90a8e1430d8f5adca6",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp04.000_lonp044.375_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784788,
+      "modified_utc": "2026-08-25T12:44:12.045183+00:00",
+      "sha256": "b7afed2e6cbc88fc24e454052b4d45242d807ccc2e866df478bc5a7195ab4c15",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp04.000_lonp045.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784620,
+      "modified_utc": "2026-08-25T12:44:12.407854+00:00",
+      "sha256": "a51414938bd880d761701ced7361724e6b8314bba54fbce080e10279a98a53d0",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp04.000_lonp046.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784311,
+      "modified_utc": "2026-08-25T12:44:12.676026+00:00",
+      "sha256": "5d77a55a89c53aa542ece44fe45f2740a3bd91185a71ad9ae9833dccacce9a2a",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp04.500_lonp043.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785054,
+      "modified_utc": "2026-08-25T12:44:14.044400+00:00",
+      "sha256": "40703884343082fac2df65a60e5c2d1dcb5359dc1201141f505d6727543a7856",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp04.500_lonp046.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 782896,
+      "modified_utc": "2026-08-25T12:44:13.571959+00:00",
+      "sha256": "875fa0ecc4473426e170be21f4024f0fd2676b16373fe42fb21c2c4680331187",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp05.000_lonp045.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784763,
+      "modified_utc": "2026-08-25T12:44:14.619183+00:00",
+      "sha256": "762cfdb2ec1697470d8b2c9a525007595744f08b6671adef922b6f32203cd0b1",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp05.000_lonp048.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 783074,
+      "modified_utc": "2026-08-25T12:44:14.841242+00:00",
+      "sha256": "70544582c115488552df3435afa4b8dabc0437c4529e8660c0fbfe7256b57255",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp05.500_lonp046.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785257,
+      "modified_utc": "2026-08-25T12:44:15.132984+00:00",
+      "sha256": "6c4f9f8a74a52555420fc1c3a4caa622ab7a286b3c003abef86723d2728d7eda",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp06.000_lonp046.250_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784921,
+      "modified_utc": "2026-08-25T12:44:15.914336+00:00",
+      "sha256": "b91959bcaf34ba8bf05e85d68ba5cfb99b2b8a65bf46f4c68177bc627716bd16",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp06.000_lonp046.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784976,
+      "modified_utc": "2026-08-25T12:44:16.843474+00:00",
+      "sha256": "cf339fbcdbc819eb4ae4c19b43a5726e1f100612d6e80cc923c43f0e1dbca9f0",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp06.000_lonp048.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785254,
+      "modified_utc": "2026-08-25T12:44:16.518839+00:00",
+      "sha256": "c89938bd5d6ad95f0c795012b50509bbbce80e4f1e3523ba76d2723f4fd1f033",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp07.000_lonp047.500_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785149,
+      "modified_utc": "2026-08-25T12:44:16.652087+00:00",
+      "sha256": "52dee151fa0afcff070002a94962cecffa02fc63e91c40a463bb2111d24f9e71",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp07.000_lonp048.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784797,
+      "modified_utc": "2026-08-25T12:44:18.691242+00:00",
+      "sha256": "f0a726b6f26bad75e27d0740e5fff9fc9ad56904874daea02cfaa7c7dd3f060a",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp07.000_lonp048.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784926,
+      "modified_utc": "2026-08-25T12:44:18.681433+00:00",
+      "sha256": "f8e7cf9b427636265c99e4a1bc86be586fdd173c9cf4a3406e5457338f388e23",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp08.000_lonp048.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784855,
+      "modified_utc": "2026-08-25T12:44:18.975034+00:00",
+      "sha256": "391644d6e21cb76a9102a907dd8562f0c7cc351214b838439404cb9973ab1138",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp08.000_lonp049.375_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 783028,
+      "modified_utc": "2026-08-25T12:44:19.022119+00:00",
+      "sha256": "031efac30eb9426f482cfb95a53a89f5f0c41e9a770bf441af4c21153c8f35e0",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp08.500_lonp046.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785124,
+      "modified_utc": "2026-08-25T12:44:21.185951+00:00",
+      "sha256": "95f538e8bfc451766e01fed3aa1ec30fea2722f50e27c020c0bcbe8f066d1a42",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp08.500_lonp047.500_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785075,
+      "modified_utc": "2026-08-25T12:44:20.487548+00:00",
+      "sha256": "70f74c6dec03e3a67366c10afa50a1b9ad3d249656ac713ebcf789f15af08def",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp08.500_lonp048.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785130,
+      "modified_utc": "2026-08-25T12:44:21.038857+00:00",
+      "sha256": "d34fe8c20d233fb561c6b79f8c29c67ab4d0a00cad996688a1b3825f355a2dd6",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp09.000_lonp045.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784571,
+      "modified_utc": "2026-08-25T12:44:21.029334+00:00",
+      "sha256": "d82af2e824a5599be955fffc8df6e2ff25014df6b29f5a45c7545b54323001a0",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp09.000_lonp047.500_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785157,
+      "modified_utc": "2026-08-25T12:44:22.697433+00:00",
+      "sha256": "955d2b6075e8e35da2291e270cd34b8dddbd96621e2028b528b7e265bf57a583",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp09.000_lonp048.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785315,
+      "modified_utc": "2026-08-25T12:44:22.775874+00:00",
+      "sha256": "56a7bec5222e5e726a2be45e0cef56a7833aedc9fd3718448236aff2cb0aae54",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp09.000_lonp050.000_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785511,
+      "modified_utc": "2026-08-25T12:44:23.337772+00:00",
+      "sha256": "2742a228a843d59e27306337e78b1ff6eebf401c5f1acea956a18c7872848155",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp09.500_lonp044.375_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784692,
+      "modified_utc": "2026-08-25T12:44:23.765064+00:00",
+      "sha256": "1ed5fabd91fd2ece9120d0c40a69ad87408f957bc59be3641e801a2b89889bc4",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp09.500_lonp045.000_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784090,
+      "modified_utc": "2026-08-25T12:44:24.992716+00:00",
+      "sha256": "bcaa6c65208312da31377137032e3c07a169a782f29a6d0c112ab73a65cf092a",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp09.500_lonp046.250_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785070,
+      "modified_utc": "2026-08-25T12:44:25.102497+00:00",
+      "sha256": "61549e5354914c3847c0577d3d81df39edd6f80b01628e7fa1d1e72b72c06327",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp09.500_lonp049.375_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785276,
+      "modified_utc": "2026-08-25T12:44:25.479744+00:00",
+      "sha256": "18a62eea0c2ec5607c5f17b7c27abf886772fbdf23e0e7a3fab0d78087a304fc",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp10.000_lonp043.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 783552,
+      "modified_utc": "2026-08-25T12:44:26.218412+00:00",
+      "sha256": "4faccc7163d95d8e3114e7a119958eff70842e4d1dfeda2c1fc8be2a367c34ac",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp10.000_lonp043.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784821,
+      "modified_utc": "2026-08-25T12:44:27.187977+00:00",
+      "sha256": "231560bfd7cb95341cba0fd93df2611bbc24ffa8d58072b6659818d5c6fbac2e",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp10.000_lonp045.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785085,
+      "modified_utc": "2026-08-25T12:44:27.005803+00:00",
+      "sha256": "ad92d1258152e15bbba83b5c4a146c2ed2728cd232f06d4261fb82e8e43e55bf",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp10.000_lonp046.875_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784986,
+      "modified_utc": "2026-08-25T12:44:27.642605+00:00",
+      "sha256": "ebf5f53f354f049ab91ba289ca233e35b75f3ee2d0ce514761e0bfae40c08b0f",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp10.500_lonp043.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784922,
+      "modified_utc": "2026-08-25T12:44:28.426765+00:00",
+      "sha256": "76ce60777e0010a3daf3e29e230180d0c208f5f66493e39457d1e90e03f3bad8",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp10.500_lonp045.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785189,
+      "modified_utc": "2026-08-25T12:44:29.362083+00:00",
+      "sha256": "5f71e1b6e9ef60b1d769ad5a10ace2567dffdc0134b13bbe9e39a02594a3be23",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp10.500_lonp048.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784807,
+      "modified_utc": "2026-08-25T12:44:28.698762+00:00",
+      "sha256": "5f559033677ec5f255d0687e559bd0837c716a4841eb7f5f0a581c62f3eef150",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp10.500_lonp048.750_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785297,
+      "modified_utc": "2026-08-25T12:44:30.870507+00:00",
+      "sha256": "c3631d3682aaff1d14f79710a9b963889582bd8f7a9d770b0930f0969b71d511",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp10.500_lonp050.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785403,
+      "modified_utc": "2026-08-25T12:44:30.760463+00:00",
+      "sha256": "d7fe41ce70cc5c02a9b2cc12d865dc2d2a0d7bd8acb227432da73229da963fd8",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp11.000_lonp043.125_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 785027,
+      "modified_utc": "2026-08-25T12:44:31.125044+00:00",
+      "sha256": "ae9d2df779965ef6e64f19a1349315eb9dcd2f58dd458eb8e218d453f222cd8b",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp11.000_lonp049.375_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784774,
+      "modified_utc": "2026-08-25T12:44:31.381454+00:00",
+      "sha256": "6aa7aede63b4a45979e27d1c83c996f0d555e97c994657accce6e8bcc6075265",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp11.000_lonp050.000_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784898,
+      "modified_utc": "2026-08-25T12:44:33.121986+00:00",
+      "sha256": "c47850470a19b27499635fed36adfbf54182b7a442803f956a44b4cdf13444d6",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
+      }
+    },
+    {
+      "path": "raw/climate/nasa_power_merra2/nasa_power_daily_latp11.500_lonp050.625_20000101_20251231.json",
+      "extension": ".json",
+      "size_bytes": 784566,
+      "modified_utc": "2026-08-25T12:44:32.943371+00:00",
+      "sha256": "1d195c8a2438dea51bb895a009183e00f53559d90489e8e1f6c19aa1ff5f0471",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": "2000-01-01",
+      "is_recognized_data_format": true,
+      "inspection": {
+        "readable": true,
+        "valid_feature_collection": false
       }
     },
     {
@@ -4885,9 +5965,24 @@
     {
       "path": "README.md",
       "extension": ".md",
-      "size_bytes": 2498,
-      "modified_utc": "2026-08-25T12:25:25.279803+00:00",
-      "sha256": "ced3d17411f2a44d8b4ffe3fb26fc953925cf4858a3ae4ce799a7d92535b9357",
+      "size_bytes": 5363,
+      "modified_utc": "2026-08-25T13:48:44.229885+00:00",
+      "sha256": "c024616b9f181ff7f7ddb404e1c3b6917961b773adb8f85ad53d010f5a47444d",
+      "zero_byte": false,
+      "suspected_partial_download": false,
+      "date_from_filename": null,
+      "is_recognized_data_format": false,
+      "inspection": {
+        "readable": null,
+        "note": "inventory and checksum only"
+      }
+    },
+    {
+      "path": "requirements-phase01.txt",
+      "extension": ".txt",
+      "size_bytes": 126,
+      "modified_utc": "2026-08-25T13:43:25.667393+00:00",
+      "sha256": "fcbde3682bc2bd72009d53bcd84cb0c51d77ae1a666aef99a9575b4a1962f07c",
       "zero_byte": false,
       "suspected_partial_download": false,
       "date_from_filename": null,

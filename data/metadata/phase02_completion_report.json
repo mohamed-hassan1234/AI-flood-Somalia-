@@ -1,0 +1,405 @@
+{
+  "phase": "02",
+  "generated_at": "2026-08-26T10:37:41.221002+00:00",
+  "phase02_version": "1.1.0",
+  "git_commit": "ccabf5cdbcbb5017ab56794662d37cd0ee49a11e",
+  "status": "COMPLETE",
+  "models": {
+    "drought": {
+      "acceptance_status": "VALIDATED",
+      "selected_model": "logistic_regression",
+      "measured_metrics": {
+        "test_rows": 3920,
+        "test_prevalence": 0.0836734693877551,
+        "test_recall": 0.6158536585365854,
+        "test_precision": 0.36396396396396397,
+        "test_pr_auc": 0.38578864047202055,
+        "test_pr_auc_relative_to_prevalence": 4.61064472759244,
+        "test_roc_auc": 0.8692695318865773,
+        "test_false_alarm_rate": 0.0982739420935412,
+        "test_miss_rate": 0.38414634146341464,
+        "test_brier": 0.06489080971230429,
+        "backtest_folds": 5,
+        "mean_detected_lead_time_days": 16.0
+      },
+      "failing_checks": [],
+      "artifact_path": "ml/artifacts/drought/drought_model_v1.1.0.joblib",
+      "artifact_checksum_sha256": "9125108a58b5370ffd5e1b30000fd75690eda0cdf38621407cff7c29f7ac64ec",
+      "operating_threshold": 0.27,
+      "risk_thresholds": {
+        "watch": 0.135,
+        "warning": 0.27,
+        "severe": 0.635
+      },
+      "calibration_method": "isotonic"
+    },
+    "flood": {
+      "acceptance_status": "VALIDATED",
+      "selected_model": "logistic_regression",
+      "measured_metrics": {
+        "test_rows": 4035,
+        "test_prevalence": 0.14200743494423793,
+        "test_recall": 0.7888307155322862,
+        "test_precision": 0.9021956087824351,
+        "test_pr_auc": 0.8800261117925614,
+        "test_pr_auc_relative_to_prevalence": 6.197042514979032,
+        "test_roc_auc": 0.9707845236690954,
+        "test_false_alarm_rate": 0.01415366839976892,
+        "test_miss_rate": 0.2111692844677138,
+        "test_brier": 0.03535022791086659,
+        "backtest_folds": 6,
+        "mean_detected_lead_time_days": 1.0394990366088632
+      },
+      "failing_checks": [],
+      "artifact_path": "ml/artifacts/flood/flood_model_v1.1.0.joblib",
+      "artifact_checksum_sha256": "7d5db090b3601734be8ac6625abcaffcdb340e11f4bdbb0f9a36c635541bed80",
+      "operating_threshold": 0.22999999999999998,
+      "risk_thresholds": {
+        "watch": 0.11499999999999999,
+        "warning": 0.22999999999999998,
+        "severe": 0.615
+      },
+      "calibration_method": "isotonic"
+    },
+    "food_security": {
+      "acceptance_status": "VALIDATED",
+      "selected_model": "rule",
+      "measured_metrics": {
+        "test_rows": 72,
+        "test_prevalence": 0.3611111111111111,
+        "test_recall": 0.5384615384615384,
+        "test_precision": 0.7,
+        "test_pr_auc": 0.6805322962016612,
+        "test_pr_auc_relative_to_prevalence": 1.884550974096908,
+        "test_roc_auc": 0.7408026755852843,
+        "test_false_alarm_rate": 0.13043478260869565,
+        "test_miss_rate": 0.46153846153846156,
+        "test_brier": 0.20219305555555553,
+        "backtest_folds": 4,
+        "mean_detected_lead_time_days": 30.0
+      },
+      "failing_checks": [],
+      "artifact_path": "ml/artifacts/food_security/food_security_model_v1.1.0.joblib",
+      "artifact_checksum_sha256": "754a7f00d72f182fa1cf5c3f2b3829c6ca4f487e2a1b632acb4d7d10a5b2c2e0",
+      "operating_threshold": 0.53,
+      "risk_thresholds": {
+        "watch": 0.265,
+        "warning": 0.53,
+        "severe": 0.765
+      },
+      "calibration_method": "identity"
+    }
+  },
+  "flood_station_backtest": {
+    "SH001": {
+      "rows": 1998,
+      "positives": 448,
+      "negatives": 1550,
+      "true_negative": 1536,
+      "false_positive": 14,
+      "false_negative": 43,
+      "true_positive": 405,
+      "recall": 0.9040178571428571,
+      "precision": 0.9665871121718377,
+      "false_alarm_rate": 0.00903225806451613,
+      "miss_rate": 0.09598214285714286,
+      "mean_detected_lead_time_days": 1.0222222222222221,
+      "status": "EVALUATED"
+    },
+    "SH002": {
+      "rows": 2182,
+      "positives": 239,
+      "negatives": 1943,
+      "true_negative": 1934,
+      "false_positive": 9,
+      "false_negative": 42,
+      "true_positive": 197,
+      "recall": 0.8242677824267782,
+      "precision": 0.9563106796116505,
+      "false_alarm_rate": 0.004632012352032939,
+      "miss_rate": 0.17573221757322174,
+      "mean_detected_lead_time_days": 1.0203045685279188,
+      "status": "EVALUATED"
+    },
+    "SH004": {
+      "rows": 2019,
+      "positives": 339,
+      "negatives": 1680,
+      "true_negative": 1636,
+      "false_positive": 44,
+      "false_negative": 43,
+      "true_positive": 296,
+      "recall": 0.8731563421828908,
+      "precision": 0.8705882352941177,
+      "false_alarm_rate": 0.02619047619047619,
+      "miss_rate": 0.12684365781710916,
+      "mean_detected_lead_time_days": 1.027027027027027,
+      "status": "EVALUATED"
+    },
+    "JB001": {
+      "rows": 2003,
+      "positives": 59,
+      "negatives": 1944,
+      "true_negative": 1914,
+      "false_positive": 30,
+      "false_negative": 12,
+      "true_positive": 47,
+      "recall": 0.7966101694915254,
+      "precision": 0.6103896103896104,
+      "false_alarm_rate": 0.015432098765432098,
+      "miss_rate": 0.2033898305084746,
+      "mean_detected_lead_time_days": 1.148936170212766,
+      "status": "EVALUATED"
+    },
+    "JB009": {
+      "rows": 1793,
+      "positives": 128,
+      "negatives": 1665,
+      "true_negative": 1621,
+      "false_positive": 44,
+      "false_negative": 35,
+      "true_positive": 93,
+      "recall": 0.7265625,
+      "precision": 0.6788321167883211,
+      "false_alarm_rate": 0.026426426426426425,
+      "miss_rate": 0.2734375,
+      "mean_detected_lead_time_days": 1.1397849462365592,
+      "status": "EVALUATED"
+    }
+  },
+  "backtesting": {
+    "drought": {
+      "fold_count": 5,
+      "overall_metrics": {
+        "rows": 7269,
+        "positives": 1068,
+        "negatives": 6201,
+        "prevalence": 0.14692529921584813,
+        "accuracy": 0.8466088870546155,
+        "balanced_accuracy": 0.7368680568012771,
+        "precision": 0.48176881303335917,
+        "recall": 0.5814606741573034,
+        "f1": 0.5269410267288926,
+        "roc_auc": 0.8354359602504611,
+        "pr_auc": 0.46373149735524377,
+        "brier": 0.09944855469356922,
+        "ece_10_bin": 0.0404978415973227,
+        "false_alarm_rate": 0.10772456055474923,
+        "miss_rate": 0.41853932584269665,
+        "true_negative": 5533,
+        "false_positive": 668,
+        "false_negative": 447,
+        "true_positive": 621,
+        "operating_threshold": 0.5,
+        "threshold": "fold_specific_validation_thresholds"
+      },
+      "mean_detected_lead_time_days": 16.0
+    },
+    "flood": {
+      "fold_count": 6,
+      "overall_metrics": {
+        "rows": 9995,
+        "positives": 1213,
+        "negatives": 8782,
+        "prevalence": 0.12136068034017009,
+        "accuracy": 0.968384192096048,
+        "balanced_accuracy": 0.9198370139175857,
+        "precision": 0.8804071246819338,
+        "recall": 0.8557295960428689,
+        "f1": 0.8678929765886289,
+        "roc_auc": 0.9795530485330951,
+        "pr_auc": 0.8538355281196154,
+        "brier": 0.04402227809725445,
+        "ece_10_bin": 0.03350143152146744,
+        "false_alarm_rate": 0.016055568207697563,
+        "miss_rate": 0.1442704039571311,
+        "true_negative": 8641,
+        "false_positive": 141,
+        "false_negative": 175,
+        "true_positive": 1038,
+        "operating_threshold": 0.5,
+        "threshold": "fold_specific_validation_thresholds"
+      },
+      "mean_detected_lead_time_days": 1.0394990366088632
+    },
+    "food_security": {
+      "fold_count": 4,
+      "overall_metrics": {
+        "rows": 198,
+        "positives": 123,
+        "negatives": 75,
+        "prevalence": 0.6212121212121212,
+        "accuracy": 0.7424242424242424,
+        "balanced_accuracy": 0.7172357723577236,
+        "precision": 0.7769230769230769,
+        "recall": 0.8211382113821138,
+        "f1": 0.7984189723320158,
+        "roc_auc": 0.5355013550135501,
+        "pr_auc": 0.7356349321244219,
+        "brier": 0.3049143257819817,
+        "ece_10_bin": 0.26558722588877437,
+        "false_alarm_rate": 0.38666666666666666,
+        "miss_rate": 0.17886178861788618,
+        "true_negative": 46,
+        "false_positive": 29,
+        "false_negative": 22,
+        "true_positive": 101,
+        "operating_threshold": 0.5,
+        "threshold": "fold_specific_validation_thresholds"
+      },
+      "mean_detected_lead_time_days": 30.0
+    }
+  },
+  "calibration": {
+    "drought": {
+      "method": "isotonic",
+      "validation_brier_before": 0.16391296070756875,
+      "validation_brier_after": 0.11737032032040581,
+      "candidate_brier": {
+        "identity": 0.16391296070756875,
+        "sigmoid": 0.11906389679415955,
+        "isotonic": 0.11737032032040581
+      },
+      "fit_data": "validation partition only",
+      "reference_prevalence": 0.11324281778827233,
+      "validation_prevalence": 0.22096148103911614,
+      "absolute_prevalence_shift": 0.10771866325084381,
+      "selection_guard": "CANDIDATE_SELECTED_BY_VALIDATION_BRIER",
+      "test_brier_before": 0.10746471404877059,
+      "test_brier_after": 0.06489080971230429,
+      "test_ece_before": 0.13463533653431625,
+      "test_ece_after": 0.03244163705877263
+    },
+    "flood": {
+      "method": "isotonic",
+      "validation_brier_before": 0.02754017202639663,
+      "validation_brier_after": 0.0032468835333664156,
+      "candidate_brier": {
+        "identity": 0.02754017202639663,
+        "sigmoid": 0.007768145766177338,
+        "isotonic": 0.0032468835333664156
+      },
+      "fit_data": "validation partition only",
+      "reference_prevalence": 0.09683995922528033,
+      "validation_prevalence": 0.01674982181040627,
+      "absolute_prevalence_shift": 0.08009013741487406,
+      "selection_guard": "CANDIDATE_SELECTED_BY_VALIDATION_BRIER",
+      "test_brier_before": 0.07708448318034838,
+      "test_brier_after": 0.03535022791086659,
+      "test_ece_before": 0.09830090655472493,
+      "test_ece_after": 0.030877896702830823
+    },
+    "food_security": {
+      "method": "identity",
+      "validation_brier_before": 0.20132301587301585,
+      "validation_brier_after": 0.20132301587301585,
+      "candidate_brier": {
+        "identity": 0.20132301587301585,
+        "sigmoid": 0.16795458082560885,
+        "isotonic": 0.16071546829828404
+      },
+      "fit_data": "validation partition only",
+      "reference_prevalence": 0.18888888888888888,
+      "validation_prevalence": 0.7698412698412699,
+      "absolute_prevalence_shift": 0.580952380952381,
+      "selection_guard": "IDENTITY_PREVALENCE_SHIFT_GUARD",
+      "test_brier_before": 0.20219305555555553,
+      "test_brier_after": 0.20219305555555553,
+      "test_ece_before": 0.14958333333333332,
+      "test_ece_after": 0.14958333333333332
+    }
+  },
+  "explainability": {
+    "drought": {
+      "available": true,
+      "method": "model-agnostic permutation importance plus median-perturbation local drivers",
+      "shap_status": "NOT_APPLICABLE"
+    },
+    "flood": {
+      "available": true,
+      "method": "model-agnostic permutation importance plus median-perturbation local drivers",
+      "shap_status": "NOT_APPLICABLE"
+    },
+    "food_security": {
+      "available": true,
+      "method": "model-agnostic permutation importance plus median-perturbation local drivers",
+      "shap_status": "NOT_APPLICABLE"
+    }
+  },
+  "tests": {
+    "generated_at": "2026-08-26T10:37:17.092255+00:00",
+    "phase02_version": "1.1.0",
+    "status": "PASS",
+    "tests_run": 20,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 1.1632385000120848
+  },
+  "target_summary_reference": "data/metadata/phase02_target_summary.json",
+  "target_positive_rates": {
+    "drought": 0.1272873286296105,
+    "flood": 0.09443058076225046,
+    "food_security": 0.41534391534391535
+  },
+  "checklist": {
+    "targets": {
+      "drought_target_defined": true,
+      "flood_target_defined": true,
+      "food_security_target_defined": true
+    },
+    "datasets": {
+      "drought_model_dataset_valid": true,
+      "flood_model_dataset_valid": true,
+      "food_security_model_dataset_valid": true
+    },
+    "leakage": {
+      "no_temporal_leakage": true,
+      "no_target_leakage": true,
+      "split_integrity_verified": true
+    },
+    "baselines": {
+      "drought_baseline_evaluated": true,
+      "flood_baseline_evaluated": true,
+      "food_security_baseline_evaluated": true
+    },
+    "advanced_models": {
+      "candidate_models_evaluated": true,
+      "final_selection_justified": true
+    },
+    "backtest": {
+      "drought_backtested": true,
+      "flood_backtested": true,
+      "food_security_backtested": true
+    },
+    "calibration": {
+      "final_probabilistic_models_calibrated_or_deemed_unnecessary": true
+    },
+    "explainability": {
+      "global_explanations_available": true,
+      "local_explanations_supported": true
+    },
+    "artifacts": {
+      "model_artifacts_exist": true,
+      "feature_schemas_exist": true,
+      "metadata_exists": true,
+      "checksums_exist": true
+    },
+    "documentation": {
+      "model_cards_exist": true,
+      "phase02_report_exists": true,
+      "reproduction_instructions_exist": true
+    },
+    "testing": {
+      "automated_tests_pass": true,
+      "leakage_tests_pass": true,
+      "serialization_tests_pass": true
+    },
+    "acceptance_gate": {
+      "drought_acceptance": "VALIDATED",
+      "flood_acceptance": "VALIDATED",
+      "food_security_acceptance": "VALIDATED"
+    }
+  },
+  "blockers": []
+}

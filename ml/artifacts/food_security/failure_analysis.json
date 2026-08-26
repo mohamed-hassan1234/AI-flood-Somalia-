@@ -1,0 +1,201 @@
+{
+  "false_positive_count": 6,
+  "false_negative_count": 12,
+  "highest_confidence_false_positives": [
+    {
+      "region_id": "SO14",
+      "feature_as_of_date": "2023-12-02T00:00:00",
+      "target_period_start": "2024-01-01T00:00:00",
+      "target_period_end": "2024-03-31T00:00:00",
+      "target": 0,
+      "probability": 0.675,
+      "prediction": 1,
+      "correct": false
+    },
+    {
+      "region_id": "SO17",
+      "feature_as_of_date": "2023-12-02T00:00:00",
+      "target_period_start": "2024-01-01T00:00:00",
+      "target_period_end": "2024-03-31T00:00:00",
+      "target": 0,
+      "probability": 0.675,
+      "prediction": 1,
+      "correct": false
+    },
+    {
+      "region_id": "SO23",
+      "feature_as_of_date": "2024-06-01T00:00:00",
+      "target_period_start": "2024-07-01T00:00:00",
+      "target_period_end": "2024-09-30T00:00:00",
+      "target": 0,
+      "probability": 0.625,
+      "prediction": 1,
+      "correct": false
+    },
+    {
+      "region_id": "SO22",
+      "feature_as_of_date": "2024-06-01T00:00:00",
+      "target_period_start": "2024-07-01T00:00:00",
+      "target_period_end": "2024-09-30T00:00:00",
+      "target": 0,
+      "probability": 0.5499999999999999,
+      "prediction": 1,
+      "correct": false
+    },
+    {
+      "region_id": "SO14",
+      "feature_as_of_date": "2024-12-02T00:00:00",
+      "target_period_start": "2025-01-01T00:00:00",
+      "target_period_end": "2025-03-31T00:00:00",
+      "target": 0,
+      "probability": 0.5499999999999999,
+      "prediction": 1,
+      "correct": false
+    },
+    {
+      "region_id": "SO21",
+      "feature_as_of_date": "2024-12-02T00:00:00",
+      "target_period_start": "2025-01-01T00:00:00",
+      "target_period_end": "2025-03-31T00:00:00",
+      "target": 0,
+      "probability": 0.5499999999999999,
+      "prediction": 1,
+      "correct": false
+    }
+  ],
+  "highest_confidence_false_negatives": [
+    {
+      "region_id": "SO22",
+      "feature_as_of_date": "2023-12-02T00:00:00",
+      "target_period_start": "2024-01-01T00:00:00",
+      "target_period_end": "2024-03-31T00:00:00",
+      "target": 1,
+      "probability": 0.35000000000000003,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO17",
+      "feature_as_of_date": "2025-06-01T00:00:00",
+      "target_period_start": "2025-07-01T00:00:00",
+      "target_period_end": "2025-09-30T00:00:00",
+      "target": 1,
+      "probability": 0.35000000000000003,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO14",
+      "feature_as_of_date": "2025-06-01T00:00:00",
+      "target_period_start": "2025-07-01T00:00:00",
+      "target_period_end": "2025-09-30T00:00:00",
+      "target": 1,
+      "probability": 0.37499999999999994,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO27",
+      "feature_as_of_date": "2024-06-01T00:00:00",
+      "target_period_start": "2024-07-01T00:00:00",
+      "target_period_end": "2024-09-30T00:00:00",
+      "target": 1,
+      "probability": 0.37499999999999994,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO23",
+      "feature_as_of_date": "2023-12-02T00:00:00",
+      "target_period_start": "2024-01-01T00:00:00",
+      "target_period_end": "2024-03-31T00:00:00",
+      "target": 1,
+      "probability": 0.39999999999999997,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO15",
+      "feature_as_of_date": "2025-06-01T00:00:00",
+      "target_period_start": "2025-07-01T00:00:00",
+      "target_period_end": "2025-09-30T00:00:00",
+      "target": 1,
+      "probability": 0.39999999999999997,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO25",
+      "feature_as_of_date": "2024-12-02T00:00:00",
+      "target_period_start": "2025-01-01T00:00:00",
+      "target_period_end": "2025-03-31T00:00:00",
+      "target": 1,
+      "probability": 0.475,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO14",
+      "feature_as_of_date": "2024-06-01T00:00:00",
+      "target_period_start": "2024-07-01T00:00:00",
+      "target_period_end": "2024-09-30T00:00:00",
+      "target": 1,
+      "probability": 0.475,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO16",
+      "feature_as_of_date": "2025-06-01T00:00:00",
+      "target_period_start": "2025-07-01T00:00:00",
+      "target_period_end": "2025-09-30T00:00:00",
+      "target": 1,
+      "probability": 0.475,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO20",
+      "feature_as_of_date": "2023-12-02T00:00:00",
+      "target_period_start": "2024-01-01T00:00:00",
+      "target_period_end": "2024-03-31T00:00:00",
+      "target": 1,
+      "probability": 0.5,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO26",
+      "feature_as_of_date": "2023-12-02T00:00:00",
+      "target_period_start": "2024-01-01T00:00:00",
+      "target_period_end": "2024-03-31T00:00:00",
+      "target": 1,
+      "probability": 0.5249999999999999,
+      "prediction": 0,
+      "correct": false
+    },
+    {
+      "region_id": "SO21",
+      "feature_as_of_date": "2023-12-02T00:00:00",
+      "target_period_start": "2024-01-01T00:00:00",
+      "target_period_end": "2024-03-31T00:00:00",
+      "target": 1,
+      "probability": 0.5249999999999999,
+      "prediction": 0,
+      "correct": false
+    }
+  ],
+  "errors_by_region": {
+    "SO14": 4,
+    "SO15": 1,
+    "SO16": 1,
+    "SO17": 2,
+    "SO20": 1,
+    "SO21": 2,
+    "SO22": 2,
+    "SO23": 2,
+    "SO25": 1,
+    "SO26": 1,
+    "SO27": 1
+  }
+}

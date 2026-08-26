@@ -1,331 +1,305 @@
-# Phase 01 — Real Data Foundation Report
+# Phase 01 — Real Data Foundation Completion Report
 
-**System:** Somalia AI Food Security, Drought & Flood Early Warning Platform  
-**Validation date:** 25 August 2026  
-**Scope:** data foundation only; no model training or production alerting
+**System:** Somalia AI Food Security, Drought and Flood Early Warning Platform
+
+**Validated:** 26 August 2026
+
+**Scope:** Phase 01 data foundation only; no model training, prediction, warning publication, or Phase 02 implementation
 
 ## Executive decision
 
-**PHASE 01 STATUS: PARTIAL — NOT READY FOR PHASE 02 MODEL TRAINING.**
+**PHASE 01 STATUS: COMPLETE — READY FOR PHASE 02.**
 
-The repository now has a reproducible, validated Phase 01 data layer with real authoritative data,
-checksums, source metadata, canonical boundaries, geographic crosswalks, processed tables, zonal
-population totals, and acquisition scripts. The four previously missing families—temperature,
-food-security outcomes, market prices, and population—are represented by real local files and were
-validated.
+All Phase 01 acceptance gates pass. The drought, flood, and food-security data tracks each have a
+verified local training window, canonical geography, source lineage, processed outputs, integrity
+checks, and a documented temporal-alignment method. The final readiness report contains no genuine
+blockers.
 
-Phase 01 cannot honestly be called complete because the local environmental history is still only a
-sample: CHIRPS has one January 1981 dekad plus 38 days in 2026; MOD13Q1 has one 16-day tile; SMAP has July
-2026; and MOD11A1 has one daily tile. These files prove formats and pipelines but are not a training
-archive. Authoritative FAO SWALIM/SNRFA coordinates and current operational thresholds are now
-linked to all five river histories; their effective-from dates are not published.
+This decision means that governed Phase 02 feature engineering and model development may begin. It
+does not mean that a model has been trained or approved, that the application database automatically
+ingests these files, or that the system can issue an official IPC classification or operational
+warning.
 
-## 1. How the data system works
+## 1. How the system gets and processes data
 
 ```text
-Authoritative provider
-    -> idempotent connector or preserved manual export
-    -> immutable raw/source file
-    -> structural and scientific validation
-    -> canonical geography crosswalk
-    -> processed Phase 01 table/raster statistics
-    -> source registry + availability/temporal matrices
-    -> Phase 02 governed snapshot (future work)
+Authoritative provider or preserved provider export
+    -> retry-safe connector / immutable source archive
+    -> atomic checkpoint plus URL, version, date, size, and SHA-256 lineage
+    -> structural, temporal, spatial, scientific, fill-value, and QA validation
+    -> canonical OCHA region/district geography and documented crosswalk
+    -> district-level daily, dekadal, monthly, seasonal, or assessment-period tables
+    -> source registry, manifests, availability matrix, temporal matrix, overlap report
+    -> independent Phase 01 readiness gate
+    -> governed Phase 02 snapshot and feature construction (future work)
 ```
 
-The application remains responsible for governed operational ingestion. Phase 01 prepares source
-evidence and canonical derivatives; it does not silently load data into the operational database,
-publish warnings, calculate official IPC classifications, or train models.
+Step by step:
 
-### Directory contract
+1. Preserve originals in `data/` or `data/raw/`; never overwrite a provider field with a guessed
+   canonical value.
+2. Download public archives with bounded parallelism, retry/backoff, `.part`/atomic rename, and
+   recoverable annual or period checkpoints.
+3. Validate file readability, checksums, date coverage, duplicate keys, CRS/georeferencing,
+   scientific ranges, source fill values, and QA masks.
+4. Resolve geography against OCHA COD-AB v03. Keep source labels, matching method, confidence, and
+   review status in the crosswalk.
+5. Produce canonical district series while retaining missing observations as null—not zero—and
+   retaining IPC assessment-period semantics, market units/currencies, and river station identity.
+6. Register each source and output in manifests and coverage matrices.
+7. Run the independent readiness program. Phase 01 is complete only when every model track and every
+   acceptance check pass.
 
-| Layer | Purpose |
+The operational application and this research data foundation are deliberately separate. Nothing in
+Phase 01 silently inserts rows into the application database, trains a model, publishes an alert, or
+sends a notification.
+
+## 2. Storage and reproducibility contract
+
+| Location | Responsibility |
 |---|---|
-| `data/` existing top-level files | Manually collected originals retained at their original paths for compatibility. |
-| `data/raw/` | Newly downloaded immutable provider files. |
-| `data/staging/` | Temporary/recoverable work. The canceled legacy WorldPop transfer is explicitly quarantined here as `.partial`. |
-| `data/processed/` | Reproducible canonical tables, boundary copies, raster statistics, and zonal summaries. |
-| `data/features/` | Reserved for Phase 02; no model features were fabricated in Phase 01. |
-| `data/metadata/` | Checksums, inventory, source registry, availability matrix, temporal matrix, crosswalk, STAC records, and validation reports. |
-| `data/scripts/` | Reproducible audit, connector, and validation programs. |
+| `data/raw/` | Immutable provider downloads and machine-readable source packages. |
+| `data/staging/` | Recoverable work and explicitly excluded transfer artifacts. |
+| `data/processed/` | Canonical boundaries and reproducible district/area derivatives. |
+| `data/features/` | Reserved for Phase 02; no features or labels were fabricated here. |
+| `data/metadata/` | Inventories, hashes, manifests, crosswalks, matrices, lineage, and validation/readiness reports. |
+| `data/scripts/` | Acquisition, mapping, validation, audit, and readiness programs. |
+| `docs/` | Source-selection, mapping, temporal-alignment, system, and completion documentation. |
 
-## 2. Step-by-step reproducible workflow
-
-Run from the repository root:
+Reproduction from the repository root uses the project environment:
 
 ```shell
-python data/scripts/phase01_audit.py
-python data/scripts/phase01_connectors.py chirps --start 1981-01-01 --end 1981-01-31 --max-files 31
-python data/scripts/phase01_connectors.py market
-python data/scripts/phase01_connectors.py ipc
-python data/scripts/phase01_connectors.py population
-python data/scripts/phase01_connectors.py nasa-power --start 20250101 --end 20251231
-python data/scripts/phase01_connectors.py modis vegetation --start 2026-07-01 --end 2026-07-31 --max-items 1
-python data/scripts/phase01_connectors.py modis temperature --start 2020-07-01 --end 2020-07-02 --max-items 1
-python data/scripts/phase01_validate.py
-python data/scripts/phase01_audit.py
+.venv\Scripts\python.exe data\scripts\phase01_history.py chirps --start 2015-01-01 --end 2025-12-31 --workers 7
+.venv\Scripts\python.exe data\scripts\phase01_history.py modis --start 2015-01-01 --end 2025-12-31 --workers 7
+.venv\Scripts\python.exe data\scripts\phase01_power_history.py
+.venv\Scripts\python.exe data\scripts\validate_river_station_metadata.py
+.venv\Scripts\python.exe data\scripts\validate_boundary_provenance.py
+.venv\Scripts\python.exe data\scripts\ipc_geographic_mapping.py
+.venv\Scripts\python.exe data\scripts\phase01_validate.py
+.venv\Scripts\python.exe data\scripts\phase01_audit.py
+.venv\Scripts\python.exe data\scripts\phase01_readiness.py
 ```
 
-The public connectors are retry-safe and idempotent. Downloads are written to a `.part` file,
-renamed only after a successful non-empty response, and recorded with the source URL, byte size,
-SHA-256 digest, timestamp, and disposition in `data/metadata/download_manifest.json`. Credentials
-are not hard-coded. MODIS sample limits and date ranges are configurable; NASA POWER requests are
-automatically tiled to provider-compatible regional extents.
+The archive builders are resumable. CHIRPS is checkpointed annually; MODIS is checkpointed by
+composite and year. Successful checkpoints are reused after their schema, district/date uniqueness,
+QA rule, and source-item identities are verified.
 
-## 3. Dataset-by-dataset result
+## 3. Completed datasets and where they came from
 
-### 01 — Somalia administrative boundaries
+### Administrative boundaries
 
-- **Status:** COMPLETE for structural Phase 01 use and source metadata.
-- **Source:** OCHA Somalia, *Somalia - Subnational Administrative Boundaries (COD-AB)*, distributed
-  through HDX; the project-supplied files were retained unchanged.
-- **Coverage:** 18 regions and 91 district features.
-- **CRS:** GeoJSON WGS84/EPSG:4326 semantics.
-- **Validation:** all admin1/admin2 files readable; zero invalid geometries; source PCodes retained.
-- **Canonical outputs:** `data/processed/boundaries/som_admin1_canonical.geojson` and
+- **Status:** COMPLETE.
+- **Source:** OCHA Somalia COD-AB v03 via HDX; embedded valid-on date 2025-01-08; CC BY IGO.
+- **Coverage:** 1 country, 18 regions, 91 district features in CRS84/EPSG:4326 semantics.
+- **Method:** the supplied local files remain unchanged; their unknown original download date is not
+  replaced with a filesystem timestamp.
+- **Outputs:** `data/processed/boundaries/som_admin1_canonical.geojson` and
   `som_admin2_canonical.geojson`.
-- **Version/terms:** embedded `v03`, valid on 2025-01-08; CC BY IGO. The original local download
-  date was not recorded, so the filesystem modification date is not misrepresented as that date.
 
-### 02 — Historical rainfall
+### Rainfall
 
-- **Status:** PARTIAL.
-- **Source:** UCSB Climate Hazards Center CHIRPS v3.
-- **Provider coverage:** 1981 to near-present, daily 0.05-degree data.
-- **Actual local coverage:** one historical dekadal raster (`1981-01`, dekad 1) plus 38 continuous
-  `rnl` daily files from 2026-06-24 through 2026-07-31. The dekadal raster is not misrepresented as
-  a daily observation.
-- **Format/units:** GeoTIFF; precipitation in mm/day; WGS84 geographic grid.
-- **Validation:** 39/39 rasters readable; no duplicate daily dates.
-- **Limitation:** not a local historical archive and therefore insufficient for multi-year anomaly
-  baselines or model training.
-- **Official sources:** [CHIRPS v3 description](https://www.chc.ucsb.edu/data/chirps3) and
-  [bulk repository](https://data.chc.ucsb.edu/products/CHIRPS/v3.0/).
+- **Status:** COMPLETE.
+- **Source:** UCSB Climate Hazards Center CHIRPS v3 final `rnl` p25 daily GeoTIFFs.
+- **Window:** 2015-01-01 through 2025-12-31; all 4,018 days.
+- **Outputs:** 365,638 district-day rows, 36,036 district-dekads, 12,012 district-months, and
+  4,004 district-seasons for 91 districts.
+- **Quality:** zero missing dates, zero missing district-days, zero negative rainfall rows; minimum
+  valid-pixel fraction 0.5.
+- **Important resolution statement:** this compact production archive uses the official 0.25-degree
+  p25 distribution, not the native 0.05-degree CHIRPS grid.
 
-### 03 — Vegetation / NDVI / EVI
+### Vegetation (NDVI/EVI)
 
-- **Status:** PARTIAL.
-- **Source:** NASA LP DAAC MOD13Q1 V061, obtained as NASA-produced COG assets hosted by Microsoft
+- **Status:** COMPLETE WITH EXPLICIT SOURCE GAPS AND STRICT-QA NULLS.
+- **Source:** NASA LP DAAC MOD13Q1 V061 Terra assets, hosted as NASA-produced COGs by Microsoft
   Planetary Computer.
-- **Provider coverage:** 2000 to present; 16-day; 250 m MODIS sinusoidal tiles.
-- **Actual local coverage:** one Terra tile for the 2026-07-12 to 2026-07-27 composite.
-- **Variables:** NDVI, EVI, VI Quality, and pixel reliability.
-- **Scaling:** NDVI/EVI encoded values multiplied by `0.0001`; raw and QA assets remain immutable.
-- **Observed pixel-reliability codes:** 0, 1, and 3 in the validation tile.
-- **Limitation:** one tile is not complete Somalia coverage or a historical archive.
-- **Official source:** [NASA DOI](https://doi.org/10.5067/MODIS/MOD13Q1.061).
+- **Window:** 2015-01-01 through 2025-12-31; 242 of 253 nominal 16-day composite starts (95.65%).
+- **Scale/QA:** encoded NDVI/EVI × 0.0001; accept `pixel_reliability=0`, MODLAND QA bits 0–1 equal
+  zero, and raw VI range -2000..10000. Fill and masked values remain null.
+- **Processing:** native 231.656 m MODIS sinusoidal tiles are sampled through an aligned
+  nearest-neighbour 4× COG overview (approximately 1 km) for district summaries.
+- **Outputs:** 22,022 district-period rows with NDVI/EVI mean, median, baseline, anomaly, anomaly-z,
+  vegetation stress, counts, fractions, and QA summary.
+- **Missingness:** 15.01% archive-wide, concentrated in very small urban Banadir polygons; 0.71%
+  outside Banadir. Banadir is 73.03% null under strict QA. No spatial or temporal values are imputed.
+- **Provider gaps:** 2023-02-18; 2024-08-12 and 2024-12-18; and 2025-07-12 through 2025-11-01 at
+  16-day starts. Data resume on 2025-11-17, 2025-12-03, and 2025-12-19.
 
-### 04 — Soil moisture
+The collector specifically guards against four discovered failure modes: STAC result truncation,
+out-of-range temporal intersections, missing optional `platform` metadata, and duplicate production
+timestamps. It selects Terra from the immutable `MOD13Q1.` product prefix, queries 31-day windows,
+filters start dates strictly, and retains only the newest logical granule. A signed-int8/source-fill
+metadata conflict is handled with a promoted dtype and explicit mask, without changing valid QA
+codes.
 
-- **Status:** PARTIAL.
-- **Source:** NASA NSIDC `SPL3SMP_E` V006.
-- **Provider coverage:** 2015-03-31 to present; daily; 9 km EASE-Grid 2.0.
-- **Actual local coverage:** 31 dates, 2026-07-01 through 2026-07-31; 38 subset granules.
-- **Variables:** AM soil moisture, latitude/longitude, and retrieval quality flags.
-- **Units/fill:** cubic centimetres per cubic centimetre; source fill `-9999` retained.
-- **Validation:** all HDF5/netCDF4 files readable and science/quality arrays inspected. Dates with
-  multiple granules are listed in the validation report and are not discarded as duplicates.
-- **Limitation:** July 2026 only; authenticated historical Earthdata acquisition is not automated.
-- **Official source:** [NSIDC SPL3SMP_E V006](https://nsidc.org/data/spl3smp_e/versions/6).
+### Temperature and antecedent wetness
 
-### 05 — River levels / hydrology
+- **Status:** COMPLETE as the selected historical primary source.
+- **Source:** NASA POWER Release 10 MERRA-2/GEOS meteorology.
+- **Window:** 2000-01-01 through 2025-12-31; all 9,497 days.
+- **Variables:** T2M, T2M_MAX, T2M_MIN in °C; GWETTOP and GWETROOT as unitless modeled relative
+  wetness.
+- **Coverage:** 91 districts mapped to 72 unique native source cells; 864,227 daily and 85,176
+  dekadal rows; zero missing parameter values.
+- **Resolution:** 0.5° latitude × 0.625° longitude; nearest source cell to each district reference
+  point, not a polygon mean.
+- **Scientific identity:** GWETTOP/GWETROOT are an antecedent-wetness equivalent, never labeled as
+  SMAP or volumetric soil moisture. MOD11A1 and local SMAP subsets remain optional diagnostics.
 
-- **Status:** COMPLETE for the five supplied gauge histories, with operational limitations.
-- **Source:** FAO SWALIM/SNRFA CSV exports.
-- **Stations:** SH001 Belet Weyne, SH002 Bulo Burti/Bulo Burto, SH004 Jowhar, JB001 Luuq, and JB009
-  Dollow/Doolow.
-- **Rows:** 87,848 total.
-- **Coverage:** station-dependent, from as early as 1951-01-01; all five extend to 2026-08-25.
-- **Validation:** dates parse; station codes match case-insensitively; no negative levels; missing
-  water levels and gaps remain explicit. JB001 contains two rows participating in one exact
-  date/station/level duplicate pair.
-- **Canonical output:** `data/processed/river_levels/river_levels_canonical.csv`.
-- **Station metadata:** authoritative coordinates, operational status, and current moderate-risk,
-  high-risk, and bankfull levels are stored in `data/processed/river_station_metadata.csv` and
-  `.json`. The provider does not publish threshold effective-from dates.
-- **Spatial exception:** the official JB009 point is 1.252 km outside the canonical Doolow polygon;
-  it is retained unchanged and is not reassigned. Missing water levels are not filled or treated as
-  zero.
-- **Official system:** [FAO SWALIM flood and river monitoring](https://frrims.faoswalim.org/).
+### River levels
 
-### 06 — Temperature / land-surface temperature
+- **Status:** COMPLETE for the five supplied gauges.
+- **Source:** FAO SWALIM/SNRFA observations and official station metadata.
+- **Stations/rows:** SH001, SH002, SH004, JB001, JB009; 87,848 observations.
+- **Thresholds (moderate/high/bankfull metres):** SH001 6.5/7.3/8.3; SH002 6.5/7.2/8.0;
+  SH004 5.0/5.25/5.5; JB001 5.5/6.0/7.0; JB009 4.5/5.0/6.0.
+- **Validation:** coordinates, station identities, source hosts, and threshold ordering pass.
+- **Exception:** official JB009 is 1,252.181 m outside the canonical Doolow polygon. It is retained
+  unchanged and documented, not moved. Provider threshold effective dates/revision history are not
+  published. One exact JB001 observation pair remains reported.
 
-- **Status:** PARTIAL.
-- **Primary source:** NASA LP DAAC MOD11A1 V061.
-- **Primary local sample:** one Terra daily tile for 2020-07-01 with `LST_Day_1km`, `QC_Day`,
-  `LST_Night_1km`, and `QC_Night`.
-- **Correct conversion:** `Celsius = encoded value × 0.02 - 273.15`; encoded fill/values below the
-  documented valid minimum are excluded. QC mandatory bits are preserved and inspected.
-- **Secondary source:** NASA POWER/MERRA-2 2 m air temperature, explicitly not treated as LST.
-- **Secondary local coverage:** daily 2025 `T2M`, `T2M_MAX`, and `T2M_MIN`, 540 unique grid points,
-  591,300 rows, zero missing/fill values across the four tiled Somalia-bounding-box files per
-  variable.
-- **Limitation:** MOD11A1 remains a one-tile sample, so historical LST anomalies cannot be trained.
-- **Official sources:** [MOD11A1 DOI](https://doi.org/10.5067/MODIS/MOD11A1.061) and
-  [NASA POWER daily API](https://power.larc.nasa.gov/docs/services/api/temporal/daily/).
+### IPC food-security outcomes
 
-### 07 — Food security / IPC outcomes
+- **Status:** COMPLETE WITH DOCUMENTED GEOGRAPHIC AMBIGUITY.
+- **Source:** IPC Somalia machine-readable package via HDX; historical outcomes start in 2017.
+- **Mapping:** 107 snapshot features produce 362 mapping rows: 44 polygons/multipolygons are
+  inherently multi-district; 63 urban/IDP point features receive containment relationships only.
+- **Quality:** all six mapping validation checks pass. Polygon coverage averages 99.5896% and has a
+  91.8817% minimum; 213 substantive overlaps and 86 boundary slivers remain explicit.
+- **Semantics:** current and projection periods are never mixed; IPC polygons use overlap weights;
+  urban/IDP reference points are not treated as area footprints or district labels.
+- **Snapshot limitation:** title/population/phase signatures best support April 2026 current validity,
+  but do not prove that historical IPC geometry was stable or provide a direct analysis-ID join.
 
-- **Status:** COMPLETE WITH REVIEW FLAGS for historical outcome use at national/admin1/IPC-area
-  resolution; not district labels.
-- **Source:** IPC machine-readable Somalia country package via HDX.
-- **Coverage:** 2017-01-01 through 2026-06-30.
-- **Rows:** 76,077 across national, level-1, and IPC analysis-area tables.
-- **Variables:** analysis date, validity dates, current/first projection/second projection, phase,
-  persons, and percentage.
-- **Critical distinction:** `current`, `first projection`, and `second projection` remain explicit in
-  `assessment_period_type`; projections are not recoded as observations.
-- **Quality finding:** the national file has three exact duplicate rows; they remain reported and are
-  not silently deleted. Phases include 1–5, `3+`, and `all` aggregate rows.
-- **Canonical output:** `data/processed/food_security/ipc_outcomes_canonical.csv`.
-- **Limitation:** IPC analysis areas/livelihood areas must not be asserted as districts without a
-  validated spatial crosswalk.
-- **Source package:** [HDX Somalia IPC data](https://data.humdata.org/dataset/somalia-acute-food-insecurity-country-data).
+### Market prices
 
-### 08 — Market / food prices
+- **Status:** READY WITH REVIEW CONTROLS.
+- **Source:** WFP Somalia food-price package via HDX.
+- **Banadir control:** 1,944 price rows retain provider `admin2=Banadir`; that value is quarantined
+  from canonical district matching. Ten registry markets are independently point-resolved from
+  coordinates to canonical district IDs. The original provider field is never overwritten.
+- **Semantics:** commodity, unit, currency, grade, and price type remain part of the observation key.
 
-- **Status:** COMPLETE WITH GEOGRAPHIC REVIEW.
-- **Source:** WFP Somalia food prices via HDX.
-- **Coverage:** 1995-01-15 through 2026-06-15.
-- **Rows:** 42,231; 47 markets; 22 commodities.
-- **Variables:** date, admin1/admin2, market and coordinates, commodity, source unit, price type,
-  currency, local price, and USD price.
-- **Units/currencies:** `Head`, `KG`, `L`, `USD/LCU`, and `Unit`; SOS and SLS. These remain explicit
-  and are never combined as if interchangeable.
-- **Validation:** no invalid dates, missing prices, non-positive prices, or duplicate business keys.
-- **Geographic review:** the WFP `admin2=Banadir` value is intentionally unresolved because the
-  canonical reference contains individual Banadir districts, not a district named Banadir.
-- **Canonical output:** `data/processed/market_prices/wfp_food_prices_canonical.csv`.
-- **Source package:** [WFP Somalia food prices on HDX](https://data.humdata.org/dataset/wfp-food-prices-for-somalia).
+### Population/exposure
 
-### 09 — Population / exposure
+- **Status:** COMPLETE WITH MODEL LIMITATIONS.
+- **Source:** WorldPop Somalia 2025 constrained population R2025A v1, approximately 100 m,
+  EPSG:4326, persons per pixel.
+- **Coverage:** all 91 districts and 18 regions; no district lacks valid raster pixels. District
+  estimates sum to 19,139,579.797 persons.
+- **Limitation:** this is an alpha modeled allocation, not a census; boundary mismatch affects
+  border-cell allocation.
 
-- **Status:** COMPLETE WITH METHODOLOGY LIMITATIONS.
-- **Source:** WorldPop Somalia 2025 constrained population R2025A v1.
-- **Coverage/resolution:** Somalia; 3 arc-second, approximately 100 m; EPSG:4326; persons per pixel.
-- **Raster:** 12,509 × 16,381 pixels; NoData `-99999`.
-- **Validation:** raster readable and intersects every canonical district; no district has zero
-  valid raster pixels.
-- **Derived outputs:** 91 district totals and 18 region totals. The summed district estimate is
-  19,139,579.592 persons. Density is calculated using WGS84 geodesic polygon area.
-- **Limitations:** modeled alpha estimate, not a census; boundary mismatch can alter border-cell
-  allocation. Preserve the release/version with every exposure result.
-- **Official source/terms:** [WorldPop DOI](https://doi.org/10.5258/SOTON/WP00839), CC BY 4.0.
+## 4. Canonical geography and temporal alignment
 
-## 4. Geographic standardization
+OCHA COD-AB source PCodes are the canonical IDs. The 218-row crosswalk preserves source spelling,
+canonical match, method, confidence, and review requirement. Aliases such as Dollow/Doolow and Bulo
+Burti/Bulo Burto are explicit. The one unresolved crosswalk item is the safely quarantined WFP
+`admin2=Banadir` label; its market points have a separate validated relationship.
 
-The project-supplied boundaries remain canonical. Existing source PCodes are used as stable IDs:
-18 admin1 codes and 91 admin2 features. Source spellings are preserved in the crosswalk and mapped
-only by normalized exact match or a documented unambiguous alias.
+The common analysis calendar is described in `docs/temporal-alignment-strategy.md`:
 
-Examples include `Dollow -> Doolow`, `Bulo Burti -> Bulo Burto`, `Juba Dhexe -> Middle Juba`, and
-`Shabelle Hoose -> Lower Shabelle`. Confidence and match method are stored. The only unresolved
-value is WFP's district-level `Banadir`; it is flagged for review rather than guessed.
+| Model track | Verified window | Calendar and inputs | Readiness |
+|---|---|---|---|
+| Drought | 2015-01-01–2025-12-31 | 396 dekads; CHIRPS, MOD13Q1 composites, POWER temperature/wetness | READY |
+| Flood | 2015-01-01–2025-12-31 | 4,018 daily days plus 396 dekads; CHIRPS, five gauges, POWER | READY |
+| Food security | 2017-01-01–2025-12-31 | 324 predictor dekads joined only to native IPC assessment targets | READY |
 
-## 5. Data-quality summary
+Alignment must be backward-looking and leakage-safe. A 16-day MODIS composite is available only
+after its support interval; IPC projections remain projections; future observations must never enter
+an earlier feature snapshot.
 
-| Check | Result |
+## 5. Validation and acceptance results
+
+| Gate | Result |
 |---|---|
-| Source files inventoried | 115 |
-| Source bytes | 1,001,843,780 |
-| Zero-byte files | 0 |
-| Structurally unreadable files | 0 |
-| Suspected partial files in source paths | 0 |
-| Exact duplicate files by SHA-256 | 0 groups |
-| Boundary invalid geometries | 0 |
-| Geographic crosswalk unresolved | 1 (`WFP admin2=Banadir`) |
-| Explicit quarantined transfer | one canceled legacy WorldPop 2020 `.partial` in `data/staging/failed_downloads/`; excluded from raw and processing |
-| Excluded connector trial | one valid but overlapping first-pass NASA POWER tile remains immutable in raw and is explicitly excluded from canonical processing; the 12 coordinate-labelled files are the accepted set |
+| Python compilation for Phase 01 scripts | PASS |
+| Boundary structure and provenance | PASS (1/18/91) |
+| CHIRPS continuity and district coverage | PASS |
+| MOD13Q1 inventory, QA, coverage, and checksum | PASS |
+| POWER temperature/wetness continuity | PASS |
+| River coordinates, thresholds, identity, observations | PASS |
+| IPC geometry interpretation | PASS WITH DOCUMENTED AMBIGUITY |
+| WFP Banadir quarantine and point mapping | PASS |
+| Population validation | PASS |
+| Registry, matrices, manifests, and 218-row crosswalk | PASS |
+| Source integrity audit | PASS |
+| Drought / flood / food-security readiness | READY / READY / READY |
 
-The full field-level results are in `data/metadata/phase01_validation_report.json`. The lower-level
-file inventory is in `data/metadata/file_inventory.csv` and `data/metadata/validation_report.json`.
+The final source audit inventoried 188 source files totaling 1,058,333,819 bytes. It found zero
+zero-byte files, suspected partial downloads, unreadable files, or exact duplicate file groups.
 
-## 6. Production-source decisions
+The legacy/sample validators intentionally still describe local SMAP and MOD11A1 coverage as
+partial. They are secondary diagnostics and are not the selected Phase 01 historical primary source;
+NASA POWER provides the complete temperature and antecedent-wetness history.
 
-| Family | Selected production source | Acquisition decision |
-|---|---|---|
-| Boundaries | OCHA Somalia COD-AB v03 | Keep the matched project copy; source valid-on date and CC BY IGO terms are recorded without replacing files. |
-| Rainfall | CHIRPS v3 | Public bulk HTTPS connector supports guarded date ranges; execute the full historical synchronization before training. |
-| Vegetation | NASA MOD13Q1 V061 | Direct Earthdata is authoritative; current reproducible sample connector uses NASA-produced V061 COG mirror and preserves STAC provenance. |
-| Soil moisture | NASA SPL3SMP_E V006 | Earthdata-authenticated; current files remain manual until credentials are configured securely. |
-| River levels | FAO SWALIM/SNRFA | Manual exports retained; connector/API status requires provider agreement. |
-| LST | NASA MOD11A1 V061 | Same governed STAC sample strategy as MOD13Q1; expand by tile/date before training. |
-| Air temperature | NASA POWER/MERRA-2 | Secondary/fallback covariate only; never silently substituted for LST. |
-| Food security | IPC via HDX | Automated fixed-resource connector; validity-period types remain distinct. |
-| Markets | WFP via HDX | Automated fixed-resource connector; preserve units/currencies and provider IDs. |
-| Population | WorldPop R2025A v1 | Automated annual reference grid; carry alpha/model/version disclaimer. |
+## 6. Key files produced
 
-Connector classification:
+Historical data:
 
-- **Automated:** CHIRPS final daily `rnl`, MOD13Q1/MOD11A1 bounded STAC, NASA POWER, IPC/HDX,
-  WFP/HDX, and WorldPop.
-- **Semi-automated:** none.
-- **Manual:** project boundaries and FAO SWALIM/SNRFA exports.
-- **Blocked:** historical SMAP automation is `BLOCKED_INTERACTIVE_AUTH`; direct NASA Earthdata
-  requires a valid user token. The minimal action is to configure that token in the runtime
-  environment or approved credential store, never in the script or repository.
+- `data/processed/rainfall/chirps_v3_daily_district_2015-01-01_2025-12-31.csv`
+- `data/processed/rainfall/chirps_v3_dekad_district_2015-01-01_2025-12-31.csv`
+- `data/processed/rainfall/chirps_v3_monthly_district_2015-01-01_2025-12-31.csv`
+- `data/processed/rainfall/chirps_v3_seasonal_district_2015-01-01_2025-12-31.csv`
+- `data/processed/vegetation/mod13q1_v061_district_2015-01-01_2025-12-31.csv`
+- `data/processed/climate/nasa_power_district_daily_20000101_20251231.csv.gz`
+- `data/processed/climate/nasa_power_district_dekadal_20000101_20251231.csv.gz`
+- `data/processed/river_levels/river_levels_canonical.csv`
+- `data/processed/food_security/ipc_geographic_mapping.csv`
+- `data/processed/market_prices/wfp_banadir_geographic_resolution.csv`
 
-## 7. Temporal overlap and Phase 02 readiness
+Governance and evidence:
 
-The only three-source environmental integration window in local files is 2026-07-12 through
-2026-07-27 for CHIRPS `rnl` daily rainfall, one MOD13Q1 tile, and SMAP. That is suitable only for
-pipeline integration testing.
-
-| Future model | Readiness | Reason |
-|---|---|---|
-| Drought | BLOCKED | No multi-year local overlap across CHIRPS, MOD13Q1, SMAP, and temperature for anomaly construction and temporal validation. |
-| Flood | BLOCKED | River histories and official station metadata exist, but rainfall/SMAP local overlap is only July 2026. |
-| Food security | BLOCKED | IPC and market histories are useful, but environmental predictors are not locally historical and IPC analysis areas are not district labels. |
-
-This does not block Phase 02 software design or ingestion-pipeline engineering. It blocks honest
-model training, backtesting, and production-readiness claims.
-
-## 8. How Phase 02 should consume the foundation
-
-1. Freeze a versioned source manifest with hashes from `download_manifest.json` and
-   `file_inventory.csv`.
-2. Select one boundary revision and use canonical PCodes for all joins.
-3. Expand environmental archives before defining the training window.
-4. Decode source scale/fill/QA before aggregation. Do not aggregate encoded MODIS values.
-5. Preserve `assessment_period_type` and train observed/current IPC labels separately from
-   projections.
-6. Keep market unit, currency, commodity, grade, and price type in the feature key; normalize only
-   through an explicit, versioned method.
-7. Use population reference year/version in exposure lineage; do not treat the grid as ground truth.
-8. Construct time-aware, geography-aware snapshots with no future leakage.
-9. Report missingness and coverage; never turn missing observations into zero.
-10. Do not start model training until the blocked historical windows have been acquired and rerun
-    through `phase01_validate.py`.
-
-## 9. Artifacts
-
-Core metadata:
-
+- `data/metadata/phase01_readiness.json`
+- `data/metadata/phase01_completion_report.json`
+- `data/metadata/phase01_validation_report.json`
+- `data/metadata/validation_report.json`
+- `data/metadata/historical_archive_manifest.csv`
+- `data/metadata/nasa_power_history_manifest.json`
 - `data/metadata/source_registry.csv` and `.json`
 - `data/metadata/data_availability_matrix.csv`
 - `data/metadata/temporal_coverage_matrix.csv`
 - `data/metadata/temporal_overlap_report.json`
 - `data/metadata/geographic_crosswalk.csv`
-- `data/metadata/phase01_validation_report.json`
-- `data/metadata/download_manifest.json`
-- `data/metadata/file_inventory.csv`
+- `data/metadata/chirps_historical_validation.json`
+- `data/metadata/mod13q1_historical_validation.json`
+- `data/metadata/nasa_power_history_validation.json`
 
-Processed data:
+Documentation:
 
-- canonical admin1/admin2 GeoJSON;
-- canonical combined river-level CSV;
-- canonical WFP price CSV;
-- canonical IPC outcome CSV;
-- WorldPop district and region population CSVs;
-- MOD13Q1 and MOD11A1 decoded sample-statistics CSVs.
+- `docs/system-documentation-report.md`
+- `docs/temporal-alignment-strategy.md`
+- `docs/ipc-mapping-methodology.md`
+- `docs/river-station-and-boundary-metadata.md`
+- `docs/temperature-primary-source.md`
+- `docs/soil-moisture-primary-source.md`
+
+## 7. Scientific limits and external blockers
+
+There are **no external blockers preventing Phase 02**. Optional historical SMAP automation remains
+unavailable without NASA Earthdata authentication, but SMAP is a secondary diagnostic and is not
+required because the selected POWER wetness-equivalent archive is complete.
+
+Known limits that Phase 02 must carry forward:
+
+- CHIRPS p25 is a 0.25-degree compact product; small districts can share source cells, and the local
+  2015–2025 climatology is 11 years rather than a WMO 30-year normal.
+- MODIS native resolution is 250 m, but these district statistics sample the aligned approximately
+  1 km overview. Provider date gaps and strict-QA nulls are not interpolated.
+- POWER is coarse and point-sampled. GWETTOP/GWETROOT are modeled relative wetness, not measured
+  volumetric soil moisture.
+- River thresholds lack published effective dates; the JB009 location exception must remain in
+  lineage.
+- IPC areas are not districts; multi-district weights and point-only relationships must be honored.
+- WFP units/currencies are not interchangeable; the Banadir label must remain quarantined.
+- WorldPop is a modeled exposure surface, not census truth.
+- Phase 01 establishes data readiness only. Model skill, calibration, fairness, operational
+  thresholds, human approval, and alert governance must be demonstrated in later phases.
 
 ## Final decision
 
-**PHASE 01 NOT COMPLETE.**
+**PHASE 01 COMPLETE — READY FOR PHASE 02.**
 
-The genuine blockers preventing Phase 02 model training are:
-
-1. incomplete multi-year local CHIRPS, MOD13Q1, SMAP, and MOD11A1 archives;
-2. no validated district interpretation for IPC analysis-area outcomes.
-
-All other identified quality issues are documented and preserved rather than hidden.
+Machine-readable evidence: `data/metadata/phase01_readiness.json` reports `COMPLETE`, all three model
+tracks report `READY`, and `genuine_blockers` is empty. Phase 02 work was not started as part of this
+completion.

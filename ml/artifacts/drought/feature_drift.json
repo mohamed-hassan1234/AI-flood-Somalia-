@@ -1,0 +1,66 @@
+{
+  "rain_7d_mm": {
+    "psi_train_to_validation": 0.013783964860440055,
+    "psi_train_to_test": 0.04617172701938321
+  },
+  "rain_30d_mm": {
+    "psi_train_to_validation": 0.08408306199811871,
+    "psi_train_to_test": 0.013655090352523443
+  },
+  "rain_90d_mm": {
+    "psi_train_to_validation": 0.20248205702445676,
+    "psi_train_to_test": 0.027163314349318388
+  },
+  "heavy_rain_days_30d": {
+    "psi_train_to_validation": null,
+    "psi_train_to_test": null
+  },
+  "dry_spell_days": {
+    "psi_train_to_validation": 0.03275163721547816,
+    "psi_train_to_test": 0.04382172300871501
+  },
+  "t2m_7d_c": {
+    "psi_train_to_validation": 0.08087454386409883,
+    "psi_train_to_test": 0.019243596694904403
+  },
+  "t2m_30d_c": {
+    "psi_train_to_validation": 0.07212192346187798,
+    "psi_train_to_test": 0.022673582556903
+  },
+  "t2m_max_30d_c": {
+    "psi_train_to_validation": 0.03608043326480052,
+    "psi_train_to_test": 0.012365548835514644
+  },
+  "gwet_top_7d": {
+    "psi_train_to_validation": 0.07566865773884221,
+    "psi_train_to_test": 0.09503095360238414
+  },
+  "gwet_top_30d": {
+    "psi_train_to_validation": 0.08314763832186481,
+    "psi_train_to_test": 0.08887538341996665
+  },
+  "gwet_root_30d": {
+    "psi_train_to_validation": 0.02187871944591854,
+    "psi_train_to_test": 0.05257787793743671
+  },
+  "ndvi_last": {
+    "psi_train_to_validation": 0.03834605012816124,
+    "psi_train_to_test": 0.0759794425947213
+  },
+  "evi_last": {
+    "psi_train_to_validation": 0.03472764664124285,
+    "psi_train_to_test": 0.07152211930557113
+  },
+  "ndvi_change_1": {
+    "psi_train_to_validation": 0.016658709882932096,
+    "psi_train_to_test": 0.04660110294602363
+  },
+  "vegetation_valid_pixel_fraction": {
+    "psi_train_to_validation": 0.003322552478257326,
+    "psi_train_to_test": 0.012279514315849716
+  },
+  "ndvi_last_anomaly_z_reference": {
+    "psi_train_to_validation": 0.09878265795517154,
+    "psi_train_to_test": 0.4109183633292799
+  }
+}
