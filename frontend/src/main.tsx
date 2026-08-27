@@ -1,2 +1,19 @@
-import React from'react';import ReactDOM from'react-dom/client';import{QueryClient,QueryClientProvider}from'@tanstack/react-query';import{BrowserRouter}from'react-router-dom';import{App}from'./app/App';import'./styles.css';import'./features.css';
-ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><QueryClientProvider client={new QueryClient()}><BrowserRouter><App/></BrowserRouter></QueryClientProvider></React.StrictMode>);
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+import { AppProviders } from './app/providers/AppProviders';
+import { AppRouter } from './app/router/AppRouter';
+import './styles.css';
+
+const container = document.getElementById('root');
+if (!container) {
+  throw new Error('Root container #root was not found in the document.');
+}
+
+createRoot(container).render(
+  <StrictMode>
+    <AppProviders>
+      <AppRouter />
+    </AppProviders>
+  </StrictMode>,
+);

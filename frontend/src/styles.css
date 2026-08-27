@@ -1,1 +1,201 @@
-@import "tailwindcss";:root{font-family:Inter,system-ui;color:#eaf4ef;background:#071b18}*{box-sizing:border-box}body{margin:0}.shell{min-height:100vh;display:grid;grid-template-columns:260px 1fr;background:radial-gradient(circle at 85% 5%,#173c31 0,transparent 35%),#071b18}aside{border-right:1px solid #27483e;padding:32px 24px;display:flex;flex-direction:column}.brand{font-size:21px;letter-spacing:.12em}.brand strong,main span{color:#e8b84a}aside>p{color:#829d94;font-size:12px}.language-control{display:grid;gap:5px;color:#9eb3ac;font-size:12px}.language-control select{background:#0c2722;color:#eaf4ef;border:1px solid #36594e;border-radius:5px;padding:7px}nav{display:grid;gap:6px;margin-top:32px}nav a{color:#9eb3ac;text-decoration:none;padding:11px 13px;border-radius:6px;font-size:14px}nav a.active,nav a:hover{background:#15372f;color:white}aside footer{margin-top:auto;color:#789188;font-size:12px}aside footer b{display:block;color:#e8b84a}main{padding:9vh 8vw}.eyebrow{color:#e8b84a;letter-spacing:.2em;font-weight:700;font-size:12px}h1{font-family:Georgia,serif;font-size:clamp(48px,6vw,88px);line-height:.95;margin:28px 0}.lead{color:#a9bcb5;max-width:650px;font-size:18px;line-height:1.7}section{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:70px}article{background:#0c2722;border:1px solid #26463c;padding:24px;min-height:190px}article>b{color:#58756b;font-size:12px}article h2{font-family:Georgia,serif;margin-top:35px}article p{color:#8ca49c;font-size:13px}article small{color:#e8b84a;font-weight:700;font-size:10px}@media(max-width:850px){.shell{grid-template-columns:1fr}aside{padding:16px 22px;border-right:0;border-bottom:1px solid #27483e;display:flex;flex-direction:row;align-items:center;gap:16px}aside>p,aside nav,aside footer,aside .signin{display:none}.language-control{margin-left:auto}main{padding:40px 22px}section{grid-template-columns:1fr 1fr}}
+@import "tailwindcss";
+
+/* ==========================================================================
+   SOMALIA AI — EARLY WARNING & EARLY ACTION PLATFORM
+   Phase 05 design tokens.
+
+   Operational interface for national disaster-risk analysts. Light, calm,
+   high-contrast, data-dense. Severity colour is reserved exclusively for
+   risk semantics and is never used decoratively.
+   ========================================================================== */
+
+@theme {
+  /* ---- Typography ---------------------------------------------------- */
+  --font-sans: "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono",
+    Menlo, Consolas, monospace;
+
+  /* ---- Neutral surface scale ---------------------------------------- */
+  --color-canvas: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #fbfcfd;
+  --color-surface-sunken: #f2f4f7;
+
+  --color-line: #e4e7ec;
+  --color-line-strong: #d0d5dd;
+
+  --color-ink: #0d1526;
+  --color-ink-secondary: #475467;
+  --color-ink-muted: #667085;
+  --color-ink-faint: #98a2b3;
+
+  /* ---- Brand: deep institutional blue, Somali sky-blue accent -------- */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93b8ec;
+  --color-brand-500: #2f6fd0;
+  --color-brand-600: #1a55ad;
+  --color-brand-700: #14448c;
+  --color-brand-800: #103769;
+  --color-brand-900: #0b2a4f;
+  --color-accent: #4189dd; /* Somali flag blue — identity mark only */
+
+  /* ---- Risk semantics -------------------------------------------------
+     These five levels carry meaning across map, cards, tables, charts and
+     badges. Never reuse them for navigation, selection or decoration.     */
+
+  /* NORMAL */
+  --color-risk-normal-fg: #067647;
+  --color-risk-normal-bg: #ecfdf3;
+  --color-risk-normal-line: #a9e5c3;
+  --color-risk-normal-solid: #17b26a;
+
+  /* WATCH */
+  --color-risk-watch-fg: #91530a;
+  --color-risk-watch-bg: #fffaeb;
+  --color-risk-watch-line: #fedf89;
+  --color-risk-watch-solid: #f5b546;
+
+  /* WARNING */
+  --color-risk-warning-fg: #b93815;
+  --color-risk-warning-bg: #fff4ed;
+  --color-risk-warning-line: #f9c8a4;
+  --color-risk-warning-solid: #ef6820;
+
+  /* CRITICAL / SEVERE */
+  --color-risk-critical-fg: #b42318;
+  --color-risk-critical-bg: #fef3f2;
+  --color-risk-critical-line: #fecdca;
+  --color-risk-critical-solid: #f04438;
+
+  /* UNKNOWN / INSUFFICIENT */
+  --color-risk-unknown-fg: #475467;
+  --color-risk-unknown-bg: #f9fafb;
+  --color-risk-unknown-line: #e4e7ec;
+  --color-risk-unknown-solid: #98a2b3;
+
+  /* SUPPRESSED / STALE — muted, explicitly not a severity */
+  --color-muted-fg: #5d6b82;
+  --color-muted-bg: #f4f5f7;
+  --color-muted-line: #dfe3e8;
+  --color-muted-solid: #8899ae;
+
+  /* ---- Non-severity status (system state, not risk) ------------------ */
+  --color-ok-fg: #067647;
+  --color-ok-bg: #ecfdf3;
+  --color-ok-line: #a9e5c3;
+  --color-info-fg: #175cd3;
+  --color-info-bg: #eff8ff;
+  --color-info-line: #b2ddff;
+  --color-danger-fg: #b42318;
+  --color-danger-bg: #fef3f2;
+  --color-danger-line: #fecdca;
+
+  /* ---- Radius -------------------------------------------------------- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* ---- Elevation: restrained, used only to lift transient surfaces --- */
+  --shadow-xs: 0 1px 2px 0 rgb(16 24 40 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(16 24 40 / 0.08), 0 1px 2px -1px rgb(16 24 40 / 0.04);
+  --shadow-md: 0 4px 8px -2px rgb(16 24 40 / 0.08), 0 2px 4px -2px rgb(16 24 40 / 0.04);
+  --shadow-lg: 0 12px 16px -4px rgb(16 24 40 / 0.08), 0 4px 6px -2px rgb(16 24 40 / 0.03);
+  --shadow-xl: 0 20px 24px -4px rgb(16 24 40 / 0.10), 0 8px 8px -4px rgb(16 24 40 / 0.04);
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+@layer base {
+  :root {
+    /* Numeric columns must align; enable tabular figures globally so that
+       probabilities and counts are scannable in tables and metric cards. */
+    font-variant-numeric: tabular-nums;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* A single, consistent focus treatment everywhere. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  /* Headings inherit weight from utilities rather than UA defaults. */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+    margin: 0;
+  }
+
+  p { margin: 0; }
+
+  /* Keep long identifiers (station codes, hashes) from breaking layout. */
+  code, kbd, samp, pre {
+    font-family: var(--font-mono);
+  }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line-strong);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-ink-faint); background-clip: content-box; }
+}
+
+@layer utilities {
+  /* Screen-reader-only text used to carry severity/status meaning that is
+     otherwise conveyed by icon + colour. */
+  .sr-only-focusable:not(:focus):not(:focus-within) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .grid-cols-fill-260 {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+/* Respect reduced-motion for every transition we introduce. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

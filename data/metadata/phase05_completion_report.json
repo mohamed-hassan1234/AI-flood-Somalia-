@@ -1,0 +1,207 @@
+{
+  "generated_at": "2026-08-26T23:54:57.132467+00:00",
+  "phase": "PHASE 05 - PRODUCTION FRONTEND / OPERATIONAL MVP",
+  "status": "COMPLETE",
+  "final_decision": "PHASE 05 COMPLETE - FRONTEND READY; BLOCKED ON PHASE 04 ADAPTER FOR LIVE OPERATIONAL INTELLIGENCE",
+  "git": {
+    "branch": "main",
+    "head_at_start": "4d4faf5",
+    "committed": false
+  },
+  "contract_verification": {
+    "method": [
+      "source_reading",
+      "generated_openapi",
+      "live_integration"
+    ],
+    "openapi_paths": 66,
+    "api_base_path": "/api/v1",
+    "source_reading_matched_openapi": true,
+    "live_backend_exercised": true
+  },
+  "quality_gates": {
+    "typecheck": {
+      "result": "PASS",
+      "errors": 0
+    },
+    "lint": {
+      "result": "PASS",
+      "errors": 0,
+      "warnings": 5,
+      "warning_rule": "react-refresh/only-export-components",
+      "warning_impact": "development hot-reload granularity only"
+    },
+    "tests": {
+      "result": "PASS",
+      "suites": 9,
+      "run": 137,
+      "passed": 137,
+      "failed": 0
+    },
+    "production_build": {
+      "result": "PASS",
+      "build_seconds": 11
+    }
+  },
+  "pages": {
+    "login": "PASS",
+    "overview": "PASS",
+    "risk_map": "PASS",
+    "drought": "PASS",
+    "flood": "PASS",
+    "food_security": "PASS",
+    "warning_center": "PASS",
+    "warning_review": "PASS",
+    "history": "PASS",
+    "data_health": "PASS",
+    "model_operations": "PASS",
+    "reports": "PASS",
+    "administration": "PASS",
+    "profile": "PASS"
+  },
+  "validation": {
+    "auth": "PASS",
+    "role_aware_ui": "PASS",
+    "overview": "PASS",
+    "somalia_map": "PASS",
+    "drought_ui": "PASS",
+    "flood_ui": "PASS",
+    "food_security_ui": "PASS",
+    "warning_center": "PASS",
+    "warning_review": "PASS",
+    "data_health": "PASS",
+    "history": "PASS",
+    "responsive": "PASS",
+    "accessibility": "PASS",
+    "api_integration": "PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "tests": "PASS",
+    "production_build": "PASS"
+  },
+  "responsive_verification": {
+    "method": "measured in a real browser: documentElement.scrollWidth vs clientWidth, plus a sweep for elements extending past the viewport",
+    "breakpoints": {
+      "375": {
+        "horizontal_overflow": false,
+        "offending_elements": 0
+      },
+      "430": {
+        "horizontal_overflow": false,
+        "offending_elements": 0
+      },
+      "768": {
+        "horizontal_overflow": false,
+        "offending_elements": 0
+      },
+      "1024": {
+        "horizontal_overflow": false,
+        "offending_elements": 0
+      },
+      "1280": {
+        "horizontal_overflow": false,
+        "offending_elements": 0
+      },
+      "1440": {
+        "horizontal_overflow": false,
+        "offending_elements": 0
+      }
+    }
+  },
+  "scientific_honesty_enforced": {
+    "river_flood_scope": "station/gauge only; discrete markers, never area polygons; no flash-flood or nationwide claim",
+    "food_security_scope": "region only; explicitly separated from official IPC classification",
+    "drought_scope": "district; explicitly not a famine forecast and not an IPC classification",
+    "no_averaged_national_probability": true,
+    "absence_never_rendered_as_normal": true,
+    "withheld_probability_rendered_as_withheld_not_zero": true,
+    "chart_gaps_preserved": true,
+    "enforced_by_tests": [
+      "scientific-honesty",
+      "no-production-fixture-fallback",
+      "risk-semantics"
+    ]
+  },
+  "human_governance": {
+    "chain": [
+      "AI generated",
+      "Analyst review",
+      "Verification",
+      "Authorised approval",
+      "Published"
+    ],
+    "ai_output_visually_distinguished_from_approved_warning": true,
+    "confirmation_required_for": [
+      "approved",
+      "published",
+      "resolved"
+    ],
+    "confirm_control_not_focused_on_open": true,
+    "backend_transitions_mirrored_exactly": true
+  },
+  "no_fake_data": {
+    "production_fixture_imports": 0,
+    "sample_data_fallbacks": 0,
+    "stray_fetch_calls_outside_api_module": 0,
+    "enforced_by": "src/tests/no-production-fixture-fallback.test.ts"
+  },
+  "timezone": {
+    "operational": "Africa/Mogadishu",
+    "label_always_rendered": "EAT",
+    "live_check": {
+      "api_returned": "2026-08-26T23:48:00Z",
+      "ui_rendered": "27 Aug 2026, 02:47 EAT",
+      "correct": true
+    }
+  },
+  "accessibility": {
+    "severity_never_colour_alone": true,
+    "encoding": "glyph + uppercase label + colour",
+    "skip_link": true,
+    "named_landmarks": true,
+    "single_h1_per_page": true,
+    "aria_tab_pattern_with_roving_tabindex": true,
+    "focus_trap_and_escape_in_overlays": true,
+    "prefers_reduced_motion_respected": true,
+    "tap_targets_fixed_during_verification": 4
+  },
+  "defects_found_and_fixed_by_own_tests": [
+    "cadence formatter rendered '3.0 mo' instead of '3 mo'",
+    "per-hook retry overrode the QueryClient policy, defeating test configuration",
+    "data-autofocus lost to document order in overlay focus selection",
+    "corrupted regex literal containing a control character",
+    "four interactive targets below the WCAG 2.5.8 24px minimum"
+  ],
+  "known_limitations": [
+    "Backend defines no reject or hold alert transition; UI offers the real transitions and explains the absence",
+    "/alerts has no server-side filtering; filtering and pagination are client-side",
+    "/risks does not return station coordinates; unmappable gauges are counted and listed, never positioned by guesswork",
+    "Administration is read-only; account creation involves credential issuance and scope assignment",
+    "No basemap bundled; boundaries render on a plain ground unless VITE_MAP_STYLE_URL is set",
+    "i18n covers navigation and status vocabulary; methodological text stays English by design"
+  ],
+  "phase_04_dependency": {
+    "adapter_present_in_backend": false,
+    "evidence": "grep -rn 'operational' backend/app returns no matches; no Phase 04 documents exist in the repository",
+    "consequence": "Phase 03 operational intelligence on disk (87 drought districts, 5 flood stations, 18 food-security regions) is not reachable through any API endpoint",
+    "frontend_behaviour": "reports PARTIAL/STALE and 'No evidence' truthfully; no green Operational indicator is forced",
+    "frontend_change_required_when_adapter_lands": false,
+    "forward_compatibility": [
+      "toSeverity accepts the Phase 03 'SEVERE' spelling alongside the API 'critical'",
+      "driver rendering already understands the contract reason_code vocabulary"
+    ]
+  },
+  "previous_phases_touched": {
+    "phase_01_data": false,
+    "phase_02_models": false,
+    "phase_03_semantics": false,
+    "backend_code": false
+  },
+  "counts": {
+    "source_files": 51,
+    "lines_of_code": 14405,
+    "files_created": 39,
+    "files_modified": 11,
+    "files_removed": 18
+  }
+}
